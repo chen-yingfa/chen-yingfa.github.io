@@ -1,0 +1,54 @@
+# Header
+nav:
+  Home: /index
+  Posts: /archives
+  Categories: /category
+  Tags: /tag
+  Publications: /publications
+  "About Me": /about
+
+email: "chenyingfa1999@qq.com"
+
+# favicon
+favicon: /images/favicon.ico
+
+# logo
+logo: /images/logo.svg
+
+# links
+links:
+  Github: https://github.com/xbmlz
+  ZhiHu: https://www.zhihu.com/people/chen-ying-fa-34
+  Twitter: https://www.twitter.com/DonnyChan123
+  # Weibo:
+
+# analytics
+google_analytics:
+baidu_analytics:
+
+# mathjax
+fancybox: true
+
+# mathjax
+mathjax: true
+
+# echarts
+echarts: true
+
+# busuanzi
+busuanzi: true
+
+# mermaid
+mermaid:
+  enable: true
+  # Available themes: default | dark | forest | neutral
+  theme: default
+
+# giscus
+giscus:
+  enable:
+  repo:
+  repo_id:
+  category:
+  category_id:
+  mapping:

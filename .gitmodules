@@ -1,0 +1,6 @@
+[submodule "themes/stellar"]
+	path = themes/stellar
+	url = git@github.com:chen-yingfa/hexo-theme-stellar.git
+[submodule "themes/oranges"]
+	path = themes/oranges
+	url = https://github.com/zchengsite/hexo-theme-oranges.git
