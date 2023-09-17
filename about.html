@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en,zh-cn,default">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="Chen Yingfa">
+
+
+  <meta name="subtitle" content="陈英发">
+
+
+  <meta name="description" content="清华大学自然语言处理二年级研究生，出生长大在挪威，到北京求学。当前在研究如何控制大模型的知识和行为。
+
+A second year graduate student in THUNLP (the NLP lab of Tsinghua University). Born and raised in Norway, and went to Beijing for education. I am currently working about controllable knowledge and behavior of LLM.
+">
+
+
+  <meta name="keywords" content="Chen Yingfa,NLP,Tsinghua">
+
+
+<title>About me | Chen Yingfa</title>
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
+  <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <!-- The navigation bar -->
+    <nav class="flex items-center text-base gap-1">
+      <!-- Top-left logo and title -->
+      <a href="/">
+        <div class="flex flex-row items-center w-max">
+          <div class="font-medium align-middle p-1 overflow-hidden">
+            <img class="w-6 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo"
+            src="/images/logo.svg" alt="Chen Yingfa" />
+          </div>
+          <div class="title-container align-middle">
+            Chen Yingfa
+          </div>
+        </div>
+      </a>
+      <!-- Title -->
+      <div id="header-title"
+        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        About me
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        <!-- Page links -->
+        <div class="flex items-center gap-3">
+          
+            <a class="hidden sm:flex w-max" href="/index">
+              Home
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/archives">
+              Posts
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/category">
+              Categories
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/tag">
+              Tags
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/about">
+              About Me
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/publications">
+              Publications
+            </a>
+            
+        </div>
+        <!-- Icons, for external links -->
+        <div class="flex items-center gap-1">
+          
+            
+              <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+                <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+              </a>
+              
+              <a class="w-5 h-5 hidden sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
+                <iconify-icon width="20" icon="ri:zhihu-line"></iconify-icon>
+              </a>
+              
+              <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
+                <iconify-icon width="20" icon="ri:twitter-line"></iconify-icon>
+              </a>
+              
+                
+                  <!-- <a class="w-5 h-5 hidden sm:flex" title="Twitter" href="rss2.xml">
+                <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+              </a> -->
+            <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+              <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+            </a>
+        </div>
+        <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+          <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+            <iconify-icon width="20" icon="carbon:menu"></iconify-icon>
+          </span>
+          <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+            <iconify-icon width="20" icon="carbon:close"></iconify-icon>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content"
+    class="shadow-blue-500/80 relative z-20 bg-white/100 dark:bg-zinc-900 px-6 sm:px-8 py-2 backdrop-blur-lg -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/index" class="flex h-12 sm:h-auto items-center">
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">
+            Posts
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/category" class="flex h-12 sm:h-auto items-center">
+            Categories
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/tag" class="flex h-12 sm:h-auto items-center">
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/about" class="flex h-12 sm:h-auto items-center">
+            About Me
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/publications" class="flex h-12 sm:h-auto items-center">
+            Publications
+          </a>
+        </li>
+        
+    </ul>
+  </div>
+  <div class="mask z-10 bg-black/20 absolute inset-0"></div>
+</div>
+  <main class="pt-14">
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <!-- Title -->
+      <div id="article-title" class="leading-snug mb-4 md:mb-6">
+        <p class="text-3xl font-bold">About me</p>
+      </div>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <!-- Date, read time, word count, and category -->
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            Created: <time>2023-09-14,</time>
+            Updated: <time>2023-09-16</time>
+          </span>
+          <!-- <span class="text-gray-400">·</span> -->
+          <!-- <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>3 min</span>
+          </span> -->
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>699 words</span>
+          </span>
+          <!-- Categories -->
+          
+          </section>
+        </div>
+        <!-- tags -->
+        <div class="flex flex-wrap gap-1 pt-2">
+          
+        </div>
+      </div>
+    </header>
+    <!-- content -->
+    <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+      <p><a href="#chinese-version-%E4%B8%AD%E6%96%87%E7%89%88%E6%9C%AC">中文</a></p>
+<p>Social links:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=IgPWvEQAAAAJ&amp;hl=en">Google Scholar</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">Twitter</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.github.com/chen-yingfa">GitHub</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://space.bilibili.com/474619698?spm_id_from=333.1007.0.0">B站</a></li>
+</ul>
+<p>Email: (either is ok)</p>
+<ul>
+<li>chenyingfa1999 (at) <a target="_blank" rel="noopener" href="http://qq.com">qq.com</a></li>
+<li>donnychan1999 (at) <a target="_blank" rel="noopener" href="http://gmail.com">gmail.com</a></li>
+</ul>
+<hr>
+<p>你好, hello, hei!</p>
+<p>My name is Yingfa Chen (陈英发).</p>
+<p>I'm a 2nd year graduate student at the <a target="_blank" rel="noopener" href="http://nlp.csai.tsinghua.edu.cn/">Natural Language Processing lab at Tsinghua University</a>, advised by Prof. Zhiyuan Liu. My research interests are about controlling the knowledge and behavior of large language models.</p>
+<p>I'm just getting started with academia, and will be applying for PhD in the same lab this year (the end of 2023), there is so much to learn!</p>
+<p><a href="/pdf/cv.pdf"><span class="github-emoji"><span>📄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c4.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> My CV (last updated: December, 2022)</a></p>
+<h2 id="Education">Education</h2>
+<ul>
+<li>
+<p><strong>M.S. in Computer Science and Technology (计算机科学与技术)</strong></p>
+<p>Tsinghua University, China</p>
+<p>Sep 2022 - Jul 2024 (expected)</p>
+<p><em>Research direction: natural language processing, large language models</em></p>
+<p><em>Advisor: Prof. Zhiyuan Liu</em></p>
+</li>
+<li>
+<p><strong>B.S. in Computer Science and Technology (计算机科学与技术)</strong></p>
+<p>Tsinghua University, China</p>
+<p>Aug 2018 - Jul 2022</p>
+</li>
+<li>
+<p><strong>General Studies in Natural Science (Studiespesialisering med realfag)</strong></p>
+<p>Møglestu High School, Norway</p>
+<p>Aug 2014 - Jul 2018</p>
+</li>
+</ul>
+<h2 id="Personal-Background">Personal Background</h2>
+<p>I was born in March 13, 1999 in Arendal Norway. I grew up in Lillesand, a small coastal town in Aust-Agder, Norway. My parents are ethnically Chinese but born respectively in Vietnam and Cambodia, and they moved to Norway as refugees. My mother tongue is Cantonese Chinese.</p>
+<p>When I was 19, I went to Beijing for a Bachelor's degree in Computer Science at Tsinghua University.</p>
+<p>Since March of 2022, I am happily in a relationship with <a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/">Luo Yining</a>.</p>
+<h2 id="Interests">Interests</h2>
+<p><span class="github-emoji"><span>💪</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Sports: Badminton, running, soccer.</p>
+<p><span class="github-emoji"><span>🎮</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f3ae.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Entertainment: Video games, C-pop, anime, manga, Jackie Cheung, etc.</p>
+<hr>
+<blockquote>
+<p>Below is the Chinese version of this text, no need to read it if you understand the above text already.</p>
+</blockquote>
+<h1>Chinese Version 中文版本</h1>
+<p>我叫陈英发。</p>
+<p>我是清华大学<a target="_blank" rel="noopener" href="http://nlp.csai.tsinghua.edu.cn/">自然语言处理与社会人文计算实验室</a>的二年级研究生，由刘知远副教授指导。我的研究兴趣是关于控制大型语言模型的知识和行为。</p>
+<p>我刚刚开始学术生涯，将在今年（2023年低）申请博士学位，还有很多要学习！</p>
+<p><a href="/pdf/cv.pdf"><span class="github-emoji"><span>📄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c4.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 我的简历（最后更新：2022年12月）</a></p>
+<h2 id="教育背景">教育背景</h2>
+<ul>
+<li>
+<p><strong>硕士：计算机科学与技术</strong></p>
+<p>清华大学，中国</p>
+<p>2022年9月 - 2024年7月（预计）</p>
+<p>研究方向：自然语言处理，大型语言模型</p>
+<p>导师：刘知远副教授</p>
+</li>
+<li>
+<p><strong>本科：计算机科学与技术</strong></p>
+<p>清华大学，中国</p>
+<p>2018年8月 - 2022年7月</p>
+</li>
+<li>
+<p><strong>高中：自然科学通识教育</strong></p>
+<p>挪威，莫格勒斯图高中</p>
+<p>2014年8月 - 2018年7月</p>
+</li>
+</ul>
+<h2 id="个人背景">个人背景</h2>
+<p>我于 1999 年 3 月 13 日在挪威 Arendal 出生。我长大在挪威 Aust-Agder 的一个沿海小镇 Lillesand。我的父母是华裔，分别出生在越南和柬埔寨，他们作为难民移民到挪威。我的母语是广东话。</p>
+<p>十九岁时，我前往北京，在清华大学攻读计算机科学学士学位。</p>
+<p>自 2022 年 3 月以来，我与我女友<a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/">骆怡宁</a>相爱。</p>
+<h2 id="兴趣爱好">兴趣爱好</h2>
+<p><span class="github-emoji"><span>💪</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 体育：羽毛球，跑步，足球。</p>
+<p><span class="github-emoji"><span>🎮</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f3ae.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 娱乐：电子游戏，C-pop，动漫，漫画，张学友等等。</p>
+<blockquote>
+<p>Translated by ChatGPT, reviewed by me.</p>
+</blockquote>
+<hr>
+<h1>Extra</h1>
+<p>Here is a binary search in Python:</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    lo, hi = <span class="number">0</span>, <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        m = (lo + hi) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[m] &lt; target:</span><br><span class="line">            lo = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            hi = m</span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></tbody></table></figure>
+
+    </article>
+    <!-- prev and next -->
+    <div class="flex justify-between mt-4 pt-4 border-t border-gray-400 test-sm align-middle gap-2">
+      <div>
+        
+      </div>
+      <div class="border-l border-1 border-gray-400 pl-2">
+        
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>访客 Visitors:</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>·</span>
+  <span>浏览量 Page View:</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2023</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/chen-yingfa" target="_blank" rel="noopener noreferrer">陈英发</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/chen-yingfa/hexo-theme-fengye" target="_blank" rel="noopener noreferrer">枫叶 Fengye</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en,zh-cn,default">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="Chen Yingfa">
+
+
+  <meta name="subtitle" content="陈英发">
+
+
+  <meta name="description" content="清华大学自然语言处理二年级研究生，出生长大在挪威，到北京求学。当前在研究如何控制大模型的知识和行为。
+
+A second year graduate student in THUNLP (the NLP lab of Tsinghua University). Born and raised in Norway, and went to Beijing for education. I am currently working about controllable knowledge and behavior of LLM.
+">
+
+
+  <meta name="keywords" content="Chen Yingfa,NLP,Tsinghua">
+
+
+<title>Tags 标签 | Chen Yingfa</title>
+
+
+
+<link rel="icon" href="/images/favicon.ico">
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
+  <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <!-- The navigation bar -->
+    <nav class="flex items-center text-base gap-1">
+      <!-- Top-left logo and title -->
+      <a href="/">
+        <div class="flex flex-row items-center w-max">
+          <div class="font-medium align-middle p-1 overflow-hidden">
+            <img class="w-6 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo"
+            src="/images/logo.svg" alt="Chen Yingfa" />
+          </div>
+          <div class="title-container align-middle">
+            Chen Yingfa
+          </div>
+        </div>
+      </a>
+      <!-- Title -->
+      <div id="header-title"
+        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        Tags 标签
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        <!-- Page links -->
+        <div class="flex items-center gap-3">
+          
+            <a class="hidden sm:flex w-max" href="/index">
+              Home
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/archives">
+              Posts
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/category">
+              Categories
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/tag">
+              Tags
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/about">
+              About Me
+            </a>
+            
+            <a class="hidden sm:flex w-max" href="/publications">
+              Publications
+            </a>
+            
+        </div>
+        <!-- Icons, for external links -->
+        <div class="flex items-center gap-1">
+          
+            
+              <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
+                <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+              </a>
+              
+              <a class="w-5 h-5 hidden sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
+                <iconify-icon width="20" icon="ri:zhihu-line"></iconify-icon>
+              </a>
+              
+              <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
+                <iconify-icon width="20" icon="ri:twitter-line"></iconify-icon>
+              </a>
+              
+                
+                  <!-- <a class="w-5 h-5 hidden sm:flex" title="Twitter" href="rss2.xml">
+                <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+              </a> -->
+            <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+              <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+            </a>
+        </div>
+        <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+          <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+            <iconify-icon width="20" icon="carbon:menu"></iconify-icon>
+          </span>
+          <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+            <iconify-icon width="20" icon="carbon:close"></iconify-icon>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content"
+    class="shadow-blue-500/80 relative z-20 bg-white/100 dark:bg-zinc-900 px-6 sm:px-8 py-2 backdrop-blur-lg -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/index" class="flex h-12 sm:h-auto items-center">
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">
+            Posts
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/category" class="flex h-12 sm:h-auto items-center">
+            Categories
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/tag" class="flex h-12 sm:h-auto items-center">
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/about" class="flex h-12 sm:h-auto items-center">
+            About Me
+          </a>
+        </li>
+        
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/publications" class="flex h-12 sm:h-auto items-center">
+            Publications
+          </a>
+        </li>
+        
+    </ul>
+  </div>
+  <div class="mask z-10 bg-black/20 absolute inset-0"></div>
+</div>
+  <main class="pt-14">
+    
+
+  <!-- 显示所有tag，让用户选择 -->
+  <div class="px-6 max-w-prose mx-auto md:px-0 mt-6">
+    <h2 class="font-bold text-2xl mb-4">Tags</h2>
+    <div class="tags-container flex flex-wrap gap-2">
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E4%B8%AD%E6%96%87/">
+          <a href="/tags/%E4%B8%AD%E6%96%87/">中文</a>
+          <span class="text-gray-400 px-1 text-xs">×5</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/00/">
+          <a href="/tags/00/">00</a>
+          <span class="text-gray-400 px-1 text-xs">×4</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/life/">
+          <a href="/tags/life/">life</a>
+          <span class="text-gray-400 px-1 text-xs">×4</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/research/">
+          <a href="/tags/research/">research</a>
+          <span class="text-gray-400 px-1 text-xs">×3</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/school/">
+          <a href="/tags/school/">school</a>
+          <span class="text-gray-400 px-1 text-xs">×3</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/test/">
+          <a href="/tags/test/">test</a>
+          <span class="text-gray-400 px-1 text-xs">×3</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/paper/">
+          <a href="/tags/paper/">paper</a>
+          <span class="text-gray-400 px-1 text-xs">×2</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/english/">
+          <a href="/tags/english/">english</a>
+          <span class="text-gray-400 px-1 text-xs">×2</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/jekyll/">
+          <a href="/tags/jekyll/">jekyll</a>
+          <span class="text-gray-400 px-1 text-xs">×2</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/hugo/">
+          <a href="/tags/hugo/">hugo</a>
+          <span class="text-gray-400 px-1 text-xs">×2</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/blog/">
+          <a href="/tags/blog/">blog</a>
+          <span class="text-gray-400 px-1 text-xs">×2</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/cfd/">
+          <a href="/tags/cfd/">cfd</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/dataset/">
+          <a href="/tags/dataset/">dataset</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/arxiv/">
+          <a href="/tags/arxiv/">arxiv</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/llm/">
+          <a href="/tags/llm/">llm</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/knowledge/">
+          <a href="/tags/knowledge/">knowledge</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/emnlp/">
+          <a href="/tags/emnlp/">emnlp</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/deep-learning/">
+          <a href="/tags/deep-learning/">deep-learning</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/graduation/">
+          <a href="/tags/graduation/">graduation</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/update/">
+          <a href="/tags/update/">update</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/learn/">
+          <a href="/tags/learn/">learn</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/important/">
+          <a href="/tags/important/">important</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/static-site-generator/">
+          <a href="/tags/static-site-generator/">static-site-generator</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/homework/">
+          <a href="/tags/homework/">homework</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">
+          <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">孩子们</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%8D%A7%E9%BE%99/">
+          <a href="/tags/%E5%8D%A7%E9%BE%99/">卧龙</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E7%8C%AB%E5%92%AA/">
+          <a href="/tags/%E7%8C%AB%E5%92%AA/">猫咪</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%B0%8F%E7%BB%BF/">
+          <a href="/tags/%E5%B0%8F%E7%BB%BF/">小绿</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%9C%9F%E9%B8%A1/">
+          <a href="/tags/%E5%9C%9F%E9%B8%A1/">土鸡</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/algorithm/">
+          <a href="/tags/algorithm/">algorithm</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/binary-search/">
+          <a href="/tags/binary-search/">binary-search</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/rust/">
+          <a href="/tags/rust/">rust</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/python/">
+          <a href="/tags/python/">python</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/c/">
+          <a href="/tags/c/">c++</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/visa/">
+          <a href="/tags/visa/">visa</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/hexo/">
+          <a href="/tags/hexo/">hexo</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/work/">
+          <a href="/tags/work/">work</a>
+          <span class="text-gray-400 px-1 text-xs">×1</span>
+        </div>
+      
+    </div>
+  </div>
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>访客 Visitors:</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>·</span>
+  <span>浏览量 Page View:</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
+    <span>© 2023</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/chen-yingfa" target="_blank" rel="noopener noreferrer">陈英发</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/chen-yingfa/hexo-theme-fengye" target="_blank" rel="noopener noreferrer">枫叶 Fengye</a>
+  </div>
+
+</footer>
+
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>
