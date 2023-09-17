@@ -118,6 +118,7 @@ deploy:
 email: "chenyingfa1999@qq.com"
 
 markdown:
+  preset: 'default'
   render:
     html: true
     xhtmlOut: false
@@ -137,6 +138,13 @@ markdown:
     lazyload: true
     prepend_root: false
     post_asset: false
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sup
+    - markdown-it-sub
+    - markdown-it-ins
+    - markdown-it-mark
+    - markdown-it-abbr
 
 plugins:
   - name: '@renbaoshuo/markdown-it-katex'
