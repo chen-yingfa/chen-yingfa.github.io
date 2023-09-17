@@ -34,21 +34,29 @@ I'm just getting started with academia, and will be applying for PhD in the same
 
 ## Education
 
-**M.S. in Computer Science and Technology (计算机科学与技术)**
-Tsinghua University, China
-Sep 2022 - Jul 2024 (expected)
-*Research direction: natural language processing, large language models*
-*Advisor: Prof. Zhiyuan Liu*
+- **M.S. in Computer Science and Technology (计算机科学与技术)**
+    
+    Tsinghua University, China
+    
+    Sep 2022 - Jul 2024 (expected)
+
+    *Research direction: natural language processing, large language models*
+
+    *Advisor: Prof. Zhiyuan Liu*
 
 
-**B.S. in Computer Science and Technology (计算机科学与技术)**
-Tsinghua University, China 
-Aug 2018 - Jul 2022
+- **B.S. in Computer Science and Technology (计算机科学与技术)**
+
+    Tsinghua University, China 
+    
+    Aug 2018 - Jul 2022
 
 
-**General Studies in Natural Science (Studiespesialisering med realfag)**
-Møglestu High School, Norway
-Aug 2014 - Jul 2018
+- **General Studies in Natural Science (Studiespesialisering med realfag)**
+
+    Møglestu High School, Norway
+
+    Aug 2014 - Jul 2018
 
 ## Personal Background
 
@@ -61,6 +69,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 ## Interests
 
 :muscle: Sports: Badminton, running, soccer.
+
 :video_game: Entertainment: Video games, C-pop, anime, manga, Jackie Cheung, etc.
 
 ---
@@ -79,21 +88,29 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 ## 教育背景
 
-**硕士：计算机科学与技术**
-清华大学，中国
-2022年9月 - 2024年7月（预计）
-研究方向：自然语言处理，大型语言模型
-导师：刘知远副教授
+- **硕士：计算机科学与技术**
+
+    清华大学，中国
+
+    2022年9月 - 2024年7月（预计）
+
+    研究方向：自然语言处理，大型语言模型
+
+    导师：刘知远副教授
 
 
-**本科：计算机科学与技术**
-清华大学，中国
-2018年8月 - 2022年7月
+- **本科：计算机科学与技术**
+
+    清华大学，中国
+
+    2018年8月 - 2022年7月
 
 
-**高中：自然科学通识教育**
-挪威，莫格勒斯图高中
-2014年8月 - 2018年7月
+- **高中：自然科学通识教育**
+
+    挪威，莫格勒斯图高中
+
+    2014年8月 - 2018年7月
 
 ## 个人背景
 
@@ -106,6 +123,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 ## 兴趣爱好
 
 :muscle: 体育：羽毛球，跑步，足球。
+
 :video_game: 娱乐：电子游戏，C-pop，动漫，漫画，张学友等等。
 
 > Translated by ChatGPT, reviewed by me.

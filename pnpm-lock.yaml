@@ -35,9 +35,6 @@ dependencies:
   hexo-renderer-markdown-it:
     specifier: ^7.1.0
     version: 7.1.0
-  hexo-renderer-markdown-it-plus:
-    specifier: ^1.0.6
-    version: 1.0.6
   hexo-renderer-stylus:
     specifier: ^3.0.0
     version: 3.0.0
@@ -56,23 +53,23 @@ dependencies:
   katex:
     specifier: ^0.16.8
     version: 0.16.8
+  markdown-it-checkbox:
+    specifier: ^1.1.0
+    version: 1.1.0
   markdown-it-footnote:
     specifier: ^3.0.3
     version: 3.0.3
-  markdown-it-task-checkbox:
-    specifier: ^1.0.6
-    version: 1.0.6
+  markdown-it-task-lists:
+    specifier: ^2.1.1
+    version: 2.1.1
+  markdown-it-toc-and-anchor:
+    specifier: ^4.2.0
+    version: 4.2.0
 
 packages:
 
   /@adobe/css-tools@4.3.1:
     resolution: {integrity: sha512-/62yikz7NLScCGAAST5SHdnjaDJQBDq0M2muyRTpf2VQhw6StBg2ALiu73zSJQ4fMVLA+0uBhBHAle7Wg+2kSg==}
-    dev: false
-
-  /@iktakahiro/markdown-it-katex@4.0.1:
-    resolution: {integrity: sha512-kGFooO7fIOgY34PSG8ZNVsUlKhhNoqhzW2kq94TNGa8COzh73PO4KsEoPOsQVG1mEAe8tg7GqG0FoVao0aMHaw==}
-    dependencies:
-      katex: 0.12.0
     dev: false
 
   /@renbaoshuo/markdown-it-katex@2.0.2(katex@0.16.8)(markdown-it@13.0.1):
@@ -292,10 +289,6 @@ packages:
 
   /command-exists@1.2.9:
     resolution: {integrity: sha512-LTQ/SGc+s0Xc0Fu5WaKnR0YiygZkm9eKFvyS+fRsU7/ZWFF8ykFM6Pc9aCVf1+xasOOZpO3BAVgVrKvsqKHV7w==}
-    dev: false
-
-  /commander@2.20.3:
-    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: false
 
   /commander@5.1.0:
@@ -814,25 +807,6 @@ packages:
       ejs: 3.1.9
     dev: false
 
-  /hexo-renderer-markdown-it-plus@1.0.6:
-    resolution: {integrity: sha512-nuidp4IvyHC9G3hnRO4bY7BfBBZBhnOEfQjfk6AJI+qsy+BlaUwDvemuARFTD3APPIO78YamAv5mweo5XMRwfA==}
-    dependencies:
-      '@iktakahiro/markdown-it-katex': 4.0.1
-      clone: 2.1.2
-      highlight.js: 11.8.0
-      markdown-it: 13.0.1
-      markdown-it-abbr: 1.0.4
-      markdown-it-deflist: 2.1.0
-      markdown-it-emoji: 2.0.2
-      markdown-it-footnote: 3.0.3
-      markdown-it-ins: 3.0.1
-      markdown-it-mark: 3.0.1
-      markdown-it-sub: 1.0.0
-      markdown-it-sup: 1.0.0
-      markdown-it-toc: 1.1.0
-      uslug: 1.0.4
-    dev: false
-
   /hexo-renderer-markdown-it@7.1.0:
     resolution: {integrity: sha512-CQK7/kvhWbpKzXOSTpSuANVKgOZjPzxkPna4IQ6xMnRqsNpVXNSzpn5Ke1QEVH2x6FJB1/Vf7B40sJVxQKagaw==}
     engines: {node: '>=14'}
@@ -1157,13 +1131,6 @@ packages:
     engines: {'0': node >= 0.2.0}
     dev: false
 
-  /katex@0.12.0:
-    resolution: {integrity: sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==}
-    hasBin: true
-    dependencies:
-      commander: 2.20.3
-    dev: false
-
   /katex@0.16.8:
     resolution: {integrity: sha512-ftuDnJbcbOckGY11OO+zg3OofESlbR5DRl2cmN8HeWeeFIV7wTXvAOx8kEjZjobhA+9wh2fbKeO6cdcA9Mnovg==}
     hasBin: true
@@ -1199,6 +1166,12 @@ packages:
       markdown-it: '>= 9.0.0'
     dependencies:
       markdown-it: 13.0.1
+    dev: false
+
+  /markdown-it-checkbox@1.1.0:
+    resolution: {integrity: sha512-NkZVjnXo5G+cLNdi7DPZxICypBuxFE9F8sx3YGMZn+Cfizr8EZ/1TFUKl7ZnefF6cr1aFHbnQ5iA3rc4cp7EyA==}
+    dependencies:
+      underscore: 1.13.6
     dev: false
 
   /markdown-it-cjk-breaks@1.1.3:
@@ -1239,12 +1212,15 @@ packages:
     resolution: {integrity: sha512-E32m0nV9iyhRR7CrhnzL5msqic7rL1juWre6TQNxsnApg7Uf+F97JOKxUijg5YwXz86lZ0mqfOnutoryyNdntQ==}
     dev: false
 
-  /markdown-it-task-checkbox@1.0.6:
-    resolution: {integrity: sha512-7pxkHuvqTOu3iwVGmDPeYjQg+AIS9VQxzyLP9JCg9lBjgPAJXGEkChK6A2iFuj3tS0GV3HG2u5AMNhcQqwxpJw==}
+  /markdown-it-task-lists@2.1.1:
+    resolution: {integrity: sha512-TxFAc76Jnhb2OUu+n3yz9RMu4CwGfaT788br6HhEDlvWfdeJcLUsxk1Hgw2yJio0OXsxv7pyIPmvECY7bMbluA==}
     dev: false
 
-  /markdown-it-toc@1.1.0:
-    resolution: {integrity: sha512-75GJ7xGUE/G1goCUkXiAuOk1rGMRVYrCX5sQ4rnJLZiGbUJGdTfUfyWibLA0RpRzKgfpdIncz9Z4WwN84x0OJg==}
+  /markdown-it-toc-and-anchor@4.2.0:
+    resolution: {integrity: sha512-DusSbKtg8CwZ92ztN7bOojDpP4h0+w7BVOPuA3PHDIaabMsERYpwsazLYSP/UlKedoQjOz21mwlai36TQ04EpA==}
+    dependencies:
+      clone: 2.1.2
+      uslug: 1.0.4
     dev: false
 
   /markdown-it@13.0.1:
@@ -1760,6 +1736,10 @@ packages:
 
   /uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
+    dev: false
+
+  /underscore@1.13.6:
+    resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
     dev: false
 
   /universalify@0.2.0:

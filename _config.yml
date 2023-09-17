@@ -126,19 +126,24 @@ markdown:
     linkify: true
     typographer: false
   anchors:
+    # Minimum level for ID creation. (Ex. h2 to h6)
     level: 2
+    # A suffix that is prepended to the number given if the ID is repeated.
     collisionSuffix: ''
+    # If `true`, creates an anchor tag with a permalink besides the heading.
     permalink: false
-    permalinkClass: 'header-anchor'
+    # Class used for the permalink anchor tag.
+    permalinkClass: header-anchor
+    # Set to 'right' to add permalink after heading
     permalinkSide: 'left'
-    permalinkSymbol: '¶'
+    # The symbol used to make the permalink
+    permalinkSymbol: ¶
+    # Transform anchor to (1) lower case; (2) upper case
     case: 0
+    # Replace space with a character
     separator: '-'
-  images:
-    lazyload: true
-    prepend_root: false
-    post_asset: false
   plugins:
+    - markdown-it-task-lists
     - markdown-it-footnote
     - markdown-it-sup
     - markdown-it-sub
@@ -148,5 +153,5 @@ markdown:
 
 plugins:
   - name: '@renbaoshuo/markdown-it-katex'
-  - options:
+    options:
       skipDelimitersCheck: true
