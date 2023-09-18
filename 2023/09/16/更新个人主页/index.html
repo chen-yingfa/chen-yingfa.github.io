@@ -163,23 +163,23 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex flex-row items-center text-base gap-1 h-6">
+    <nav class="flex flex-row items-center text-base gap-2 h-6 text-zinc-700 dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center w-max group">
-          <div class="font-medium align-middle pl-1 overflow-hidden">
-            <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[60deg]" id="logo"
+          <div class="align-middle pl-1 overflow-hidden">
+            <img class="w-6 mr-2 inline-block transition-transform group-hover:rotate-[60deg] group-hover:scale-110" id="logo"
             src="/images/logo.svg" alt="Chen Yingfa" />
           </div>
           <!-- Site Title on the top left -->
-          <div class="title-container align-middle font-bold">
+          <div class="title-container align-middle font-extrabold">
             Chen Yingfa
           </div>
         </div>
       </a>
-      <!-- Title -->
+      <!-- Post Title, shown when scrolled down -->
       <div id="header-title"
-        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis text-zinc-500 dark:text-zinc:500">
         更新个人主页
       </div>
       <div class="flex-1"></div>
@@ -252,43 +252,43 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   </div>
 </header>
 <!-- Dropdown menu on small screens -->
-<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-8 bottom-0 z-10">
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed w-full top-8 bottom-0 z-10">
   <div id="menu-content"
-    class="drop-shadow-lg shadow-zinc-500/50 relative z-20 bg-white/70 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 backdrop-blur-md -translate-y-full transition-transform duration-200">
+    class="drop-shadow-lg backdrop-blur-md backdrop-saturate-150 shadow-zinc-500/50 relative z-20 bg-white/80 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 -translate-y-full transition-transform duration-200">
     <ul class="nav flex flex-col sm:flex-row text-md font-medium">
       
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/index" class="flex h-12 sm:h-auto items-center">
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
+          <a href="/index" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             Home
           </a>
         </li>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/archives" class="flex h-12 sm:h-auto items-center">
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
+          <a href="/archives" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             Posts
           </a>
         </li>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/category" class="flex h-12 sm:h-auto items-center">
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
+          <a href="/category" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             Categories
           </a>
         </li>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/tag" class="flex h-12 sm:h-auto items-center">
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
+          <a href="/tag" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             Tags
           </a>
         </li>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/about" class="flex h-12 sm:h-auto items-center">
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
+          <a href="/about" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             About Me
           </a>
         </li>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/publications" class="flex h-12 sm:h-auto items-center">
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
+          <a href="/publications" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             Publications
           </a>
         </li>
@@ -296,7 +296,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     </ul>
   </div>
   <!-- Mask for making the page dark -->
-  <div class="mask z-10 bg-black/20 absolute inset-0"></div>
+  <div class="mask z-10 bg-black/10 absolute inset-0"></div>
 </div>
   <main class="pt-14">
     <!-- css -->
@@ -322,26 +322,26 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       </div>
       <!-- Meta data -->
       <div>
-        <section class="flex flex-wrap items-center gap-1 text-sm">
+        <section class="flex flex-wrap items-center gap-x-2 text-sm text-zinc-500 dark:text-zinc-400">
           <!-- Dates -->
           <span class="flex items-center gap-1">
-            <iconify-icon width="18" icon="mingcute:file-new-fill" ></iconify-icon>
+            <iconify-icon class="transition-all hover:-translate-y-1" width="18" icon="mingcute:file-new-fill" ></iconify-icon>
             Created: <time class="w-max">2023-09-16</time>
           </span>
           <span class="flex items-center gap-1">
-            <iconify-icon width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
-            Edited: <time class="w-max">2023-09-18</time>
+            <iconify-icon class="transition-all hover:-translate-y-1" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
+            Edited: <time class="w-max">2023-09-19</time>
           </span>
           <!-- Word count -->
           <span class="flex items-center gap-1">
-            <iconify-icon width="18" icon="mingcute:book-6-fill" ></iconify-icon>
+            <iconify-icon class="transition-all hover:-translate-y-1" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
             <span>1.2k words, 4 min</span>
           </span>
           <!-- Categories -->
           
             <!-- <span class="text-gray-400">·</span> -->
             <span class="flex items-center gap-1">
-              <iconify-icon width="18" icon="mingcute:classify-2-fill" class="mr-0"></iconify-icon>
+              <iconify-icon class="transition-all hover:-translate-y-1" width="18" icon="mingcute:classify-2-fill" class="mr-0"></iconify-icon>
               <a class="article-category-link" href="/categories/life/">life</a>
             </span>
           
@@ -351,39 +351,39 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       <div class="flex flex-wrap gap-1 pt-2">
         
           
-            <a href="/tags/00/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/00/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>00</p>
             </a>
           
-            <a href="/tags/life/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/life/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>life</p>
             </a>
           
-            <a href="/tags/jekyll/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/jekyll/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>jekyll</p>
             </a>
           
-            <a href="/tags/hugo/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/hugo/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>hugo</p>
             </a>
           
-            <a href="/tags/%E4%B8%AD%E6%96%87/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/%E4%B8%AD%E6%96%87/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>中文</p>
             </a>
           
-            <a href="/tags/blog/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/blog/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>blog</p>
             </a>
           
-            <a href="/tags/visa/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/visa/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>visa</p>
             </a>
           
-            <a href="/tags/hexo/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/hexo/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>hexo</p>
             </a>
           
-            <a href="/tags/work/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+            <a href="/tags/work/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
               <p>work</p>
             </a>
           
@@ -411,7 +411,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <p>最近还申请了签证，决定了寒假 00 跟我一起回家！在家待一整个月，好神奇，觉得我们的关系发展得好顺利。马上的国庆 🇨🇳 我会跟 00 回去武汉和应城参加她高中同学和表姐的婚礼 💑，顺便还会看她的外公外婆。</p>
 <p><img src="/images/%E4%B8%AD%E5%9B%BD%E6%8A%A4%E7%85%A7.jpg" alt="中国公民的护照"></p>
 <blockquote>
-<p>00 的签证，是我向往的身份！</p>
+<p>00 的护照，是我向往的身份！</p>
 </blockquote>
 <p><img src="/images/%E7%94%B3%E8%AF%B7%E7%AD%BE%E8%AF%81.jpg" alt="00在签证中心前面"></p>
 <blockquote>
@@ -507,7 +507,7 @@ $$</p>
     </div>
     <div class="border-l border-1 border-gray-400 pl-2">
       
-        <a href="/2023/09/16/CFDBench/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+        <a href="/2023/09/16/CFDBench/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center hover:translate-x-1 transition-all">
           CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics
           <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
         </a>
