@@ -5,7 +5,7 @@ updated: 2023-09-16 20:11:00
 type: "about"
 ---
 
-[中文](#chinese-version-中文版本)
+[中文](#Chinese-Version-中文版本)
 
 Social links:
 
