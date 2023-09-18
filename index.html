@@ -163,12 +163,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex items-center text-base gap-1">
+    <nav class="flex flex-row items-center text-base gap-1 h-6">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center w-max group">
           <div class="font-medium align-middle pl-1 overflow-hidden">
-            <img class="w-6 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo"
+            <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[60deg]" id="logo"
             src="/images/logo.svg" alt="Chen Yingfa" />
           </div>
           <!-- Site Title on the top left -->
@@ -216,16 +216,16 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <div class="flex items-center gap-2 ml-2">
           
             
-              <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
-                <iconify-icon class="transition-transform hover:rotate-[10deg]" width="20" icon="simple-icons:github"></iconify-icon>
+              <a class="w-5 h-5 sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
+                <iconify-icon class="transition-transform hover:rotate-[10deg] hover:scale-125" width="20" icon="simple-icons:github"></iconify-icon>
               </a>
             
-              <a class="w-5 h-5 hidden sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
-                <iconify-icon class="transition-transform hover:rotate-[10deg]" width="20" icon="simple-icons:zhihu"></iconify-icon>
+              <a class="w-5 h-5 sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
+                <iconify-icon class="transition-transform hover:rotate-[10deg] hover:scale-125" width="20" icon="simple-icons:zhihu"></iconify-icon>
               </a>
             
-              <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
-                <iconify-icon class="transition-transform hover:rotate-[10deg]" width="20" icon="simple-icons:twitter"></iconify-icon>
+              <a class="w-5 h-5 sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
+                <iconify-icon class="transition-transform hover:rotate-[10deg] hover:scale-125" width="20" icon="simple-icons:twitter"></iconify-icon>
               </a>
             
           
@@ -235,26 +235,27 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 
           <!-- Dark/light toggle icon -->
           <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
-            <iconify-icon class="transition-transform hover:rotate-[45deg]" width="20" icon="" id="theme-icon"></iconify-icon>
+            <iconify-icon class="transition-transform hover:rotate-[45deg] hover:scale-125" width="20" icon="" id="theme-icon"></iconify-icon>
           </a>
         </div>
         <!-- Icon for dropout menu on small screens -->
         <div class="flex items-center justify-center gap-1 ml-1 sm:hidden">
           <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
-            <iconify-icon width="20" icon="ic:menu"></iconify-icon>
+            <iconify-icon width="20" icon="mingcute:menu-fill" class="transition-transform hover:scale-125 hover:rotate-[5deg]"></iconify-icon>
           </a>
           <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-            <iconify-icon width="20" icon="ic:close"></iconify-icon>
+            <iconify-icon width="20" icon="mingcute:close-circle-fill" class="transition-transform hover:scale-125 hover:rotate-[80deg]"></iconify-icon>
           </a>
         </div>
       </div>
     </nav>
   </div>
 </header>
+<!-- Dropdown menu on small screens -->
 <div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-8 bottom-0 z-10">
   <div id="menu-content"
-    class="backdrop-saturate-150  shadow-zinc-500/80 relative z-20 bg-white/70 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-200">
-    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+    class="drop-shadow-lg shadow-zinc-500/50 relative z-20 bg-white/70 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 backdrop-blur-md -translate-y-full transition-transform duration-200">
+    <ul class="nav flex flex-col sm:flex-row text-md font-medium">
       
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
           <a href="/index" class="flex h-12 sm:h-auto items-center">
@@ -294,6 +295,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
     </ul>
   </div>
+  <!-- Mask for making the page dark -->
   <div class="mask z-10 bg-black/20 absolute inset-0"></div>
 </div>
   <main class="pt-14">
@@ -303,17 +305,23 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <div class="flex flex-col items-center justify-center">
         <img class="w-24 h-24 rounded-full" src="/images/logo.svg" alt="Chen Yingfa" />
         <!-- Site title -->
-        <h1 class="site-title text-4xl font-bold leading-relaxed text-black dark:text-zinc-200">
+        <h1 class="site-title text-4xl font-extrabold text-gray-800 dark:text-zinc-200">
           Chen Yingfa
         </h1>
         <!-- Sub-title -->
-        <p class="text-xl text-gray-800 dark:text-zinc-200 mt-2 font-bold text-black dark:text-zinc-200">
+        <p class="text-xl font-extrabold text-gray-800 dark:text-zinc-200 mt-2 dark:text-zinc-200">
           陈英发
         </p>
-        <p class="mt-3">
-          Beijing · 北京
-          · <a href="/pdf/cv.pdf">CV (Dec, 2022)</a>
-        </p>
+        <div class="flex flex-row items-center gap-6 mt-3">
+          <span class="flex flex-row items-center gap-1">
+            <iconify-icon width="18" icon="mingcute:home-2-fill"></iconify-icon>
+            <p>Beijing 北京</p>
+          </span>
+          <a href="/pdf/cv.pdf" class="flex flex-row items-center gap-1">
+            <iconify-icon width="18" icon="mingcute:document-fill"></iconify-icon>
+            <p>CV 简历 (Dec, 2022)</p>
+          </a>
+        </div>
         <!-- Description from config -->
         <div class="description-container max-w-prose mx-auto grid grid-cols-1">
           <div class="text-left p-8">
@@ -332,10 +340,14 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <!-- 分割线 -->
   <div class="flex flex-col items-center justify-center0">
     <hr class="w-1/2 my-8 h-[1px] bg-gray-200 dark:bg-zinc-700 mr-1/2"></hr>
-    <p class="text-center p-4 text-gray-400 text-2xl">Recent Works</p>
+    <div class="flex flex-row items-center gap-1 text-zinc-300 dark:text-zinc-600">
+      <iconify-icon width="26" icon="mingcute:news-fill"></iconify-icon>
+      <p class="text-center text-3xl">Recent Works</p>
+    </div>
   </div>
 
-  <section class="px-6 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
+  <!-- List of featured posts -->
+  <section class="px-6 py-8 max-w-prose mx-auto gap-12 grid grid-cols-1">
     
     
       
@@ -348,33 +360,35 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         <!-- The post -->
         <div class="flex flex-col gap-1 post-container">
-          <a style="--stagger:0" href="/2023/09/14/EREN/" data-animate>
+          <a style="--stagger:0" href="/2023/09/16/CFDBench/" data-animate>
             <!-- Post Title -->
             <header>
-              <h2 class="font-bold text-lg text-zinc-800 dark:text-zinc-200">
-                (EREN) Robust and Scalable Model Editing for Large Language Models
+              <h2 class="font-bold text-lg text-zinc-600 dark:text-zinc-300">
+                CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics
               </h2>
             </header>
             <section class="text-zinc-500 dark:text-zinc-400 text-sm time">
               <p class="line-clamp-4">
                 
                   <div class="py-2">
-                    <p>This is my first ever stand-alone research work, I hope it can be accepted at EMNLP 2023, but judging from its review scores, it can only get EMNLP Findings. But that's acceptable.</p>
+                    <p><a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
+<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a target="_blank" rel="noopener" href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
                   </div>
                   <!-- Line sep -->
-                  <hr class=" h-[1px] bg-zinc-200 dark:bg-zinc-700 mr-1/2"></hr>
+                  <!-- <hr class="w-1/4 h-[1px] bg-zinc-200 dark:bg-zinc-700"></hr> -->
                 
               </p>
             </section>
             <!-- Post statistics -->
-            <div class="text-sm text-zinc-500 dark:text-zinc-400">
-              <p class="line-clamp-4">
-                Sep 14, 2023
-                ·
-                303 words
-                ·
-                1 min
-              </p>
+            <div class="flex flex-row items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+              <span class="flex flex-row items-center gap-1">
+                <iconify-icon width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
+                Sep 16, 2023
+              </span>
+              <span class="flex flex-row items-center gap-1">
+                <iconify-icon width="18" icon="ant-design:read-filled" ></iconify-icon>
+                309 words, 1 min
+              </span>
             </div>
           </a>
           <!-- Tags -->
@@ -386,23 +400,19 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 </span>
               
                 <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/arxiv/">arxiv</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/llm/">llm</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/knowledge/">knowledge</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
                   <a href="/tags/research/">research</a>
                 </span>
               
                 <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/emnlp/">emnlp</a>
+                  <a href="/tags/cfd/">cfd</a>
+                </span>
+              
+                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+                  <a href="/tags/dataset/">dataset</a>
+                </span>
+              
+                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+                  <a href="/tags/00/">00</a>
                 </span>
               
                 <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
@@ -420,34 +430,34 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         <!-- The post -->
         <div class="flex flex-col gap-1 post-container">
-          <a style="--stagger:1" href="/2023/09/16/CFDBench/" data-animate>
+          <a style="--stagger:1" href="/2023/09/14/EREN/" data-animate>
             <!-- Post Title -->
             <header>
-              <h2 class="font-bold text-lg text-zinc-800 dark:text-zinc-200">
-                CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics
+              <h2 class="font-bold text-lg text-zinc-600 dark:text-zinc-300">
+                (EREN) Robust and Scalable Model Editing for Large Language Models
               </h2>
             </header>
             <section class="text-zinc-500 dark:text-zinc-400 text-sm time">
               <p class="line-clamp-4">
                 
                   <div class="py-2">
-                    <p><a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
-<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a target="_blank" rel="noopener" href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
+                    <p>This is my first ever stand-alone research work, I hope it can be accepted at EMNLP 2023, but judging from its review scores, it can only get EMNLP Findings. But that's acceptable.</p>
                   </div>
                   <!-- Line sep -->
-                  <hr class=" h-[1px] bg-zinc-200 dark:bg-zinc-700 mr-1/2"></hr>
+                  <!-- <hr class="w-1/4 h-[1px] bg-zinc-200 dark:bg-zinc-700"></hr> -->
                 
               </p>
             </section>
             <!-- Post statistics -->
-            <div class="text-sm text-zinc-500 dark:text-zinc-400">
-              <p class="line-clamp-4">
-                Sep 16, 2023
-                ·
-                309 words
-                ·
-                1 min
-              </p>
+            <div class="flex flex-row items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+              <span class="flex flex-row items-center gap-1">
+                <iconify-icon width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
+                Sep 14, 2023
+              </span>
+              <span class="flex flex-row items-center gap-1">
+                <iconify-icon width="18" icon="ant-design:read-filled" ></iconify-icon>
+                303 words, 1 min
+              </span>
             </div>
           </a>
           <!-- Tags -->
@@ -467,15 +477,19 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 </span>
               
                 <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/cfd/">cfd</a>
+                  <a href="/tags/arxiv/">arxiv</a>
                 </span>
               
                 <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/dataset/">dataset</a>
+                  <a href="/tags/llm/">llm</a>
                 </span>
               
                 <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/00/">00</a>
+                  <a href="/tags/knowledge/">knowledge</a>
+                </span>
+              
+                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+                  <a href="/tags/emnlp/">emnlp</a>
                 </span>
               
             
