@@ -76,7 +76,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 > Below is the Chinese version of this text, no need to read it if you understand the above text already.
 
-# Chinese Version
+## Chinese Version 中文版本
 
 我叫陈英发。
 
