@@ -17,8 +17,8 @@ Social links:
 
 Email: (either is ok)
 
-- chenyingfa1999 (at) qq.com
-- donnychan1999 (at) gmail.com
+- chenyingfa1999@qq.com
+- donnychan1999@gmail.com
 
 ---
 
@@ -76,7 +76,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 > Below is the Chinese version of this text, no need to read it if you understand the above text already.
 
-# Chinese Version 中文版本
+# Chinese Version
 
 我叫陈英发。
 
@@ -86,7 +86,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 [:page_facing_up: 我的简历（最后更新：2022年12月）](/pdf/cv.pdf)
 
-## 教育背景
+### 教育背景
 
 - **硕士：计算机科学与技术**
 
@@ -112,7 +112,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
     2014年8月 - 2018年7月
 
-## 个人背景
+### 个人背景
 
 我于 1999 年 3 月 13 日在挪威 Arendal 出生。我长大在挪威 Aust-Agder 的一个沿海小镇 Lillesand。我的父母是华裔，分别出生在越南和柬埔寨，他们作为难民移民到挪威。我的母语是广东话。
 
@@ -120,7 +120,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 自 2022 年 3 月以来，我与我女友[骆怡宁](https://www.github.com/luo-yining/)相爱。
 
-## 兴趣爱好
+### 兴趣爱好
 
 :muscle: 体育：羽毛球，跑步，足球。
 
@@ -130,7 +130,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 ---
 
-# Extra
+## Extra
 
 Here is a binary search in Python:
 

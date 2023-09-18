@@ -9,7 +9,8 @@ tags:
 - python
 - c++
 - test
-- 中文
+- english
+- code
 ---
 
 A binary search with C++:
