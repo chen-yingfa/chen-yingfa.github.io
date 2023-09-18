@@ -166,12 +166,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <nav class="flex items-center text-base gap-1">
       <!-- Top-left logo and title -->
       <a href="/">
-        <div class="flex flex-row items-center w-max">
-          <div class="font-medium align-middle pl-1 overflow-hidden group">
+        <div class="flex flex-row items-center w-max group">
+          <div class="font-medium align-middle pl-1 overflow-hidden">
             <img class="w-6 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo"
             src="/images/logo.svg" alt="Chen Yingfa" />
           </div>
-          <!-- Title -->
+          <!-- Site Title on the top left -->
           <div class="title-container align-middle font-bold">
             Chen Yingfa
           </div>
@@ -217,41 +217,43 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           
             
               <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
-                <iconify-icon width="20" icon="simple-icons:github"></iconify-icon>
+                <iconify-icon class="transition-transform hover:rotate-[10deg]" width="20" icon="simple-icons:github"></iconify-icon>
               </a>
             
               <a class="w-5 h-5 hidden sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
-                <iconify-icon width="20" icon="simple-icons:zhihu"></iconify-icon>
+                <iconify-icon class="transition-transform hover:rotate-[10deg]" width="20" icon="simple-icons:zhihu"></iconify-icon>
               </a>
             
               <a class="w-5 h-5 hidden sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
-                <iconify-icon width="20" icon="simple-icons:twitter"></iconify-icon>
+                <iconify-icon class="transition-transform hover:rotate-[10deg]" width="20" icon="simple-icons:twitter"></iconify-icon>
               </a>
             
           
           <!-- <a class="w-5 h-5 hidden sm:flex" title="Twitter" href="rss2.xml">
             <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
           </a> -->
+
+          <!-- Dark/light toggle icon -->
           <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
-            <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+            <iconify-icon class="transition-transform hover:rotate-[45deg]" width="20" icon="" id="theme-icon"></iconify-icon>
           </a>
         </div>
         <!-- Icon for dropout menu on small screens -->
         <div class="flex items-center justify-center gap-1 ml-1 sm:hidden">
-          <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
             <iconify-icon width="20" icon="ic:menu"></iconify-icon>
-          </span>
-          <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          </a>
+          <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
             <iconify-icon width="20" icon="ic:close"></iconify-icon>
-          </span>
+          </a>
         </div>
       </div>
     </nav>
   </div>
 </header>
-<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-8 bottom-0 z-10">
   <div id="menu-content"
-    class="shadow-blue-500/80 relative z-20 bg-white/100 dark:bg-zinc-900 px-6 sm:px-8 py-2 backdrop-blur-lg -translate-y-full transition-transform duration-300">
+    class="backdrop-saturate-150  shadow-zinc-500/80 relative z-20 bg-white/70 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-200">
     <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
       
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
@@ -302,202 +304,203 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <h2 class="font-bold text-2xl mb-4">Tags</h2>
     <div class="tags-container flex flex-wrap gap-2">
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/00/">
-          <a href="/tags/00/">00</a>
+        <a href="/tags/00/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/00/">
+          00
           <span class="text-gray-400 px-1 text-xs">×4</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/life/">
-          <a href="/tags/life/">life</a>
+        <a href="/tags/life/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/life/">
+          life
           <span class="text-gray-400 px-1 text-xs">×4</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E4%B8%AD%E6%96%87/">
-          <a href="/tags/%E4%B8%AD%E6%96%87/">中文</a>
+        <a href="/tags/%E4%B8%AD%E6%96%87/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E4%B8%AD%E6%96%87/">
+          中文
           <span class="text-gray-400 px-1 text-xs">×4</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/research/">
-          <a href="/tags/research/">research</a>
+        <a href="/tags/research/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/research/">
+          research
           <span class="text-gray-400 px-1 text-xs">×3</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/english/">
-          <a href="/tags/english/">english</a>
+        <a href="/tags/english/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/english/">
+          english
           <span class="text-gray-400 px-1 text-xs">×3</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/school/">
-          <a href="/tags/school/">school</a>
+        <a href="/tags/school/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/school/">
+          school
           <span class="text-gray-400 px-1 text-xs">×3</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/test/">
-          <a href="/tags/test/">test</a>
+        <a href="/tags/test/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/test/">
+          test
           <span class="text-gray-400 px-1 text-xs">×3</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/paper/">
-          <a href="/tags/paper/">paper</a>
+        <a href="/tags/paper/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/paper/">
+          paper
           <span class="text-gray-400 px-1 text-xs">×2</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/jekyll/">
-          <a href="/tags/jekyll/">jekyll</a>
+        <a href="/tags/jekyll/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/jekyll/">
+          jekyll
           <span class="text-gray-400 px-1 text-xs">×2</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/hugo/">
-          <a href="/tags/hugo/">hugo</a>
+        <a href="/tags/hugo/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/hugo/">
+          hugo
           <span class="text-gray-400 px-1 text-xs">×2</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/blog/">
-          <a href="/tags/blog/">blog</a>
+        <a href="/tags/blog/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/blog/">
+          blog
           <span class="text-gray-400 px-1 text-xs">×2</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/cfd/">
-          <a href="/tags/cfd/">cfd</a>
+        <a href="/tags/arxiv/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/arxiv/">
+          arxiv
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/dataset/">
-          <a href="/tags/dataset/">dataset</a>
+        <a href="/tags/llm/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/llm/">
+          llm
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/arxiv/">
-          <a href="/tags/arxiv/">arxiv</a>
+        <a href="/tags/knowledge/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/knowledge/">
+          knowledge
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/llm/">
-          <a href="/tags/llm/">llm</a>
+        <a href="/tags/emnlp/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/emnlp/">
+          emnlp
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/knowledge/">
-          <a href="/tags/knowledge/">knowledge</a>
+        <a href="/tags/cfd/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/cfd/">
+          cfd
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/emnlp/">
-          <a href="/tags/emnlp/">emnlp</a>
+        <a href="/tags/dataset/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/dataset/">
+          dataset
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/update/">
-          <a href="/tags/update/">update</a>
+        <a href="/tags/update/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/update/">
+          update
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/learn/">
-          <a href="/tags/learn/">learn</a>
+        <a href="/tags/learn/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/learn/">
+          learn
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/important/">
-          <a href="/tags/important/">important</a>
+        <a href="/tags/important/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/important/">
+          important
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/static-site-generator/">
-          <a href="/tags/static-site-generator/">static-site-generator</a>
+        <a href="/tags/static-site-generator/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/static-site-generator/">
+          static-site-generator
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/homework/">
-          <a href="/tags/homework/">homework</a>
+        <a href="/tags/homework/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/homework/">
+          homework
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">
-          <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">孩子们</a>
+        <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">
+          孩子们
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%8D%A7%E9%BE%99/">
-          <a href="/tags/%E5%8D%A7%E9%BE%99/">卧龙</a>
+        <a href="/tags/%E5%8D%A7%E9%BE%99/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%8D%A7%E9%BE%99/">
+          卧龙
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E7%8C%AB%E5%92%AA/">
-          <a href="/tags/%E7%8C%AB%E5%92%AA/">猫咪</a>
+        <a href="/tags/%E7%8C%AB%E5%92%AA/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E7%8C%AB%E5%92%AA/">
+          猫咪
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%B0%8F%E7%BB%BF/">
-          <a href="/tags/%E5%B0%8F%E7%BB%BF/">小绿</a>
+        <a href="/tags/%E5%B0%8F%E7%BB%BF/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%B0%8F%E7%BB%BF/">
+          小绿
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%9C%9F%E9%B8%A1/">
-          <a href="/tags/%E5%9C%9F%E9%B8%A1/">土鸡</a>
+        <a href="/tags/%E5%9C%9F%E9%B8%A1/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/%E5%9C%9F%E9%B8%A1/">
+          土鸡
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/algorithm/">
-          <a href="/tags/algorithm/">algorithm</a>
+        <a href="/tags/deep-learning/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/deep-learning/">
+          deep-learning
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/binary-search/">
-          <a href="/tags/binary-search/">binary-search</a>
+        <a href="/tags/graduation/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/graduation/">
+          graduation
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/rust/">
-          <a href="/tags/rust/">rust</a>
+        <a href="/tags/algorithm/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/algorithm/">
+          algorithm
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/python/">
-          <a href="/tags/python/">python</a>
+        <a href="/tags/binary-search/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/binary-search/">
+          binary-search
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/c/">
-          <a href="/tags/c/">c++</a>
+        <a href="/tags/rust/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/rust/">
+          rust
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/code/">
-          <a href="/tags/code/">code</a>
+        <a href="/tags/python/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/python/">
+          python
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/visa/">
-          <a href="/tags/visa/">visa</a>
+        <a href="/tags/c/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/c/">
+          c++
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/hexo/">
-          <a href="/tags/hexo/">hexo</a>
+        <a href="/tags/code/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/code/">
+          code
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/work/">
-          <a href="/tags/work/">work</a>
+        <a href="/tags/visa/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/visa/">
+          visa
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/deep-learning/">
-          <a href="/tags/deep-learning/">deep-learning</a>
+        <a href="/tags/hexo/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/hexo/">
+          hexo
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
-        <div class="bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/graduation/">
-          <a href="/tags/graduation/">graduation</a>
+        <a href="/tags/work/" class="transition-transform hover:scale-110 bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 hover:dark:bg-zinc-700 px-2 py-1 rounded-md transition-colors" href="/tags/work/">
+          work
           <span class="text-gray-400 px-1 text-xs">×1</span>
-        </div>
+        </a>
       
     </div>
   </div>
 
 
   </main>
-  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <footer class="flex flex-col h-40 items-center justify-center text-zinc-400 dark:text-zinc-600 text-sm">
+  <!-- <hr class="w-1/3 my-8 h-[1px] bg-gray-200 dark:bg-zinc-700"></hr> -->
   <!-- busuanzi -->
   
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -511,8 +514,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <span class="flex items-center">
     <iconify-icon width="14" icon="carbon:view-filled" width="18"></iconify-icon>
     <span class="mx-1">浏览量 Page View:</span>
+    <span id="busuanzi_value_site_pv"></span>
   </span>
-  <span id="busuanzi_value_site_pv"></span>
 </div>
 <!-- End Busuanzi Analytics -->
 

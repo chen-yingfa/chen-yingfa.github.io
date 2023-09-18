@@ -144,6 +144,9 @@ a:hover {
 .toc-list ol {
   margin-top: 0.3rem;
 }
+.back-to-top:hover {
+  transform: scale(1.1);
+}
 .back-to-top {
   -webkit-transform: translateZ(0);
   transition-property: bottom;
