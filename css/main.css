@@ -104,7 +104,7 @@ html.dark {
   --c-bg-code: #3f3f46;
   --c-scrollbar: #333;
   --c-scrollbar-hover: #555;
-  --c-sep: #fff;
+  --c-sep: #3f3f46;
 }
 a {
   color: var(--c-theme);
