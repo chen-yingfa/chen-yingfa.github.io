@@ -311,97 +311,103 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <p class="text-3xl font-bold">Some Binary Search</p>
       </div>
       <div>
-        <section class="flex items-center gap-3 text-sm">
+        <section class="flex flex-wrap items-center gap-3 text-sm">
           <!-- Date, read time, word count, and category -->
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
-            Created: <time>2023-09-14,</time>
-            Updated: <time>2023-09-17</time>
+            Created: <time class="w-max">2023-09-14,</time>
+            Updated: <time class="w-max">2023-09-18</time>
           </span>
           <!-- <span class="text-gray-400">·</span> -->
-          <!-- <span class="flex items-center gap-1">
+          <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
             <span>1 min</span>
-          </span> -->
-          <span class="text-gray-400">·</span>
+          </span>
+          <!-- <span class="text-gray-400">·</span> -->
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
             <span>157 words</span>
           </span>
           <!-- Categories -->
           
-            <span class="text-gray-400">·</span>
+            <!-- <span class="text-gray-400">·</span> -->
             <span class="flex items-center gap-1">
               <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
               <a class="article-category-link" href="/categories/test/">test</a>
             </span>
-            
-          </section>
-        </div>
-        <!-- tags -->
-        <div class="flex flex-wrap gap-1 pt-2">
           
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/test/">test</a>
-              </span>
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/%E4%B8%AD%E6%96%87/">中文</a>
-              </span>
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/algorithm/">algorithm</a>
-              </span>
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/binary-search/">binary-search</a>
-              </span>
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/rust/">rust</a>
-              </span>
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/python/">python</a>
-              </span>
-            
-              <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                <a href="/tags/c/">c++</a>
-              </span>
-            
-          
-        </div>
+        </section>
       </div>
-    </header>
-    <!-- content -->
-    <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-      <p>A binary search with C++:</p>
+      <!-- tags -->
+      <div class="flex flex-wrap gap-1 pt-2">
+        
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/english/">english</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/test/">test</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/algorithm/">algorithm</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/binary-search/">binary-search</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/rust/">rust</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/python/">python</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/c/">c++</a>
+            </span>
+          
+            <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+              <a href="/tags/code/">code</a>
+            </span>
+          
+        
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <p>A binary search with C++:</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bin_search</span><span class="params">(vector&lt;T&gt;&amp; arr, T target)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = arr.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) {</span><br><span class="line">        <span class="type">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == target) {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; target) {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>The same thing with Rust:</p>
 <figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">bin_search</span>&lt;T: <span class="built_in">Ord</span>&gt;(arr: &amp;<span class="type">Vec</span>&lt;T&gt;, target: &amp;T) <span class="punctuation">-&gt;</span> <span class="type">usize</span> {</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">left</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">right</span> = arr.<span class="title function_ invoke__">len</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> left &lt;= right {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">mid</span> = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> arr[mid] == *target {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> arr[mid] &lt; *target {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    left</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>And with Python:</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target</span>):</span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[mid] == target:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">elif</span> arr[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> left</span><br></pre></td></tr></tbody></table></figure>
-    </article>
-    <!-- prev and next -->
-    <div class="flex justify-between mt-4 pt-4 border-t border-gray-400 test-sm align-middle gap-2">
-      <div>
-        
-          <a href="/2023/09/14/EREN/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+  </article>
+
+  <!-- prev and next -->
+  <div class="flex justify-between mt-4 pt-4 border-t border-gray-400 test-sm align-middle gap-2">
+    <div>
+      
+        <a href="/2023/09/14/EREN/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
           <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
           (EREN) Robust and Scalable Model Editing for Large Language Models
         </a>
-        
-      </div>
-      <div class="border-l border-1 border-gray-400 pl-2">
-        
+      
+    </div>
+    <div class="border-l border-1 border-gray-400 pl-2">
+      
         <a href="/2023/05/18/second-post/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
           临近2023暑假，00师姐答辩，晚上打球
           <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
         </a>
-        
+      
     </div>
   </div>
+
   <!-- comment -->
   <div class="article-comments mt-12">
     
