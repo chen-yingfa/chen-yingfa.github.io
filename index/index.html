@@ -163,7 +163,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex flex-row items-center text-base gap-2 h-6 text-zinc-700 dark:text-zinc-200">
+    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-700 dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center w-max group">
@@ -172,7 +172,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             src="/images/logo.svg" alt="Chen Yingfa" />
           </div>
           <!-- Site Title on the top left -->
-          <div class="title-container align-middle font-extrabold">
+          <div class="title-container align-middle font-extrabold group-hover:translate-x-1 transition-all">
             Chen Yingfa
           </div>
         </div>
@@ -183,32 +183,44 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         index
       </div>
       <div class="flex-1"></div>
-      <div class="flex items-center gap-1">
+      <div class="flex flex-row items-center h-full gap-1">
         <!-- Page links -->
-        <div class="flex items-center gap-2 text-sm">
+        <div class="flex flex-row h-full gap-3 text-sm">
           
-            <a class="hidden sm:flex w-max" href="/index">
-              Home
+            <a href="/index" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Home
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/archives">
-              Posts
+            <a href="/archives" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Posts
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/category">
-              Categories
+            <a href="/category" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Categories
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/tag">
-              Tags
+            <a href="/tag" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Tags
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/about">
-              About Me
+            <a href="/about" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                About
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/publications">
-              Publications
+            <a href="/publications" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Publications
+              </p>
             </a>
             
         </div>
@@ -283,7 +295,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
           <a href="/about" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            About Me
+            About
           </a>
         </li>
         
@@ -313,8 +325,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           陈英发
         </p>
         <div class="flex flex-row items-center gap-6 mt-3">
-          <span class="flex flex-row items-center gap-1">
-            <iconify-icon class="transition-all hover:-translate-y-1"  width="18" icon="mingcute:home-2-fill"></iconify-icon>
+          <span class="flex flex-row items-center gap-1 group">
+            <iconify-icon class="transition-all group-hover:-translate-y-1"  width="18" icon="mingcute:home-2-fill"></iconify-icon>
             <p>Beijing 北京</p>
           </span>
           <a href="/pdf/cv.pdf" class="flex flex-row items-center gap-1 group">
@@ -340,8 +352,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <!-- 分割线 -->
   <div class="flex flex-col items-center justify-center0">
     <hr class="w-1/2 my-8 h-[1px] bg-gray-200 dark:bg-zinc-700 mr-1/2"></hr>
-    <div class="flex flex-row items-center gap-1 text-zinc-300 dark:text-zinc-600">
-      <iconify-icon class="transition-all hover:-translate-y-1" width="28" icon="mingcute:news-fill"></iconify-icon>
+    <div class="flex flex-row items-center gap-2 text-zinc-300 dark:text-zinc-600 group">
+      <iconify-icon class="transition-all group-hover:-translate-y-1 group-hover:scale-125" width="28" icon="mingcute:news-fill"></iconify-icon>
       <p class="text-center text-3xl">Recent Works</p>
     </div>
   </div>
@@ -385,12 +397,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             </section>
             <!-- Post statistics -->
             <div class="flex flex-row items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-              <span class="flex flex-row items-center gap-1">
-                <iconify-icon width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
+              <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
                 Sep 16, 2023
               </span>
-              <span class="flex flex-row items-center gap-1">
-                <iconify-icon width="18" icon="mingcute:book-6-fill" ></iconify-icon>
+              <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
                 309 words, 1 min
               </span>
             </div>
@@ -429,18 +441,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       
     
       
-    
-      
-    
-      
-    
-      
         <!-- Large year background -->
         
         
         <!-- The post -->
         <div class="flex flex-col px-6 gap-1 post-container">
-          <a style="--stagger:4" href="/2023/09/14/EREN/" data-animate>
+          <a style="--stagger:1" href="/2023/09/14/EREN/" data-animate>
             <!-- Post Title -->
             <header>
               <h2 class="post-title font-bold text-lg text-zinc-600 dark:text-zinc-300 dark:hover:text-[#de7441] hover:translate-x-2 transition-all">
@@ -460,12 +466,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             </section>
             <!-- Post statistics -->
             <div class="flex flex-row items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-              <span class="flex flex-row items-center gap-1">
-                <iconify-icon width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
+              <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
                 Sep 14, 2023
               </span>
-              <span class="flex flex-row items-center gap-1">
-                <iconify-icon width="18" icon="mingcute:book-6-fill" ></iconify-icon>
+              <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
                 303 words, 1 min
               </span>
             </div>
@@ -505,6 +511,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
           </div> -->
         </div>
+      
+    
+      
+    
+      
+    
       
     
       

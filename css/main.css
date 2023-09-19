@@ -259,11 +259,10 @@ hr {
   font-size: 0.8rem;
 }
 .prose .fancybox-img img:hover {
-  transform: scale(1.04);
-  filter: drop-shadow(0 1px 4px #000);
+  transform: scale(1.01);
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 300ms;
 }
 .prose .fancybox-img img {
   margin-bottom: 0.5rem;

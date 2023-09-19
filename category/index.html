@@ -163,7 +163,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex flex-row items-center text-base gap-2 h-6 text-zinc-700 dark:text-zinc-200">
+    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-700 dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center w-max group">
@@ -172,7 +172,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             src="/images/logo.svg" alt="Chen Yingfa" />
           </div>
           <!-- Site Title on the top left -->
-          <div class="title-container align-middle font-extrabold">
+          <div class="title-container align-middle font-extrabold group-hover:translate-x-1 transition-all">
             Chen Yingfa
           </div>
         </div>
@@ -183,32 +183,44 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         Categories 类别
       </div>
       <div class="flex-1"></div>
-      <div class="flex items-center gap-1">
+      <div class="flex flex-row items-center h-full gap-1">
         <!-- Page links -->
-        <div class="flex items-center gap-2 text-sm">
+        <div class="flex flex-row h-full gap-3 text-sm">
           
-            <a class="hidden sm:flex w-max" href="/index">
-              Home
+            <a href="/index" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Home
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/archives">
-              Posts
+            <a href="/archives" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Posts
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/category">
-              Categories
+            <a href="/category" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Categories
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/tag">
-              Tags
+            <a href="/tag" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Tags
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/about">
-              About Me
+            <a href="/about" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                About
+              </p>
             </a>
             
-            <a class="hidden sm:flex w-max" href="/publications">
-              Publications
+            <a href="/publications" class="h-full flex flex-row items-center group">
+              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+                Publications
+              </p>
             </a>
             
         </div>
@@ -283,7 +295,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
           <a href="/about" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            About Me
+            About
           </a>
         </li>
         
@@ -305,24 +317,30 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <!-- 显示所有存在的 category -->
   <div class="px-6 max-w-prose mx-auto md:px-0 mt-6">
     <h2 class="font-bold text-2xl">Categories</h2>
-    <ul class="mt-2">
+    <div class="mt-2 flex flex-col">
       
-        <li class="mt-2 hover:translate-x-2 transition-all">
-          <a href="/categories/paper/"> paper</a>
-          <span>(2)</span>
-        </li>
+        <a href="/categories/paper/" class="py-2 group">
+          <div class="flex flex-row gap-1 group-hover:translate-x-2 transition-all">
+            <p> paper</p>
+            <span>(2)</span>
+          </div>
+        </a>
       
-        <li class="mt-2 hover:translate-x-2 transition-all">
-          <a href="/categories/life/"> life</a>
-          <span>(4)</span>
-        </li>
+        <a href="/categories/life/" class="py-2 group">
+          <div class="flex flex-row gap-1 group-hover:translate-x-2 transition-all">
+            <p> life</p>
+            <span>(4)</span>
+          </div>
+        </a>
       
-        <li class="mt-2 hover:translate-x-2 transition-all">
-          <a href="/categories/test/"> test</a>
-          <span>(1)</span>
-        </li>
+        <a href="/categories/test/" class="py-2 group">
+          <div class="flex flex-row gap-1 group-hover:translate-x-2 transition-all">
+            <p> test</p>
+            <span>(1)</span>
+          </div>
+        </a>
       
-    </ul>
+    </div>
   </div>
 
 
