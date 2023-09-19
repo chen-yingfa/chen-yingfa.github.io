@@ -6,7 +6,6 @@ tags:
 - life
 - '00'
 - school
-- deep-learning
 - graduation
 - 中文
 ---

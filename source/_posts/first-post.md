@@ -3,12 +3,9 @@ title: 第一个帖子，瞎写点东西
 date: 2023-05-17 23:00:00
 categories: life
 tags:
-- test
-- blog
 - life
 - school
 - research
-- homework
 - "00"
 - 孩子们
 - 卧龙
@@ -44,14 +41,6 @@ tags:
   - 去加拿大，然后回挪威一两周，然后回来跟 00 去南京，我不用签证，但是还是有很多手续。
 - 写好开题报告
   - 还不知道做啥呢
-
-
-
-
-
-
-
-
 
 ## 我的家乡 Lillesand
 

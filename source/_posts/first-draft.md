@@ -6,10 +6,6 @@ date: 2022-10-27 14:04:16 +0800
 categories: life
 tags: 
 - life
-- school
-- update
-- learn
-- important
 - jekyll
 - test
 - hugo
