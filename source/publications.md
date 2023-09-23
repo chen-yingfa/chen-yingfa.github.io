@@ -1,8 +1,9 @@
 ---
+title: My Publications
 date: 2023-09-16 19:13:19
 type: "publications"
 ---
-# My Publications
+<!-- # My Publications -->
 
 List of all my publications:
 

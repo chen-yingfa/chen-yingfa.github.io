@@ -9,7 +9,7 @@ tags:
 - machine-learning
 - ethics
 - safety
-- ai alignment
+- ai-alignment
 - 面壁智能
 - modelbest
 - life
