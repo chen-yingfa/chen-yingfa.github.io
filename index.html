@@ -40,9 +40,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
-
-
 
 <script src="/lib/jquery.min.js"></script>
 
@@ -55,32 +52,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   tailwind.config = {
     darkMode: "class",
   };
-</script>
-
-
-<script src="/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
 </script>
 
 <script>
@@ -376,7 +347,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         <!-- The post -->
         <div class="flex flex-col px-6 gap-1 post-container">
-          <a style="--stagger:0" href="/2023/09/16/CFDBench/" data-animate>
+          <a style="--stagger:0" href="/2023/09/16/CFDBench/">
             <!-- Post Title -->
             <header>
               <h2 class="post-title font-bold text-lg text-zinc-600 dark:text-zinc-300 dark:hover:text-[#de7441] hover:translate-x-2 transition-all">
@@ -411,60 +382,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
               </span>
             </div>
           </a>
-          <!-- Tags -->
-          <!-- <div class="border-gray-200 flex flex-wrap gap-1">
-            
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/paper/">paper</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/research/">research</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/cfd/">cfd</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/dataset/">dataset</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/00/">00</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/english/">english</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/pinn/">pinn</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/fno/">fno</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/machine-learning/">machine-learning</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/deep-learning/">deep-learning</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/deeponet/">deeponet</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/ai4science/">ai4science</a>
-                </span>
-              
-            
-          </div> -->
         </div>
       
     
@@ -474,7 +391,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         <!-- The post -->
         <div class="flex flex-col px-6 gap-1 post-container">
-          <a style="--stagger:1" href="/2023/09/14/EREN/" data-animate>
+          <a style="--stagger:1" href="/2023/09/14/EREN/">
             <!-- Post Title -->
             <header>
               <h2 class="post-title font-bold text-lg text-zinc-600 dark:text-zinc-300 dark:hover:text-[#de7441] hover:translate-x-2 transition-all">
@@ -508,68 +425,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
               </span>
             </div>
           </a>
-          <!-- Tags -->
-          <!-- <div class="border-gray-200 flex flex-wrap gap-1">
-            
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/paper/">paper</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/research/">research</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/english/">english</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/arxiv/">arxiv</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/llm/">llm</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/knowledge/">knowledge</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/emnlp/">emnlp</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/model-editing/">model editing</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/in-context-learning/">in-context-learning</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/ai/">ai</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/serac/">serac</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/rome/">rome</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/eren/">eren</a>
-                </span>
-              
-                <span class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-                  <a href="/tags/mend/">mend</a>
-                </span>
-              
-            
-          </div> -->
         </div>
       
     
@@ -595,17 +450,17 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="ic:round-person" width="18"></iconify-icon>
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
     <span class="mr-1">访客 Visitors: </span>
     <span id="busuanzi_value_site_uv"></span>
-  </span>
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="carbon:view-filled" width="18"></iconify-icon>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
     <span class="mx-1">浏览量 Page View:</span>
     <span id="busuanzi_value_site_pv"></span>
-  </span>
+  </div>
 </div>
 <!-- End Busuanzi Analytics -->
 
@@ -614,7 +469,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <div class="flex items-center gap-2">
     <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
     <span>© 2023</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <iconify-icon width="16" icon="emojione-monotone:maple-leaf" ></iconify-icon>
     <a href="https://github.com/chen-yingfa" target="_blank" rel="noopener noreferrer">陈英发</a>
   </div>
   <!-- powered by -->

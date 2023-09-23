@@ -40,9 +40,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
-
-
 
 <script src="/lib/jquery.min.js"></script>
 
@@ -55,32 +52,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   tailwind.config = {
     darkMode: "class",
   };
-</script>
-
-
-<script src="/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
 </script>
 
 <script>
@@ -351,17 +322,17 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="ic:round-person" width="18"></iconify-icon>
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
     <span class="mr-1">访客 Visitors: </span>
     <span id="busuanzi_value_site_uv"></span>
-  </span>
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="carbon:view-filled" width="18"></iconify-icon>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
     <span class="mx-1">浏览量 Page View:</span>
     <span id="busuanzi_value_site_pv"></span>
-  </span>
+  </div>
 </div>
 <!-- End Busuanzi Analytics -->
 
@@ -370,7 +341,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <div class="flex items-center gap-2">
     <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
     <span>© 2023</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <iconify-icon width="16" icon="emojione-monotone:maple-leaf" ></iconify-icon>
     <a href="https://github.com/chen-yingfa" target="_blank" rel="noopener noreferrer">陈英发</a>
   </div>
   <!-- powered by -->

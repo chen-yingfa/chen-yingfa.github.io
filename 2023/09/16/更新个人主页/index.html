@@ -40,9 +40,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
-
-
 
 <script src="/lib/jquery.min.js"></script>
 
@@ -55,32 +52,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   tailwind.config = {
     darkMode: "class",
   };
-</script>
-
-
-<script src="/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
 </script>
 
 <script>
@@ -325,11 +296,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 
 
 <section class="px-6 max-w-prose mx-auto md:px-0">
-  <!-- header -->
-  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
-    <div class="pt-4 md:pt-6">
+  <!-- Post header before content -->
+  <header class="py-4">
+    <div class="flex flex-col gap-2 pt-4 md:pt-6">
       <!-- Title -->
-      <div id="article-title" class="leading-snug mb-4 md:mb-6">
+      <div id="article-title" class="leading-snug">
         <p class="text-3xl font-bold">更新个人主页</p>
       </div>
       <!-- Meta data -->
@@ -360,67 +331,82 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </section>
       </div>
       <!-- tags -->
-      <div class="flex flex-wrap gap-1 pt-2">
-        
-          
-            <a href="/tags/research/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>research</p>
-            </a>
-          
-            <a href="/tags/00/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>00</p>
-            </a>
-          
-            <a href="/tags/life/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>life</p>
-            </a>
-          
-            <a href="/tags/jekyll/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>jekyll</p>
-            </a>
-          
-            <a href="/tags/hugo/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>hugo</p>
-            </a>
-          
-            <a href="/tags/static-site-generator/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>static-site-generator</p>
-            </a>
-          
-            <a href="/tags/%E4%B8%AD%E6%96%87/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>中文</p>
-            </a>
-          
-            <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>面壁智能</p>
-            </a>
-          
-            <a href="/tags/blog/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>blog</p>
-            </a>
-          
-            <a href="/tags/%E7%AD%BE%E8%AF%81/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>签证</p>
-            </a>
-          
-            <a href="/tags/hexo/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>hexo</p>
-            </a>
-          
-            <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>羽毛球</p>
-            </a>
-          
-            <a href="/tags/work/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>work</p>
-            </a>
-          
-            <a href="/tags/%E6%9E%AB%E5%8F%B6/" class="transition-transform hover:scale-110 hover:rotate-[3deg] bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-              <p>枫叶</p>
-            </a>
-          
-        
-      </div>
+      
+<div class="flex flex-wrap gap-2">
+  
+    
+      <a href="/tags/research/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>research</p>
+      </a>
+    
+      <a href="/tags/00/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>00</p>
+      </a>
+    
+      <a href="/tags/life/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>life</p>
+      </a>
+    
+      <a href="/tags/jekyll/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>jekyll</p>
+      </a>
+    
+      <a href="/tags/hugo/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>hugo</p>
+      </a>
+    
+      <a href="/tags/static-site-generator/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>static-site-generator</p>
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>中文</p>
+      </a>
+    
+      <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>面壁智能</p>
+      </a>
+    
+      <a href="/tags/blog/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>blog</p>
+      </a>
+    
+      <a href="/tags/%E7%AD%BE%E8%AF%81/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>签证</p>
+      </a>
+    
+      <a href="/tags/hexo/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>hexo</p>
+      </a>
+    
+      <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>羽毛球</p>
+      </a>
+    
+      <a href="/tags/work/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>work</p>
+      </a>
+    
+      <a href="/tags/%E6%9E%AB%E5%8F%B6/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>枫叶</p>
+      </a>
+    
+  
+</div>
     </div>
   </header>
   <!-- content -->
@@ -663,17 +649,17 @@ $$</p>
   
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="ic:round-person" width="18"></iconify-icon>
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
     <span class="mr-1">访客 Visitors: </span>
     <span id="busuanzi_value_site_uv"></span>
-  </span>
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="carbon:view-filled" width="18"></iconify-icon>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
     <span class="mx-1">浏览量 Page View:</span>
     <span id="busuanzi_value_site_pv"></span>
-  </span>
+  </div>
 </div>
 <!-- End Busuanzi Analytics -->
 
@@ -682,7 +668,7 @@ $$</p>
   <div class="flex items-center gap-2">
     <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
     <span>© 2023</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <iconify-icon width="16" icon="emojione-monotone:maple-leaf" ></iconify-icon>
     <a href="https://github.com/chen-yingfa" target="_blank" rel="noopener noreferrer">陈英发</a>
   </div>
   <!-- powered by -->

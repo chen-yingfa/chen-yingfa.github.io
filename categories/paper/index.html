@@ -40,9 +40,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
-
-
 
 <script src="/lib/jquery.min.js"></script>
 
@@ -55,32 +52,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   tailwind.config = {
     darkMode: "class",
   };
-</script>
-
-
-<script src="/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
 </script>
 
 <script>
@@ -325,8 +296,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   
   
     
+    <!-- Large text showing the year in the background -->
     
-      <!-- Large text showing the year in the background -->
       <div class="relative pointer-events-none">
         <div class="absolute -top-6 w-[100%]">
           <p class="text-clip overflow-hidden -translate-x-2 text-9xl font-extrabold opacity-10">
@@ -337,7 +308,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     
     <!-- The post -->
     <div class="flex flex-col gap-1 px-6 post-container">
-      <a class="group" style="--stagger:0" href="/2023/09/16/CFDBench/" data-animate>
+      <a class="group" style="--stagger:0" href="/2023/09/16/CFDBench/">
         <!-- Post title -->
         <header>
           <h2 class="font-bold text-xl group-hover:translate-x-2 transition-all">
@@ -359,7 +330,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </section>
       </a>
       <!-- Post Statistics -->
-      <div class="flex flex-wrap items-center gap-x-2 gap-y-0 text-sm text-gray-400 line-clamp-4">
+      <div class="flex flex-wrap items-center gap-x-2 text-sm text-gray-400 line-clamp-4">
         <span class="flex flex-row items-center gap-1 group">
           <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16" icon="mingcute:file-new-fill" ></iconify-icon>
           <time class="w-max">
@@ -389,78 +360,80 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </span>
       </div>
       <!-- Tags -->
-      <div class="flex flex-wrap gap-2">
-        
-          
-            <a href="/tags/paper/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>paper</p>
-            </a>
-          
-            <a href="/tags/research/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>research</p>
-            </a>
-          
-            <a href="/tags/cfd/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>cfd</p>
-            </a>
-          
-            <a href="/tags/dataset/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>dataset</p>
-            </a>
-          
-            <a href="/tags/00/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>00</p>
-            </a>
-          
-            <a href="/tags/english/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>english</p>
-            </a>
-          
-            <a href="/tags/pinn/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>pinn</p>
-            </a>
-          
-            <a href="/tags/fno/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>fno</p>
-            </a>
-          
-            <a href="/tags/machine-learning/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>machine-learning</p>
-            </a>
-          
-            <a href="/tags/deep-learning/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>deep-learning</p>
-            </a>
-          
-            <a href="/tags/deeponet/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>deeponet</p>
-            </a>
-          
-            <a href="/tags/ai4science/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>ai4science</p>
-            </a>
-          
-        
-      </div>
+      
+<div class="flex flex-wrap gap-2">
+  
+    
+      <a href="/tags/paper/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>paper</p>
+      </a>
+    
+      <a href="/tags/research/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>research</p>
+      </a>
+    
+      <a href="/tags/cfd/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>cfd</p>
+      </a>
+    
+      <a href="/tags/dataset/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>dataset</p>
+      </a>
+    
+      <a href="/tags/00/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>00</p>
+      </a>
+    
+      <a href="/tags/english/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>english</p>
+      </a>
+    
+      <a href="/tags/pinn/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>pinn</p>
+      </a>
+    
+      <a href="/tags/fno/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>fno</p>
+      </a>
+    
+      <a href="/tags/machine-learning/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>machine-learning</p>
+      </a>
+    
+      <a href="/tags/deep-learning/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>deep-learning</p>
+      </a>
+    
+      <a href="/tags/deeponet/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>deeponet</p>
+      </a>
+    
+      <a href="/tags/ai4science/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>ai4science</p>
+      </a>
+    
+  
+</div>
     </div>
   
     
+    <!-- Large text showing the year in the background -->
     
     <!-- The post -->
     <div class="flex flex-col gap-1 px-6 post-container">
-      <a class="group" style="--stagger:1" href="/2023/09/14/EREN/" data-animate>
+      <a class="group" style="--stagger:1" href="/2023/09/14/EREN/">
         <!-- Post title -->
         <header>
           <h2 class="font-bold text-xl group-hover:translate-x-2 transition-all">
@@ -481,7 +454,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </section>
       </a>
       <!-- Post Statistics -->
-      <div class="flex flex-wrap items-center gap-x-2 gap-y-0 text-sm text-gray-400 line-clamp-4">
+      <div class="flex flex-wrap items-center gap-x-2 text-sm text-gray-400 line-clamp-4">
         <span class="flex flex-row items-center gap-1 group">
           <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16" icon="mingcute:file-new-fill" ></iconify-icon>
           <time class="w-max">
@@ -511,81 +484,82 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </span>
       </div>
       <!-- Tags -->
-      <div class="flex flex-wrap gap-2">
-        
-          
-            <a href="/tags/paper/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>paper</p>
-            </a>
-          
-            <a href="/tags/research/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>research</p>
-            </a>
-          
-            <a href="/tags/english/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>english</p>
-            </a>
-          
-            <a href="/tags/arxiv/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>arxiv</p>
-            </a>
-          
-            <a href="/tags/llm/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>llm</p>
-            </a>
-          
-            <a href="/tags/knowledge/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>knowledge</p>
-            </a>
-          
-            <a href="/tags/emnlp/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>emnlp</p>
-            </a>
-          
-            <a href="/tags/model-editing/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>model editing</p>
-            </a>
-          
-            <a href="/tags/in-context-learning/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>in-context-learning</p>
-            </a>
-          
-            <a href="/tags/ai/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>ai</p>
-            </a>
-          
-            <a href="/tags/serac/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>serac</p>
-            </a>
-          
-            <a href="/tags/rome/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>rome</p>
-            </a>
-          
-            <a href="/tags/eren/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>eren</p>
-            </a>
-          
-            <a href="/tags/mend/" 
-              class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
-              <p>mend</p>
-            </a>
-          
-        
-      </div>
+      
+<div class="flex flex-wrap gap-2">
+  
+    
+      <a href="/tags/paper/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>paper</p>
+      </a>
+    
+      <a href="/tags/research/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>research</p>
+      </a>
+    
+      <a href="/tags/english/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>english</p>
+      </a>
+    
+      <a href="/tags/arxiv/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>arxiv</p>
+      </a>
+    
+      <a href="/tags/llm/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>llm</p>
+      </a>
+    
+      <a href="/tags/knowledge/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>knowledge</p>
+      </a>
+    
+      <a href="/tags/emnlp/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>emnlp</p>
+      </a>
+    
+      <a href="/tags/model-editing/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>model editing</p>
+      </a>
+    
+      <a href="/tags/in-context-learning/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>in-context-learning</p>
+      </a>
+    
+      <a href="/tags/ai/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>ai</p>
+      </a>
+    
+      <a href="/tags/serac/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>serac</p>
+      </a>
+    
+      <a href="/tags/rome/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>rome</p>
+      </a>
+    
+      <a href="/tags/eren/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>eren</p>
+      </a>
+    
+      <a href="/tags/mend/" 
+        class="transition-all hover:scale-110 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-md hover:drop-shadow-md hover:rotate-[3deg]">
+        <p>mend</p>
+      </a>
+    
+  
+</div>
     </div>
   
 </section>
@@ -599,17 +573,17 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="ic:round-person" width="18"></iconify-icon>
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
     <span class="mr-1">访客 Visitors: </span>
     <span id="busuanzi_value_site_uv"></span>
-  </span>
-  <span class="flex items-center">
-    <iconify-icon width="14" icon="carbon:view-filled" width="18"></iconify-icon>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
     <span class="mx-1">浏览量 Page View:</span>
     <span id="busuanzi_value_site_pv"></span>
-  </span>
+  </div>
 </div>
 <!-- End Busuanzi Analytics -->
 
@@ -618,7 +592,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <div class="flex items-center gap-2">
     <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: inherit;">CC BY-NC-SA 4.0</a>
     <span>© 2023</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <iconify-icon width="16" icon="emojione-monotone:maple-leaf" ></iconify-icon>
     <a href="https://github.com/chen-yingfa" target="_blank" rel="noopener noreferrer">陈英发</a>
   </div>
   <!-- powered by -->
