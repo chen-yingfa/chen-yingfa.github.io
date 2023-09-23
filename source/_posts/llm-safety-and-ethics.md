@@ -1,7 +1,7 @@
 ---
 title: "Safety and Ethical Concerns in Large Language Models"
 date: 2023-09-19 18:13:06
-categories:
+categories: Thoughts
 tags:
 - english
 - research
@@ -13,6 +13,7 @@ tags:
 - 面壁智能
 - modelbest
 - life
+- tutorial
 ---
 
 I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题". Below is a list of references.

@@ -3,7 +3,7 @@ layout: post
 author: Donny Chan
 title: 第一篇
 date: 2022-10-27 14:04:16 +0800
-categories: life
+categories: Life
 tags: 
 - life
 - jekyll
@@ -11,6 +11,8 @@ tags:
 - hugo
 - static-site-generator
 - 中文
+- html
+- liquid
 ---
 
 之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。

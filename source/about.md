@@ -34,29 +34,35 @@ I'm just getting started with academia, and will be applying for PhD in the same
 
 ## Education
 
-- **M.S. in Computer Science and Technology (计算机科学与技术)**
-    
-    Tsinghua University, China
-    
-    Sep 2022 - Jul 2024 (expected)
+**M.S. in Computer Science and Technology (计算机科学与技术)**
 
-    *Research direction: natural language processing, large language models*
+<div align="right">Sep 2022 - Jul 2024 (expected)</div>
 
-    *Advisor: Prof. Zhiyuan Liu*
+Tsinghua University, China
 
+*Research direction: natural language processing, large language models*
 
-- **B.S. in Computer Science and Technology (计算机科学与技术)**
+*Advisor: Prof. Zhiyuan Liu*
 
-    Tsinghua University, China 
-    
-    Aug 2018 - Jul 2022
+---
 
+**B.S. in Computer Science and Technology (计算机科学与技术)**
 
-- **General Studies in Natural Science (Studiespesialisering med realfag)**
+<div align="right">Aug 2018 - Jul 2022</div>
 
-    Møglestu High School, Norway
+Tsinghua University, China 
 
-    Aug 2014 - Jul 2018
+---
+
+**General Studies in Natural Science (Studiespesialisering med realfag)**
+
+<div align="right">
+Aug 2014 - Jul 2018
+</div>
+
+Møglestu High School, Norway
+
+---
 
 ## Personal Background
 
@@ -64,7 +70,7 @@ I was born in March 13, 1999 in Arendal Norway. I grew up in Lillesand, a small 
 
 When I was 19, I went to Beijing for a Bachelor's degree in Computer Science at Tsinghua University.
 
-Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/).
+Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/)^[The tag [#00](../../../tags/00) refers to my girlfriend].
 
 ## Interests
 

@@ -1,7 +1,7 @@
 ---
 title: Some Binary Search
 date: 2023-09-14 19:31:09
-categories: test
+categories: Test
 tags:
 - algorithm
 - binary-search

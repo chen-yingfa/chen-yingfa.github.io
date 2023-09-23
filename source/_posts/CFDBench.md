@@ -2,7 +2,7 @@
 author: Chen Yingfa
 title: "CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics"
 date: 2023-09-16 19:47:17
-categories: paper
+categories: Paper
 tags:
 - paper
 - research
@@ -12,6 +12,7 @@ tags:
 - english
 - pinn
 - fno
+- physics
 - machine-learning
 - deep-learning
 - deeponet
