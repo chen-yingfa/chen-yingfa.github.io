@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Donny Chan
-title: 第一篇（草稿）
+title: 第一篇
 date: 2022-10-27 14:04:16 +0800
 categories: life
 tags: 

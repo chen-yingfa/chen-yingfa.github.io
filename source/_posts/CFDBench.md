@@ -1,4 +1,5 @@
 ---
+author: Chen Yingfa
 title: "CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics"
 date: 2023-09-16 19:47:17
 categories: paper
@@ -9,10 +10,16 @@ tags:
 - dataset
 - "00"
 - english
+- pinn
+- fno
+- machine-learning
+- deep-learning
+- deeponet
+- ai4science
 featured: true
 ---
 
-[Code](https://www.github.com/luo-yining/CFDBench) | [Paper (on hold by ArXiv)](...) | [知乎](https://zhuanlan.zhihu.com/p/656033757)
+[Code](https://www.github.com/luo-yining/CFDBench) | [Paper (on hold by ArXiv)](...) | [Paper (preprints.org)](https://www.preprints.org/manuscript/202309.1550/v1) | [知乎](https://zhuanlan.zhihu.com/p/656033757)
 
 I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., [Pangu-Weather](https://github.com/198808xc/Pangu-Weather) have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.
 

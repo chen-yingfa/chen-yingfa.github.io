@@ -1,4 +1,5 @@
 ---
+author: Chen Yingfa
 title: "(EREN) Robust and Scalable Model Editing for Large Language Models"
 date: 2023-09-14 19:39:34
 categories: paper
@@ -10,6 +11,13 @@ tags:
 - research
 - emnlp
 - english
+- model editing
+- in-context-learning
+- ai
+- serac
+- rome
+- eren
+- mend
 featured: true
 ---
 
