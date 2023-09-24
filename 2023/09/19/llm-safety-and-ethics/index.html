@@ -28,7 +28,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 
 
 
-<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" href="/images/favicon-32x32.png">
 
 
 <link
@@ -137,13 +137,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-700 dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
-        <div class="flex flex-row items-center w-max group">
-          <div class="align-middle pl-1 overflow-hidden">
-            <img class="w-6 mr-2 inline-block transition-transform group-hover:rotate-[60deg] group-hover:scale-110" id="logo"
-            src="/images/logo.svg" alt="Chen Yingfa" />
-          </div>
+        <div class="flex flex-row items-center gap-1 w-max group pl-2">
+          <iconify-icon icon="mingcute:home-2-fill" width="24"
+            class="group-hover:scale-125 transition-transform"></iconify-icon>
           <!-- Site Title on the top left -->
-          <div class="title-container align-middle font-extrabold group-hover:translate-x-1 transition-all">
+          <div class="title-container align-middle font-black group-hover:translate-x-1 transition-all">
             Chen Yingfa
           </div>
         </div>
@@ -158,38 +156,42 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <!-- Page links -->
         <div class="flex flex-row h-full gap-3 text-sm">
           
-            <a href="/index" class="h-full flex flex-row items-center group">
-              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
-                Home
-              </p>
-            </a>
-            
-            <a href="/archives" class="h-full flex flex-row items-center group">
-              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+            <a
+              href="/archives"
+              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              <p>
                 Posts
               </p>
             </a>
             
-            <a href="/category" class="h-full flex flex-row items-center group">
-              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+            <a
+              href="/category"
+              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              <p>
                 Categories
               </p>
             </a>
             
-            <a href="/tag" class="h-full flex flex-row items-center group">
-              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+            <a
+              href="/tag"
+              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              <p>
                 Tags
               </p>
             </a>
             
-            <a href="/publications" class="h-full flex flex-row items-center group">
-              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+            <a
+              href="/publications"
+              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              <p>
                 Publications
               </p>
             </a>
             
-            <a href="/about" class="h-full flex flex-row items-center group">
-              <p class="hidden sm:flex w-max group-hover:translate-y-[2px] transition-all">
+            <a
+              href="/about"
+              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              <p>
                 About
               </p>
             </a>
@@ -200,29 +202,37 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           
             
               <a class="w-5 h-5 sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
-                <iconify-icon class="transition-transform hover:rotate-[10deg] hover:scale-125" width="20" icon="simple-icons:github"></iconify-icon>
+                <iconify-icon
+                  class="transition-transform hover:rotate-[10deg] hover:scale-125"
+                  width="20" 
+                  icon="simple-icons:github">
+                </iconify-icon>
               </a>
             
               <a class="w-5 h-5 sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
-                <iconify-icon class="transition-transform hover:rotate-[10deg] hover:scale-125" width="20" icon="simple-icons:zhihu"></iconify-icon>
+                <iconify-icon
+                  class="transition-transform hover:rotate-[10deg] hover:scale-125"
+                  width="20" 
+                  icon="simple-icons:zhihu">
+                </iconify-icon>
               </a>
             
               <a class="w-5 h-5 sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
-                <iconify-icon class="transition-transform hover:rotate-[10deg] hover:scale-125" width="20" icon="simple-icons:twitter"></iconify-icon>
+                <iconify-icon
+                  class="transition-transform hover:rotate-[10deg] hover:scale-125"
+                  width="20" 
+                  icon="simple-icons:twitter">
+                </iconify-icon>
               </a>
             
           
-          <!-- <a class="w-5 h-5 hidden sm:flex" title="Twitter" href="rss2.xml">
-            <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
-          </a> -->
-
           <!-- Dark/light toggle icon -->
           <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
             <iconify-icon class="transition-transform hover:rotate-[45deg] hover:scale-125" width="20" icon="" id="theme-icon"></iconify-icon>
           </a>
         </div>
         <!-- Icon for dropout menu on small screens -->
-        <div class="flex items-center justify-center gap-1 ml-1 sm:hidden">
+        <div class="flex items-center justify-center gap-1 mx-1 sm:hidden">
           <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
             <iconify-icon width="20" icon="mingcute:menu-fill" class="transition-transform hover:scale-125 hover:rotate-[5deg]"></iconify-icon>
           </a>
@@ -240,12 +250,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     class="drop-shadow-lg backdrop-blur-md backdrop-saturate-150 shadow-zinc-500/50 relative z-20 bg-white/80 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 -translate-y-full transition-transform duration-200">
     <ul class="nav flex flex-col sm:flex-row text-md font-medium">
       
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
-          <a href="/index" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            Home
-          </a>
-        </li>
-        
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
           <a href="/archives" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
             Posts
@@ -313,12 +317,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           </span>
           <span class="flex items-center gap-1 group">
             <iconify-icon class="transition-all group-hover:-translate-y-1 group-hover:scale-125" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
-            Edited: <time class="w-max">2023-09-23</time>
+            Edited: <time class="w-max">2023-09-24</time>
           </span>
           <!-- Word count -->
           <span class="flex items-center gap-1 group">
             <iconify-icon class="transition-all group-hover:-translate-y-1 group-hover:scale-125" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
-            <span>529 words, 3 min</span>
+            <span>531 words, 3 min</span>
           </span>
           <!-- Categories -->
           
@@ -336,57 +340,79 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   
     
       <a href="/tags/research/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#research</p>
       </a>
     
       <a href="/tags/english/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#english</p>
       </a>
     
       <a href="/tags/machine-learning/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#machine-learning</p>
       </a>
     
       <a href="/tags/llm/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#llm</p>
       </a>
     
       <a href="/tags/life/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#life</p>
       </a>
     
       <a href="/tags/ethics/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#ethics</p>
       </a>
     
       <a href="/tags/safety/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#safety</p>
       </a>
     
       <a href="/tags/ai-alignment/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#ai-alignment</p>
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#面壁智能</p>
       </a>
     
       <a href="/tags/modelbest/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#modelbest</p>
       </a>
     
       <a href="/tags/tutorial/" 
-        class="transition-all text-zinc-500 hover:scale-110 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1 text-sm rounded-lg hover:drop-shadow-md hover:rotate-[3deg]">
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-2 py-1
+          text-sm rounded-lg hover:drop-shadow">
         <p>#tutorial</p>
       </a>
     
@@ -440,7 +466,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <p>⭐️: important</p>
 <p>⭐️⭐️: very important</p>
 <h2 id="My-Thoughts">My Thoughts</h2>
-<p>AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me, which I believe is because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated saftey", and this is very similar to model editing, which is a prolem I have worked on previous (see my publication, <a href="../../../../2023/09/14/EREN/">EREN</a>). I think using classifier on top (a safe guard), along with prompting methods and currect alignment methods is good enough, but as we can see from the <a target="_blank" rel="noopener" href="https://www.anthropic.com/index/claude-2">technical report of Claude 2</a>, the helpfulness of the model significantly drops after alignment, which is pretty hard to tackle.</p>
+<p>AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me, which I believe is because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and this is very similar to the overgeneralization model editing, which is a prolem I have worked on previous (see my publication, <a href="../../../../2023/09/14/EREN/">EREN</a>). I think using classifier on top (a safe guard), along with prompting methods and currect alignment methods is good enough, but as we can see from the <a target="_blank" rel="noopener" href="https://www.anthropic.com/index/claude-2">technical report of Claude 2</a>, the helpfulness of the model significantly drops after alignment, which is pretty hard to tackle.</p>
 <p>Another concern is that there is no concensus on the goal of alignment. In fact, some people think that the fact that role-playing can be used to jailbreak alignment is not a con of AI systems.</p>
 <p>Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This is especially for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.</p>
 <p>All in all, AI alignment is a sub-field of better controllability of AI system, and I can foresee that it will be a hot research topic for the upcoming five years.</p>

@@ -91,7 +91,7 @@ pre .params {
   color: var(--prism-decorator);
 }
 :root {
-  --c-theme: #de7441;
+  --c-theme: #3478f6;
   --c-bg: #fff;
   --c-bg-code: #ebebef;
   --c-scrollbar: #d9d9d9;
@@ -99,7 +99,7 @@ pre .params {
   --c-sep: #d1d5db;
 }
 html.dark {
-  --c-theme: #de7441;
+  --c-theme: #3478f6;
   --c-bg: #212121;
   --c-bg-code: #3f3f46;
   --c-scrollbar: #333;
@@ -278,6 +278,9 @@ li.task-list-item .task-list-item-checkbox input:checked {
   text-decoration: line-through;
 }
 .post-title:hover {
+  color: var(--c-theme);
+}
+.post-excerpt:hover > a {
   color: var(--c-theme);
 }
 @-moz-keyframes enter {
