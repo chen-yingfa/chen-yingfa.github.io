@@ -24,7 +24,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <meta name="keywords" content="Chen Yingfa,NLP,Tsinghua">
 
 
-<title>home | Chen Yingfa</title>
+<title>Tag: 三体 | Chen Yingfa</title>
 
 
 
@@ -151,7 +151,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium
         whitespace-nowrap overflow-hidden overflow-ellipsis
         text-zinc-600 dark:text-zinc:500">
-        home
+        
       </div>
       <div class="flex-1"></div>
       <div class="flex flex-row items-center h-full gap-1">
@@ -293,169 +293,301 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <div class="mask z-10 bg-black/10 absolute inset-0"></div>
 </div>
   <main class="pt-14">
-    <!-- css -->
+    <!-- 
+This page has two versions, which is shown is based on whether current page
+is "tag".
 
-<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+  - url:'http://localhost:4000/tag/' return false.
+- url:'http://localhost:4000/tags/test/' return true.
 
+The '/tag/' page shows all tags and is where you land on when you click
+on the "Tags" in the navigation bar. Otherwise if you enter 'tags' by clicking on of the tag elements in some
+posts, and it shows all posts with that tag.
 
-<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+To add a "Tags" page.
 
-<!-- toc -->
+1. hexo new page "tag"
+2. cd source/tag/index.md
+3. Add the following front matter.
 
-<section class="px-6 max-w-prose mx-auto md:px-0">
-  <!-- Post header before content -->
-  <header class="py-4">
-    <div class="flex flex-col gap-2 pt-4 md:pt-6">
-      <!-- Title -->
-      <div id="article-title" class="leading-snug">
-        <p class="text-3xl font-bold">home</p>
+---
+title: '''tag'''
+date: 2019-06-09 09:56:49
+layout: tag
+---
+-->
+
+  <!-- 已经选择了一个tag，显示一个 tag 的所有 post -->
+  <div>
+    <div class="flex flex-wrap gap-2 justify-center items-center">
+      <div class="text-xl align-middle">
+        Tag:
       </div>
-      <!-- Meta data -->
-      <div>
-        <section class="flex flex-wrap items-center gap-x-2 text-sm text-zinc-500 dark:text-zinc-400">
-          <!-- Dates -->
-          <span class="flex items-center gap-1 group">
-            <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:file-new-fill" ></iconify-icon>
-            Created: <time class="w-max">2023-09-16</time>
-          </span>
-          <span class="flex items-center gap-1 group">
-            <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
-            Edited: <time class="w-max">2023-09-16</time>
-          </span>
-          <!-- Word count -->
-          <span class="flex items-center gap-1 group">
-            <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
-            <span>1 words, 1 min</span>
-          </span>
-          <!-- Categories -->
-          
+      <div 
+      class="bg-gray-100 
+        dark:bg-transparent
+        dark:border-[1px]
+        dark:border-zinc-300
+        px-3 py-1 text-xl rounded-full
+        drop-shadow">
+        #三体
+      </div>
+  </div>
+  <section class="px-0 py-8 max-w-prose mx-auto gap-10 grid grid-cols-1">
+  
+  
+    
+    <!-- Large text showing the year in the background -->
+    
+      <div class="relative pointer-events-none">
+        <div class="absolute -top-6 w-[100%]">
+          <p class="text-clip overflow-hidden -translate-x-2 text-9xl
+            font-black opacity-10 dark:opacity-20">
+            2023
+          </p>
+        </div>
+      </div>
+    
+    <!-- The post -->
+    <div>
+      <!-- One post item in a list -->
+<div class="flex flex-col gap-1 px-6 post-container">
+    <a class="group" href="/2023/09/19/llm-safety-and-ethics/">
+        <!-- Post title -->
+        <header>
+            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+          group-hover:translate-x-2 group-hover:text-[var(--c-theme)] transition-all">
+                Safety and Ethical Concerns of Large Language Models
+            </h2>
+        </header>
+        <section class="mt-1 text-sm">
+            <p class="line-clamp-4">
+                <!-- Post excerpt -->
+                
+                    <div class="post-excerpt text-zinc-600 dark:text-zinc-300">
+                        <p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
+                    </div>
+                    <!-- Line sep -->
+                    <hr class="mt-1 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    </hr>
+                
+            </p>
         </section>
-      </div>
-      <!-- tags -->
-      
+    </a>
+    <!-- Post Statistics -->
+    <div class="flex flex-wrap items-center gap-x-2 text-sm text-zinc-700 dark:text-zinc-300 line-clamp-4">
+        <span class="flex flex-row items-center gap-1 group">
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:file-new-fill"></iconify-icon>
+            <time class="w-max">
+                2023-09-19
+            </time>
+        </span>
+        <span class="flex flex-row items-center gap-1 group">
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:edit-2-fill"></iconify-icon>
+            <time class="w-max">
+                2023-09-25
+            </time>
+        </span>
+        <span class="flex flex-row items-center gap-1 group">
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:book-6-fill"></iconify-icon>
+            <p class="w-max">
+                635 words, 3 min
+            </p>
+        </span>
+        <!-- Categories -->
+        <span class="flex flex-row items-center gap-1 group">
+            
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                    icon="mingcute:classify-2-fill" class="mr-0">
+                </iconify-icon>
+                
+                    <a class="underline underline-offset-2" href="/categories/Thoughts/">Thoughts</a>
+                
+            
+        </span>
+        <!-- Tags -->
+    </div>
+    
+        
 <div class="flex flex-wrap gap-1">
   
+    
+      <a href="/tags/research/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #research
+      </a>
+    
+      <a href="/tags/english/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #english
+      </a>
+    
+      <a href="/tags/machine-learning/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #machine-learning
+      </a>
+    
+      <a href="/tags/llm/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #llm
+      </a>
+    
+      <a href="/tags/eren/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #eren
+      </a>
+    
+      <a href="/tags/life/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #life
+      </a>
+    
+      <a href="/tags/ethics/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #ethics
+      </a>
+    
+      <a href="/tags/safety/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #safety
+      </a>
+    
+      <a href="/tags/ai-alignment/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #ai-alignment
+      </a>
+    
+      <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #面壁智能
+      </a>
+    
+      <a href="/tags/modelbest/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #modelbest
+      </a>
+    
+      <a href="/tags/tutorial/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #tutorial
+      </a>
+    
+      <a href="/tags/chatgpt/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #chatgpt
+      </a>
+    
+      <a href="/tags/claude/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #claude
+      </a>
+    
+      <a href="/tags/%E4%B8%89%E4%BD%93/" 
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #三体
+      </a>
+    
+  
+</div>
+    
 </div>
     </div>
-  </header>
-  <!-- content -->
-  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <p>Hello</p>
-
-  </article>
-
-  <!-- prev and next -->
-  <div class="flex justify-between mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-700 test-sm align-middle gap-2">
-    <div>
-      
-    </div>
-    <div class="border-l border-1 border-gray-400 pl-2">
-      
-    </div>
-  </div>
-
-  <!-- comment -->
-  <div class="article-comments mt-12">
-    
-
-  </div>
+  
 </section>
-<!-- js inspect -->
 
-<script src="/lib/clipboard.min.js"></script>
-
-
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-  });
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  $(document).ready(() => {
-    const maraidConfig = {
-      theme: "default",
-      logLevel: 3,
-      flowchart: { curve: "linear" },
-      gantt: { axisFormat: "%m/%d/%Y" },
-      sequence: { actorMargin: 50 },
-    };
-    mermaid.initialize(maraidConfig);
-  });
-</script>
-
-
-
-<script src="/lib/fancybox/fancybox.umd.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-    $('.post-content').each(function(i){
-      $(this).find('img').each(function(){
-        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
-        var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
-        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
-      });
-      $(this).find('.fancybox').each(function(){
-        $(this).attr('rel', 'article' + i);
-      });
-    });
-
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        // options
-    })
-  })
-</script>
-
-<!-- tocbot begin -->
-
-<script src="/lib/tocbot/tocbot.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-      tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.post-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
-  })
-</script>
-<!-- tocbot end -->
 
 
   </main>

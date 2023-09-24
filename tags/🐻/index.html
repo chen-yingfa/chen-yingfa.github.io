@@ -130,11 +130,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
-<body class="font-[Arial] bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
+<body class="font-arial bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
   <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-700 dark:text-zinc-200">
+    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-800 dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group pl-2">
@@ -148,7 +148,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       </a>
       <!-- Post Title, shown when scrolled down -->
       <div id="header-title"
-        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis text-zinc-500 dark:text-zinc:500">
+        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium
+        whitespace-nowrap overflow-hidden overflow-ellipsis
+        text-zinc-600 dark:text-zinc:500">
         
       </div>
       <div class="flex-1"></div>
@@ -158,7 +160,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           
             <a
               href="/archives"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Posts
               </p>
@@ -166,7 +169,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/category"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Categories
               </p>
@@ -174,7 +178,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/tag"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Tags
               </p>
@@ -182,7 +187,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/publications"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Publications
               </p>
@@ -190,7 +196,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/about"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 About
               </p>
@@ -316,7 +323,13 @@ layout: tag
       <div class="text-xl align-middle">
         Tag:
       </div>
-      <div class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-xl rounded-md transition-colors">
+      <div 
+      class="bg-gray-100 
+        dark:bg-transparent
+        dark:border-[1px]
+        dark:border-zinc-300
+        px-3 py-1 text-xl rounded-full
+        drop-shadow">
         #🐻
       </div>
   </div>
@@ -328,27 +341,31 @@ layout: tag
     
       <div class="relative pointer-events-none">
         <div class="absolute -top-6 w-[100%]">
-          <p class="text-clip overflow-hidden -translate-x-2 text-9xl font-extrabold opacity-10">
+          <p class="text-clip overflow-hidden -translate-x-2 text-9xl
+            font-black opacity-10 dark:opacity-20">
             2023
           </p>
         </div>
       </div>
     
     <!-- The post -->
-    <div class="flex flex-col gap-1 px-6 post-container">
-      <a class="group" href="/2023/05/17/first-post/">
+    <div>
+      <!-- One post item in a list -->
+<div class="flex flex-col gap-1 px-6 post-container">
+    <a class="group" href="/2023/05/17/first-post/">
         <!-- Post title -->
         <header>
-          <h2 class="font-bold text-xl group-hover:translate-x-2 transition-all">
-            第一个帖子，瞎写点东西
-          </h2>
+            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+          group-hover:translate-x-2 group-hover:text-[var(--c-theme)] transition-all">
+                第一个帖子，瞎写点东西
+            </h2>
         </header>
-        <section class="text-zinc-500 dark:text-zinc-400 mt-1 text-sm time">
-          <p class="line-clamp-4">
-            <!-- Post excerpt -->
-            
-              <div class="post-excerpt">
-                <p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p>
+        <section class="mt-1 text-sm">
+            <p class="line-clamp-4">
+                <!-- Post excerpt -->
+                
+                    <div class="post-excerpt text-zinc-600 dark:text-zinc-300">
+                        <p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p>
 <p>我和 00 的孩子们：</p>
 <ul>
 <li>卧龙：调皮的肥猫 🐱</li>
@@ -359,222 +376,322 @@ layout: tag
 <li>内存条：白色的熊熊 🐻</li>
 <li>闪光灯：灰色的熊熊 🐻</li>
 </ul>
-              </div>
-              <!-- Line sep -->
-              <hr class="mt-1 h-[1px] bg-gray-200 dark:bg-zinc-700 mr-1/2"></hr>
-            
-          </p>
+                    </div>
+                    <!-- Line sep -->
+                    <hr class="mt-1 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    </hr>
+                
+            </p>
         </section>
-      </a>
-      <!-- Post Statistics -->
-      <div class="flex flex-wrap items-center gap-x-2 text-sm text-gray-400 line-clamp-4">
+    </a>
+    <!-- Post Statistics -->
+    <div class="flex flex-wrap items-center gap-x-2 text-sm text-zinc-700 dark:text-zinc-300 line-clamp-4">
         <span class="flex flex-row items-center gap-1 group">
-          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:file-new-fill" ></iconify-icon>
-          <time class="w-max">
-            2023-05-17
-          </time>
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:file-new-fill"></iconify-icon>
+            <time class="w-max">
+                2023-05-17
+            </time>
         </span>
         <span class="flex flex-row items-center gap-1 group">
-          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:edit-2-fill" ></iconify-icon>
-          <time class="w-max">
-            2023-09-23
-          </time>
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:edit-2-fill"></iconify-icon>
+            <time class="w-max">
+                2023-09-23
+            </time>
         </span>
         <span class="flex flex-row items-center gap-1 group">
-          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:book-6-fill" ></iconify-icon>
-          <p class="w-max">
-            239 words, 1 min
-          </p>
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:book-6-fill"></iconify-icon>
+            <p class="w-max">
+                239 words, 1 min
+            </p>
         </span>
         <!-- Categories -->
         <span class="flex flex-row items-center gap-1 group">
-          
-            <iconify-icon
-              class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform"
-              width="16"
-              icon="mingcute:classify-2-fill"
-              class="mr-0">
-            </iconify-icon>
             
-              <a class="text-gray-400" href="/categories/Life/">Life</a>
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                    icon="mingcute:classify-2-fill" class="mr-0">
+                </iconify-icon>
+                
+                    <a class="underline underline-offset-2" href="/categories/Life/">Life</a>
+                
             
-          
         </span>
-      </div>
-      <!-- Tags -->
-      
+        <!-- Tags -->
+    </div>
+    
+        
 <div class="flex flex-wrap gap-1">
   
     
       <a href="/tags/research/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#research</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #research
       </a>
     
       <a href="/tags/cfd/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#cfd</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #cfd
       </a>
     
       <a href="/tags/00/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#00</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #00
       </a>
     
       <a href="/tags/life/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#life</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #life
       </a>
     
       <a href="/tags/school/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#school</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #school
       </a>
     
       <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#孩子们</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #孩子们
       </a>
     
       <a href="/tags/%E5%8D%A7%E9%BE%99/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#卧龙</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #卧龙
       </a>
     
       <a href="/tags/%E5%87%A4%E9%9B%8F/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#凤雏</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #凤雏
       </a>
     
       <a href="/tags/%E9%AA%86%E9%9B%81/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#骆雁</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #骆雁
       </a>
     
       <a href="/tags/%E9%BB%84%E5%B8%9D/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#黄帝</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #黄帝
       </a>
     
       <a href="/tags/%E5%B0%8F%E7%BB%BF/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#小绿</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #小绿
       </a>
     
       <a href="/tags/%E7%8C%AB%E5%92%AA/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#猫咪</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #猫咪
       </a>
     
       <a href="/tags/%E5%9C%9F%E9%B8%A1/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#土鸡</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #土鸡
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#中文</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #中文
       </a>
     
       <a href="/tags/%E7%86%8A/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#熊</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #熊
       </a>
     
       <a href="/tags/%F0%9F%90%BB/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#🐻</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #🐻
       </a>
     
       <a href="/tags/%F0%9F%90%B1/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#🐱</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #🐱
       </a>
     
       <a href="/tags/%F0%9F%90%87/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#🐇</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #🐇
       </a>
     
       <a href="/tags/%F0%9F%90%B0/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#🐰</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #🐰
       </a>
     
       <a href="/tags/%F0%9F%90%8A/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#🐊</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #🐊
       </a>
     
       <a href="/tags/emoren/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#emoren</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #emoren
       </a>
     
       <a href="/tags/acl/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#acl</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #acl
       </a>
     
       <a href="/tags/lillesand/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#lillesand</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #lillesand
       </a>
     
       <a href="/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#加拿大</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #加拿大
       </a>
     
   
+</div>
+    
 </div>
     </div>
   

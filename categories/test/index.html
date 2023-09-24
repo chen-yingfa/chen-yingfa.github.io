@@ -130,11 +130,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
-<body class="font-[Arial] bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
+<body class="font-arial bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
   <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-700 dark:text-zinc-200">
+    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-800 dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group pl-2">
@@ -148,7 +148,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       </a>
       <!-- Post Title, shown when scrolled down -->
       <div id="header-title"
-        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis text-zinc-500 dark:text-zinc:500">
+        class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium
+        whitespace-nowrap overflow-hidden overflow-ellipsis
+        text-zinc-600 dark:text-zinc:500">
         
       </div>
       <div class="flex-1"></div>
@@ -158,7 +160,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           
             <a
               href="/archives"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Posts
               </p>
@@ -166,7 +169,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/category"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Categories
               </p>
@@ -174,7 +178,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/tag"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Tags
               </p>
@@ -182,7 +187,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/publications"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 Publications
               </p>
@@ -190,7 +196,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
             <a
               href="/about"
-              class="hidden sm:flex h-full flex flex-row items-center hover:translate-y-[2px] transition-transform">
+              class="hidden sm:flex h-full flex flex-row items-center
+                hover:translate-y-[2px] transition-transform">
               <p>
                 About
               </p>
@@ -305,125 +312,164 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     
       <div class="relative pointer-events-none">
         <div class="absolute -top-6 w-[100%]">
-          <p class="text-clip overflow-hidden -translate-x-2 text-9xl font-extrabold opacity-10">
+          <p class="text-clip overflow-hidden -translate-x-2 text-9xl
+            font-black opacity-10 dark:opacity-20">
             2023
           </p>
         </div>
       </div>
     
     <!-- The post -->
-    <div class="flex flex-col gap-1 px-6 post-container">
-      <a class="group" href="/2023/09/14/some_binary_search/">
+    <div>
+      <!-- One post item in a list -->
+<div class="flex flex-col gap-1 px-6 post-container">
+    <a class="group" href="/2023/09/14/some_binary_search/">
         <!-- Post title -->
         <header>
-          <h2 class="font-bold text-xl group-hover:translate-x-2 transition-all">
-            Some Binary Search
-          </h2>
+            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+          group-hover:translate-x-2 group-hover:text-[var(--c-theme)] transition-all">
+                Some Binary Search
+            </h2>
         </header>
-        <section class="text-zinc-500 dark:text-zinc-400 mt-1 text-sm time">
-          <p class="line-clamp-4">
-            <!-- Post excerpt -->
-            
-          </p>
+        <section class="mt-1 text-sm">
+            <p class="line-clamp-4">
+                <!-- Post excerpt -->
+                
+            </p>
         </section>
-      </a>
-      <!-- Post Statistics -->
-      <div class="flex flex-wrap items-center gap-x-2 text-sm text-gray-400 line-clamp-4">
+    </a>
+    <!-- Post Statistics -->
+    <div class="flex flex-wrap items-center gap-x-2 text-sm text-zinc-700 dark:text-zinc-300 line-clamp-4">
         <span class="flex flex-row items-center gap-1 group">
-          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:file-new-fill" ></iconify-icon>
-          <time class="w-max">
-            2023-09-14
-          </time>
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:file-new-fill"></iconify-icon>
+            <time class="w-max">
+                2023-09-14
+            </time>
         </span>
         <span class="flex flex-row items-center gap-1 group">
-          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:edit-2-fill" ></iconify-icon>
-          <time class="w-max">
-            2023-09-23
-          </time>
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:edit-2-fill"></iconify-icon>
+            <time class="w-max">
+                2023-09-23
+            </time>
         </span>
         <span class="flex flex-row items-center gap-1 group">
-          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:book-6-fill" ></iconify-icon>
-          <p class="w-max">
-            157 words, 1 min
-          </p>
+            <iconify-icon class="group-hover:scale-125 transition-transform" width="16"
+                icon="mingcute:book-6-fill"></iconify-icon>
+            <p class="w-max">
+                157 words, 1 min
+            </p>
         </span>
         <!-- Categories -->
         <span class="flex flex-row items-center gap-1 group">
-          
-            <iconify-icon
-              class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform"
-              width="16"
-              icon="mingcute:classify-2-fill"
-              class="mr-0">
-            </iconify-icon>
             
-              <a class="text-gray-400" href="/categories/Test/">Test</a>
+                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                    icon="mingcute:classify-2-fill" class="mr-0">
+                </iconify-icon>
+                
+                    <a class="underline underline-offset-2" href="/categories/Test/">Test</a>
+                
             
-          
         </span>
-      </div>
-      <!-- Tags -->
-      
+        <!-- Tags -->
+    </div>
+    
+        
 <div class="flex flex-wrap gap-1">
   
     
       <a href="/tags/english/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#english</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #english
       </a>
     
       <a href="/tags/test/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#test</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #test
       </a>
     
       <a href="/tags/algorithm/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#algorithm</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #algorithm
       </a>
     
       <a href="/tags/binary-search/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#binary-search</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #binary-search
       </a>
     
       <a href="/tags/rust/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#rust</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #rust
       </a>
     
       <a href="/tags/python/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#python</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #python
       </a>
     
       <a href="/tags/c/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#c++</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #c++
       </a>
     
       <a href="/tags/code/" 
-        class="transition-all text-zinc-500 bg-zinc-100
-          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
-          text-sm rounded-lg hover:drop-shadow">
-        <p>#code</p>
+        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
+          hover:bg-zinc-200
+          dark:bg-transparent 
+          dark:border-[1px]
+          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
+          px-[6px] py-[3px]
+          text-sm rounded-full hover:drop-shadow">
+        #code
       </a>
     
   
+</div>
+    
 </div>
     </div>
   
