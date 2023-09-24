@@ -17,6 +17,7 @@ tags:
 - eren
 - chatgpt
 - claude
+- 三体
 ---
 
 I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.
@@ -73,6 +74,6 @@ AI alignment is extremely important, and we know very little about it right now.
 
 Another concern is that there is no concensus on the goal of alignment. In fact, many people think that the fact that role-playing can be used to jailbreak alignment is not a bad thing per se, especially regarding toxicity, because if the user explicitly tells the AI to role-play a person that slurs a lot, the user expects slurs (one kind of toxicity).
 
-Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This is especially for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.
+Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This concern is specially severe for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.^[Does there exist a way to make AI impossible to unalign? This reminds me of the "mind stamping" (Chinese: 思想钢印) from the Three Body Problem, a novel by Liu Cixin.]
 
 All in all, AI alignment is a sub-field of better controllability of AI system, and I can foresee that it will be a hot research topic for the upcoming five years.
