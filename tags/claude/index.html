@@ -24,7 +24,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <meta name="keywords" content="Chen Yingfa,NLP,Tsinghua">
 
 
-<title>Some Binary Search | Chen Yingfa</title>
+<title>Tag: claude | Chen Yingfa</title>
 
 
 
@@ -149,7 +149,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       <!-- Post Title, shown when scrolled down -->
       <div id="header-title"
         class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis text-zinc-500 dark:text-zinc:500">
-        Some Binary Search
+        
       </div>
       <div class="flex-1"></div>
       <div class="flex flex-row items-center h-full gap-1">
@@ -286,54 +286,122 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <div class="mask z-10 bg-black/10 absolute inset-0"></div>
 </div>
   <main class="pt-14">
-    <!-- css -->
+    <!-- 
+This page has two versions, which is shown is based on whether current page
+is "tag".
 
-<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+  - url:'http://localhost:4000/tag/' return false.
+- url:'http://localhost:4000/tags/test/' return true.
 
+The '/tag/' page shows all tags and is where you land on when you click
+on the "Tags" in the navigation bar. Otherwise if you enter 'tags' by clicking on of the tag elements in some
+posts, and it shows all posts with that tag.
 
-<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+To add a "Tags" page.
 
-<!-- toc -->
+1. hexo new page "tag"
+2. cd source/tag/index.md
+3. Add the following front matter.
 
-<section class="px-6 max-w-prose mx-auto md:px-0">
-  <!-- Post header before content -->
-  <header class="py-4">
-    <div class="flex flex-col gap-2 pt-4 md:pt-6">
-      <!-- Title -->
-      <div id="article-title" class="leading-snug">
-        <p class="text-3xl font-bold">Some Binary Search</p>
+---
+title: '''tag'''
+date: 2019-06-09 09:56:49
+layout: tag
+---
+-->
+
+  <!-- 已经选择了一个tag，显示一个 tag 的所有 post -->
+  <div>
+    <div class="flex flex-wrap gap-2 justify-center items-center">
+      <div class="text-xl align-middle">
+        Tag:
       </div>
-      <!-- Meta data -->
-      <div>
-        <section class="flex flex-wrap items-center gap-x-2 text-sm text-zinc-500 dark:text-zinc-400">
-          <!-- Dates -->
-          <span class="flex items-center gap-1 group">
-            <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:file-new-fill" ></iconify-icon>
-            Created: <time class="w-max">2023-09-14</time>
-          </span>
-          <span class="flex items-center gap-1 group">
-            <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
-            Edited: <time class="w-max">2023-09-23</time>
-          </span>
-          <!-- Word count -->
-          <span class="flex items-center gap-1 group">
-            <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
-            <span>157 words, 1 min</span>
-          </span>
-          <!-- Categories -->
-          
-            <!-- <span class="text-gray-400">·</span> -->
-            <span class="flex items-center gap-1 group">
-              <iconify-icon class="transition-all group-hover:scale-125" width="18" icon="mingcute:classify-2-fill" class="mr-0"></iconify-icon>
-              <a class="article-category-link" href="/categories/Test/">Test</a>
-            </span>
-          
+      <div class="bg-gray-100 dark:bg-zinc-800 px-2 py-1 text-xl rounded-md transition-colors">
+        #claude
+      </div>
+  </div>
+  <section class="px-0 py-8 max-w-prose mx-auto gap-10 grid grid-cols-1">
+  
+  
+    
+    <!-- Large text showing the year in the background -->
+    
+      <div class="relative pointer-events-none">
+        <div class="absolute -top-6 w-[100%]">
+          <p class="text-clip overflow-hidden -translate-x-2 text-9xl font-extrabold opacity-10">
+            2023
+          </p>
+        </div>
+      </div>
+    
+    <!-- The post -->
+    <div class="flex flex-col gap-1 px-6 post-container">
+      <a class="group" href="/2023/09/19/llm-safety-and-ethics/">
+        <!-- Post title -->
+        <header>
+          <h2 class="font-bold text-xl group-hover:translate-x-2 transition-all">
+            Safety and Ethical Concerns of Large Language Models
+          </h2>
+        </header>
+        <section class="text-zinc-500 dark:text-zinc-400 mt-1 text-sm time">
+          <p class="line-clamp-4">
+            <!-- Post excerpt -->
+            
+              <div class="post-excerpt">
+                <p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
+              </div>
+              <!-- Line sep -->
+              <hr class="mt-1 h-[1px] bg-gray-200 dark:bg-zinc-700 mr-1/2"></hr>
+            
+          </p>
         </section>
+      </a>
+      <!-- Post Statistics -->
+      <div class="flex flex-wrap items-center gap-x-2 text-sm text-gray-400 line-clamp-4">
+        <span class="flex flex-row items-center gap-1 group">
+          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:file-new-fill" ></iconify-icon>
+          <time class="w-max">
+            2023-09-19
+          </time>
+        </span>
+        <span class="flex flex-row items-center gap-1 group">
+          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:edit-2-fill" ></iconify-icon>
+          <time class="w-max">
+            2023-09-24
+          </time>
+        </span>
+        <span class="flex flex-row items-center gap-1 group">
+          <iconify-icon class="group-hover:scale-125 transition-transform" width="16" icon="mingcute:book-6-fill" ></iconify-icon>
+          <p class="w-max">
+            558 words, 3 min
+          </p>
+        </span>
+        <!-- Categories -->
+        <span class="flex flex-row items-center gap-1 group">
+          
+            <iconify-icon
+              class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform"
+              width="16"
+              icon="mingcute:classify-2-fill"
+              class="mr-0">
+            </iconify-icon>
+            
+              <a class="text-gray-400" href="/categories/Thoughts/">Thoughts</a>
+            
+          
+        </span>
       </div>
-      <!-- tags -->
+      <!-- Tags -->
       
 <div class="flex flex-wrap gap-1">
   
+    
+      <a href="/tags/research/" 
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
+          text-sm rounded-lg hover:drop-shadow">
+        <p>#research</p>
+      </a>
     
       <a href="/tags/english/" 
         class="transition-all text-zinc-500 bg-zinc-100
@@ -342,191 +410,96 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <p>#english</p>
       </a>
     
-      <a href="/tags/test/" 
+      <a href="/tags/machine-learning/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#test</p>
+        <p>#machine-learning</p>
       </a>
     
-      <a href="/tags/algorithm/" 
+      <a href="/tags/llm/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#algorithm</p>
+        <p>#llm</p>
       </a>
     
-      <a href="/tags/binary-search/" 
+      <a href="/tags/eren/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#binary-search</p>
+        <p>#eren</p>
       </a>
     
-      <a href="/tags/rust/" 
+      <a href="/tags/life/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#rust</p>
+        <p>#life</p>
       </a>
     
-      <a href="/tags/python/" 
+      <a href="/tags/ethics/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#python</p>
+        <p>#ethics</p>
       </a>
     
-      <a href="/tags/c/" 
+      <a href="/tags/safety/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#c++</p>
+        <p>#safety</p>
       </a>
     
-      <a href="/tags/code/" 
+      <a href="/tags/ai-alignment/" 
         class="transition-all text-zinc-500 bg-zinc-100
           hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
           text-sm rounded-lg hover:drop-shadow">
-        <p>#code</p>
+        <p>#ai-alignment</p>
+      </a>
+    
+      <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
+          text-sm rounded-lg hover:drop-shadow">
+        <p>#面壁智能</p>
+      </a>
+    
+      <a href="/tags/modelbest/" 
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
+          text-sm rounded-lg hover:drop-shadow">
+        <p>#modelbest</p>
+      </a>
+    
+      <a href="/tags/tutorial/" 
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
+          text-sm rounded-lg hover:drop-shadow">
+        <p>#tutorial</p>
+      </a>
+    
+      <a href="/tags/chatgpt/" 
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
+          text-sm rounded-lg hover:drop-shadow">
+        <p>#chatgpt</p>
+      </a>
+    
+      <a href="/tags/claude/" 
+        class="transition-all text-zinc-500 bg-zinc-100
+          hover:bg-zinc-200 dark:bg-zinc-800 hover:dark:bg-zinc-700 px-[6px] py-[3px]
+          text-sm rounded-lg hover:drop-shadow">
+        <p>#claude</p>
       </a>
     
   
 </div>
     </div>
-  </header>
-  <!-- content -->
-  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <p>A binary search with C++:</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bin_search</span><span class="params">(vector&lt;T&gt;&amp; arr, T target)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = arr.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) {</span><br><span class="line">        <span class="type">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == target) {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; target) {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>The same thing with Rust:</p>
-<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">bin_search</span>&lt;T: <span class="built_in">Ord</span>&gt;(arr: &amp;<span class="type">Vec</span>&lt;T&gt;, target: &amp;T) <span class="punctuation">-&gt;</span> <span class="type">usize</span> {</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">left</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">right</span> = arr.<span class="title function_ invoke__">len</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> left &lt;= right {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">mid</span> = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> arr[mid] == *target {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> arr[mid] &lt; *target {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    left</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>And with Python:</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target</span>):</span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[mid] == target:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">elif</span> arr[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> left</span><br></pre></td></tr></tbody></table></figure>
-  </article>
-
-  <!-- prev and next -->
-  <div class="flex justify-between mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-700 test-sm align-middle gap-2">
-    <div>
-      
-        <a href="/2023/09/14/EREN/" class="text-sm text-gray-400 hover:text-gray-500 hover:-translate-x-1 transition-all flex justify-center">
-          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
-          (EREN) Robust and Scalable Model Editing for Large Language Models
-        </a>
-      
-    </div>
-    <div class="border-l border-1 border-gray-400 pl-2">
-      
-        <a href="/2023/05/18/second-post/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center hover:translate-x-1 transition-all">
-          临近2023暑假，00师姐答辩，晚上打球
-          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
-        </a>
-      
-    </div>
-  </div>
-
-  <!-- comment -->
-  <div class="article-comments mt-12">
-    
-
-  </div>
+  
 </section>
-<!-- js inspect -->
 
-<script src="/lib/clipboard.min.js"></script>
-
-
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-  });
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  $(document).ready(() => {
-    const maraidConfig = {
-      theme: "default",
-      logLevel: 3,
-      flowchart: { curve: "linear" },
-      gantt: { axisFormat: "%m/%d/%Y" },
-      sequence: { actorMargin: 50 },
-    };
-    mermaid.initialize(maraidConfig);
-  });
-</script>
-
-
-
-<script src="/lib/fancybox/fancybox.umd.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-    $('.post-content').each(function(i){
-      $(this).find('img').each(function(){
-        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
-        var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
-        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
-      });
-      $(this).find('.fancybox').each(function(){
-        $(this).attr('rel', 'article' + i);
-      });
-    });
-
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        // options
-    })
-  })
-</script>
-
-<!-- tocbot begin -->
-
-<script src="/lib/tocbot/tocbot.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-      tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.post-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
-  })
-</script>
-<!-- tocbot end -->
 
 
   </main>
