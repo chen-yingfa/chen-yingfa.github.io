@@ -138,7 +138,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group pl-2">
-          <iconify-icon icon="mingcute:home-2-fill" width="24"
+          <iconify-icon icon="mingcute:home-2-fill" width="20"
             class="group-hover:scale-125 transition-transform"></iconify-icon>
           <!-- Site Title on the top left -->
           <div class="title-container align-middle font-black group-hover:translate-x-1 transition-all">
@@ -291,7 +291,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <!-- Home page info, short text about me -->
     <div class="flex flex-col items-center justify-center">
         <!-- <img class="w-24 h-24 rounded-full" src="/images/logo.svg" alt="Chen Yingfa" /> -->
-        <img class="rounded-3xl w-48 hover:scale-110 transition-transform" src="/images/portrait.png" alt="Chen Yingfa" />
+        <img 
+          class="rounded-3xl w-48 hover:scale-110 transition-transform drop-shadow-lg" 
+          src="/images/portrait.png" alt="Chen Yingfa" 
+        />
         <!-- Site title -->
         <h1 class="site-title text-4xl mt-4 font-extrabold text-gray-800 dark:text-zinc-200">
           Chen Yingfa
@@ -335,7 +338,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   </div>
 
   <!-- List of featured posts -->
-  <section class="flex flex-col items-center py-8 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <section class="flex flex-wrap items-center py-8 max-w-prose mx-auto gap-12 grid grid-cols-1">
     
     
       
@@ -351,8 +354,53 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           </div>
         
         <!-- The post -->
-        <div class="flex flex-col px-6 gap-1 post-container">
-          <a style="--stagger:0" href="/2023/09/16/CFDBench/">
+        <div class="flex flex-col gap-1 px-6 post-container">
+          <a style="--stagger:0" href="/2023/09/14/EREN/">
+            <!-- Post Title -->
+            <header>
+              <h2 class="post-title font-bold text-lg text-zinc-600 hover:translate-x-2 transition-all">
+                (EREN) Robust and Scalable Model Editing for Large Language Models
+              </h2>
+            </header>
+            <section class="text-zinc-500 dark:text-zinc-400 text-sm time">
+              <p class="line-clamp-4">
+                
+                  <div class="py-2">
+                    <p>This is my first ever stand-alone research work, I hope it can be accepted at EMNLP 2023, but judging from its review scores, it can only get EMNLP Findings. But that's acceptable.</p>
+                  </div>
+                  <!-- Line sep -->
+                  <!-- <hr class="w-1/4 h-[1px] bg-zinc-200 dark:bg-zinc-700"></hr> -->
+                
+              </p>
+            </section>
+            <!-- Post statistics -->
+            <div 
+              class="flex flex-wrap items-center gap-x-4 text-sm
+                text-zinc-500 dark:text-zinc-400">
+              <span class="flex flex-row w-max items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:file-new-fill" ></iconify-icon>
+                Sep 14, 2023
+              </span>
+              <span class="flex flex-row w-max items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
+                Sep 23, 2023
+              </span>
+              <span class="flex flex-row w-max items-center gap-1 group">
+                <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
+                303 words, 1 min
+              </span>
+            </div>
+          </a>
+        </div>
+      
+    
+      
+        <!-- Large year background -->
+        
+        
+        <!-- The post -->
+        <div class="flex flex-col gap-1 px-6 post-container">
+          <a style="--stagger:1" href="/2023/09/16/CFDBench/">
             <!-- Post Title -->
             <header>
               <h2 class="post-title font-bold text-lg text-zinc-600 hover:translate-x-2 transition-all">
@@ -372,61 +420,20 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
               </p>
             </section>
             <!-- Post statistics -->
-            <div class="flex flex-row items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-              <span class="flex flex-row items-center gap-1 group">
+            <div 
+              class="flex flex-wrap items-center gap-x-4 text-sm
+                text-zinc-500 dark:text-zinc-400">
+              <span class="flex flex-row w-max items-center gap-1 group">
                 <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:file-new-fill" ></iconify-icon>
                 Sep 16, 2023
               </span>
-              <span class="flex flex-row items-center gap-1 group">
+              <span class="flex flex-row w-max items-center gap-1 group">
                 <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
                 Sep 23, 2023
               </span>
-              <span class="flex flex-row items-center gap-1 group">
+              <span class="flex flex-row w-max items-center gap-1 group">
                 <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
                 312 words, 1 min
-              </span>
-            </div>
-          </a>
-        </div>
-      
-    
-      
-        <!-- Large year background -->
-        
-        
-        <!-- The post -->
-        <div class="flex flex-col px-6 gap-1 post-container">
-          <a style="--stagger:1" href="/2023/09/14/EREN/">
-            <!-- Post Title -->
-            <header>
-              <h2 class="post-title font-bold text-lg text-zinc-600 hover:translate-x-2 transition-all">
-                (EREN) Robust and Scalable Model Editing for Large Language Models
-              </h2>
-            </header>
-            <section class="text-zinc-500 dark:text-zinc-400 text-sm time">
-              <p class="line-clamp-4">
-                
-                  <div class="py-2">
-                    <p>This is my first ever stand-alone research work, I hope it can be accepted at EMNLP 2023, but judging from its review scores, it can only get EMNLP Findings. But that's acceptable.</p>
-                  </div>
-                  <!-- Line sep -->
-                  <!-- <hr class="w-1/4 h-[1px] bg-zinc-200 dark:bg-zinc-700"></hr> -->
-                
-              </p>
-            </section>
-            <!-- Post statistics -->
-            <div class="flex flex-row items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-              <span class="flex flex-row items-center gap-1 group">
-                <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:file-new-fill" ></iconify-icon>
-                Sep 14, 2023
-              </span>
-              <span class="flex flex-row items-center gap-1 group">
-                <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:edit-2-fill" ></iconify-icon>
-                Sep 23, 2023
-              </span>
-              <span class="flex flex-row items-center gap-1 group">
-                <iconify-icon class="group-hover:scale-125 transition-transform" width="18" icon="mingcute:book-6-fill" ></iconify-icon>
-                303 words, 1 min
               </span>
             </div>
           </a>

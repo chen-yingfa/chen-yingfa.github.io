@@ -196,7 +196,7 @@ a:hover {
   padding-left: 8px;
 }
 .post-content blockquote p {
-  margin: 0px 8px;
+  margin: 0px 4px;
   font-style: normal;
   color: #aaa;
 }
@@ -205,6 +205,10 @@ a:hover {
 }
 hr {
   border: 0px;
+}
+::selection {
+  background-color: var(--c-theme);
+  color: var(--c-bg);
 }
 .prose p {
   margin: 0.8rem 0px;
@@ -248,11 +252,18 @@ hr {
 .prose .footnotes {
   font-size: 0.8rem;
 }
+.prose .footnote-backref {
+  color: var(--c-theme);
+  text-decoration: none;
+}
+.prose .footnote-backref:hover {
+  color: var(--c-theme);
+}
 .prose .fancybox-img img:hover {
   transform: scale(1.01);
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
+  transition-duration: 200ms;
 }
 .prose .fancybox-img img {
   margin-bottom: 0.5rem;
