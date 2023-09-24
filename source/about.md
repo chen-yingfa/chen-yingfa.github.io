@@ -5,6 +5,8 @@ updated: 2023-09-16 20:11:00
 type: "about"
 ---
 
+<img src="images/portrait.jpg" alt="Portrait of Chen Yingfa having lunch in Beijing, taken by Luo Yining."/>
+
 [中文](#Chinese-Version-中文版本)
 
 Social links:
