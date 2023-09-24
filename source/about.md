@@ -1,7 +1,6 @@
 ---
-title: About me
+title: About Me
 date: 2023-09-14 18:18:06
-updated: 2023-09-16 20:11:00
 type: "about"
 ---
 
@@ -9,7 +8,7 @@ type: "about"
 
 [中文](#Chinese-Version-中文版本)
 
-Social links:
+🔗 Social links:
 
 - [Google Scholar](https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en)
 - [Twitter](https://www.twitter.com/DonnyChan123)
@@ -17,7 +16,7 @@ Social links:
 - [知乎](https://www.zhihu.com/people/chen-ying-fa-34)
 - [B站](https://space.bilibili.com/474619698?spm_id_from=333.1007.0.0)
 
-Email: (either is ok)
+✉️ Email: (either is ok) 
 
 - chenyingfa1999@qq.com
 - donnychan1999@gmail.com
@@ -32,9 +31,11 @@ I'm a 2nd year graduate student at the [Natural Language Processing lab at Tsing
 
 I'm just getting started with academia, and will be applying for PhD in the same lab this year (the end of 2023), there is so much to learn!
 
-[:page_facing_up: My CV (last updated: December, 2022)](/pdf/cv.pdf)
+[:page_facing_up: My resume (last updated: December, 2022)](/pdf/cv.pdf)
 
 ## Education
+
+---
 
 **M.S. in Computer Science and Technology (计算机科学与技术)**
 
