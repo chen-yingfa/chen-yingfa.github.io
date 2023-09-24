@@ -97,7 +97,6 @@ pre .params {
   --c-scrollbar: #d9d9d9;
   --c-scrollbar-hover: #bbb;
   --c-sep: #d1d5db;
-  font-family: "Arial";
 }
 html.dark {
   --c-theme: #3478f6;
@@ -106,7 +105,6 @@ html.dark {
   --c-scrollbar: #333;
   --c-scrollbar-hover: #555;
   --c-sep: #3f3f46;
-  font-family: "Arial";
 }
 a {
   color: var(--c-theme);
