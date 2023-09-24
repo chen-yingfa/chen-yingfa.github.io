@@ -1,5 +1,5 @@
 ---
-title: "Safety and Ethical Concerns in Large Language Models"
+title: "Safety and Ethical Concerns of Large Language Models"
 date: 2023-09-19 18:13:06
 categories: Thoughts
 tags:
@@ -14,9 +14,12 @@ tags:
 - modelbest
 - life
 - tutorial
+- eren
+- chatgpt
+- claude
 ---
 
-I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题". Below is a list of references.
+I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.
 
 <!-- more -->
 
@@ -66,9 +69,9 @@ I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beiji
 
 ## My Thoughts
 
-AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me, which I believe is because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and this is very similar to the overgeneralization model editing, which is a prolem I have worked on previous (see my publication, [EREN](../../../../2023/09/14/EREN/)). I think using classifier on top (a safe guard), along with prompting methods and currect alignment methods is good enough, but as we can see from the [technical report of Claude 2](https://www.anthropic.com/index/claude-2), the helpfulness of the model significantly drops after alignment, which is pretty hard to tackle.
+AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me. This is presumably because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and it is very similar to the overgeneralization model editing, which is a problem I have worked on previous (see my publication, [EREN](../../../../2023/09/14/EREN/)). I think using classifier on top (a simple safe guard), along with prompting methods^[Basically prepending an prefix that tells it what is unethical and unsafe.] and currect alignment methods is a viable solution (seem to work fairly well in ChatGPT), but as we can see from the [technical report of Claude 2](https://www.anthropic.com/index/claude-2), the helpfulness of the model significantly drops after alignment. Therefore, I think minimizing the sacrifice in helpfulness will be an important direction of future research.
 
-Another concern is that there is no concensus on the goal of alignment. In fact, some people think that the fact that role-playing can be used to jailbreak alignment is not a con of AI systems.
+Another concern is that there is no concensus on the goal of alignment. In fact, many people think that the fact that role-playing can be used to jailbreak alignment is not a bad thing per se, especially regarding toxicity, because if the user explicitly tells the AI to role-play a person that slurs a lot, the user expects slurs (one kind of toxicity).
 
 Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This is especially for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.
 
