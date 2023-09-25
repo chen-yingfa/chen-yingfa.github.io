@@ -1,10 +1,10 @@
 html:not(.dark) {
   --highlight-keyword: #1c6b48;
-  --highlight-background: #fbfbfb;
+  --highlight-background: #f7f7f8;
   --highlight-comment: #a0ada0;
   --highlight-foreground: #393a34;
   --highlight-string: #b56959;
-  --highlight-gutter: #869194;
+  --highlight-gutter: #565154;
   --highlight-class: #2993a3;
   --highlight-function: #6c7834;
   --prism-builtin: #ab5959;
@@ -93,7 +93,9 @@ pre .params {
 :root {
   --c-theme: #3478f6;
   --c-bg: #fff;
-  --c-bg-code: #ebebef;
+  --c-text: #444;
+  --c-bg-code: #f5f5f6;
+  --c-code-line-number: #bbb;
   --c-scrollbar: #d9d9d9;
   --c-scrollbar-hover: #bbb;
   --c-sep: #d1d5db;
@@ -102,6 +104,7 @@ pre .params {
 html.dark {
   --c-theme: #3478f6;
   --c-bg: #212121;
+  --c-text: #eee;
   --c-bg-code: #3f3f46;
   --c-scrollbar: #333;
   --c-scrollbar-hover: #555;
@@ -212,6 +215,10 @@ hr {
   background-color: var(--c-theme);
   color: var(--c-bg);
 }
+.prose h2 {
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+}
 .prose p {
   margin: 0.8rem 0px;
   line-height: 1.5;
@@ -244,6 +251,29 @@ hr {
   font-size: 0.9em;
   font-weight: 400;
 }
+.prose figure.highlight {
+  display: flex;
+  flex-direction: column;
+}
+.prose figure.highlight table {
+  width: 100%;
+  min-width: 0;
+}
+.prose figure.highlight td.code {
+  width: 100%;
+  min-width: 0;
+  overflow: scroll;
+  border-radius: 12px;
+  background-color: var(--c-bg-code);
+}
+.prose figure.highlight .copy-icon {
+  right: 22px;
+  top: 30px;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  cursor: pointer;
+}
 .prose a {
   color: var(--c-theme);
   transition: color 0.2s ease-in-out;
@@ -255,11 +285,13 @@ hr {
   font-size: 0.8rem;
 }
 .prose .footnote-backref {
-  color: var(--c-theme);
   text-decoration: none;
 }
 .prose .footnote-backref:hover {
   color: var(--c-theme);
+  transform: translateY(-3px);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .prose .fancybox-img img:hover {
   transform: scale(1.01);
@@ -296,7 +328,7 @@ li.task-list-item .task-list-item-checkbox input:checked {
 .code-language {
   font-size: 0.8rem;
   color: var(--c-code-language);
-  margin-left: 1rem;
+  padding-left: 0.5rem;
   margin-bottom: 0.5rem;
   display: block;
 }
