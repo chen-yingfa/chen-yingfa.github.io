@@ -135,18 +135,20 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     font-arial
     bg-[var(--c-0)]
     text-[var(--c-80)]
-    relative">
+  ">
   <header
   class="
-    w-full pl-1 pr-2 py-1
+    w-full
+    m-0
+    px-3
+    py-1
     z-10
-    backdrop-blur-xl
-    backdrop-saturate-150
     border-b
-    bg-[var(--c-10)]
+    border-[1px]
+    bg-[var(--c-20)]
     border-[var(--c-sep)]
   ">
-  <div class="max-auto">
+  <div>
     <!-- The navigation bar -->
     <nav class="
       flex flex-row items-center
@@ -253,7 +255,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           
           <!-- Dark/light toggle icon -->
           <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
-            <iconify-icon class="transition-transform hover:rotate-[45deg] hover:scale-125" width="20" icon="" id="theme-icon"></iconify-icon>
+            <iconify-icon class="transition-transform hover:rotate-[45deg]
+              hover:scale-125" width="20" icon="" id="theme-icon">
+            </iconify-icon>
           </a>
         </div>
         <!-- Icon for dropout menu on small screens -->
@@ -262,7 +266,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             <iconify-icon width="20" icon="mingcute:menu-fill" class="transition-transform hover:scale-125 hover:rotate-[5deg]"></iconify-icon>
           </a>
           <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-            <iconify-icon width="20" icon="mingcute:close-circle-fill" class="transition-transform hover:scale-125 hover:rotate-[80deg]"></iconify-icon>
+            <iconify-icon width="20" icon="mingcute:close-circle-fill"
+              class="transition-transform hover:scale-125 hover:rotate-[80deg]">
+            </iconify-icon>
           </a>
         </div>
       </div>
@@ -336,7 +342,7 @@ layout: tag
 -->
 
   <!-- 已经选择了一个tag，显示一个 tag 的所有 post -->
-  <div>
+  <div class="mt-6">
     <div class="flex flex-wrap gap-2 justify-center items-center">
       <div class="text-xl align-middle">
         Tag:
@@ -436,7 +442,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -453,7 +459,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -470,7 +476,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -487,7 +493,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -504,7 +510,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -598,7 +604,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -615,7 +621,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -632,7 +638,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -649,7 +655,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -666,7 +672,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -683,7 +689,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -700,7 +706,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -717,7 +723,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -734,7 +740,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -751,7 +757,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -768,7 +774,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -785,7 +791,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -802,7 +808,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -819,7 +825,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -836,7 +842,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -853,7 +859,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -870,7 +876,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -887,7 +893,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -904,7 +910,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -921,7 +927,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -938,7 +944,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -955,7 +961,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -972,7 +978,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -989,7 +995,7 @@ layout: tag
           dark:bg-transparent 
           dark:hover:bg-[var(--c-80)]
           dark:hover:text-[var(--c-20)]
-          px-[6px] py-[2px]
+          px-[6px] py-[1px]
           text-sm
           rounded-full 
         ">
@@ -1045,9 +1051,14 @@ layout: tag
 
 </footer>
 
-  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20
+    rounded py-1 px-1 bg-[var(--c-20)] opacity-80 text-[var(--c-80)]
+    border-[1px] border-[var(--c-sep)]
+    cursor-pointer text-center
+    drop-shadow
+  ">
     <span class="flex justify-center items-center text-sm">
-      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <iconify-icon width="18" icon="mingcute:arrow-up-fill" id="go-top"></iconify-icon>
       <span id="scrollpercent"><span>0</span> %</span>
     </span>
   </div>
