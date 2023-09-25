@@ -1,6 +1,6 @@
 html:not(.dark) {
   --highlight-keyword: #1c6b48;
-  --highlight-background: #f7f7f8;
+  --highlight-background: #f6f8fa;
   --highlight-comment: #a0ada0;
   --highlight-foreground: #393a34;
   --highlight-string: #b56959;
@@ -90,22 +90,50 @@ pre .meta {
 pre .params {
   color: var(--prism-decorator);
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 :root {
   --c-theme: #3478f6;
-  --c-bg: #fff;
+  --c-0: #fff;
+  --c-10: #f6f8fa;
+  --c-20: #f3f4f6;
+  --c-30: #e5e7eb;
+  --c-40: #d1d5db;
+  --c-50: #9ca3af;
+  --c-60: #6b7280;
+  --c-70: #4b5563;
+  --c-80: #374151;
+  --c-90: #1f2937;
+  --c-100: #111827;
   --c-text: #444;
-  --c-bg-code: #f5f5f6;
+  --c-bg-code: #f6f8fa;
   --c-code-line-number: #bbb;
   --c-scrollbar: #d9d9d9;
   --c-scrollbar-hover: #bbb;
-  --c-sep: #d1d5db;
+  --c-sep: #e1e4e8;
   --c-code-language: #9ca3af;
 }
 html.dark {
   --c-theme: #3478f6;
-  --c-bg: #212121;
+  --c-0: #181818;
+  --c-10: #1f1f1f;
+  --c-20: #282828;
+  --c-30: #333;
+  --c-40: #3f3f46;
+  --c-50: #52525b;
+  --c-60: #6b7280;
+  --c-70: #8c939f;
+  --c-80: #b0b8c1;
+  --c-90: #d9d9d9;
+  --c-100: #eee;
   --c-text: #eee;
-  --c-bg-code: #3f3f46;
+  --c-bg-code: #111;
   --c-scrollbar: #333;
   --c-scrollbar-hover: #555;
   --c-sep: #3f3f46;
@@ -123,7 +151,7 @@ a:hover {
   cursor: pointer;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--c-bg);
+  background-color: var(--c-0);
 }
 ::-webkit-scrollbar {
   width: 6px;
@@ -213,7 +241,7 @@ hr {
 }
 ::selection {
   background-color: var(--c-theme);
-  color: var(--c-bg);
+  color: var(--c-0);
 }
 .prose h2 {
   margin-top: 1em;
@@ -250,29 +278,6 @@ hr {
   padding: 0.2em 0.3em;
   font-size: 0.9em;
   font-weight: 400;
-}
-.prose figure.highlight {
-  display: flex;
-  flex-direction: column;
-}
-.prose figure.highlight table {
-  width: 100%;
-  min-width: 0;
-}
-.prose figure.highlight td.code {
-  width: 100%;
-  min-width: 0;
-  overflow: scroll;
-  border-radius: 12px;
-  background-color: var(--c-bg-code);
-}
-.prose figure.highlight .copy-icon {
-  right: 22px;
-  top: 30px;
-  width: 26px;
-  height: 26px;
-  position: absolute;
-  cursor: pointer;
 }
 .prose a {
   color: var(--c-theme);
@@ -325,12 +330,50 @@ li.task-list-item .task-list-item-checkbox input:checked {
 .post-excerpt a:hover {
   color: var(--c-theme);
 }
-.code-language {
+figure.highlight {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--c-bg-code);
+  border-radius: 10px;
+  border: 1px solid var(--c-sep);
+}
+figure.highlight::-webkit-scrollbar {
+  height: 4px /* height of horizontal scrollbar ← You're missing this */;
+  width: 0px /* width of vertical scrollbar */;
+  border: 1px solid #f00;
+  color: #008000;
+  padding: 4px;
+  margin: 4px;
+}
+figure.highlight::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--c-50);
+  color: #f00;
+}
+figure.highlight::-webkit-scrollbar-track:horizontal {
+  background-color: var(--c-bg-code);
+  color: #f00;
+}
+figure.highlight .code-language {
   font-size: 0.8rem;
-  color: var(--c-code-language);
-  padding-left: 0.5rem;
-  margin-bottom: 0.5rem;
+  color: var(--c-40);
+  background-color: var(--c-bg-code);
   display: block;
+}
+figure.highlight .copy-icon {
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--c-bg-code);
+  border: 1px solid var(--c-sep);
+  color: var(--c-70);
+  position: absolute;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px;
+}
+figure.highlight .copy-icon:hover {
+  background-color: var(--c-30);
 }
 @-moz-keyframes enter {
   0% {

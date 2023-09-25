@@ -130,11 +130,29 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
-<body class="font-arial bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative p-0">
-  <header class="fixed w-full pl-1 pr-2 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+<body 
+  class="
+    font-arial
+    bg-[var(--c-0)]
+    text-[var(--c-80)]
+    relative">
+  <header
+  class="
+    w-full pl-1 pr-2 py-1
+    z-10
+    backdrop-blur-xl
+    backdrop-saturate-150
+    border-b
+    bg-[var(--c-10)]
+    border-[var(--c-sep)]
+  ">
   <div class="max-auto">
     <!-- The navigation bar -->
-    <nav class="flex flex-row items-center text-base gap-2 h-8 text-zinc-800 dark:text-zinc-200">
+    <nav class="
+      flex flex-row items-center
+      text-base gap-2 h-8 
+      text-zinc-800 
+      dark:text-zinc-200">
       <!-- Top-left logo and title -->
       <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group pl-2">
@@ -292,7 +310,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <!-- Mask for making the page dark -->
   <div class="mask z-10 bg-black/10 absolute inset-0"></div>
 </div>
-  <main class="pt-14">
+  <main>
     <!-- 
 This page has two versions, which is shown is based on whether current page
 is "tag".
@@ -328,12 +346,12 @@ layout: tag
         dark:bg-transparent
         dark:border-[1px]
         dark:border-zinc-300
-        px-3 py-1 text-xl rounded-full
+        px-2 py-[2px] text-xl rounded-full
         drop-shadow">
         #life
       </div>
   </div>
-  <section class="px-0 py-8 max-w-prose mx-auto gap-10 grid grid-cols-1">
+  <section class="px-0 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
   
   
     
@@ -351,7 +369,7 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-1 px-6 post-container">
+<div class="flex flex-col gap-2 px-3 py-3 post-container border-[1px] rounded-lg border-[var(--c-sep)]">
     <a class="group" href="/2023/09/19/llm-safety-and-ethics/">
         <!-- Post title -->
         <header>
@@ -368,7 +386,7 @@ layout: tag
                         <p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
                     </div>
                     <!-- Line sep -->
-                    <hr class="mt-1 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    <hr class="mt-2 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
                     </hr>
                 
             </p>
@@ -416,182 +434,257 @@ layout: tag
   
     
       <a href="/tags/research/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #research
       </a>
     
       <a href="/tags/english/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #english
       </a>
     
       <a href="/tags/machine-learning/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #machine-learning
       </a>
     
-      <a href="/tags/life/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
-          dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
-        #life
-      </a>
-    
       <a href="/tags/llm/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #llm
       </a>
     
       <a href="/tags/eren/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #eren
       </a>
     
-      <a href="/tags/ethics/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+      <a href="/tags/life/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
+        #life
+      </a>
+    
+      <a href="/tags/ethics/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #ethics
       </a>
     
       <a href="/tags/safety/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #safety
       </a>
     
       <a href="/tags/ai-alignment/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #ai-alignment
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #面壁智能
       </a>
     
       <a href="/tags/modelbest/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #modelbest
       </a>
     
       <a href="/tags/tutorial/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #tutorial
       </a>
     
       <a href="/tags/chatgpt/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #chatgpt
       </a>
     
       <a href="/tags/claude/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #claude
       </a>
     
       <a href="/tags/%E4%B8%89%E4%BD%93/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #三体
       </a>
     
@@ -607,7 +700,7 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-1 px-6 post-container">
+<div class="flex flex-col gap-2 px-3 py-3 post-container border-[1px] rounded-lg border-[var(--c-sep)]">
     <a class="group" href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
         <!-- Post title -->
         <header>
@@ -625,7 +718,7 @@ layout: tag
 <p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p>
                     </div>
                     <!-- Line sep -->
-                    <hr class="mt-1 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    <hr class="mt-2 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
                     </hr>
                 
             </p>
@@ -673,218 +766,308 @@ layout: tag
   
     
       <a href="/tags/research/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #research
       </a>
     
       <a href="/tags/00/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #00
       </a>
     
       <a href="/tags/life/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #life
       </a>
     
       <a href="/tags/jekyll/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #jekyll
       </a>
     
       <a href="/tags/hugo/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #hugo
       </a>
     
       <a href="/tags/static-site-generator/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #static-site-generator
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #中文
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #面壁智能
       </a>
     
       <a href="/tags/blog/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #blog
       </a>
     
       <a href="/tags/%E7%AD%BE%E8%AF%81/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #签证
       </a>
     
       <a href="/tags/hexo/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #hexo
       </a>
     
       <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #羽毛球
       </a>
     
       <a href="/tags/work/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #work
       </a>
     
       <a href="/tags/%E6%9E%AB%E5%8F%B6/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #枫叶
       </a>
     
       <a href="/tags/%E4%B8%AD%E5%9B%BD/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #中国
       </a>
     
       <a href="/tags/%E6%8C%AA%E5%A8%81/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #挪威
       </a>
     
       <a href="/tags/markdown/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #markdown
       </a>
     
       <a href="/tags/%E5%AE%BF%E8%88%8D/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #宿舍
       </a>
     
@@ -900,7 +1083,7 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-1 px-6 post-container">
+<div class="flex flex-col gap-2 px-3 py-3 post-container border-[1px] rounded-lg border-[var(--c-sep)]">
     <a class="group" href="/2023/05/18/second-post/">
         <!-- Post title -->
         <header>
@@ -958,62 +1141,87 @@ layout: tag
   
     
       <a href="/tags/00/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #00
       </a>
     
       <a href="/tags/life/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #life
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #中文
       </a>
     
       <a href="/tags/school/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #school
       </a>
     
       <a href="/tags/graduation/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #graduation
       </a>
     
@@ -1029,7 +1237,7 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-1 px-6 post-container">
+<div class="flex flex-col gap-2 px-3 py-3 post-container border-[1px] rounded-lg border-[var(--c-sep)]">
     <a class="group" href="/2023/05/17/first-post/">
         <!-- Post title -->
         <header>
@@ -1047,7 +1255,7 @@ layout: tag
 <p>我和 00 的孩子们：</p>
                     </div>
                     <!-- Line sep -->
-                    <hr class="mt-1 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    <hr class="mt-2 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
                     </hr>
                 
             </p>
@@ -1095,290 +1303,410 @@ layout: tag
   
     
       <a href="/tags/research/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #research
       </a>
     
       <a href="/tags/cfd/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #cfd
       </a>
     
       <a href="/tags/00/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #00
       </a>
     
       <a href="/tags/life/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #life
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #中文
       </a>
     
       <a href="/tags/school/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #school
       </a>
     
       <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #孩子们
       </a>
     
       <a href="/tags/%E5%8D%A7%E9%BE%99/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #卧龙
       </a>
     
       <a href="/tags/%E5%87%A4%E9%9B%8F/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #凤雏
       </a>
     
       <a href="/tags/%E9%AA%86%E9%9B%81/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #骆雁
       </a>
     
       <a href="/tags/%E9%BB%84%E5%B8%9D/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #黄帝
       </a>
     
       <a href="/tags/%E5%B0%8F%E7%BB%BF/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #小绿
       </a>
     
       <a href="/tags/%E7%8C%AB%E5%92%AA/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #猫咪
       </a>
     
       <a href="/tags/%E5%9C%9F%E9%B8%A1/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #土鸡
       </a>
     
       <a href="/tags/%E7%86%8A/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #熊
       </a>
     
       <a href="/tags/%F0%9F%90%BB/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #🐻
       </a>
     
       <a href="/tags/%F0%9F%90%B1/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #🐱
       </a>
     
       <a href="/tags/%F0%9F%90%87/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #🐇
       </a>
     
       <a href="/tags/%F0%9F%90%B0/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #🐰
       </a>
     
       <a href="/tags/%F0%9F%90%8A/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #🐊
       </a>
     
       <a href="/tags/emoren/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #emoren
       </a>
     
       <a href="/tags/acl/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #acl
       </a>
     
       <a href="/tags/lillesand/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #lillesand
       </a>
     
       <a href="/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #加拿大
       </a>
     
@@ -1403,7 +1731,7 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-1 px-6 post-container">
+<div class="flex flex-col gap-2 px-3 py-3 post-container border-[1px] rounded-lg border-[var(--c-sep)]">
     <a class="group" href="/2022/10/27/first-draft/">
         <!-- Post title -->
         <header>
@@ -1423,7 +1751,7 @@ layout: tag
 <figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
                     </div>
                     <!-- Line sep -->
-                    <hr class="mt-1 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    <hr class="mt-2 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
                     </hr>
                 
             </p>
@@ -1471,98 +1799,138 @@ layout: tag
   
     
       <a href="/tags/life/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #life
       </a>
     
       <a href="/tags/jekyll/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #jekyll
       </a>
     
       <a href="/tags/test/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #test
       </a>
     
       <a href="/tags/hugo/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #hugo
       </a>
     
       <a href="/tags/static-site-generator/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #static-site-generator
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #中文
       </a>
     
       <a href="/tags/html/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #html
       </a>
     
       <a href="/tags/liquid/" 
-        class="text-zinc-500 dark:text-zinc-400 bg-zinc-100
-          hover:bg-zinc-200
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
           dark:bg-transparent 
-          dark:border-[1px]
-          dark:border-zinc-300 dark:hover:bg-zinc-200 dark:hover:text-zinc-800
-          px-[6px] py-[3px]
-          text-sm rounded-full 
-          hover:drop-shadow">
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[2px]
+          text-sm
+          rounded-full 
+        ">
         #liquid
       </a>
     
