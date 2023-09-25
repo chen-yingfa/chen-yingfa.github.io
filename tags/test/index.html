@@ -140,10 +140,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   class="
     w-full
     m-0
-    px-3
+    px-1
     py-1
     z-10
-    border-b
+    border-b-[1px]
     bg-[var(--c-20)]
     border-[var(--c-sep)]
   ">
@@ -173,7 +173,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
       </div>
       <div class="flex-1"></div>
-      <div class="flex flex-row items-center h-full gap-1">
+      <div class="flex flex-row items-center h-full gap-2">
         <!-- Page links -->
         <div class="flex flex-row h-full gap-3 text-sm">
           
@@ -224,7 +224,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
         </div>
         <!-- Icons, for external links -->
-        <div class="flex items-center gap-2 ml-2">
+        <div class="flex items-center gap-2 mx-1">
           
             
               <a class="w-5 h-5 sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
@@ -347,13 +347,13 @@ layout: tag
         Tag:
       </div>
       <div 
-      class="bg-gray-100 
-        border-[1px]
+      class="
+        bg-[var(--c-20)]
         dark:bg-transparent
-        border-[var(--c-sep)]
-        px-2 py-[1px]
-        text-xl rounded-full
-        ">
+        border-[1px]
+        border-[var(--c-sep-2)]
+        px-2 py-[1px] text-xl rounded-full
+      ">
         #test
       </div>
   </div>
@@ -365,8 +365,11 @@ layout: tag
     
       <div class="relative pointer-events-none h-[30px]">
         <div class="absolute -top-6 w-[100%]">
-          <p class="text-clip overflow-hidden -translate-x-2 text-9xl
-            font-extrabold opacity-10 dark:opacity-20">
+          <p class="text-clip overflow-hidden -translate-x-3 text-9xl
+            font-extrabold
+            text-[var(--c-70)]
+            opacity-10
+            dark:opacity-20">
             2023
           </p>
         </div>
@@ -417,7 +420,9 @@ layout: tag
         <!-- Categories -->
         <span class="flex flex-row items-center gap-1 group">
             
-                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                <iconify-icon class="
+                    group-hover:scale-125
+                    transition-transform group-hover:text-[var(--c-theme)]" width="16"
                     icon="mingcute:classify-2-fill" class="mr-0">
                 </iconify-icon>
                 
@@ -436,7 +441,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -453,7 +458,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -470,7 +475,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -487,7 +492,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -504,7 +509,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -521,7 +526,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -538,7 +543,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -555,7 +560,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -579,8 +584,11 @@ layout: tag
     
       <div class="relative pointer-events-none h-[30px]">
         <div class="absolute -top-6 w-[100%]">
-          <p class="text-clip overflow-hidden -translate-x-2 text-9xl
-            font-extrabold opacity-10 dark:opacity-20">
+          <p class="text-clip overflow-hidden -translate-x-3 text-9xl
+            font-extrabold
+            text-[var(--c-70)]
+            opacity-10
+            dark:opacity-20">
             2022
           </p>
         </div>
@@ -602,14 +610,14 @@ layout: tag
             <p class="line-clamp-4">
                 <!-- Post excerpt -->
                 
-                    <div class="post-excerpt text-zinc-600 dark:text-zinc-300">
+                    <div class="post-excerpt text-[var(--c-60)]">
                         <p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
 <p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p>
 
 <figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
                     </div>
                     <!-- Line sep -->
-                    <hr class="mt-2 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    <hr class="mt-2 h-[1px] bg-[var(--c-sep-2)]">
                     </hr>
                 
             </p>
@@ -641,7 +649,9 @@ layout: tag
         <!-- Categories -->
         <span class="flex flex-row items-center gap-1 group">
             
-                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                <iconify-icon class="
+                    group-hover:scale-125
+                    transition-transform group-hover:text-[var(--c-theme)]" width="16"
                     icon="mingcute:classify-2-fill" class="mr-0">
                 </iconify-icon>
                 
@@ -660,7 +670,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -673,11 +683,28 @@ layout: tag
         #life
       </a>
     
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
+      </a>
+    
       <a href="/tags/jekyll/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -694,7 +721,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -711,7 +738,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -728,7 +755,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -741,28 +768,11 @@ layout: tag
         #static-site-generator
       </a>
     
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
-      </a>
-    
       <a href="/tags/html/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -779,7 +789,7 @@ layout: tag
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -803,7 +813,8 @@ layout: tag
 
 
   </main>
-  <footer class="flex flex-col h-40 items-center justify-center text-zinc-400 dark:text-zinc-600 text-sm">
+  <footer class="flex flex-col h-40 items-center justify-center
+  text-[var(--c-50)] text-sm">
   <!-- <hr class="w-1/3 my-8 h-[1px] bg-gray-200 dark:bg-zinc-700"></hr> -->
   <!-- busuanzi -->
   

@@ -140,10 +140,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   class="
     w-full
     m-0
-    px-3
+    px-1
     py-1
     z-10
-    border-b
+    border-b-[1px]
     bg-[var(--c-20)]
     border-[var(--c-sep)]
   ">
@@ -173,7 +173,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
       </div>
       <div class="flex-1"></div>
-      <div class="flex flex-row items-center h-full gap-1">
+      <div class="flex flex-row items-center h-full gap-2">
         <!-- Page links -->
         <div class="flex flex-row h-full gap-3 text-sm">
           
@@ -224,7 +224,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
         </div>
         <!-- Icons, for external links -->
-        <div class="flex items-center gap-2 ml-2">
+        <div class="flex items-center gap-2 mx-1">
           
             
               <a class="w-5 h-5 sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
@@ -324,8 +324,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     
       <div class="relative pointer-events-none h-[30px]">
         <div class="absolute -top-6 w-[100%]">
-          <p class="text-clip overflow-hidden -translate-x-2 text-9xl
-            font-extrabold opacity-10 dark:opacity-20">
+          <p class="text-clip overflow-hidden -translate-x-3 text-9xl
+            font-extrabold
+            text-[var(--c-70)]
+            opacity-10
+            dark:opacity-20">
             2023
           </p>
         </div>
@@ -376,7 +379,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <!-- Categories -->
         <span class="flex flex-row items-center gap-1 group">
             
-                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                <iconify-icon class="
+                    group-hover:scale-125
+                    transition-transform group-hover:text-[var(--c-theme)]" width="16"
                     icon="mingcute:classify-2-fill" class="mr-0">
                 </iconify-icon>
                 
@@ -391,62 +396,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <div class="flex flex-wrap gap-1">
   
     
-      <a href="/tags/life/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #life
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
-      </a>
-    
-      <a href="/tags/school/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #school
-      </a>
-    
       <a href="/tags/00/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -459,11 +413,62 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #00
       </a>
     
+      <a href="/tags/life/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #life
+      </a>
+    
+      <a href="/tags/school/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #school
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
+      </a>
+    
       <a href="/tags/graduation/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -501,12 +506,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             <p class="line-clamp-4">
                 <!-- Post excerpt -->
                 
-                    <div class="post-excerpt text-zinc-600 dark:text-zinc-300">
+                    <div class="post-excerpt text-[var(--c-60)]">
                         <p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p>
 <p>我和 00 的孩子们：</p>
                     </div>
                     <!-- Line sep -->
-                    <hr class="mt-2 h-[1px] bg-zinc-200 dark:bg-zinc-600 mr-1/2">
+                    <hr class="mt-2 h-[1px] bg-[var(--c-sep-2)]">
                     </hr>
                 
             </p>
@@ -538,7 +543,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <!-- Categories -->
         <span class="flex flex-row items-center gap-1 group">
             
-                <iconify-icon class="group-hover:scale-125 group-hover:rotate-[10deg] transition-transform" width="16"
+                <iconify-icon class="
+                    group-hover:scale-125
+                    transition-transform group-hover:text-[var(--c-theme)]" width="16"
                     icon="mingcute:classify-2-fill" class="mr-0">
                 </iconify-icon>
                 
@@ -557,7 +564,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -570,11 +577,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #research
       </a>
     
-      <a href="/tags/life/" 
+      <a href="/tags/cfd/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -584,48 +591,14 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           text-sm
           rounded-full 
         ">
-        #life
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
-      </a>
-    
-      <a href="/tags/school/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #school
+        #cfd
       </a>
     
       <a href="/tags/00/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -638,11 +611,45 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #00
       </a>
     
+      <a href="/tags/life/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #life
+      </a>
+    
+      <a href="/tags/school/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #school
+      </a>
+    
       <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -659,7 +666,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -676,7 +683,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -693,7 +700,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -710,7 +717,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -727,7 +734,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -744,7 +751,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -761,7 +768,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -774,11 +781,28 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #土鸡
       </a>
     
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
+      </a>
+    
       <a href="/tags/%E7%86%8A/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -795,7 +819,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -812,7 +836,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -829,7 +853,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -846,7 +870,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -863,7 +887,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -880,7 +904,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -893,28 +917,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #emoren
       </a>
     
-      <a href="/tags/cfd/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #cfd
-      </a>
-    
       <a href="/tags/acl/" 
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -931,7 +938,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -948,7 +955,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         class="
           text-[var(--c-70)]
           border-[1px]
-          border-[var(--c-sep)]
+          border-[var(--c-sep-2)]
           bg-[var(--c-20)]
           hover:bg-[var(--c-30)]
           dark:bg-transparent 
@@ -970,7 +977,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 </section>
 
   </main>
-  <footer class="flex flex-col h-40 items-center justify-center text-zinc-400 dark:text-zinc-600 text-sm">
+  <footer class="flex flex-col h-40 items-center justify-center
+  text-[var(--c-50)] text-sm">
   <!-- <hr class="w-1/3 my-8 h-[1px] bg-gray-200 dark:bg-zinc-700"></hr> -->
   <!-- busuanzi -->
   
