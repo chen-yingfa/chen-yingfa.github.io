@@ -140,7 +140,7 @@ html.dark {
   --c-bg-code: #111;
   --c-scrollbar: #333;
   --c-scrollbar-hover: #555;
-  --c-sep: #3f3f46;
+  --c-sep: #4f4f56;
   --c-code-language: #8c939f;
 }
 header {
@@ -362,7 +362,7 @@ figure.highlight::-webkit-scrollbar-track:horizontal {
 }
 figure.highlight .code-language {
   font-size: 0.8rem;
-  color: var(--c-40);
+  color: var(--c-50);
   background-color: var(--c-bg-code);
   display: block;
 }
@@ -373,7 +373,7 @@ figure.highlight .copy-icon {
   height: 30px;
   background-color: var(--c-bg-code);
   border: 1px solid var(--c-sep);
-  color: var(--c-70);
+  color: var(--c-80);
   position: absolute;
   cursor: pointer;
   border-radius: 4px;
