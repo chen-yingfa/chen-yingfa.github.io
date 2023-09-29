@@ -146,9 +146,6 @@ html.dark {
   --c-sep-2: #818488;
   --c-code-language: #8c939f;
 }
-header {
-  padding: 0px 0px;
-}
 a {
   color: var(--c-theme);
 }
@@ -163,19 +160,18 @@ a:hover {
 .toc-list ol {
   margin-top: 0.2rem;
 }
-.back-to-top:hover {
-  transform: scale(1.15) rotate(3deg);
-  filter: drop-shadow(0 1px 2px #000);
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .back-to-top {
   -webkit-transform: translateZ(0);
   transition-property: bottom;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+}
+.back-to-top:hover {
+  transform: scale(1.15);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 .back-to-top.back-to-top-on {
   bottom: 30px;
