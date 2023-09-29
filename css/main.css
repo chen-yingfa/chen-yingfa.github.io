@@ -123,7 +123,7 @@ body {
   --h-header: 40px;
 }
 html.dark {
-  --c-theme: #477fef;
+  --c-theme: #6393f2;
   --c-0: #181818;
   --c-10: #1f1f1f;
   --c-20: #282828;
@@ -266,8 +266,6 @@ hr {
 }
 .prose a {
   color: var(--c-theme);
-  text-underline-offset: 2px;
-  transition: color 0.2s ease-in-out;
   text-decoration: none;
 }
 .prose a:hover {
@@ -283,10 +281,7 @@ hr {
   text-decoration: none;
 }
 .prose .footnote-backref:hover {
-  color: var(--c-theme);
-  transform: translateY(-3px);
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: underline;
 }
 .prose .fancybox-img img {
   margin-bottom: 0.5rem;
