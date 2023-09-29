@@ -157,10 +157,11 @@ a:hover {
   cursor: pointer;
 }
 .toc-list li {
-  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .toc-list ol {
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
 }
 .back-to-top:hover {
   transform: scale(1.15) rotate(3deg);
@@ -267,6 +268,10 @@ hr {
   color: var(--c-theme);
   text-underline-offset: 2px;
   transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+.prose a:hover {
+  text-decoration: underline;
 }
 .prose blockquote ::before {
   content: '';
