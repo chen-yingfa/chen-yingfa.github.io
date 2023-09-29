@@ -2,6 +2,7 @@
 title: "Safety and Ethical Concerns of Large Language Models"
 date: 2023-09-19 18:13:06
 categories: Thoughts
+author: Yingfa Chen
 tags:
 - english
 - research

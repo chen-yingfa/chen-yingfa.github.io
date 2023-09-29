@@ -1,5 +1,5 @@
 ---
-author: Chen Yingfa
+author: Yingfa Chen
 title: 第一个帖子，瞎写点东西
 date: 2023-05-17 23:00:00
 categories: Life
