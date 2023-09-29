@@ -155,18 +155,18 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       h-[var(--h-header)]
       text-[var(--c-100)]
     ">
-      <!-- Top-left title -->
+      <!-- Left part -->
       <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group">
           <!-- Site Title on the top left -->
-          <div class="title-container align-middle font-black pl-1
+          <div class="text-xl title-container align-middle font-black pl-1
             group-hover:translate-x-1 transition-transform">
             Chen Yingfa
           </div>
         </div>
       </a>
       <div class="flex-1"></div>
-      <!-- Right part, list of icons -->
+      <!-- Right part -->
       <div class="flex flex-row items-center h-full gap-0">
         <!-- Page links -->
         <div class="hidden sm:flex h-8 flex-row items-center gap-0 text-sm">
@@ -225,7 +225,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                   h-full
                   hover:underline
                   hover:bg-[var(--c-25)]
-                  p-1 rounded
+                  p-1 rounded-lg
                 ">
                 <iconify-icon icon="mingcute:classify-2-fill" width="22">
                 </iconify-icon>
@@ -241,18 +241,18 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                   h-full
                   hover:underline
                   hover:bg-[var(--c-25)]
-                  p-1 rounded
+                  p-1 rounded-lg
                 ">
                 <iconify-icon icon="mingcute:tag-fill" width="22">
                 </iconify-icon>
               </a>
             
           
+          <!-- Separation line -->
+          <div class="h-8 w-[1px] bg-[var(--c-border)] mx-1"></div>
         </div>
-        <!-- Separation line -->
-        <div class="h-8 w-[1px] mx-3 bg-[var(--c-border)]"></div>
         <!-- Icons on the right -->
-        <div class="flex items-center gap-2">
+        <div class="flex flex-row items-center h-full">
           
             
               
@@ -260,10 +260,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 
                 
               
-              <a class="w-5 h-5 sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
+              <a class="hover:bg-[var(--c-30)] rounded-lg p-1 h-full flex flex-row items-center group" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
                 <iconify-icon
-                  class="transition-transform hover:scale-125"
-                  width="22"
+                  width="24"
                   icon="mdi:github">
                 </iconify-icon>
               </a>
@@ -273,10 +272,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 
                 
               
-              <a class="w-5 h-5 sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
+              <a class="hover:bg-[var(--c-30)] rounded-lg p-1 h-full flex flex-row items-center group" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
                 <iconify-icon
-                  class="transition-transform hover:scale-125"
-                  width="22"
+                  width="24"
                   icon="ri:zhihu-line">
                 </iconify-icon>
               </a>
@@ -286,19 +284,18 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 
                 
               
-              <a class="w-5 h-5 sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
+              <a class="hover:bg-[var(--c-30)] rounded-lg p-1 h-full flex flex-row items-center group" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
                 <iconify-icon
-                  class="transition-transform hover:scale-125"
-                  width="22"
+                  width="24"
                   icon="mingcute:social-x-fill">
                 </iconify-icon>
               </a>
             
           
           <!-- Dark/light toggle icon -->
-          <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
-            <iconify-icon class="transition-transform hover:rotate-[45deg]
-              hover:scale-125" width="22" icon="" id="theme-icon">
+          <a class="flex group p-1" title="toggle theme" id="toggle-dark">
+            <iconify-icon class="transition-transform group-hover:rotate-[45deg]
+            group-hover:scale-125 " width="24" icon="" id="theme-icon">
             </iconify-icon>
           </a>
           <!-- Icon for dropout menu on small screens -->
@@ -628,23 +625,6 @@ layout: tag
         #life
       </a>
     
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep-2)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
-      </a>
-    
       <a href="/tags/jekyll/" 
         class="
           text-[var(--c-70)]
@@ -694,6 +674,23 @@ layout: tag
           rounded-full 
         ">
         #static-site-generator
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
@@ -998,23 +995,6 @@ layout: tag
         #life
       </a>
     
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep-2)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
-      </a>
-    
       <a href="/tags/jekyll/" 
         class="
           text-[var(--c-70)]
@@ -1081,6 +1061,23 @@ layout: tag
           rounded-full 
         ">
         #static-site-generator
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
       </a>
     
       <a href="/tags/html/" 
@@ -1181,14 +1178,14 @@ layout: tag
 </footer>
 
   <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20
-    rounded py-1 px-1 bg-[var(--c-20)] opacity-80 text-[var(--c-80)]
+    rounded py-1 px-2 bg-[var(--c-20)] opacity-80 text-[var(--c-80)]
     border-[1px] border-[var(--c-sep)]
     cursor-pointer text-center
     drop-shadow
   ">
     <span class="flex justify-center items-center text-sm">
-      <iconify-icon width="18" icon="mingcute:arrow-up-fill" id="go-top"></iconify-icon>
       <span id="scrollpercent"><span>0</span> %</span>
+      <iconify-icon width="18" icon="mingcute:arrow-to-up-fill" id="go-top"></iconify-icon>
     </span>
   </div>
   
