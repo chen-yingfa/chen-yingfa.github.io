@@ -140,7 +140,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   class="
     w-full
     m-0
-    px-2
+    px-3
     py-1
     z-10
     border-b-[1px]
@@ -151,18 +151,13 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <!-- The navigation bar -->
     <nav class="
       flex flex-row items-center
-      text-base
       gap-2
-      h-8
+      h-[var(--h-header)]
       text-[var(--c-100)]
-      dark:text-zinc-200">
-      <!-- Top-left logo and title -->
+    ">
+      <!-- Top-left title -->
       <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group">
-          <!-- Home icon
-          <iconify-icon icon="mingcute:home-2-fill" width="20"
-            class="group-hover:scale-125 transition-transform">
-          </iconify-icon> -->
           <!-- Site Title on the top left -->
           <div class="title-container align-middle font-black pl-1
             group-hover:translate-x-1 transition-transform">
@@ -174,79 +169,128 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       <!-- Right part, list of icons -->
       <div class="flex flex-row items-center h-full gap-0">
         <!-- Page links -->
-        <div class="flex flex-row h-full gap-3 text-sm mr-3">
+        <div class="hidden sm:flex h-8 flex-row items-center gap-0 text-sm">
           
-            <a
-              href="/archives"
-              class="hidden sm:flex h-full flex flex-row items-center
-                hover:translate-y-[2px] transition-transform hover:underline">
-              <p>
-                Posts
-              </p>
-            </a>
             
-            <a
-              href="/category"
-              class="hidden sm:flex h-full flex flex-row items-center
-                hover:translate-y-[2px] transition-transform hover:underline">
-              <p>
-                Categories
-              </p>
-            </a>
             
-            <a
-              href="/tag"
-              class="hidden sm:flex h-full flex flex-row items-center
-                hover:translate-y-[2px] transition-transform hover:underline">
-              <p>
-                Tags
-              </p>
-            </a>
+              <a
+                href="/archives"
+                class="flex flex-row items-center
+                  h-full
+                  hover:underline
+                  p-1 rounded
+                ">
+                <p>
+                  Posts
+                </p>
+              </a>
             
-            <a
-              href="/publications"
-              class="hidden sm:flex h-full flex flex-row items-center
-                hover:translate-y-[2px] transition-transform hover:underline">
-              <p>
-                Publications
-              </p>
-            </a>
+          
             
-            <a
-              href="/about"
-              class="hidden sm:flex h-full flex flex-row items-center
-                hover:translate-y-[2px] transition-transform hover:underline">
-              <p>
-                About
-              </p>
-            </a>
             
+              <a
+                href="/publications"
+                class="flex flex-row items-center
+                  h-full
+                  hover:underline
+                  p-1 rounded
+                ">
+                <p>
+                  Publications
+                </p>
+              </a>
+            
+          
+            
+            
+              <a
+                href="/about"
+                class="flex flex-row items-center
+                  h-full
+                  hover:underline
+                  p-1 rounded
+                ">
+                <p>
+                  About
+                </p>
+              </a>
+            
+          
+            
+            
+              <a
+                href="/category"
+                class="
+                  flex flex-row items-center
+                  h-full
+                  hover:underline
+                  hover:bg-[var(--c-25)]
+                  p-1 rounded
+                ">
+                <iconify-icon icon="mingcute:classify-2-fill" width="22">
+                </iconify-icon>
+              </a>
+            
+          
+            
+            
+              <a
+                href="/tag"
+                class="
+                  flex flex-row items-center
+                  h-full
+                  hover:underline
+                  hover:bg-[var(--c-25)]
+                  p-1 rounded
+                ">
+                <iconify-icon icon="mingcute:tag-fill" width="22">
+                </iconify-icon>
+              </a>
+            
+          
         </div>
-        <!-- Icons, for external links -->
-        <div class="flex items-center gap-1">
+        <!-- Separation line -->
+        <div class="h-8 w-[1px] mx-3 bg-[var(--c-border)]"></div>
+        <!-- Icons on the right -->
+        <div class="flex items-center gap-2">
           
             
+              
+              
+                
+                
+              
               <a class="w-5 h-5 sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/chen-yingfa">
                 <iconify-icon
                   class="transition-transform hover:scale-125"
-                  width="20" 
-                  icon="simple-icons:github">
+                  width="22"
+                  icon="mdi:github">
                 </iconify-icon>
               </a>
             
+              
+              
+                
+                
+              
               <a class="w-5 h-5 sm:flex" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
                 <iconify-icon
                   class="transition-transform hover:scale-125"
-                  width="20" 
-                  icon="simple-icons:zhihu">
+                  width="22"
+                  icon="ri:zhihu-line">
                 </iconify-icon>
               </a>
             
+              
+              
+                
+                
+              
               <a class="w-5 h-5 sm:flex" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
                 <iconify-icon
                   class="transition-transform hover:scale-125"
-                  width="20" 
-                  icon="simple-icons:twitter">
+                  width="22"
+                  icon="mingcute:social-x-fill">
                 </iconify-icon>
               </a>
             
@@ -254,67 +298,148 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <!-- Dark/light toggle icon -->
           <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
             <iconify-icon class="transition-transform hover:rotate-[45deg]
-              hover:scale-125" width="20" icon="" id="theme-icon">
+              hover:scale-125" width="22" icon="" id="theme-icon">
             </iconify-icon>
           </a>
-        </div>
-        <!-- Icon for dropout menu on small screens -->
-        <div class="flex items-center justify-center gap-1 mx-1 sm:hidden">
-          <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
-            <iconify-icon width="20" icon="mingcute:menu-fill"
-              class="transition-transform hover:scale-125 hover:rotate-[5deg]">
-            </iconify-icon>
-          </a>
-          <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-            <iconify-icon width="20" icon="mingcute:close-circle-fill"
-              class="transition-transform hover:scale-125 hover:rotate-[80deg]">
-            </iconify-icon>
-          </a>
+          <!-- Icon for dropout menu on small screens -->
+          <div class="flex items-center justify-center gap-1 mx-1 sm:hidden">
+            <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+              <iconify-icon width="22" icon="mingcute:menu-fill"
+                class="transition-transform hover:scale-125 hover:rotate-[5deg]">
+              </iconify-icon>
+            </a>
+            <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+              <iconify-icon width="22" icon="mingcute:close-circle-fill"
+                class="transition-transform hover:scale-125 hover:rotate-[80deg]">
+              </iconify-icon>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
   </div>
 </header>
 <!-- Dropdown menu on small screens -->
-<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed w-full top-10 bottom-0 z-10">
+<div id="menu-panel"
+  class="
+    h-0
+    overflow-hidden
+    sm:hidden
+    w-full
+    z-10
+    rounded
+    border-[var(--c-border)]
+  ">
   <div id="menu-content"
-    class="drop-shadow-lg backdrop-blur-md backdrop-saturate-150 shadow-zinc-500/50 relative z-20 bg-white/80 dark:bg-zinc-900/80 px-6 sm:px-8 py-2 -translate-y-full transition-transform duration-200">
-    <ul class="nav flex flex-col sm:flex-row text-md font-medium">
+    class="
+      rounded-b-xl
+      border-b-[1px]
+      relative
+      z-20
+      bg-[var(--c-10)]
+      border-[var(--c-border)]
+      px-6
+      py-2
+      -translate-y-full
+      transition-transform
+      duration-200
+    ">
+    <div class="
+      nav flex
+      flex-col
+      sm:flex-row
+      text-md
+      font-bold
+      transition-transform
+    ">
       
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
-          <a href="/archives" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            Posts
-          </a>
-        </li>
+        <a href="/archives"
+          class="
+            flex
+            h-12
+            sm:h-auto
+            items-center
+            hover:translate-x-2
+            hover:underline
+            transition-transform
+            border-b-[1px]
+            last:border-0
+            border-[var(--c-border)]
+          "
+        >
+          Posts
+        </a>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
-          <a href="/category" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            Categories
-          </a>
-        </li>
+        <a href="/publications"
+          class="
+            flex
+            h-12
+            sm:h-auto
+            items-center
+            hover:translate-x-2
+            hover:underline
+            transition-transform
+            border-b-[1px]
+            last:border-0
+            border-[var(--c-border)]
+          "
+        >
+          Publications
+        </a>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
-          <a href="/tag" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            Tags
-          </a>
-        </li>
+        <a href="/about"
+          class="
+            flex
+            h-12
+            sm:h-auto
+            items-center
+            hover:translate-x-2
+            hover:underline
+            transition-transform
+            border-b-[1px]
+            last:border-0
+            border-[var(--c-border)]
+          "
+        >
+          About
+        </a>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
-          <a href="/publications" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            Publications
-          </a>
-        </li>
+        <a href="/%5Bobject%20Object%5D"
+          class="
+            flex
+            h-12
+            sm:h-auto
+            items-center
+            hover:translate-x-2
+            hover:underline
+            transition-transform
+            border-b-[1px]
+            last:border-0
+            border-[var(--c-border)]
+          "
+        >
+          Categories
+        </a>
         
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/10 last:border-0 hover:text-main">
-          <a href="/about" class="flex h-12 sm:h-auto items-center hover:translate-x-2 transition-all">
-            About
-          </a>
-        </li>
+        <a href="/%5Bobject%20Object%5D"
+          class="
+            flex
+            h-12
+            sm:h-auto
+            items-center
+            hover:translate-x-2
+            hover:underline
+            transition-transform
+            border-b-[1px]
+            last:border-0
+            border-[var(--c-border)]
+          "
+        >
+          Tags
+        </a>
         
-    </ul>
+    </div>
   </div>
-  <!-- Mask for making the page dark -->
-  <div class="mask z-10 bg-black/10 absolute inset-0"></div>
 </div>
   <main>
     <!-- 
@@ -359,7 +484,7 @@ layout: tag
         #中文
       </div>
   </div>
-  <section class="px-0 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
+  <section class="px-2 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
   
   
     
@@ -380,11 +505,14 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-2 px-3 py-3 post-container rounded-lg border-[var(--c-sep)]">
+<div class="
+    flex flex-col gap-2 px-3 py-3 post-container
+    rounded-lg
+">
     <a class="group" href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
         <!-- Post title -->
         <header>
-            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+            <h2 class="text-[var(--c-90)] font-bold text-xl
                 group-hover:translate-x-2 group-hover:text-[var(--c-theme)] 
                 transition-all group-hover:underline">
                 更新个人主页
@@ -500,6 +628,23 @@ layout: tag
         #life
       </a>
     
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
+      </a>
+    
       <a href="/tags/jekyll/" 
         class="
           text-[var(--c-70)]
@@ -549,23 +694,6 @@ layout: tag
           rounded-full 
         ">
         #static-site-generator
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep-2)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
@@ -767,11 +895,14 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-2 px-3 py-3 post-container rounded-lg border-[var(--c-sep)]">
+<div class="
+    flex flex-col gap-2 px-3 py-3 post-container
+    rounded-lg
+">
     <a class="group" href="/2023/05/18/second-post/">
         <!-- Post title -->
         <header>
-            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+            <h2 class="text-[var(--c-90)] font-bold text-xl
                 group-hover:translate-x-2 group-hover:text-[var(--c-theme)] 
                 transition-all group-hover:underline">
                 临近2023暑假，00师姐答辩，晚上打球
@@ -862,23 +993,6 @@ layout: tag
         #life
       </a>
     
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep-2)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
-      </a>
-    
       <a href="/tags/school/" 
         class="
           text-[var(--c-70)]
@@ -894,6 +1008,23 @@ layout: tag
           rounded-full 
         ">
         #school
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
       </a>
     
       <a href="/tags/graduation/" 
@@ -925,11 +1056,14 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-2 px-3 py-3 post-container rounded-lg border-[var(--c-sep)]">
+<div class="
+    flex flex-col gap-2 px-3 py-3 post-container
+    rounded-lg
+">
     <a class="group" href="/2023/05/17/first-post/">
         <!-- Post title -->
         <header>
-            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+            <h2 class="text-[var(--c-90)] font-bold text-xl
                 group-hover:translate-x-2 group-hover:text-[var(--c-theme)] 
                 transition-all group-hover:underline">
                 第一个帖子，瞎写点东西
@@ -1060,23 +1194,6 @@ layout: tag
           rounded-full 
         ">
         #life
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep-2)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
       </a>
     
       <a href="/tags/school/" 
@@ -1230,6 +1347,23 @@ layout: tag
           rounded-full 
         ">
         #土鸡
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
       </a>
     
       <a href="/tags/%E7%86%8A/" 
@@ -1426,11 +1560,14 @@ layout: tag
     <!-- The post -->
     <div>
       <!-- One post item in a list -->
-<div class="flex flex-col gap-2 px-3 py-3 post-container rounded-lg border-[var(--c-sep)]">
+<div class="
+    flex flex-col gap-2 px-3 py-3 post-container
+    rounded-lg
+">
     <a class="group" href="/2022/10/27/first-draft/">
         <!-- Post title -->
         <header>
-            <h2 class="text-zinc-600 dark:text-zinc-300 font-bold text-xl
+            <h2 class="text-[var(--c-90)] font-bold text-xl
                 group-hover:translate-x-2 group-hover:text-[var(--c-theme)] 
                 transition-all group-hover:underline">
                 第一篇
@@ -1514,6 +1651,23 @@ layout: tag
         #life
       </a>
     
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-sep-2)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px] py-[1px]
+          text-sm
+          rounded-full 
+        ">
+        #中文
+      </a>
+    
       <a href="/tags/jekyll/" 
         class="
           text-[var(--c-70)]
@@ -1580,23 +1734,6 @@ layout: tag
           rounded-full 
         ">
         #static-site-generator
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-sep-2)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px] py-[1px]
-          text-sm
-          rounded-full 
-        ">
-        #中文
       </a>
     
       <a href="/tags/html/" 
