@@ -1,16 +1,31 @@
 # Header
 nav:
   # Home: /index
-  Posts: /archives
-  Publications: /publications
+  Posts:
+    path: /archives
+    icon: mingcute:inbox-fill
+    show_text: true
+  Publications:
+    path: /publications
+    icon: mingcute:science-fill
+    show_text: true
   # Projects: /projects
-  About: /about
+  About:
+    path: /about
+    icon: mingcute:user-info-fill
+    show_text: true
   Categories:
     path: /category
     icon: mingcute:classify-2-fill
+    show_icon: true
   Tags:
     path: /tag
     icon: mingcute:tag-fill
+    show_icon: true
+  Home:
+    path: /index
+    icon: mingcute:home-2-fill
+    show_icon: true
 
 email: "chenyingfa1999@qq.com"
 
@@ -26,8 +41,8 @@ logo: /images/logo.svg
 # links
 links:
   Github:
-    link: https://github.com/chen-yingfa
-    icon: mdi:github
+    link: https://www.github.com/chen-yingfa
+    icon: mingcute:github-fill
   ZhiHu:
     link: https://www.zhihu.com/people/chen-ying-fa-34
     icon: ri:zhihu-line
