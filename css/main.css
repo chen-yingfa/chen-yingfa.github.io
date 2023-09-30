@@ -99,7 +99,7 @@ body {
 }
 :root {
   --c-theme: #3478f6;
-  --c-theme-2: #3458b6;
+  --c-theme-2: #3058b6;
   --c-0: #fff;
   --c-10: #f6f8fa;
   --c-20: #f3f4f6;
@@ -121,10 +121,11 @@ body {
   --c-sep: #e1e4e8;
   --c-sep-2: #d1d4d8;
   --c-code-language: #9ca3af;
-  --h-header: 40px;
+  --h-header: 48px;
 }
 html.dark {
-  --c-theme: #6393f2;
+  --c-theme: #5393d2;
+  --c-theme-2: #415876;
   --c-0: #181818;
   --c-10: #1f1f1f;
   --c-20: #282828;
@@ -149,6 +150,7 @@ html.dark {
 }
 a {
   color: var(--c-theme);
+  transition: color 0.1s ease-in-out;
 }
 a:hover {
   color: var(--c-theme);

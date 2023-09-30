@@ -140,29 +140,37 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <header class="
     flex flex-row items-center
     w-full
-    px-3
+    pr-3
     z-10
     border-b-[1px]
-    bg-[var(--c-10)]
-    border-[var(--c-border)]
+    border-b-[var(--c-border)]
+    dark:border-[0px]
+    dark:bg-[var(--c-0)]
     gap-2
     h-[var(--h-header)]
-    text-[var(--c-100)]">
+    text-[var(--c-100)]
+">
     <!-- Left part -->
-    <a href="/">
-        <div class="flex flex-row items-center gap-1 w-max group">
-            <!-- Site Title on the top left -->
-            <div class="text-xl title-container font-black group-hover:underline">
-                Chen Yingfa
-            </div>
-        </div>
-    </a>
+    <div class="overflow-hidden h-full flex flex-row items-center">
+        <!-- Site Title on the top left -->
+        <a href="/" class="
+            text-2xl
+            text-[var(--c-theme)]
+            hover:text-[var(--c-theme-2)]
+            pl-3
+            transition-colors
+            font-black
+            bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent
+          ">
+            Chen Yingfa
+        </a>
+    </div>
     <!-- Div for pushing items to both sides -->
     <div class="flex-1"></div>
     <!-- Right part -->
-    <div class="flex flex-row items-center">
+    <div class="flex flex-row items-center z-20 h-full">
         <!-- Page links -->
-        <div class="hidden sm:flex flex-row items-center">
+        <div class="hidden sm:flex flex-row items-center h-full">
             
                 
                 
@@ -175,9 +183,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-70)]
-                        hover:text-[var(--c-10)]
-                        p-1
+                        hover:bg-[var(--c-25)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        p-2
                         my-1
                         rounded-lg
                     ">
@@ -201,9 +210,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-70)]
-                        hover:text-[var(--c-10)]
-                        p-1
+                        hover:bg-[var(--c-25)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        p-2
                         my-1
                         rounded-lg
                     ">
@@ -227,9 +237,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-70)]
-                        hover:text-[var(--c-10)]
-                        p-1
+                        hover:bg-[var(--c-25)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        p-2
                         my-1
                         rounded-lg
                     ">
@@ -253,9 +264,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-70)]
-                        hover:text-[var(--c-10)]
-                        p-1
+                        hover:bg-[var(--c-25)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        p-2
                         my-1
                         rounded-lg
                     ">
@@ -277,9 +289,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-70)]
-                        hover:text-[var(--c-10)]
-                        p-1
+                        hover:bg-[var(--c-25)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        p-2
                         my-1
                         rounded-lg
                     ">
@@ -301,9 +314,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-70)]
-                        hover:text-[var(--c-10)]
-                        p-1
+                        hover:bg-[var(--c-25)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        p-2
                         my-1
                         rounded-lg
                     ">
@@ -319,8 +333,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <div class="flex flex-row items-center">
             <!-- Dark/light toggle icon -->
             <a class="flex group p-1" title="toggle theme" id="toggle-dark">
-                <iconify-icon class="transition-transform group-hover:rotate-[45deg]
-                    group-hover:scale-125 group-hover:text-[var(--c-100)]
+                <iconify-icon class="transition-transform
+                    group-hover:rotate-[45deg]
+                    group-hover:scale-125
+                    group-hover:text-[var(--c-theme)]
                     " width="24" icon="" id="theme-icon">
                 </iconify-icon>
             </a>
@@ -351,7 +367,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     w-full
     z-10
     rounded
-    border-[var(--c-border)]
+    drop-shadow-md
   ">
   <div id="menu-content"
     class="
@@ -359,7 +375,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       border-b-[1px]
       relative
       z-20
-      bg-[var(--c-10)]
       border-[var(--c-border)]
       px-2
       py-2
@@ -386,11 +401,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 gap-2
                 h-12
                 hover:underline
-                hover:bg-[var(--c-70)]
-                hover:text-[var(--c-10)]
+                hover:bg-[var(--c-10)]
                 px-3
                 py-1
                 rounded-lg
+                hover:drop-shadow-md
             ">
             <iconify-icon icon="mingcute:inbox-fill" width="22">
             </iconify-icon>
@@ -409,11 +424,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 gap-2
                 h-12
                 hover:underline
-                hover:bg-[var(--c-70)]
-                hover:text-[var(--c-10)]
+                hover:bg-[var(--c-10)]
                 px-3
                 py-1
                 rounded-lg
+                hover:drop-shadow-md
             ">
             <iconify-icon icon="mingcute:science-fill" width="22">
             </iconify-icon>
@@ -432,11 +447,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 gap-2
                 h-12
                 hover:underline
-                hover:bg-[var(--c-70)]
-                hover:text-[var(--c-10)]
+                hover:bg-[var(--c-10)]
                 px-3
                 py-1
                 rounded-lg
+                hover:drop-shadow-md
             ">
             <iconify-icon icon="mingcute:user-info-fill" width="22">
             </iconify-icon>
@@ -455,11 +470,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 gap-2
                 h-12
                 hover:underline
-                hover:bg-[var(--c-70)]
-                hover:text-[var(--c-10)]
+                hover:bg-[var(--c-10)]
                 px-3
                 py-1
                 rounded-lg
+                hover:drop-shadow-md
             ">
             <iconify-icon icon="mingcute:classify-2-fill" width="22">
             </iconify-icon>
@@ -478,11 +493,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 gap-2
                 h-12
                 hover:underline
-                hover:bg-[var(--c-70)]
-                hover:text-[var(--c-10)]
+                hover:bg-[var(--c-10)]
                 px-3
                 py-1
                 rounded-lg
+                hover:drop-shadow-md
             ">
             <iconify-icon icon="mingcute:tag-fill" width="22">
             </iconify-icon>
@@ -501,11 +516,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                 gap-2
                 h-12
                 hover:underline
-                hover:bg-[var(--c-70)]
-                hover:text-[var(--c-10)]
+                hover:bg-[var(--c-10)]
                 px-3
                 py-1
                 rounded-lg
+                hover:drop-shadow-md
             ">
             <iconify-icon icon="mingcute:home-2-fill" width="22">
             </iconify-icon>
@@ -580,77 +595,77 @@ layout: tag
       </div>
     
     <!-- The post -->
-    <div>
+    <div class="w-full">
       <!-- One post item in a list -->
 <div class="
     post-container
     px-3 py-3
 ">
-    <div class="flex flex-row">
-        <div class="post-data-container flex flex-col gap-2">
-            <!-- Post title -->
-            <a href="/2023/09/14/some_binary_search/">
-                <h2 class="
+    <div class="post-data-container flex flex-col gap-2">
+        <!-- Post title -->
+        <a href="/2023/09/14/some_binary_search/">
+            <h2 class="
                     text-[var(--c-80)]
                     font-bold
                     text-xl
                     hover:text-[var(--c-theme)]
-                    transition-transform
+                    transition-all
                     hover:underline">
-                    Some Binary Search
-                </h2>
-            </a>
-            <section class="mt-1 text-sm">
-                <p class="line-clamp-4">
-                    <!-- Post excerpt -->
-                    
+                Some Binary Search
+            </h2>
+        </a>
+        <section class="mt-1 text-sm">
+            <p class="line-clamp-4">
+                <!-- Post excerpt -->
+                
+            </p>
+        </section>
+        <!-- Post Statistics -->
+        <div class="flex flex-wrap items-center gap-x-2 text-sm
+            text-[var(--c-70)] line-clamp-4">
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:add-circle-fill"></iconify-icon>
+                <time class="w-max">
+                    2023-09-14
+                </time>
+            </span>
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:refresh-3-fill"></iconify-icon>
+                <time class="w-max">
+                    2023-09-23
+                </time>
+            </span>
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:book-2-fill"></iconify-icon>
+                <p class="w-max">
+                    157 words, 1 min
                 </p>
-            </section>
-            <!-- Post Statistics -->
-            <div class="flex flex-wrap items-center gap-x-2 text-sm
-                text-[var(--c-70)] line-clamp-4">
-                <span class="flex flex-row items-center gap-1 group">
-                    <iconify-icon width="16"
-                        icon="mingcute:add-circle-fill"></iconify-icon>
-                    <time class="w-max">
-                        2023-09-14
-                    </time>
-                </span>
-                <span class="flex flex-row items-center gap-1 group">
-                    <iconify-icon width="16"
-                        icon="mingcute:refresh-3-fill"></iconify-icon>
-                    <time class="w-max">
-                        2023-09-23
-                    </time>
-                </span>
-                <span class="flex flex-row items-center gap-1 group">
-                    <iconify-icon width="16"
-                        icon="mingcute:book-2-fill"></iconify-icon>
-                    <p class="w-max">
-                        157 words, 1 min
-                    </p>
-                </span>
-                <!-- Categories -->
-                <span class="flex flex-row items-center gap-1 group">
+            </span>
+            <!-- Categories -->
+            <span class="flex flex-row items-center gap-1 group">
+                
+                    <iconify-icon class="
+                            group-hover:scale-125
+                            transition-transform
+                            group-hover:text-[var(--c-theme)]
+                        "
+                        width="16"
+                        icon="mingcute:classify-2-fill" class="mr-0">
+                    </iconify-icon>
                     
-                        <iconify-icon class="
-                                group-hover:scale-125
-                                transition-transform
-                                group-hover:text-[var(--c-theme)]
-                            "
-                            width="16"
-                            icon="mingcute:classify-2-fill" class="mr-0">
-                        </iconify-icon>
-                        
-                            <a class="underline underline-offset-2"
-                                href="/categories/Test/">
-                                Test
-                            </a>
-                        
+                        <a class="underline underline-offset-2"
+                            href="/categories/Test/">
+                            Test
+                        </a>
                     
-                </span>
-                <!-- Tags -->
-            </div>
+                
+            </span>
+        </div>
+        <!-- Tags -->
+        <div>
             
                 
 <div class="flex flex-wrap gap-1">
@@ -794,7 +809,7 @@ layout: tag
     
   
 </div>
-            
+                
         </div>
     </div>
 </div>
@@ -817,7 +832,7 @@ layout: tag
         
         <a class="
             hover:text-[var(--c-10)]
-            hover:bg-[var(--c-70)]
+            hover:bg-[var(--c-theme)]
             rounded-lg
             p-1
             my-1
@@ -833,7 +848,7 @@ layout: tag
         
         <a class="
             hover:text-[var(--c-10)]
-            hover:bg-[var(--c-70)]
+            hover:bg-[var(--c-theme)]
             rounded-lg
             p-1
             my-1
@@ -849,7 +864,7 @@ layout: tag
         
         <a class="
             hover:text-[var(--c-10)]
-            hover:bg-[var(--c-70)]
+            hover:bg-[var(--c-theme)]
             rounded-lg
             p-1
             my-1
@@ -880,7 +895,7 @@ layout: tag
 
 
   <!-- copyright -->
-  <div class="flex items-center gap-2">
+  <div class="flex flex-row items-center gap-1">
     <a class="hover:underline"
       target="_blank"
       href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -888,23 +903,22 @@ layout: tag
       CC BY-NC-SA 4.0
     </a>
     <span>© 2023</span>
-    <iconify-icon width="16" icon="mingcute:maple-leaf-line" ></iconify-icon>
     <a class="hover:underline"
-      href="https://github.com/chen-yingfa" 
-      target="_blank" 
-      rel="noopener noreferrer">陈英发</a>
+    href="https://github.com/chen-yingfa" 
+    target="_blank" 
+    rel="noopener noreferrer">陈英发</a>
   </div>
   <!-- powered by -->
   <div class="flex items-center gap-1">
     <span>Powered by</span>
     <a class="hover:underline" 
-      href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
     <span>&</span>
     <a href="https://github.com/chen-yingfa/hexo-theme-fengye" 
-      class="hover:underline"
-      target="_blank"
+    class="hover:underline"
+    target="_blank"
       rel="noopener noreferrer"
-    >
+      >
       枫叶 Fengye
     </a>
   </div>
@@ -912,20 +926,17 @@ layout: tag
 </footer>
 
   <div class="back-to-top fixed right-6 z-1024 -bottom-20
-    rounded-md 
-    py-1 px-2 
-    text-[var(--c-10)]
-    bg-[var(--c-60)]
-    opacity-80 
-    border-[1px]
-    border-[var(--c-sep)]
+    rounded-lg
+    font-bold
+    py-1 px-2
+    bg-[var(--c-10)]
     cursor-pointer
     text-center
-    drop-shadow
+    drop-shadow-md
   ">
     <span class="flex justify-center items-center text-sm">
       <span id="scrollpercent"><span>0</span> %</span>
-      <iconify-icon width="18" icon="mingcute:arrow-to-up-line" id="go-top"></iconify-icon>
+      <iconify-icon width="18" icon="mingcute:arrow-to-up-fill" id="go-top"></iconify-icon>
     </span>
   </div>
   
