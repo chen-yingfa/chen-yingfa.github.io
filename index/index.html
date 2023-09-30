@@ -148,7 +148,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     dark:bg-[var(--c-0)]
     gap-2
     h-[var(--h-header)]
-    text-[var(--c-100)]
+    text-[var(--c-80)]
 ">
     <!-- Left part -->
     <div class="overflow-hidden h-full flex flex-row items-center">
@@ -156,11 +156,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <a href="/" class="
             text-2xl
             text-[var(--c-theme)]
-            hover:text-[var(--c-theme-2)]
+            hover:text-[var(--c-theme)]
             pl-3
             transition-colors
             font-black
-            bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent
+            bg-gradient-to-r from-cyan-500
+            to-blue-500 bg-clip-text text-transparent
           ">
             Chen Yingfa
         </a>
@@ -183,7 +184,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-25)]
+                        hover:bg-[var(--c-20)]
                         hover:text-[var(--c-theme)]
                         transition-all
                         p-2
@@ -210,7 +211,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-25)]
+                        hover:bg-[var(--c-20)]
                         hover:text-[var(--c-theme)]
                         transition-all
                         p-2
@@ -237,7 +238,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-25)]
+                        hover:bg-[var(--c-20)]
                         hover:text-[var(--c-theme)]
                         transition-all
                         p-2
@@ -264,7 +265,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-25)]
+                        hover:bg-[var(--c-20)]
                         hover:text-[var(--c-theme)]
                         transition-all
                         p-2
@@ -289,7 +290,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-25)]
+                        hover:bg-[var(--c-20)]
                         hover:text-[var(--c-theme)]
                         transition-all
                         p-2
@@ -314,7 +315,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                         flex flex-row items-center
                         gap-1
                         hover:underline
-                        hover:bg-[var(--c-25)]
+                        hover:bg-[var(--c-20)]
                         hover:text-[var(--c-theme)]
                         transition-all
                         p-2
@@ -535,7 +536,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 </div>
   <main>
     <div class="flex flex-col gap-0">
-  <div class="index-info-container pt-6 text-[var(--c-60)]">
+  <div class="index-info-container pt-6 text-[var(--c-70)]">
     <!-- Home page info, short text about me -->
     <div class="flex flex-col items-center">
       <a href="/about">
@@ -557,7 +558,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         text-[var(--c-80)] mt-2">
         陈英发
       </p>
-      <div class="flex flex-row items-center gap-4 mt-3">
+      <div class="flex flex-row items-center gap-4 my-3 font-bold">
         <div class="flex flex-row items-center gap-1">
           <iconify-icon width="20" icon="mingcute:building-1-fill"></iconify-icon>
           <p>Beijing 北京</p>
@@ -583,20 +584,19 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       </div>
     </div>
   </div>
-</div>
 
-<!-- 分割线 -->
-<div class="flex flex-col items-center justify-center0">
-  <hr class="w-1/2 my-8 h-[1px] bg-[var(--c-sep-2)] mr-1/2">
-  </hr>
-  <div class="flex flex-row items-center gap-2 text-[var(--c-50)]">
-    <iconify-icon width="28" icon="mingcute:news-fill"></iconify-icon>
-    <p class="text-center text-3xl">Recent Works</p>
+  <!-- 分割线 -->
+  <div class="flex flex-col items-center justify-center0">
+    <hr class="w-1/2 mb-10 h-[1px] bg-[var(--c-sep-2)] mr-1/2">
+    </hr>
+    <div class="flex flex-row items-center gap-2 text-[var(--c-50)]">
+      <iconify-icon width="28" icon="mingcute:news-fill"></iconify-icon>
+      <p class="text-center text-3xl">Recent Works</p>
+    </div>
   </div>
-</div>
 
-<!-- List of featured posts -->
-<section class="px-2 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
+  <!-- List of featured posts -->
+  <section class="px-2 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
   
   
     
@@ -606,13 +606,97 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         <div class="absolute -top-6 w-[100%]">
           <p class="text-clip overflow-hidden -translate-x-3 text-9xl
             font-extrabold
-            text-[var(--c-70)]
+            text-[var(--c-theme)]
             opacity-10
             dark:opacity-20">
             2023
           </p>
         </div>
       </div>
+    
+    <!-- The post -->
+    <div class="w-full">
+      <!-- One post item in a list -->
+<div class="
+    post-container
+    px-3 py-3
+">
+    <div class="post-data-container flex flex-col gap-2">
+        <!-- Post title -->
+        <a href="/2023/09/14/EREN/">
+            <h2 class="
+                    text-[var(--c-80)]
+                    font-bold
+                    text-xl
+                    hover:text-[var(--c-theme)]
+                    transition-all
+                    hover:underline">
+                (EREN) Robust and Scalable Model Editing for Large Language Models
+            </h2>
+        </a>
+        <section class="mt-1 text-sm">
+            <p class="line-clamp-4">
+                <!-- Post excerpt -->
+                
+                    <div class="post-excerpt text-[var(--c-60)]">
+                        <p>This is my first ever stand-alone research work, I hope it can be accepted at EMNLP 2023, but judging from its review scores, it can only get EMNLP Findings. But that's acceptable.</p>                    </div>
+                
+            </p>
+        </section>
+        <!-- Post Statistics -->
+        <div class="flex flex-wrap items-center gap-x-2 text-sm
+            text-[var(--c-70)] line-clamp-4">
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:add-circle-fill"></iconify-icon>
+                <time class="w-max">
+                    2023-09-14
+                </time>
+            </span>
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:refresh-3-fill"></iconify-icon>
+                <time class="w-max">
+                    2023-09-29
+                </time>
+            </span>
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:book-2-fill"></iconify-icon>
+                <p class="w-max">
+                    303 words, 1 min
+                </p>
+            </span>
+            <!-- Categories -->
+            <span class="flex flex-row items-center gap-1 group">
+                
+                    <iconify-icon class="
+                            group-hover:scale-125
+                            transition-transform
+                            group-hover:text-[var(--c-theme)]
+                        "
+                        width="16"
+                        icon="mingcute:classify-2-fill" class="mr-0">
+                    </iconify-icon>
+                    
+                        <a class="underline underline-offset-2"
+                            href="/categories/Paper/">
+                            Paper
+                        </a>
+                    
+                
+            </span>
+        </div>
+        <!-- Tags -->
+        <div>
+            
+        </div>
+    </div>
+</div>
+    </div>
+  
+    
+    <!-- Large text showing the year in the background -->
     
     <!-- The post -->
     <div class="w-full">
@@ -696,94 +780,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 </div>
     </div>
   
-    
-    <!-- Large text showing the year in the background -->
-    
-    <!-- The post -->
-    <div class="w-full">
-      <!-- One post item in a list -->
-<div class="
-    post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-2">
-        <!-- Post title -->
-        <a href="/2023/09/14/EREN/">
-            <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                (EREN) Robust and Scalable Model Editing for Large Language Models
-            </h2>
-        </a>
-        <section class="mt-1 text-sm">
-            <p class="line-clamp-4">
-                <!-- Post excerpt -->
-                
-                    <div class="post-excerpt text-[var(--c-60)]">
-                        <p>This is my first ever stand-alone research work, I hope it can be accepted at EMNLP 2023, but judging from its review scores, it can only get EMNLP Findings. But that's acceptable.</p>                    </div>
-                
-            </p>
-        </section>
-        <!-- Post Statistics -->
-        <div class="flex flex-wrap items-center gap-x-2 text-sm
-            text-[var(--c-70)] line-clamp-4">
-            <span class="flex flex-row items-center gap-1 group">
-                <iconify-icon width="16"
-                    icon="mingcute:add-circle-fill"></iconify-icon>
-                <time class="w-max">
-                    2023-09-14
-                </time>
-            </span>
-            <span class="flex flex-row items-center gap-1 group">
-                <iconify-icon width="16"
-                    icon="mingcute:refresh-3-fill"></iconify-icon>
-                <time class="w-max">
-                    2023-09-29
-                </time>
-            </span>
-            <span class="flex flex-row items-center gap-1 group">
-                <iconify-icon width="16"
-                    icon="mingcute:book-2-fill"></iconify-icon>
-                <p class="w-max">
-                    303 words, 1 min
-                </p>
-            </span>
-            <!-- Categories -->
-            <span class="flex flex-row items-center gap-1 group">
-                
-                    <iconify-icon class="
-                            group-hover:scale-125
-                            transition-transform
-                            group-hover:text-[var(--c-theme)]
-                        "
-                        width="16"
-                        icon="mingcute:classify-2-fill" class="mr-0">
-                    </iconify-icon>
-                    
-                        <a class="underline underline-offset-2"
-                            href="/categories/Paper/">
-                            Paper
-                        </a>
-                    
-                
-            </span>
-        </div>
-        <!-- Tags -->
-        <div>
-            
-        </div>
-    </div>
-</div>
-    </div>
-  
 </section>
 
 
-  </div>
+</div>
   </main>
   <footer class="flex flex-col h-40 mb-6 items-center justify-center
   text-[var(--c-50)] text-sm">
@@ -796,8 +796,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
         
         <a class="
-            hover:text-[var(--c-10)]
-            hover:bg-[var(--c-theme)]
+            hover:text-[var(--c-theme)]
+            hover:bg-[var(--c-20)]
             rounded-lg
             p-1
             my-1
@@ -812,8 +812,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
         
         <a class="
-            hover:text-[var(--c-10)]
-            hover:bg-[var(--c-theme)]
+            hover:text-[var(--c-theme)]
+            hover:bg-[var(--c-20)]
             rounded-lg
             p-1
             my-1
@@ -828,8 +828,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             
         
         <a class="
-            hover:text-[var(--c-10)]
-            hover:bg-[var(--c-theme)]
+            hover:text-[var(--c-theme)]
+            hover:bg-[var(--c-20)]
             rounded-lg
             p-1
             my-1
