@@ -132,7 +132,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 </head>
 <body 
   class="
-    font-arial
     bg-[var(--c-0)]
     text-[var(--c-80)]
   ">
@@ -140,12 +139,12 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <header class="
     flex flex-row items-center
     w-full
-    pr-3
+    pr-4
     z-10
     border-b-[1px]
     border-b-[var(--c-border)]
-    dark:border-[0px]
     dark:bg-[var(--c-0)]
+    dark:border-b-[var(--c-0)]
     gap-2
     h-[var(--h-header)]
     text-[var(--c-80)]
@@ -154,11 +153,11 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     <div class="overflow-hidden h-full flex flex-row items-center">
         <!-- Site Title on the top left -->
         <a href="/" class="
+            whitespace-nowrap
             text-2xl
             text-[var(--c-theme)]
             hover:text-[var(--c-theme)]
-            pl-3
-            transition-colors
+            pl-4
             font-black
             bg-gradient-to-r from-cyan-500
             to-blue-500 bg-clip-text text-transparent
@@ -372,11 +371,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   ">
   <div id="menu-content"
     class="
-      rounded-b-2xl
       border-b-[1px]
       relative
       z-20
-      border-[var(--c-border)]
+      border-[var(--c-sep)]
       px-2
       py-2
       -translate-y-full
@@ -554,7 +552,7 @@ layout: tag
 -->
 
   <!-- 显示所有tag，让用户选择 -->
-  <div class="flex flex-col gap-2 px-6 max-w-prose mx-auto md:px-0 mt-6">
+  <div class="flex flex-col gap-2 px-6 max-w-prose mx-auto md:px-0 my-8">
     <div class="flex flex-row items-center gap-2">
       <iconify-icon width="28" icon="mingcute:tag-fill"></iconify-icon>
       <h2 class="font-bold text-2xl">Tags</h2>
@@ -563,1927 +561,1388 @@ layout: tag
       
         <a href="/tags/research/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/research/">
           #research
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×5</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×5
+          </span>
         </a>
       
         <a href="/tags/life/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/life/">
           #life
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×5</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×5
+          </span>
         </a>
       
         <a href="/tags/00/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/00/">
           #00
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×4</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×4
+          </span>
         </a>
       
         <a href="/tags/english/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/english/">
           #english
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×4</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×4
+          </span>
         </a>
       
         <a href="/tags/%E4%B8%AD%E6%96%87/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/%E4%B8%AD%E6%96%87/">
           #中文
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×4</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×4
+          </span>
         </a>
       
         <a href="/tags/paper/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/paper/">
           #paper
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/cfd/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/cfd/">
           #cfd
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/machine-learning/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/machine-learning/">
           #machine-learning
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/llm/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/llm/">
           #llm
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
-        </a>
-      
-        <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/">
-          #面壁智能
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/eren/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/eren/">
           #eren
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
-        </a>
-      
-        <a href="/tags/test/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/test/">
-          #test
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
-        </a>
-      
-        <a href="/tags/hugo/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/hugo/">
-          #hugo
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/jekyll/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/jekyll/">
           #jekyll
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
+        </a>
+      
+        <a href="/tags/test/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/test/">
+          #test
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
+        </a>
+      
+        <a href="/tags/hugo/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/hugo/">
+          #hugo
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/static-site-generator/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/static-site-generator/">
           #static-site-generator
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/school/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/school/">
           #school
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×2</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
+        </a>
+      
+        <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/">
+          #面壁智能
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×2
+          </span>
         </a>
       
         <a href="/tags/dataset/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/dataset/">
           #dataset
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/pinn/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/pinn/">
           #pinn
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/fno/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/fno/">
           #fno
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/physics/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/physics/">
           #physics
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/deep-learning/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/deep-learning/">
           #deep-learning
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/deeponet/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/deeponet/">
           #deeponet
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/ai4science/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/ai4science/">
           #ai4science
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/ethics/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/ethics/">
-          #ethics
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/safety/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/safety/">
-          #safety
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/ai-alignment/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/ai-alignment/">
-          #ai-alignment
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/modelbest/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/modelbest/">
-          #modelbest
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/tutorial/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/tutorial/">
-          #tutorial
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/chatgpt/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/chatgpt/">
-          #chatgpt
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/claude/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/claude/">
-          #claude
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E4%B8%89%E4%BD%93/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E4%B8%89%E4%BD%93/">
-          #三体
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/algorithm/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/algorithm/">
-          #algorithm
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/binary-search/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/binary-search/">
-          #binary-search
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/rust/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/rust/">
-          #rust
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/python/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/python/">
-          #python
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/c/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/c/">
-          #c++
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/code/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/code/">
-          #code
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/blog/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/blog/">
-          #blog
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E7%AD%BE%E8%AF%81/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E7%AD%BE%E8%AF%81/">
-          #签证
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/hexo/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/hexo/">
-          #hexo
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">
-          #羽毛球
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/work/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/work/">
-          #work
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E6%9E%AB%E5%8F%B6/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E6%9E%AB%E5%8F%B6/">
-          #枫叶
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E4%B8%AD%E5%9B%BD/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E4%B8%AD%E5%9B%BD/">
-          #中国
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E6%8C%AA%E5%A8%81/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E6%8C%AA%E5%A8%81/">
-          #挪威
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/markdown/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/markdown/">
-          #markdown
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%AE%BF%E8%88%8D/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%AE%BF%E8%88%8D/">
-          #宿舍
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/graduation/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/graduation/">
-          #graduation
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">
-          #孩子们
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%8D%A7%E9%BE%99/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%8D%A7%E9%BE%99/">
-          #卧龙
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%87%A4%E9%9B%8F/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%87%A4%E9%9B%8F/">
-          #凤雏
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E9%AA%86%E9%9B%81/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E9%AA%86%E9%9B%81/">
-          #骆雁
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E9%BB%84%E5%B8%9D/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E9%BB%84%E5%B8%9D/">
-          #黄帝
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%B0%8F%E7%BB%BF/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%B0%8F%E7%BB%BF/">
-          #小绿
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E7%8C%AB%E5%92%AA/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E7%8C%AB%E5%92%AA/">
-          #猫咪
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%9C%9F%E9%B8%A1/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%9C%9F%E9%B8%A1/">
-          #土鸡
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E7%86%8A/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E7%86%8A/">
-          #熊
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%F0%9F%90%BB/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%F0%9F%90%BB/">
-          #🐻
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%F0%9F%90%B1/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%F0%9F%90%B1/">
-          #🐱
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%F0%9F%90%87/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%F0%9F%90%87/">
-          #🐇
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%F0%9F%90%B0/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%F0%9F%90%B0/">
-          #🐰
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%F0%9F%90%8A/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%F0%9F%90%8A/">
-          #🐊
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/emoren/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/emoren/">
-          #emoren
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/acl/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/acl/">
-          #acl
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/lillesand/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/lillesand/">
-          #lillesand
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/">
-          #加拿大
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/html/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/html/">
-          #html
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
-        </a>
-      
-        <a href="/tags/liquid/"
-          class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
-            px-[8px]
-            py-[1px]
-            rounded-full
-            hover:z-10
-          "
-          href="/tags/liquid/">
-          #liquid
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/arxiv/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/arxiv/">
           #arxiv
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/knowledge/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/knowledge/">
           #knowledge
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/emnlp/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/emnlp/">
           #emnlp
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/model-editing/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/model-editing/">
           #model editing
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/in-context-learning/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/in-context-learning/">
           #in-context-learning
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/ai/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/ai/">
           #ai
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/serac/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/serac/">
           #serac
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/rome/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/rome/">
           #rome
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
         <a href="/tags/mend/"
           class="
-            flex
-            flex-row
-            items-center
-            text-[var(--c-70)]
-            dark:text-[var(--c-80)]
-            border-[1px]
-            border-[var(--c-sep)]
-            bg-[var(--c-20)]
-            hover:bg-[var(--c-30)]
-            dark:bg-transparent 
-            dark:hover:bg-[var(--c-80)]
-            dark:hover:text-[var(--c-20)]
+            tag
+            flex flex-row items-center
+            text-[16px]
             px-[8px]
-            py-[1px]
+            py-[2px]
             rounded-full
-            hover:z-10
+            drop-shadow-md
           "
           href="/tags/mend/">
           #mend
-          <span class="text-[var(--c-50)] dark:text-[var(--c-60)] hover:text-[var(--c-60)] pl-1
-            text-sm">×1</span>
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/html/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/html/">
+          #html
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/liquid/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/liquid/">
+          #liquid
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%AD%A9%E5%AD%90%E4%BB%AC/">
+          #孩子们
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%8D%A7%E9%BE%99/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%8D%A7%E9%BE%99/">
+          #卧龙
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%87%A4%E9%9B%8F/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%87%A4%E9%9B%8F/">
+          #凤雏
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E9%AA%86%E9%9B%81/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E9%AA%86%E9%9B%81/">
+          #骆雁
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E9%BB%84%E5%B8%9D/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E9%BB%84%E5%B8%9D/">
+          #黄帝
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%B0%8F%E7%BB%BF/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%B0%8F%E7%BB%BF/">
+          #小绿
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E7%8C%AB%E5%92%AA/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E7%8C%AB%E5%92%AA/">
+          #猫咪
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%9C%9F%E9%B8%A1/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%9C%9F%E9%B8%A1/">
+          #土鸡
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E7%86%8A/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E7%86%8A/">
+          #熊
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%F0%9F%90%BB/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%F0%9F%90%BB/">
+          #🐻
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%F0%9F%90%B1/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%F0%9F%90%B1/">
+          #🐱
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%F0%9F%90%87/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%F0%9F%90%87/">
+          #🐇
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%F0%9F%90%B0/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%F0%9F%90%B0/">
+          #🐰
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%F0%9F%90%8A/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%F0%9F%90%8A/">
+          #🐊
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/emoren/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/emoren/">
+          #emoren
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/acl/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/acl/">
+          #acl
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/lillesand/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/lillesand/">
+          #lillesand
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%8A%A0%E6%8B%BF%E5%A4%A7/">
+          #加拿大
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/ethics/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/ethics/">
+          #ethics
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/safety/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/safety/">
+          #safety
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/ai-alignment/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/ai-alignment/">
+          #ai-alignment
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/modelbest/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/modelbest/">
+          #modelbest
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/tutorial/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/tutorial/">
+          #tutorial
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/chatgpt/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/chatgpt/">
+          #chatgpt
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/claude/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/claude/">
+          #claude
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E4%B8%89%E4%BD%93/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E4%B8%89%E4%BD%93/">
+          #三体
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/graduation/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/graduation/">
+          #graduation
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/algorithm/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/algorithm/">
+          #algorithm
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/binary-search/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/binary-search/">
+          #binary-search
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/rust/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/rust/">
+          #rust
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/python/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/python/">
+          #python
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/c/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/c/">
+          #c++
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/code/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/code/">
+          #code
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/blog/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/blog/">
+          #blog
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E7%AD%BE%E8%AF%81/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E7%AD%BE%E8%AF%81/">
+          #签证
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/hexo/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/hexo/">
+          #hexo
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">
+          #羽毛球
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/work/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/work/">
+          #work
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E6%9E%AB%E5%8F%B6/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E6%9E%AB%E5%8F%B6/">
+          #枫叶
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E4%B8%AD%E5%9B%BD/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E4%B8%AD%E5%9B%BD/">
+          #中国
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E6%8C%AA%E5%A8%81/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E6%8C%AA%E5%A8%81/">
+          #挪威
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/markdown/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/markdown/">
+          #markdown
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
+        </a>
+      
+        <a href="/tags/%E5%AE%BF%E8%88%8D/"
+          class="
+            tag
+            flex flex-row items-center
+            text-[16px]
+            px-[8px]
+            py-[2px]
+            rounded-full
+            drop-shadow-md
+          "
+          href="/tags/%E5%AE%BF%E8%88%8D/">
+          #宿舍
+          <span class="text-[var(--c-50)] pl-1
+            text-sm">
+            ×1
+          </span>
         </a>
       
     </div>
@@ -2505,11 +1964,11 @@ layout: tag
             hover:text-[var(--c-theme)]
             hover:bg-[var(--c-20)]
             rounded-lg
-            p-1
+            p-2
             my-1
             flex flex-row items-center
             group" title="Github" target="_blank" rel="noopener" href="https://www.github.com/chen-yingfa">
-            <iconify-icon width="24" icon="mingcute:github-fill"></iconify-icon>
+            <iconify-icon width="28" icon="mingcute:github-fill"></iconify-icon>
         </a>
     
         
@@ -2521,11 +1980,11 @@ layout: tag
             hover:text-[var(--c-theme)]
             hover:bg-[var(--c-20)]
             rounded-lg
-            p-1
+            p-2
             my-1
             flex flex-row items-center
             group" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
-            <iconify-icon width="24" icon="ri:zhihu-line"></iconify-icon>
+            <iconify-icon width="28" icon="ri:zhihu-line"></iconify-icon>
         </a>
     
         
@@ -2537,11 +1996,11 @@ layout: tag
             hover:text-[var(--c-theme)]
             hover:bg-[var(--c-20)]
             rounded-lg
-            p-1
+            p-2
             my-1
             flex flex-row items-center
             group" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
-            <iconify-icon width="24" icon="mingcute:social-x-fill"></iconify-icon>
+            <iconify-icon width="28" icon="mingcute:social-x-fill"></iconify-icon>
         </a>
     
 
@@ -2596,11 +2055,16 @@ layout: tag
 
 </footer>
 
-  <div class="back-to-top fixed right-6 z-1024 -bottom-20
+  <div class="
+    back-to-top
+    fixed right-6
+    z-1024
+    -bottom-20
     rounded-lg
     font-bold
     py-1 px-2
-    bg-[var(--c-10)]
+    text-[var(--c-80)]
+    bg-[var(--c-20)]
     cursor-pointer
     text-center
     drop-shadow-md
