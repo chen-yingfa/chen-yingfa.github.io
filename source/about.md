@@ -6,17 +6,17 @@ type: "about"
 
 <img src="images/portrait.jpg" alt="Portrait of Chen Yingfa having lunch in Beijing, taken by Luo Yining."/>
 
-[中文](#Chinese-Version-中文版本)
+<iconify-icon icon="mingcute:world-2-fill"></iconify-icon> [中文](#Chinese-Version-中文版本)
 
-🔗 Social links:
+<iconify-icon icon="mingcute:link-fill"></iconify-icon> Social links:
 
 - [Google Scholar](https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en)
-- [Twitter](https://www.twitter.com/DonnyChan123)
+- [X (Twitter)](https://www.twitter.com/DonnyChan123)
 - [GitHub](https://www.github.com/chen-yingfa)
 - [知乎](https://www.zhihu.com/people/chen-ying-fa-34)
 - [B站](https://space.bilibili.com/474619698?spm_id_from=333.1007.0.0)
 
-✉️ Email: (either is ok) 
+<iconify-icon icon="mingcute:mail-fill"></iconify-icon> Email: (either is ok) 
 
 - chenyingfa1999@qq.com
 - donnychan1999@gmail.com
@@ -77,9 +77,9 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 ## Interests
 
-:muscle: Sports: Badminton, running, soccer.
+🏸 Sports: Badminton, running, soccer.
 
-:video_game: Entertainment: Video games, C-pop, anime, manga, Jackie Cheung, etc.
+🎮 Entertainment: Video games, C-pop, anime, manga, Jackie Cheung, etc.
 
 ---
 
@@ -93,7 +93,7 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 我刚刚开始学术生涯，将在今年（2023年低）申请博士学位，还有很多要学习！
 
-[:page_facing_up: 我的简历（最后更新：2022年12月）](/pdf/cv.pdf)
+[📃 我的简历（最后更新：2022年12月）](/pdf/cv.pdf)
 
 ### 教育背景
 
@@ -131,9 +131,9 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 
 ### 兴趣爱好
 
-:muscle: 体育：羽毛球，跑步，足球。
+🏸 体育：羽毛球，跑步，足球。
 
-:video_game: 娱乐：电子游戏，C-pop，动漫，漫画，张学友等等。
+🎮 娱乐：电子游戏，C-pop，动漫，漫画，张学友等等。
 
 > Translated by ChatGPT, reviewed by me.
 
