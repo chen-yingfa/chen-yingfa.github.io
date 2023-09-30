@@ -73,7 +73,7 @@ I was born in March 13, 1999 in Arendal Norway. I grew up in Lillesand, a small 
 
 When I was 19, I went to Beijing for a Bachelor's degree in Computer Science at Tsinghua University.
 
-Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/)^[The tag [#00](../../../tags/00) refers to my girlfriend].
+Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/)^[The tag [#00](../../../tags/00) refers to my girlfriend.].
 
 ## Interests
 
