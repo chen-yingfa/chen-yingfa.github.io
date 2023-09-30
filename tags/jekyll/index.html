@@ -136,267 +136,212 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     bg-[var(--c-0)]
     text-[var(--c-80)]
   ">
-  <header
-  class="
+  <!-- The navigation bar -->
+<header class="
+    flex flex-row items-center
     w-full
-    m-0
     px-3
-    py-1
     z-10
     border-b-[1px]
     bg-[var(--c-10)]
     border-[var(--c-border)]
-  ">
-  <div>
-    <!-- The navigation bar -->
-    <nav class="
-      flex flex-row items-center
-      gap-2
-      h-[var(--h-header)]
-      text-[var(--c-100)]
-    ">
-      <!-- Left part -->
-      <a href="/">
+    gap-2
+    h-[var(--h-header)]
+    text-[var(--c-100)]">
+    <!-- Left part -->
+    <a href="/">
         <div class="flex flex-row items-center gap-1 w-max group">
-          <!-- Site Title on the top left -->
-          <div class="text-xl title-container align-middle font-black pl-1
-            group-hover:translate-x-1 transition-transform">
-            Chen Yingfa
-          </div>
+            <!-- Site Title on the top left -->
+            <div class="text-xl title-container font-black group-hover:underline">
+                Chen Yingfa
+            </div>
         </div>
-      </a>
-      <div class="flex-1"></div>
-      <!-- Right part -->
-      <div class="flex flex-row items-center h-full gap-0">
+    </a>
+    <!-- Div for pushing items to both sides -->
+    <div class="flex-1"></div>
+    <!-- Right part -->
+    <div class="flex flex-row items-center">
         <!-- Page links -->
-        <div class="hidden sm:flex h-10 flex-row items-center gap-0 text-sm">
-          
+        <div class="hidden sm:flex flex-row items-center">
             
+                
+                
+                    
+                    
+                
+                <a
+                    href="/archives"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-70)]
+                        hover:text-[var(--c-10)]
+                        p-1
+                        my-1
+                        rounded-lg
+                    ">
+                    
+                        <iconify-icon icon="mingcute:inbox-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                        <p>Posts</p>
+                    
+                </a>
             
-              
-              
+                
+                
+                    
+                    
+                
+                <a
+                    href="/publications"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-70)]
+                        hover:text-[var(--c-10)]
+                        p-1
+                        my-1
+                        rounded-lg
+                    ">
+                    
+                        <iconify-icon icon="mingcute:science-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                        <p>Publications</p>
+                    
+                </a>
             
-            <a
-              href="/archives"
-              class="
-                flex flex-row items-center
-                gap-1
-                h-full
-                hover:underline
-                hover:bg-[var(--c-25)]
-                p-1 rounded-lg
-              ">
-              
-              
-                <p class="hidden sm:flex">
-                  Posts
-                </p>
-              
-            </a>
-          
+                
+                
+                    
+                    
+                
+                <a
+                    href="/about"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-70)]
+                        hover:text-[var(--c-10)]
+                        p-1
+                        my-1
+                        rounded-lg
+                    ">
+                    
+                        <iconify-icon icon="mingcute:user-info-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                        <p>About</p>
+                    
+                </a>
             
+                
+                
+                    
+                    
+                
+                <a
+                    href="/category"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-70)]
+                        hover:text-[var(--c-10)]
+                        p-1
+                        my-1
+                        rounded-lg
+                    ">
+                    
+                        <iconify-icon icon="mingcute:classify-2-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                </a>
             
-              
-              
+                
+                
+                    
+                    
+                
+                <a
+                    href="/tag"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-70)]
+                        hover:text-[var(--c-10)]
+                        p-1
+                        my-1
+                        rounded-lg
+                    ">
+                    
+                        <iconify-icon icon="mingcute:tag-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                </a>
             
-            <a
-              href="/publications"
-              class="
-                flex flex-row items-center
-                gap-1
-                h-full
-                hover:underline
-                hover:bg-[var(--c-25)]
-                p-1 rounded-lg
-              ">
-              
-              
-                <p class="hidden sm:flex">
-                  Publications
-                </p>
-              
-            </a>
-          
+                
+                
+                    
+                    
+                
+                <a
+                    href="/index"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-70)]
+                        hover:text-[var(--c-10)]
+                        p-1
+                        my-1
+                        rounded-lg
+                    ">
+                    
+                        <iconify-icon icon="mingcute:home-2-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                </a>
             
-            
-              
-              
-            
-            <a
-              href="/about"
-              class="
-                flex flex-row items-center
-                gap-1
-                h-full
-                hover:underline
-                hover:bg-[var(--c-25)]
-                p-1 rounded-lg
-              ">
-              
-              
-                <p class="hidden sm:flex">
-                  About
-                </p>
-              
-            </a>
-          
-            
-            
-              
-              
-            
-            <a
-              href="/category"
-              class="
-                flex flex-row items-center
-                gap-1
-                h-full
-                hover:underline
-                hover:bg-[var(--c-25)]
-                p-1 rounded-lg
-              ">
-              
-                <iconify-icon icon="mingcute:classify-2-fill" width="22">
-                </iconify-icon>
-              
-              
-            </a>
-          
-            
-            
-              
-              
-            
-            <a
-              href="/tag"
-              class="
-                flex flex-row items-center
-                gap-1
-                h-full
-                hover:underline
-                hover:bg-[var(--c-25)]
-                p-1 rounded-lg
-              ">
-              
-                <iconify-icon icon="mingcute:tag-fill" width="22">
-                </iconify-icon>
-              
-              
-            </a>
-          
-            
-            
-              
-              
-            
-            <a
-              href="/index"
-              class="
-                flex flex-row items-center
-                gap-1
-                h-full
-                hover:underline
-                hover:bg-[var(--c-25)]
-                p-1 rounded-lg
-              ">
-              
-                <iconify-icon icon="mingcute:home-2-fill" width="22">
-                </iconify-icon>
-              
-              
-            </a>
-          
-          <!-- Separation line -->
-          <div class="h-8 w-[1px] bg-[var(--c-border)] mx-1"></div>
         </div>
         <!-- Icons on the right -->
-        <div class="flex flex-row items-center h-full">
-          
-            
-              
-              
-                
-                
-              
-              <a
-                class="
-                  hover:bg-[var(--c-25)]
-                  rounded-lg p-1 h-full
-                  flex flex-row items-center
-                  group
-                "
-                title="Github" target="_blank" rel="noopener" href="https://www.github.com/chen-yingfa">
-                <iconify-icon
-                  width="24"
-                  icon="mingcute:github-fill">
+        <div class="flex flex-row items-center">
+            <!-- Dark/light toggle icon -->
+            <a class="flex group p-1" title="toggle theme" id="toggle-dark">
+                <iconify-icon class="transition-transform group-hover:rotate-[45deg]
+                    group-hover:scale-125 group-hover:text-[var(--c-100)]
+                    " width="24" icon="" id="theme-icon">
                 </iconify-icon>
-              </a>
-            
-              
-              
-                
-                
-              
-              <a
-                class="
-                  hover:bg-[var(--c-25)]
-                  rounded-lg p-1 h-full
-                  flex flex-row items-center
-                  group
-                "
-                title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
-                <iconify-icon
-                  width="24"
-                  icon="ri:zhihu-line">
-                </iconify-icon>
-              </a>
-            
-              
-              
-                
-                
-              
-              <a
-                class="
-                  hover:bg-[var(--c-25)]
-                  rounded-lg p-1 h-full
-                  flex flex-row items-center
-                  group
-                "
-                title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
-                <iconify-icon
-                  width="24"
-                  icon="mingcute:social-x-fill">
-                </iconify-icon>
-              </a>
-            
-          
-          <!-- Dark/light toggle icon -->
-          <a class="flex group p-1" title="toggle theme" id="toggle-dark">
-            <iconify-icon class="
-              transition-transform group-hover:rotate-[45deg]
-              group-hover:scale-125 group-hover:text-[var(--c-100)]
-            " width="24" icon="" id="theme-icon">
-            </iconify-icon>
-          </a>
-          <!-- Icon for dropout menu on small screens -->
-          <div class="flex items-center justify-center gap-1 mx-1 sm:hidden">
-            <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
-              <iconify-icon width="22" icon="mingcute:menu-fill"
-                class="transition-transform hover:scale-125 hover:rotate-[5deg]">
-              </iconify-icon>
             </a>
-            <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-              <iconify-icon width="22" icon="mingcute:close-circle-fill"
-                class="transition-transform hover:scale-125 hover:rotate-[80deg]">
-              </iconify-icon>
-            </a>
-          </div>
+            <!-- Icon for dropout menu on small screens -->
+            <div class="flex items-center justify-center gap-1 mx-1 sm:hidden">
+                <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+                    <iconify-icon width="22" icon="mingcute:menu-fill"
+                        class="transition-transform hover:scale-125 hover:rotate-[5deg]">
+                    </iconify-icon>
+                </a>
+                <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+                    <iconify-icon width="22" icon="mingcute:close-circle-fill"
+                        class="transition-transform hover:scale-125 hover:rotate-[80deg]">
+                    </iconify-icon>
+                </a>
+            </div>
         </div>
-      </div>
-    </nav>
-  </div>
+    </div>
 </header>
+
+
 <!-- Dropdown menu on small screens -->
 <div id="menu-panel"
   class="
@@ -437,14 +382,15 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <a
             href="/archives"
             class="
-              flex flex-row items-center
-              gap-2
-              h-12
-              hover:underline
-              hover:bg-[var(--c-25)]
-              px-3
-              py-1
-              rounded-lg
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-70)]
+                hover:text-[var(--c-10)]
+                px-3
+                py-1
+                rounded-lg
             ">
             <iconify-icon icon="mingcute:inbox-fill" width="22">
             </iconify-icon>
@@ -459,14 +405,15 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <a
             href="/publications"
             class="
-              flex flex-row items-center
-              gap-2
-              h-12
-              hover:underline
-              hover:bg-[var(--c-25)]
-              px-3
-              py-1
-              rounded-lg
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-70)]
+                hover:text-[var(--c-10)]
+                px-3
+                py-1
+                rounded-lg
             ">
             <iconify-icon icon="mingcute:science-fill" width="22">
             </iconify-icon>
@@ -481,14 +428,15 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <a
             href="/about"
             class="
-              flex flex-row items-center
-              gap-2
-              h-12
-              hover:underline
-              hover:bg-[var(--c-25)]
-              px-3
-              py-1
-              rounded-lg
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-70)]
+                hover:text-[var(--c-10)]
+                px-3
+                py-1
+                rounded-lg
             ">
             <iconify-icon icon="mingcute:user-info-fill" width="22">
             </iconify-icon>
@@ -503,14 +451,15 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <a
             href="/category"
             class="
-              flex flex-row items-center
-              gap-2
-              h-12
-              hover:underline
-              hover:bg-[var(--c-25)]
-              px-3
-              py-1
-              rounded-lg
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-70)]
+                hover:text-[var(--c-10)]
+                px-3
+                py-1
+                rounded-lg
             ">
             <iconify-icon icon="mingcute:classify-2-fill" width="22">
             </iconify-icon>
@@ -525,14 +474,15 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <a
             href="/tag"
             class="
-              flex flex-row items-center
-              gap-2
-              h-12
-              hover:underline
-              hover:bg-[var(--c-25)]
-              px-3
-              py-1
-              rounded-lg
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-70)]
+                hover:text-[var(--c-10)]
+                px-3
+                py-1
+                rounded-lg
             ">
             <iconify-icon icon="mingcute:tag-fill" width="22">
             </iconify-icon>
@@ -547,14 +497,15 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           <a
             href="/index"
             class="
-              flex flex-row items-center
-              gap-2
-              h-12
-              hover:underline
-              hover:bg-[var(--c-25)]
-              px-3
-              py-1
-              rounded-lg
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-70)]
+                hover:text-[var(--c-10)]
+                px-3
+                py-1
+                rounded-lg
             ">
             <iconify-icon icon="mingcute:home-2-fill" width="22">
             </iconify-icon>
@@ -640,7 +591,7 @@ layout: tag
             <!-- Post title -->
             <a href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
                 <h2 class="
-                    text-[var(--c-90)]
+                    text-[var(--c-80)]
                     font-bold
                     text-xl
                     hover:text-[var(--c-theme)]
@@ -655,14 +606,7 @@ layout: tag
                     
                         <div class="post-excerpt text-[var(--c-60)]">
                             <p>之前有过个人主页，但是一直没有弄好，更没有更新。最近我将自己的 GitHub 的用户名改了，导致之前的 GitHub Pages 失效了，就趁机重新搭建个人主页。</p>
-<p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p>
-                        </div>
-                        <!-- Line sep -->
-                        <!-- <hr class="mt-2 h-[1px] bg-[var(--c-sep-2)]">
-                        </hr> -->
-                        <a href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
-                            ...
-                        </a>
+<p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p>                        </div>
                     
                 </p>
             </section>
@@ -750,6 +694,23 @@ layout: tag
         #00
       </a>
     
+      <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
+        class="
+          text-[var(--c-70)]
+          border-[1px]
+          border-[var(--c-border)]
+          bg-[var(--c-20)]
+          hover:bg-[var(--c-30)]
+          dark:bg-transparent 
+          dark:hover:bg-[var(--c-80)]
+          dark:hover:text-[var(--c-20)]
+          px-[6px]
+          text-sm
+          rounded-full 
+        ">
+        #面壁智能
+      </a>
+    
       <a href="/tags/life/" 
         class="
           text-[var(--c-70)]
@@ -833,23 +794,6 @@ layout: tag
           rounded-full 
         ">
         #中文
-      </a>
-    
-      <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
-        class="
-          text-[var(--c-70)]
-          border-[1px]
-          border-[var(--c-border)]
-          bg-[var(--c-20)]
-          hover:bg-[var(--c-30)]
-          dark:bg-transparent 
-          dark:hover:bg-[var(--c-80)]
-          dark:hover:text-[var(--c-20)]
-          px-[6px]
-          text-sm
-          rounded-full 
-        ">
-        #面壁智能
       </a>
     
       <a href="/tags/blog/" 
@@ -1057,7 +1001,7 @@ layout: tag
             <!-- Post title -->
             <a href="/2022/10/27/first-draft/">
                 <h2 class="
-                    text-[var(--c-90)]
+                    text-[var(--c-80)]
                     font-bold
                     text-xl
                     hover:text-[var(--c-theme)]
@@ -1074,14 +1018,7 @@ layout: tag
                             <p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
 <p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p>
 
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-                        </div>
-                        <!-- Line sep -->
-                        <!-- <hr class="mt-2 h-[1px] bg-[var(--c-sep-2)]">
-                        </hr> -->
-                        <a href="/2022/10/27/first-draft/">
-                            ...
-                        </a>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>                        </div>
                     
                 </p>
             </section>
@@ -1284,8 +1221,61 @@ layout: tag
 
 
   </main>
-  <footer class="flex flex-col h-40 items-center justify-center
+  <footer class="flex flex-col h-40 mb-6 items-center justify-center
   text-[var(--c-50)] text-sm">
+  <div class="flex flex-row items-center mb-6">
+    
+    
+        
+        
+            
+            
+        
+        <a class="
+            hover:text-[var(--c-10)]
+            hover:bg-[var(--c-70)]
+            rounded-lg
+            p-1
+            my-1
+            flex flex-row items-center
+            group" title="Github" target="_blank" rel="noopener" href="https://www.github.com/chen-yingfa">
+            <iconify-icon width="24" icon="mingcute:github-fill"></iconify-icon>
+        </a>
+    
+        
+        
+            
+            
+        
+        <a class="
+            hover:text-[var(--c-10)]
+            hover:bg-[var(--c-70)]
+            rounded-lg
+            p-1
+            my-1
+            flex flex-row items-center
+            group" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
+            <iconify-icon width="24" icon="ri:zhihu-line"></iconify-icon>
+        </a>
+    
+        
+        
+            
+            
+        
+        <a class="
+            hover:text-[var(--c-10)]
+            hover:bg-[var(--c-70)]
+            rounded-lg
+            p-1
+            my-1
+            flex flex-row items-center
+            group" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
+            <iconify-icon width="24" icon="mingcute:social-x-fill"></iconify-icon>
+        </a>
+    
+
+  </div>
   <!-- busuanzi -->
   
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1314,7 +1304,7 @@ layout: tag
       CC BY-NC-SA 4.0
     </a>
     <span>© 2023</span>
-    <iconify-icon width="16" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <iconify-icon width="16" icon="mingcute:maple-leaf-line" ></iconify-icon>
     <a class="hover:underline"
       href="https://github.com/chen-yingfa" 
       target="_blank" 
@@ -1340,8 +1330,8 @@ layout: tag
   <div class="back-to-top fixed right-6 z-1024 -bottom-20
     rounded-md 
     py-1 px-2 
-    text-[var(--c-80)]
-    bg-[var(--c-20)]
+    text-[var(--c-10)]
+    bg-[var(--c-60)]
     opacity-80 
     border-[1px]
     border-[var(--c-sep)]
@@ -1351,7 +1341,7 @@ layout: tag
   ">
     <span class="flex justify-center items-center text-sm">
       <span id="scrollpercent"><span>0</span> %</span>
-      <iconify-icon width="18" icon="mingcute:arrow-to-up-fill" id="go-top"></iconify-icon>
+      <iconify-icon width="18" icon="mingcute:arrow-to-up-line" id="go-top"></iconify-icon>
     </span>
   </div>
   
