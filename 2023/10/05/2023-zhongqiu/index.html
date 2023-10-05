@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en,zh-cn,default">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="Yingfa Chen">
+
+
+  <meta name="subtitle" content="陈英发">
+
+
+  <meta name="description" content="清华大学自然语言处理二年级研究生，出生长大在挪威，到北京求学。当前在研究如何控制大模型的知识和行为。
+
+A second year graduate student in THUNLP (the NLP lab of Tsinghua University). Born and raised in Norway, and went to Beijing for education. I am currently working about controllable knowledge and behavior of LLM.
+">
+
+
+  <meta name="keywords" content="Chen Yingfa,陈英发,Natural Language Processing,Artificial Intelligence">
+
+
+<title>2023年中秋和国庆 | Chen Yingfa</title>
+
+
+
+<link rel="icon" href="/images/favicon-32x32.png">
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Roboto"
+/>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC"
+/>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ic:round-dark-mode" : "ic:round-light-mode");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ic:round-dark-mode" : "ic:round-light-mode");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
+
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ic:round-dark-mode" : "ic:round-light-mode"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body 
+  class="
+    bg-[var(--c-0)]
+    text-[var(--c-80)]
+  ">
+  <!-- The navigation bar -->
+<header class="
+    flex flex-row items-center
+    w-full
+    pr-4
+    z-10
+    border-b-[1px]
+    border-b-[var(--c-border)]
+    dark:bg-[var(--c-0)]
+    dark:border-b-[var(--c-0)]
+    gap-2
+    h-[var(--h-header)]
+    text-[var(--c-80)]
+">
+    <!-- Left part -->
+    <div class="overflow-hidden h-full flex flex-row items-center">
+        <!-- Site Title on the top left -->
+        <a href="/" class="
+            whitespace-nowrap
+            text-2xl
+            text-[var(--c-theme)]
+            hover:text-[var(--c-theme)]
+            pl-4
+            font-black
+            bg-gradient-to-r from-cyan-500
+            to-blue-500 bg-clip-text text-transparent
+          ">
+            Chen Yingfa
+        </a>
+    </div>
+    <!-- Div for pushing items to both sides -->
+    <div class="flex-1"></div>
+    <!-- Right part -->
+    <div class="flex flex-row items-center z-20 h-full">
+        <!-- Page links -->
+        <div class="hidden sm:flex flex-row h-full">
+            
+                
+                
+                    
+                    
+                
+                <a
+                    href="/archives"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+                    
+                        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:inbox-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                        <p>Posts</p>
+                    
+                </a>
+            
+                
+                
+                    
+                    
+                
+                <a
+                    href="/publications"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+                    
+                        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:science-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                        <p>Publications</p>
+                    
+                </a>
+            
+                
+                
+                    
+                    
+                
+                <a
+                    href="/about"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+                    
+                        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:user-info-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                        <p>About</p>
+                    
+                </a>
+            
+                
+                
+                    
+                    
+                
+                <a
+                    href="/category"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+                    
+                        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:classify-2-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                </a>
+            
+                
+                
+                    
+                    
+                
+                <a
+                    href="/tag"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+                    
+                        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:tag-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                </a>
+            
+                
+                
+                    
+                    
+                
+                <a
+                    href="/index"
+                    class="
+                        flex flex-row items-center
+                        gap-1
+                        hover:underline
+                        hover:bg-[var(--c-20)]
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        px-2
+                        py-1
+                        my-1
+                        rounded-lg
+                        group
+                    ">
+                    
+                        <iconify-icon class="group-hover:scale-125 transition-transform" icon="mingcute:home-2-fill" width="22">
+                        </iconify-icon>
+                    
+                    
+                </a>
+            
+        </div>
+        <!-- Icons on the right -->
+        <div class="flex flex-row items-center">
+            <!-- Dark/light toggle icon -->
+            <a class="flex group p-1" title="toggle theme" id="toggle-dark">
+                <iconify-icon class="transition-transform
+                    group-hover:rotate-[45deg]
+                    group-hover:scale-125
+                    group-hover:text-[var(--c-theme)]
+                    " width="24" icon="" id="theme-icon">
+                </iconify-icon>
+            </a>
+            <!-- Icon for dropout menu on small screens -->
+            <div class="flex items-center justify-center gap-1 mx-1 sm:hidden">
+                <a class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+                    <iconify-icon width="22" icon="mingcute:menu-fill"
+                        class="transition-transform hover:scale-125 hover:rotate-[5deg]">
+                    </iconify-icon>
+                </a>
+                <a class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+                    <iconify-icon width="22" icon="mingcute:close-circle-fill"
+                        class="transition-transform hover:scale-125 hover:rotate-[80deg]">
+                    </iconify-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Dropdown menu on small screens -->
+<div id="menu-panel"
+  class="
+    h-0
+    overflow-hidden
+    sm:hidden
+    w-full
+    z-10
+    rounded
+  ">
+  <div id="menu-content"
+    class="
+      font-bold
+      text-xl
+      border-b-[1px]
+      relative
+      z-20
+      border-[var(--c-sep)]
+      px-2
+      py-2
+      -translate-y-full
+      transition-transform
+      duration-200
+    ">
+      
+        
+        
+          <a
+            href="/archives"
+            class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+            <iconify-icon icon="mingcute:inbox-fill" width="22">
+            </iconify-icon>
+            <p>
+              Posts
+            </p>
+          </a>
+        
+      
+        
+        
+          <a
+            href="/publications"
+            class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+            <iconify-icon icon="mingcute:science-fill" width="22">
+            </iconify-icon>
+            <p>
+              Publications
+            </p>
+          </a>
+        
+      
+        
+        
+          <a
+            href="/about"
+            class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+            <iconify-icon icon="mingcute:user-info-fill" width="22">
+            </iconify-icon>
+            <p>
+              About
+            </p>
+          </a>
+        
+      
+        
+        
+          <a
+            href="/category"
+            class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+            <iconify-icon icon="mingcute:classify-2-fill" width="22">
+            </iconify-icon>
+            <p>
+              Categories
+            </p>
+          </a>
+        
+      
+        
+        
+          <a
+            href="/tag"
+            class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+            <iconify-icon icon="mingcute:tag-fill" width="22">
+            </iconify-icon>
+            <p>
+              Tags
+            </p>
+          </a>
+        
+      
+        
+        
+          <a
+            href="/index"
+            class="
+                flex flex-row items-center
+                gap-2
+                h-12
+                hover:underline
+                hover:bg-[var(--c-20)]
+                px-3
+                py-1
+                rounded-lg
+            ">
+            <iconify-icon icon="mingcute:home-2-fill" width="22">
+            </iconify-icon>
+            <p>
+              Home
+            </p>
+          </a>
+        
+      
+  </div>
+</div>
+  <main>
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+  
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+    <!-- toc -->
+    
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- Post header before content -->
+  <header class="py-4">
+    <div class="flex flex-col gap-2 pt-4 md:pt-6">
+      <!-- Title -->
+      <div id="article-title" class="leading-snug">
+        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">2023年中秋和国庆</p>
+      </div>
+      <!-- Meta data -->
+      <div>
+        <section class="
+          flex flex-col gap-x-2 text-sm text-[var(--c-100)]">
+          <div class="flex flex-wrap items-center gap-x-2">
+            <!-- Dates -->
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
+              Created: <time class="w-max">2023-10-05</time>
+            </div>
+            <div class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
+              Edited: <time class="w-max">2023-10-05</time>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-x-2">
+            <!-- Author -->
+            
+              <span class="flex items-center gap-1 group">
+                <iconify-icon width="18" icon="mingcute:user-edit-fill" ></iconify-icon>
+                <p>Yingfa Chen</p>
+              </span>
+            
+
+            <!-- Word count -->
+            <span class="flex items-center gap-1">
+              <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
+              <span>1.2k words, 4 min</span>
+            </span>
+            <!-- Categories -->
+            
+              <!-- <span class="text-gray-400">·</span> -->
+              <span class="flex flex-row items-center gap-1 group hover:underline">
+                <iconify-icon class="transition-all group-hover:scale-125 mr-0"
+                  width="18"
+                  icon="mingcute:classify-2-fill">
+                </iconify-icon>
+                <a class="article-category-link" href="/categories/life/">Life</a>
+              </span>
+            
+          </div>
+        </section>
+      </div>
+      <!-- tags -->
+      <div>
+        
+<div class="flex flex-wrap gap-1">
+  
+    
+      <a href="/tags/life/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #life
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E7%A7%8B/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #中秋
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #中文
+      </a>
+    
+      <a href="/tags/00/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #00
+      </a>
+    
+      <a href="/tags/wedding/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #wedding
+      </a>
+    
+      <a href="/tags/%E4%B8%AD%E7%A7%8B-middle-autumn/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #中秋-middle-autumn
+      </a>
+    
+      <a href="/tags/%E5%9B%BD%E5%BA%86-national-day/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #国庆-national-day
+      </a>
+    
+      <a href="/tags/%E5%BA%94%E5%9F%8E/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #应城
+      </a>
+    
+      <a href="/tags/%E6%AD%A6%E6%B1%89-wuhan/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #武汉-wuhan
+      </a>
+    
+  
+</div>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto dark:prose-invert">
+    <p>今年国庆 🇨🇳 和中秋 🥮 一起放假，我跟 00 一起回来应城参加她堂姐和初中同学的婚礼<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，
+住在她家里十个夜晚<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。第二次见家长，也算是挺顺利，但是每天都会见到陌生人，有点累，庆幸的是，感觉到 00 能接受跟我家人生活在一起。一号到三号我们去武汉玩了三天，超级开心，跟她在一起连逛商场都是开心的！</p>
+<span id="more"></span>
+<h2 id="小县城的氛围">小县城的氛围</h2>
+<p>应城跟我想象中的小县城很像，也是很多远房亲戚，习俗也让人很烦。敬酒、随地扔垃圾、室内抽烟、八卦人家的私事、说话粗鄙、脏、说了不要还非要给人家……而且确实能明显感觉到，这里的人的素质的平均水平挺低的，尤其是上一辈。真的很讨厌吃席，00 也是，这些习俗的麻烦程度让 00 都不想结婚了……</p>
+<p>但是无所谓了，之后能跟 00 在一起就好，除了回来过节应该也很少机会有联系。</p>
+<h2 id="武汉">武汉</h2>
+<p>一号到三号去了武汉旅游。早上五点多跟 00 的 ”二妈“（其实是婶，叔叔的老婆）坐车去武汉，坐了一个小时。他们这么早是因为要去谈婚礼的事情，然后害怕堵车。我们在酒店旁边下来，那时候“二妈”下地铁站上厕所，然后 00 非要给她买包子（为了礼貌），然后她最后还是拒绝了，导致我们得自己吃下包子。虽然包子没有不好吃，但是我就很讨厌这种明知人家不要还非要买的行为。</p>
+<p>之后我们去酒店的时候，还没有房子，我们寄存了行李就直接去新天地买了杯霸王茶姬的奶茶，然后去了古德寺。网上说不可以穿着暴露，但是感觉路人穿着还是很暴露。</p>
+<p><img src="/images/%E6%96%B0%E5%A4%A9%E5%9C%B0-%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC.png" alt="在武汉新天地买霸王茶姬。"></p>
+<p>之后还去了解放公园和中山公园，都挺不错的。大城市就是好。里面看到了很好看的建筑物。在中山公园我们问了两个小孩借用羽毛球拍子来打了几下。之后在一个相亲角<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>旁边跟她的高中同学，彭双，会合，然后逛了一下相亲角。之后我们还坐了一下过山车（公园里面有过山车还是第一次见）。</p>
+<p><img src="/images/%E8%A7%A3%E6%94%BE%E5%85%AC%E5%9B%AD%E4%B8%AD%E9%97%B4.png" alt="解放公园中间的一个很多塔的地方。"></p>
+<p>晚上就去跟她的高中同学一起吃饭。</p>
+<p>第二天我们先在地铁站剪了头发，然后去宝通寺，晚上去武商梦时代。这个商场规格超级高，还挺好玩的。第一次看到索尼专卖店，还有 Pico 专卖店。里面还有滑雪的地方，但是太贵的。我们还去了优衣库，买了一些衣服，发现还挺便宜的。以前都会觉得逛街购物很无聊，但是跟她在一起连连逛街买衣服都是开心的。</p>
+<p>晚上我们跟她“大哥”（其实是堂哥）和他老婆一起吃饭，吃了魔宗烤肉，然后喝了茶颜悦色。总体来说也挺顺利的，感觉他们也不难相处。</p>
+<p><img src="/images/%E6%AD%A6%E5%95%86%E6%A2%A6%E6%97%B6%E4%BB%A3.png" alt="武商梦时代里面的美食街买鲜虾汤包"></p>
+<p>第三天我们去了欢乐谷！是我们第一次一起去游乐场！玩了一个过山车，然后做了太阳飞车，00 就头晕想吐了，果然还是不行……但是没事，还是挺开心的。排队过程中还遇到了插队的人，好恶心！</p>
+<p>晚上我们跟一些人（共七个人）一起拼车回来应城，居然比火车还便宜，不错。回来已经11点了，然后回家放下行李箱之后又出去找她初中同学一起吃宵夜。</p>
+<p><img src="/images/%E6%AD%A6%E6%B1%89%E6%AC%A2%E4%B9%90%E8%B0%B7.png" alt="在武汉欢乐谷玩耍。"></p>
+<h2 id="公事">公事</h2>
+<p>这个假期有点长，感觉有很多活都没有干。每天都很多事情，感觉这里的人太闲了，应该让他们多上班哈哈哈。古文字翻译的工作还没有干完，目前感觉效果不是很好，我也不想干这个了，感觉很浪费我的时间……至于对齐神经元，貌似现有方法都无法用在自回归模型上面，但是对齐问题好像之后自回归模型才会出现。不知道是不是我没有找到，目前还没有找到一篇研究神经元对生成结果的影响的工作。<a target="_blank" rel="noopener" href="https://www.github.com/kmeng01/rome">ROME</a> 的 Causal Tracing 感觉可以用，这两天得赶紧做点东西出来。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>27号是初中同学（魏陈）的婚礼，5号是堂姐（骆卓颖）的婚礼。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>九月二十六日回来，十月七日走。坐高铁到北京，然后做火车到应城。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>之前在上海都没找到。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+  </article>
+
+  <!-- prev and next -->
+  <div class="flex justify-between mt-4 pt-4
+    border-t border-[var(--c-sep)] text-sm
+    gap-2 text-[var(--c-50)]
+  ">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2023/09/19/llm-safety-and-ethics/"
+          class="
+            flex 
+            justify-center
+            hover:translate-x-1 
+            transition-transform
+            hover:text-[var(--c-100)]
+          "
+        >
+          Safety and Ethical Concerns of Large Language Models
+          <iconify-icon width="20" icon="mingcute:right-fill" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+  </main>
+  <footer class="flex flex-col mt-12 mb-12 items-center
+  text-[var(--c-50)] text-sm">
+  <div class="flex flex-row items-center mb-20">
+    
+    
+        
+        
+            
+            
+        
+        <a class="
+            hover:text-[var(--c-theme)]
+            hover:bg-[var(--c-20)]
+            rounded-lg
+            p-2
+            my-1
+            flex flex-row items-center
+            group" title="Github" target="_blank" rel="noopener" href="https://www.github.com/chen-yingfa">
+            <iconify-icon width="28" icon="mingcute:github-fill"></iconify-icon>
+        </a>
+    
+        
+        
+            
+            
+        
+        <a class="
+            hover:text-[var(--c-theme)]
+            hover:bg-[var(--c-20)]
+            rounded-lg
+            p-2
+            my-1
+            flex flex-row items-center
+            group" title="ZhiHu" target="_blank" rel="noopener" href="https://www.zhihu.com/people/chen-ying-fa-34">
+            <iconify-icon width="28" icon="ri:zhihu-line"></iconify-icon>
+        </a>
+    
+        
+        
+            
+            
+        
+        <a class="
+            hover:text-[var(--c-theme)]
+            hover:bg-[var(--c-20)]
+            rounded-lg
+            p-2
+            my-1
+            flex flex-row items-center
+            group" title="Twitter" target="_blank" rel="noopener" href="https://www.twitter.com/DonnyChan123">
+            <iconify-icon width="28" icon="mingcute:social-x-fill"></iconify-icon>
+        </a>
+    
+
+  </div>
+  <!-- busuanzi -->
+  <div class="mb-6">
+    
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex flex-col items-center mb-2">
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="ic:round-person" width="18"></iconify-icon>
+    <span class="mr-1">访客 Visitors: </span>
+    <span id="busuanzi_value_site_uv"></span>
+  </div>
+  <div class="flex flex-row items-center">
+    <iconify-icon width="16" icon="carbon:view-filled" width="18"></iconify-icon>
+    <span class="mx-1">浏览量 Page Views:</span>
+    <span id="busuanzi_value_site_pv"></span>
+  </div>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  </div>
+  <!-- copyright -->
+  <div class="flex flex-row items-center gap-2">
+    <a class="hover:underline"
+      target="_blank"
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    >
+      CC BY-NC-SA 4.0
+    </a>
+    <span>© 2022-2023</span>
+    <a class="hover:underline"
+    href="https://github.com/chen-yingfa" 
+    target="_blank" 
+    rel="noopener noreferrer">陈英发</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-1">
+    <span>Powered by</span>
+    <a class="hover:underline" 
+    href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/chen-yingfa/hexo-theme-fengye" 
+    class="hover:underline"
+    target="_blank"
+      rel="noopener noreferrer"
+      >
+      枫叶 Fengye
+    </a>
+  </div>
+
+</footer>
+
+  <div class="
+    back-to-top
+    fixed right-6
+    z-1024
+    -bottom-20
+    rounded-lg
+    font-bold
+    py-1 px-2
+    text-[var(--c-80)]
+    bg-[var(--c-20)]
+    cursor-pointer
+    text-center
+    drop-shadow-md
+  ">
+    <span class="flex justify-center items-center text-sm">
+      <span id="scrollpercent"><span>0</span> %</span>
+      <iconify-icon width="18" icon="mingcute:arrow-to-up-fill" id="go-top"></iconify-icon>
+    </span>
+  </div>
+  
+<script src="/js/main.js"></script>
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
+</body>
+
+</html>
