@@ -557,8 +557,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
       <!-- Meta data -->
       <div>
         <section class="
-          flex flex-col gap-x-2 text-sm text-[var(--c-100)]">
-          <div class="flex flex-wrap items-center gap-x-2">
+          flex flex-col gap-x-2 gap-y-1 text-sm text-[var(--c-100)]">
+          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
             <!-- Dates -->
             <div class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
@@ -569,7 +569,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
               Edited: <time class="w-max">2023-10-08</time>
             </div>
           </div>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
             <!-- Author -->
             
               <span class="flex items-center gap-1 group">
@@ -581,7 +581,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             <!-- Word count -->
             <span class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
-              <span>192 words, 1 min</span>
+              <span>436 words, 2 min</span>
             </span>
             <!-- Categories -->
             
@@ -663,6 +663,16 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #model-editing
       </a>
     
+      <a href="/tags/representation-engineering/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #representation-engineering
+      </a>
+    
   
 </div>
       </div>
@@ -670,7 +680,8 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   </header>
   <!-- content -->
   <article class="post-content prose m-auto dark:prose-invert">
-    <p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p>
+    <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2308.10248">Paper</a></p>
+<p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p>
 <span id="more"></span>
 <p>TSNE:<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <ul>
@@ -692,11 +703,18 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 </ul>
 <p>ActAdd uses the difference between prompt pairs instead.</p>
 <h2 id="Method">Method</h2>
-<p><img src="./method.png" alt="Overview of ActAdd"></p>
+<p>The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.</p>
+<p><img src="./alg.png" alt="Algorithm of ActAdd."></p>
+<p>As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.</p>
+<h2 id="My-Thoughts">My Thoughts</h2>
+<p>The effectiveness of this method is a strong evidence that input and output features are represented as linear directions in representational space, but we still have no explanation for why such linearity arises naturally in LLMs. However, ActAdd start to see degraded performance on off-target inputs when we drive the activations to far off, this may indicate that there is an optimal location, but the author tunes this parameter manually.</p>
+<p>The author also compared this method with adaptation methods, but the empirical results were not enough to show that ActAdd can be used as a substitute for adaptation. E.g., we cannot practically adapt the model into performing machine translation with ActAdd, because there is no negative prompt for translation. But perhaps upcoming works will can apply this method to replace adaptation, this would finally provide a way to control the model's behavior without backpropagation.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>TSNE = "Too short; not enough" <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.17333">MeZO</a> is one alternative, but the training time of MeZO is almost the same as fine-tuning. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>

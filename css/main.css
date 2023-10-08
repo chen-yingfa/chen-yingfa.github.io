@@ -290,6 +290,10 @@ hr {
 }
 .prose .fancybox-img img {
   margin-bottom: 0.5rem;
+  align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .prose .fancybox-alt {
   font-size: 0.9rem;
