@@ -51,8 +51,8 @@ I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beiji
 
 ### Exaggerated Safety
 
-- XSTEST: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models*
-- Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions*
+- XSTEST: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models ⭐️
+- Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions ⭐️
 
 ## Alignment Methods
 

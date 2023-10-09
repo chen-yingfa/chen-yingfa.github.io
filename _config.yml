@@ -47,7 +47,7 @@ external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
-filename_case: 0
+filename_case: 1
 render_drafts: false
 post_asset_folder: true
 relative_link: false
@@ -151,6 +151,9 @@ markdown:
     - markdown-it-ins
     - markdown-it-mark
     - markdown-it-abbr
+  images:
+    prepend_root: true
+    post_asset: true
 
 plugins:
   - name: '@renbaoshuo/markdown-it-katex'
