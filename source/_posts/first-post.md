@@ -1,8 +1,9 @@
 ---
-author: Yingfa Chen
+author: 陈英发 Yingfa Chen
 title: 第一个帖子，瞎写点东西
 date: 2023-05-17 23:00:00
 categories: Life
+thumbnail: lillesand0.jpg
 tags:
 - life
 - school
@@ -59,8 +60,8 @@ tags:
 
 ## 我的家乡 Lillesand
 
-![](./first-post/lillesand0.jpg "Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。")
+![Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。](./first-post/lillesand0.jpg "Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。")
 
-![](./first-post/lillesand1.jpg "Lillesand 的港口")
+![Lillesand 的港口](./first-post/lillesand1.jpg "Lillesand 的港口")
 
 好久没有回去了，上一次回挪威也没有回去

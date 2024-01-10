@@ -1,5 +1,5 @@
 ---
-author: Yingfa Chen
+author: 陈英发 Yingfa Chen
 title: Interpreting a Maze-Solving Network
 date: 2023-10-07 18:03:10
 categories: Thoughts

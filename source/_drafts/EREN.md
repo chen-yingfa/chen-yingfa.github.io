@@ -1,5 +1,5 @@
 ---
-author: Yingfa Chen
+author: 陈英发 Yingfa Chen
 title: "(EREN) Robust and Scalable Model Editing for Large Language Models"
 date: 2023-09-14 19:39:34
 categories: Paper

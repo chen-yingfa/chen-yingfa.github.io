@@ -1,6 +1,6 @@
 ---
-author: Yingfa Chen
-title: InfiniteBench
+author: 陈英发 Yingfa Chen
+title: "InfiniteBench: 100k+ Long-Context Benchmark for Large Language Models"
 date: 2024-01-10 10:38:38
 categories:
 tags:
@@ -9,11 +9,13 @@ tags:
 - nlp
 - long-context
 - benchmark
+- recurrence
+- linear-attention
+- transformer
 featured: true
 ---
 
-[Code](http://www.github.com/OpenBMB/InfiniteBench) | [Paper](upcoming)
-
+[Code](http://www.github.com/OpenBMB/InfiniteBench) | [Paper (upcoming)]()
 
 The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!
 
@@ -33,13 +35,13 @@ The data consists of language tasks from diverse domains (math, code, novels), t
 
 Following shows the statistics of the tasks in our benchmark.
 
-![Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).](infinitebench/data-stat-pie.png)
+![Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).](infinitebench/data-stat-pie.png "Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).")
 
 ## Results
 
 We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.
 
-![Results of some SOTA long-context LLMs on our InfiniteBench](infinitebench/results.png)
+![Results of some SOTA long-context LLMs on our InfiniteBench](infinitebench/results.png "Results of some SOTA long-context LLMs on our InfiniteBench")
 
 ## Thoughts on the Future of Long-Context Research
 
@@ -59,7 +61,9 @@ I like to think of different language model architectures from the perspective o
 
 In contrast, state-space models and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because a blurry remembrance is much better than complete forgettal). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.
 
-Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, RetNet's training throughput is actually faster than a transformer with Flash-Attention. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.
+By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window.
+
+Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, [RetNet](https://arxiv.org/abs/2307.08621)'s training throughput is actually faster than a transformer with [Flash-Attention](https://github.com/Dao-AILab/flash-attention). Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.
 
 ## Additional Notes
 

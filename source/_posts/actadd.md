@@ -1,5 +1,5 @@
 ---
-author: Yingfa Chen
+author: 陈英发 Yingfa Chen
 title: Activation Addition (ActAdd)
 date: 2023-10-07 17:55:33
 categories: Paper Note

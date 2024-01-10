@@ -1,5 +1,5 @@
 ---
-author: Yingfa Chen
+author: 陈英发 Yingfa Chen
 title: "CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics"
 date: 2023-09-16 19:47:17
 categories: Paper
