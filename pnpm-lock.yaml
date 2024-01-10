@@ -11,6 +11,9 @@ dependencies:
   hexo:
     specifier: ^6.3.0
     version: 6.3.0
+  hexo-asset-link:
+    specifier: ^2.2.2
+    version: 2.2.2(hexo@6.3.0)
   hexo-deployer-git:
     specifier: ^4.0.0
     version: 4.0.0
@@ -26,6 +29,9 @@ dependencies:
   hexo-generator-index:
     specifier: ^3.0.0
     version: 3.0.0
+  hexo-generator-search:
+    specifier: ^2.4.3
+    version: 2.4.3
   hexo-generator-tag:
     specifier: ^2.0.0
     version: 2.0.0
@@ -674,6 +680,14 @@ packages:
       function-bind: 1.1.1
     dev: false
 
+  /hexo-asset-link@2.2.2(hexo@6.3.0):
+    resolution: {integrity: sha512-wJDngeQXJic2CStUVIKqDdV16Fkh5pwliV8hEyLjeBfY7YoYIEeuDsY+n2VPRIXomaw4GnFG6jVVBne7lrHY1w==}
+    peerDependencies:
+      hexo: ^4.0.0 || ^5.0.0 || ^6.0.0
+    dependencies:
+      hexo: 6.3.0
+    dev: false
+
   /hexo-cli@4.3.1:
     resolution: {integrity: sha512-nYe7yJhXT7MwlDEpIAjneMfz0wnWTdIhRv+cVW2OPTw8JtG2X+8Y/sYhPDvQz/ZqjFRZ4qgiKFXN5orFJ/u1vg==}
     engines: {node: '>=14'}
@@ -765,6 +779,16 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       hexo-pagination: 3.0.0
+    dev: false
+
+  /hexo-generator-search@2.4.3:
+    resolution: {integrity: sha512-Z5hfZq2g3np/Tgdp2q9HobfIvU6Pdz89tnTurc1IIq/vW0MHgDynk0Aiv6kvMtKWthnZ5l0iEMT3YLN35NdYwQ==}
+    engines: {node: '>= 0.10.0'}
+    dependencies:
+      nunjucks: 3.2.4
+      utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - chokidar
     dev: false
 
   /hexo-generator-tag@2.0.0:

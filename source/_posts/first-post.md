@@ -59,6 +59,8 @@ tags:
 
 ## 我的家乡 Lillesand
 
-![Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。](/images/Lillesand_0.JPG)
+![](./first-post/lillesand0.jpg "Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。")
+
+![](./first-post/lillesand1.jpg "Lillesand 的港口")
 
 好久没有回去了，上一次回挪威也没有回去

@@ -49,13 +49,13 @@ In contrast, ActAdd uses the difference between prompt pairs instead.
 
 The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.
 
-<img src="./alg.png" alt="Algorithm of ActAdd." style="width: 80%;"></img>
+![ActAdd method](./actadd/alg.png "The algorithm of ActAdd")
 
 As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.
 
 ## Result
 
-<img src="./result.png" alt="Result of ActAdd." style="width: 80%;"></img>
+![Main result](./actadd/result.png "Main results.")
 
 ## My Thoughts
 

@@ -7,3 +7,7 @@ The site contains information about my research, publications, background and pe
 ## About the Site
 
 This site is built with [Hexo](https://hexo.io/) and my own theme, [Fengye](https://www.github.com/chen-yingfa/hexo-theme-fengye).
+
+## Generate Search Index
+
+Just run `hexo g` and it will automatically generate the index.

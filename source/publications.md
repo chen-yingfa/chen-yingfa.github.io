@@ -9,6 +9,8 @@ List of all my publications:
 
 **2023**:
 
+- [GitHub]: [InfiniteBench: Extending Long Context Evaluation to Over 100K](/2024/01/10/InfiniteBench/)
+    - [Code](http://www.github.com/OpenBMB/InfiniteBench)
 - [preprint]: [CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics](/2023/09/16/CFDBench/)
     - [Code](https://www.github.com/luo-yining/CFDBench) | [知乎](https://zhuanlan.zhihu.com/p/656033757) | [Paper (preprints.org)](https://www.preprints.org/manuscript/202309.1550/v1)
 <!-- - [preprint] [Robust and Scalable Model Editing for Large Language Models](/2023/09/14/EREN/) -->
