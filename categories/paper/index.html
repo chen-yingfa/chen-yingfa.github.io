@@ -31,6 +31,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <link rel="icon" href="/images/favicon-32x32.png">
 
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
@@ -41,6 +42,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 
 
 <link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/css/search.css">
 
 
 
@@ -181,7 +185,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/archives"
+                    href="/./archives"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -210,7 +214,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/publications"
+                    href="/./publications"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -239,7 +243,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/about"
+                    href="/./about"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -268,7 +272,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/category"
+                    href="/./category"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -295,7 +299,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/tag"
+                    href="/./tag"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -322,7 +326,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/index"
+                    href="/./index"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -346,6 +350,200 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </div>
         <!-- Icons on the right -->
         <div class="flex flex-row items-center">
+
+            
+  <div class="search-icon tools-bar-item w-8 flex flex-row items-center" id="search-icon">
+    <a href="javascript: void(0)" class="w-full flex flex-row items-center">
+      <iconify-icon width="24" icon="mingcute:search-2-fill"></iconify-icon>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden z-20">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <!-- <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <iconify-icon width="24" icon="mingcute:search-2-fill"></iconify-icon>
+          </a>
+        </span> -->
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search">
+        
+        <!-- <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <iconify-icon width="24" icon="mingcute:search-2-fill"></iconify-icon>
+          </a>
+        </span> -->
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        inputArea.focus()
+        // document.body.classList.add('hidden')
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        // document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    // document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchFirst<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchNoResult<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchFilesNotfound<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchServiceErrors<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
             <!-- Dark/light toggle icon -->
             <a class="flex group p-1" title="toggle theme" id="toggle-dark">
                 <iconify-icon class="transition-transform
@@ -372,36 +570,35 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     </div>
 </header>
 
-
 <!-- Dropdown menu on small screens -->
 <div id="menu-panel"
-  class="
-    h-0
-    overflow-hidden
-    sm:hidden
-    w-full
-    z-10
-    rounded
-  ">
-  <div id="menu-content"
     class="
-      font-bold
-      text-xl
-      border-b-[1px]
-      relative
-      z-20
-      border-[var(--c-sep)]
-      px-2
-      py-2
-      -translate-y-full
-      transition-transform
-      duration-200
+        h-0
+        overflow-hidden
+        sm:hidden
+        w-full
+        z-10
+        rounded
     ">
+  <div id="menu-content"
+        class="
+        font-bold
+        text-xl
+        border-b-[1px]
+        relative
+        z-20
+        border-[var(--c-sep)]
+        px-2
+        py-2
+        -translate-y-full
+        transition-transform
+        duration-200
+        ">
       
         
         
           <a
-            href="/archives"
+            href="/./archives"
             class="
                 flex flex-row items-center
                 gap-2
@@ -423,7 +620,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/publications"
+            href="/./publications"
             class="
                 flex flex-row items-center
                 gap-2
@@ -445,7 +642,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/about"
+            href="/./about"
             class="
                 flex flex-row items-center
                 gap-2
@@ -467,7 +664,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/category"
+            href="/./category"
             class="
                 flex flex-row items-center
                 gap-2
@@ -489,7 +686,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/tag"
+            href="/./tag"
             class="
                 flex flex-row items-center
                 gap-2
@@ -511,7 +708,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/index"
+            href="/./index"
             class="
                 flex flex-row items-center
                 gap-2
@@ -586,7 +783,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </a>
         <!-- Post excerpt -->
         
-            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-3">
+            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
                 <p><a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a target="_blank" rel="noopener" href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
 <p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a target="_blank" rel="noopener" href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>            </div>
         
@@ -691,16 +888,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #cfd
       </a>
     
-      <a href="/tags/machine-learning/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #machine-learning
-      </a>
-    
       <a href="/tags/dataset/" 
         class="
           tag
@@ -739,6 +926,16 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           dark:drop-shadow-none
         ">
         #physics
+      </a>
+    
+      <a href="/tags/machine-learning/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #machine-learning
       </a>
     
       <a href="/tags/deep-learning/" 

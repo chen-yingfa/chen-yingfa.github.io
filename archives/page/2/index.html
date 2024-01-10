@@ -24,13 +24,14 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   <meta name="keywords" content="Chen Yingfa,陈英发,Natural Language Processing,Artificial Intelligence">
 
 
-<title>2023年中秋和国庆 | Chen Yingfa</title>
+<title>Archives | Chen Yingfa</title>
 
 
 
 <link rel="icon" href="/images/favicon-32x32.png">
 
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
@@ -41,6 +42,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 
 
 <link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/css/search.css">
 
 
 
@@ -181,7 +185,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/archives"
+                    href="/./archives"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -210,7 +214,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/publications"
+                    href="/./publications"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -239,7 +243,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/about"
+                    href="/./about"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -268,7 +272,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/category"
+                    href="/./category"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -295,7 +299,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/tag"
+                    href="/./tag"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -322,7 +326,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
                     
                 
                 <a
-                    href="/index"
+                    href="/./index"
                     class="
                         flex flex-row items-center
                         gap-1
@@ -346,6 +350,200 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         </div>
         <!-- Icons on the right -->
         <div class="flex flex-row items-center">
+
+            
+  <div class="search-icon tools-bar-item w-8 flex flex-row items-center" id="search-icon">
+    <a href="javascript: void(0)" class="w-full flex flex-row items-center">
+      <iconify-icon width="24" icon="mingcute:search-2-fill"></iconify-icon>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden z-20">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <!-- <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <iconify-icon width="24" icon="mingcute:search-2-fill"></iconify-icon>
+          </a>
+        </span> -->
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search">
+        
+        <!-- <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <iconify-icon width="24" icon="mingcute:search-2-fill"></iconify-icon>
+          </a>
+        </span> -->
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        inputArea.focus()
+        // document.body.classList.add('hidden')
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        // document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    // document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchFirst<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchNoResult<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchFilesNotfound<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>searchServiceErrors<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
             <!-- Dark/light toggle icon -->
             <a class="flex group p-1" title="toggle theme" id="toggle-dark">
                 <iconify-icon class="transition-transform
@@ -372,36 +570,35 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     </div>
 </header>
 
-
 <!-- Dropdown menu on small screens -->
 <div id="menu-panel"
-  class="
-    h-0
-    overflow-hidden
-    sm:hidden
-    w-full
-    z-10
-    rounded
-  ">
-  <div id="menu-content"
     class="
-      font-bold
-      text-xl
-      border-b-[1px]
-      relative
-      z-20
-      border-[var(--c-sep)]
-      px-2
-      py-2
-      -translate-y-full
-      transition-transform
-      duration-200
+        h-0
+        overflow-hidden
+        sm:hidden
+        w-full
+        z-10
+        rounded
     ">
+  <div id="menu-content"
+        class="
+        font-bold
+        text-xl
+        border-b-[1px]
+        relative
+        z-20
+        border-[var(--c-sep)]
+        px-2
+        py-2
+        -translate-y-full
+        transition-transform
+        duration-200
+        ">
       
         
         
           <a
-            href="/archives"
+            href="/./archives"
             class="
                 flex flex-row items-center
                 gap-2
@@ -423,7 +620,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/publications"
+            href="/./publications"
             class="
                 flex flex-row items-center
                 gap-2
@@ -445,7 +642,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/about"
+            href="/./about"
             class="
                 flex flex-row items-center
                 gap-2
@@ -467,7 +664,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/category"
+            href="/./category"
             class="
                 flex flex-row items-center
                 gap-2
@@ -489,7 +686,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/tag"
+            href="/./tag"
             class="
                 flex flex-row items-center
                 gap-2
@@ -511,7 +708,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         
         
           <a
-            href="/index"
+            href="/./index"
             class="
                 flex flex-row items-center
                 gap-2
@@ -533,73 +730,100 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
   </div>
 </div>
   <main>
-    <!-- css -->
-
-<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
-
+    <section class="px-2 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
   
-<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
-
-    <!-- toc -->
+  
     
-  <!-- tocbot -->
-<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
-
-
-<section class="px-6 max-w-prose mx-auto md:px-0">
-  <!-- Post header before content -->
-  <header class="py-4">
-    <div class="flex flex-col gap-2 pt-4 md:pt-6">
-      <!-- Title -->
-      <div id="article-title" class="leading-snug">
-        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">2023年中秋和国庆</p>
+    <!-- Large text showing the year in the background -->
+    
+      <div class="relative pointer-events-none h-[30px]">
+        <div class="absolute -top-6 w-[100%]">
+          <p class="text-clip overflow-hidden -translate-x-3 text-9xl
+            font-extrabold
+            text-[var(--c-theme)]
+            opacity-10
+            dark:opacity-20">
+            2022
+          </p>
+        </div>
       </div>
-      <!-- Meta data -->
-      <div>
-        <section class="
-          flex flex-col gap-x-2 gap-y-1 text-sm text-[var(--c-100)]">
-          <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <!-- Dates -->
-            <div class="flex items-center gap-1">
-              <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
-              Created: <time class="w-max">2023-10-05</time>
-            </div>
-            <div class="flex items-center gap-1">
-              <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
-              Edited: <time class="w-max">2023-10-05</time>
-            </div>
-          </div>
-          <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
-            <!-- Author -->
-            
-              <span class="flex items-center gap-1 group">
-                <iconify-icon width="18" icon="mingcute:user-edit-fill" ></iconify-icon>
-                <p>Yingfa Chen</p>
-              </span>
-            
+    
+    <!-- The post -->
+    <div class="w-full">
+      <!-- One post item in a list -->
+<div class="
+    post-container
+    px-3 py-3
+">
+    <div class="post-data-container flex flex-col gap-2">
+        <!-- Post title -->
+        <a href="/2022/10/27/first-draft/">
+            <h2 class="
+                    text-[var(--c-80)]
+                    font-bold
+                    text-xl
+                    hover:text-[var(--c-theme)]
+                    transition-all
+                    hover:underline">
+                第一篇
+            </h2>
+        </a>
+        <!-- Post excerpt -->
+        
+            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
+                <p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
+<p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p>
 
-            <!-- Word count -->
-            <span class="flex items-center gap-1">
-              <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
-              <span>1.2k words, 4 min</span>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>            </div>
+        
+        <!-- Post Statistics -->
+        <div class="flex flex-wrap items-center gap-x-2 text-sm
+            text-[var(--c-70)]">
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:add-circle-fill"></iconify-icon>
+                <time class="w-max">
+                    2022-10-27
+                </time>
+            </span>
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:refresh-3-fill"></iconify-icon>
+                <time class="w-max">
+                    2023-09-29
+                </time>
+            </span>
+            <span class="flex flex-row items-center gap-1 group">
+                <iconify-icon width="16"
+                    icon="mingcute:book-2-fill"></iconify-icon>
+                <p class="w-max">
+                    332 words, 1 min
+                </p>
             </span>
             <!-- Categories -->
+            <span class="flex flex-row items-center gap-1 group">
+                
+                    <iconify-icon class="
+                            group-hover:scale-125
+                            transition-transform
+                            group-hover:text-[var(--c-theme)]
+                        "
+                        width="16"
+                        icon="mingcute:classify-2-fill" class="mr-0">
+                    </iconify-icon>
+                    
+                        <a class="underline underline-offset-2"
+                            href="/categories/life/">
+                            Life
+                        </a>
+                    
+                
+            </span>
+        </div>
+        <!-- Tags -->
+        <div>
             
-              <!-- <span class="text-gray-400">·</span> -->
-              <span class="flex flex-row items-center gap-1 group hover:underline">
-                <iconify-icon class="transition-all group-hover:scale-125 mr-0"
-                  width="18"
-                  icon="mingcute:classify-2-fill">
-                </iconify-icon>
-                <a class="article-category-link" href="/categories/life/">Life</a>
-              </span>
-            
-          </div>
-        </section>
-      </div>
-      <!-- tags -->
-      <div>
-        
+                
 <div class="flex flex-wrap gap-1">
   
     
@@ -613,16 +837,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #life
       </a>
     
-      <a href="/tags/%E4%B8%AD%E7%A7%8B/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #中秋
-      </a>
-    
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
         class="
           tag
@@ -633,248 +847,75 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         #中文
       </a>
     
-      <a href="/tags/00/" 
+      <a href="/tags/jekyll/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #00
+        #jekyll
       </a>
     
-      <a href="/tags/wedding/" 
+      <a href="/tags/test/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #wedding
+        #test
       </a>
     
-      <a href="/tags/%E4%B8%AD%E7%A7%8B-middle-autumn/" 
+      <a href="/tags/hugo/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #中秋-middle-autumn
+        #hugo
       </a>
     
-      <a href="/tags/%E5%9B%BD%E5%BA%86-national-day/" 
+      <a href="/tags/static-site-generator/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #国庆-national-day
+        #static-site-generator
       </a>
     
-      <a href="/tags/%E5%BA%94%E5%9F%8E/" 
+      <a href="/tags/html/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #应城
+        #html
       </a>
     
-      <a href="/tags/%E6%AD%A6%E6%B1%89-wuhan/" 
+      <a href="/tags/liquid/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #武汉-wuhan
+        #liquid
       </a>
     
   
 </div>
-      </div>
+            
+        </div>
     </div>
-  </header>
-  <!-- content -->
-  <article class="post-content prose m-auto dark:prose-invert">
-    <p>今年国庆 🇨🇳 和中秋 🥮 一起放假，我跟 00 一起回来应城参加她堂姐和初中同学的婚礼<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，
-住在她家里十个夜晚<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。第二次见家长，也算是挺顺利，但是每天都会见到陌生人，有点累，庆幸的是，感觉到 00 能接受跟我家人生活在一起。一号到三号我们去武汉玩了三天，超级开心，跟她在一起连逛商场都是开心的！</p>
-<span id="more"></span>
-<h2 id="小县城的氛围">小县城的氛围</h2>
-<p>应城跟我想象中的小县城很像，也是很多远房亲戚，习俗也让人很烦。敬酒、随地扔垃圾、室内抽烟、八卦人家的私事、说话粗鄙、脏、说了不要还非要给人家……而且确实能明显感觉到，这里的人的素质的平均水平挺低的，尤其是上一辈。真的很讨厌吃席，00 也是，这些习俗的麻烦程度让 00 都不想结婚了……</p>
-<p>但是无所谓了，之后能跟 00 在一起就好，除了回来过节应该也很少机会有联系。</p>
-<h2 id="武汉">武汉</h2>
-<p>一号到三号去了武汉旅游。早上五点多跟 00 的 ”二妈“（其实是婶，叔叔的老婆）坐车去武汉，坐了一个小时。他们这么早是因为要去谈婚礼的事情，然后害怕堵车。我们在酒店旁边下来，那时候“二妈”下地铁站上厕所，然后 00 非要给她买包子（为了礼貌），然后她最后还是拒绝了，导致我们得自己吃下包子。虽然包子没有不好吃，但是我就很讨厌这种明知人家不要还非要买的行为。</p>
-<p>之后我们去酒店的时候，还没有房子，我们寄存了行李就直接去新天地买了杯霸王茶姬的奶茶，然后去了古德寺。网上说不可以穿着暴露，但是感觉路人穿着还是很暴露。</p>
-<p><img src="/images/%E6%96%B0%E5%A4%A9%E5%9C%B0-%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC.png" alt=""></p>
-<p>之后还去了解放公园和中山公园，都挺不错的。大城市就是好。里面看到了很好看的建筑物。在中山公园我们问了两个小孩借用羽毛球拍子来打了几下。之后在一个相亲角<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>旁边跟她的高中同学，彭双，会合，然后逛了一下相亲角。之后我们还坐了一下过山车（公园里面有过山车还是第一次见）。</p>
-<p><img src="/images/%E8%A7%A3%E6%94%BE%E5%85%AC%E5%9B%AD%E4%B8%AD%E9%97%B4.png" alt=""></p>
-<p>晚上就去跟她的高中同学一起吃饭。</p>
-<p>第二天我们先在地铁站剪了头发，然后去宝通寺，晚上去武商梦时代。这个商场规格超级高，还挺好玩的。第一次看到索尼专卖店，还有 Pico 专卖店。里面还有滑雪的地方，但是太贵的。我们还去了优衣库，买了一些衣服，发现还挺便宜的。以前都会觉得逛街购物很无聊，但是跟她在一起连连逛街买衣服都是开心的。</p>
-<p>晚上我们跟她“大哥”（其实是堂哥）和他老婆一起吃饭，吃了魔宗烤肉，然后喝了茶颜悦色。总体来说也挺顺利的，感觉他们也不难相处。</p>
-<p><img src="/images/%E6%AD%A6%E5%95%86%E6%A2%A6%E6%97%B6%E4%BB%A3.png" alt=""></p>
-<p>第三天我们去了欢乐谷！是我们第一次一起去游乐场！玩了一个过山车，然后做了太阳飞车，00 就头晕想吐了，果然还是不行……但是没事，还是挺开心的。排队过程中还遇到了插队的人，好恶心！</p>
-<p>晚上我们跟一些人（共七个人）一起拼车回来应城，居然比火车还便宜，不错。回来已经11点了，然后回家放下行李箱之后又出去找她初中同学一起吃宵夜。</p>
-<p><img src="/images/%E6%AD%A6%E6%B1%89%E6%AC%A2%E4%B9%90%E8%B0%B7.png" alt=""></p>
-<h2 id="公事">公事</h2>
-<p>这个假期有点长，感觉有很多活都没有干。每天都很多事情，感觉这里的人太闲了，应该让他们多上班哈哈哈。古文字翻译的工作还没有干完，目前感觉效果不是很好，我也不想干这个了，感觉很浪费我的时间……至于对齐神经元，貌似现有方法都无法用在自回归模型上面，但是对齐问题好像之后自回归模型才会出现。不知道是不是我没有找到，目前还没有找到一篇研究神经元对生成结果的影响的工作。<a target="_blank" rel="noopener" href="https://www.github.com/kmeng01/rome">ROME</a> 的 Causal Tracing 感觉可以用，这两天得赶紧做点东西出来。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>27号是初中同学（魏陈）的婚礼，5号是堂姐（骆卓颖）的婚礼。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>九月二十六日回来，十月七日走。坐高铁到北京，然后做火车到应城。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn3" class="footnote-item"><p>之前在上海都没找到。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
+</div>
+    </div>
+  
 </section>
-
-  </article>
-
-  <!-- prev and next -->
-  <div class="flex justify-between mt-4 pt-4
-    border-t border-[var(--c-sep)] text-sm
-    gap-2 text-[var(--c-50)]
-  ">
-    <div>
-      
-        <a href="/2023/10/07/actadd/"
-          class="
-            transition-all
-            flex justify-center
-            hover:-translate-x-1
-            hover:text-[var(--c-80)]
-          ">
-          <iconify-icon width="20" icon="mingcute:left-fill" data-inline="false">
-          </iconify-icon>
-          Activation Addition (ActAdd)
-        </a>
-      
-    </div>
-    <div>
-      
-        <a href="/2023/09/19/llm-safety-and-ethics/"
-          class="
-            flex 
-            justify-center
-            hover:translate-x-1 
-            transition-transform
-            hover:text-[var(--c-100)]
-          "
-        >
-          Safety and Ethical Concerns of Large Language Models
-          <iconify-icon width="20" icon="mingcute:right-fill" data-inline="false"></iconify-icon>
-        </a>
-      
-    </div>
-  </div>
-
-  <!-- comment -->
-  <div class="article-comments mt-12">
-    
-
-  </div>
-</section>
-<!-- js inspect -->
-
-<script src="/lib/clipboard.min.js"></script>
-
-
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-  });
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  $(document).ready(() => {
-    const maraidConfig = {
-      theme: "default",
-      logLevel: 3,
-      flowchart: { curve: "linear" },
-      gantt: { axisFormat: "%m/%d/%Y" },
-      sequence: { actorMargin: 50 },
-    };
-    mermaid.initialize(maraidConfig);
-  });
-</script>
-
-
-
-<script src="/lib/fancybox/fancybox.umd.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-    $('.post-content').each(function(i){
-      $(this).find('img').each(function(){
-        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
-        var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
-        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
-      });
-      $(this).find('.fancybox').each(function(){
-        $(this).attr('rel', 'article' + i);
-      });
-    });
-
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        // options
-    })
-  })
-</script>
-
-<!-- tocbot begin -->
-
-<script src="/lib/tocbot/tocbot.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-      tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.post-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
-  })
-</script>
-<!-- tocbot end -->
 
   </main>
   <footer class="flex flex-col mt-12 mb-12 items-center
