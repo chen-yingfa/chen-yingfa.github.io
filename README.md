@@ -11,3 +11,9 @@ This site is built with [Hexo](https://hexo.io/) and my own theme, [Fengye](http
 ## Generate Search Index
 
 Just run `hexo g` and it will automatically generate the index.
+
+## Deploy
+
+```shell
+hexo clean && hexo deploy
+```
