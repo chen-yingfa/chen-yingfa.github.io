@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta name="author" content="Yingfa Chen">
+  <meta name="author" content="陈英发 Yingfa Chen">
 
 
   <meta name="subtitle" content="陈英发">
@@ -781,7 +781,8 @@ layout: tag
     
       <div class="relative pointer-events-none h-[30px]">
         <div class="absolute -top-6 w-[100%]">
-          <p class="text-clip overflow-hidden -translate-x-3 text-9xl
+          <p class="
+            text-clip overflow-hidden -translate-x-3 text-9xl
             font-extrabold
             text-[var(--c-theme)]
             opacity-10
@@ -798,25 +799,47 @@ layout: tag
     post-container
     px-3 py-3
 ">
-    <div class="post-data-container flex flex-col gap-2">
-        <!-- Post title -->
-        <a href="/2023/10/05/2023%E4%B8%AD%E7%A7%8B/">
-            <h2 class="
+    <div class="post-data-container flex flex-col gap-3">
+        
+        
+            <div class="flex flex-row gap-4 max-h-36">
+            <!-- Post thumbnail -->
+            <a href="/2023/10/05/2023%E4%B8%AD%E7%A7%8B/">
+                <img class="
+                    h-full
+                    max-w-48
+                    rounded-md
+                    object-cover
+                    transition-all
+                    hover:scale-105
+                    hover:shadow-md
+                    "
+                    src="/2023/10/05/2023%E4%B8%AD%E7%A7%8B/武商梦时代.png"
+                    alt="2023年中秋和国庆">
+        
+            <div class="flex flex-col gap-1">
+            <!-- Post title -->
+            <a href="/2023/10/05/2023%E4%B8%AD%E7%A7%8B/">
+                <h2 class="
                     text-[var(--c-80)]
                     font-bold
                     text-xl
                     hover:text-[var(--c-theme)]
                     transition-all
                     hover:underline">
-                2023年中秋和国庆
-            </h2>
-        </a>
+                    2023年中秋和国庆
+                </h2>
+            </a>
         <!-- Post excerpt -->
         
             <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
                 <p>今年国庆 🇨🇳 和中秋 🥮 一起放假，我跟 00 一起回来应城参加她堂姐和初中同学的婚礼<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，
 住在她家里十个夜晚<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。第二次见家长，也算是挺顺利，但是每天都会见到陌生人，有点累，庆幸的是，感觉到 00 能接受跟我家人生活在一起。一号到三号我们去武汉玩了三天，超级开心，跟她在一起连逛商场都是开心的！</p>            </div>
+            
         
+        </div>
+        
+    </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -868,6 +891,16 @@ layout: tag
 <div class="flex flex-wrap gap-1">
   
     
+      <a href="/tags/00/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          dark:drop-shadow-none
+        ">
+        #00
+      </a>
+    
       <a href="/tags/life/" 
         class="
           tag
@@ -876,16 +909,6 @@ layout: tag
           dark:drop-shadow-none
         ">
         #life
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E7%A7%8B/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #中秋
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
@@ -898,14 +921,14 @@ layout: tag
         #中文
       </a>
     
-      <a href="/tags/00/" 
+      <a href="/tags/%E4%B8%AD%E7%A7%8B/" 
         class="
           tag
           text-sm
           rounded-full
           dark:drop-shadow-none
         ">
-        #00
+        #中秋
       </a>
     
       <a href="/tags/wedding/" 
@@ -967,6 +990,11 @@ layout: tag
     </div>
   
 </section>
+
+<div class="border-t">
+
+</div>
+
 
 
 

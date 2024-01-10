@@ -303,7 +303,7 @@ hr {
   padding: 0px 0px;
   font-style: normal;
   width: 100%;
-  display: block;
+  display: none;
 }
 .prose .fancybox-alt {
   font-size: 0.9rem;
@@ -313,7 +313,7 @@ hr {
   padding: 0px 0px;
   font-style: normal;
   width: 100%;
-  display: none;
+  display: block;
 }
 li.task-list-item {
   list-style-type: none;
