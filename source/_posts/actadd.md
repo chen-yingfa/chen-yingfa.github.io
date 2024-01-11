@@ -20,13 +20,13 @@ tags:
 
 TLDR: Propose **ActAdd**, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.
 
-<!-- more -->
-
 Summary:
 
 - Propose **ActAdd**, a method for controlling model behavior by modifying activations at inference time.
 - Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.
 - ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.
+
+<!-- more -->
 
 > The recently popular [representation engineering paper](https://arxiv.org/abs/2310.01405) (RepE) seems to be largely inspired by this work.
 

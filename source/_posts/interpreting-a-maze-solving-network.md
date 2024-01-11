@@ -18,4 +18,6 @@ tags:
 
 I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.
 
+<!-- more -->
+
 The culmination of this blog post is the exciting work of [Activation Addition](/2023/10/07/actadd/), which I believe is one important work that inspired the recently [Representation Engineering](https://arxiv.org/abs/2310.01405) work.
