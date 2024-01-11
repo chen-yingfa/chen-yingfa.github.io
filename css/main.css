@@ -100,6 +100,8 @@ body {
   transition-duration: 0.2s;
 }
 :root {
+  --c-transparent: transparent;
+  --c-theme-1: #bed5f9;
   --c-theme: #4f90e6;
   --c-theme-2: #3058b6;
   --c-0: #fff;
@@ -126,6 +128,7 @@ body {
   --h-header: 48px;
 }
 html.dark {
+  --c-theme-1: #204679;
   --c-theme: #5393d2;
   --c-theme-2: #415876;
   --c-0: #181818;
@@ -325,11 +328,15 @@ li.task-list-item .task-list-item-checkbox input:checked {
   color: var(--c-theme);
   text-decoration: line-through;
 }
+.post-excerpt {
+  pointer-events: none;
+}
 .post-excerpt a {
   text-decoration: underline;
 }
-.post-excerpt a:hover {
-  color: var(--c-theme);
+.post-excerpt p {
+  margin: 2px 0px;
+  padding: 2px 0px;
 }
 figure.highlight {
   display: flex;
@@ -360,20 +367,6 @@ figure.highlight .copy-icon {
 figure.highlight .copy-icon:hover {
   background-color: var(--c-20);
   transform: scale(1.1);
-}
-.tag {
-  font-size: 0.8rem; /* 12px */
-  line-height: 1rem; /* 16px */
-  background-color: var(--c-0);
-  color: var(--c-80);
-  border: 1px solid var(--c-30);
-  padding: 0 6px;
-}
-.tag:hover {
-  color: var(--c-theme);
-  background-color: var(--c-10);
-  border: 1px solid var(--c-theme);
-  cursor: pointer;
 }
 .post-container .footnote-ref {
   display: none;

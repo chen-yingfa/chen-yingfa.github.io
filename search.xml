@@ -11,6 +11,12 @@
         <content type="html"><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="">Paper (upcoming)</a></p><p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p><blockquote><p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p></blockquote><p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p><span id="more"></span><h2 id="Background">Background</h2><p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p><h2 id="The-Data">The Data</h2><p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p><p>Following shows the statistics of the tasks in our benchmark.</p><p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p><h2 id="Results">Results</h2><p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p><p><img src="/2024/01/10/infinitebench/results.png" alt="Results of some SOTA long-context LLMs on our InfiniteBench" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p><h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2><p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p><h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3><p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><blockquote><p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p></blockquote><h3 id="Possible-Paths">Possible Paths</h3><p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong>. Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p><p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p><p>In contrast, state-space models and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because a blurry remembrance is much better than complete forgettal). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p><p>By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window.</p><p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p><h2 id="Additional-Notes">Additional Notes</h2><p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
       
       
+      <categories>
+          
+          <category> Research </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -41,7 +47,7 @@
       <link href="/2023/10/07/interpreting-a-maze-solving-network/"/>
       <url>/2023/10/07/interpreting-a-maze-solving-network/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p><p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p><p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p><p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p><span id="more"></span><p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>]]></content>
       
       
       <categories>
@@ -80,7 +86,7 @@
       <link href="/2023/10/07/actadd/"/>
       <url>/2023/10/07/actadd/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://arxiv.org/abs/2308.10248">Paper</a></p><p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p><span id="more"></span><p>Summary:</p><ul><li>Propose <strong>ActAdd</strong>, a method for controlling model behavior by modifying activations at inference time.</li><li>Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.</li><li>ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.</li></ul><blockquote><p>The recently popular <a href="https://arxiv.org/abs/2310.01405">representation engineering paper</a> (RepE) seems to be largely inspired by this work.</p></blockquote><h2 id="Background">Background</h2><p>The authors propose to compute steering vectors to steer the model's behavior. They call such methods <em>activation engineering</em>. They make the following contributions:</p><ul><li>Find that combining forward passes works well in GPT-2, despite it was not trained for this.</li><li>The proposed method, <strong>ActAdd</strong>, is efficient, requiring no gradient descent or labeled data.</li></ul><p>The difference between ActAdd and existing steering vector methods is that they find the vectors via one of the following.</p><ul><li>Differences after fine-tuning</li><li>Per-query gradient-based search</li><li>Linear probes + differences in truthy attention heads</li></ul><p>In contrast, ActAdd uses the difference between prompt pairs instead.</p><h2 id="Method">Method</h2><p>The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.</p><p><img src="/2023/10/07/actadd/alg.png" alt="ActAdd method" title="The algorithm of ActAdd"></p><p>As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.</p><h2 id="Result">Result</h2><p><img src="/2023/10/07/actadd/result.png" alt="Main result" title="Main results."></p><h2 id="My-Thoughts">My Thoughts</h2><p>The effectiveness of this method is a strong evidence that input and output features are represented as linear directions in representational space, but we still have no explanation for why such linearity arises naturally in LLMs. The fact that this actually works is very thought-provoking. However, ActAdd start to see degraded performance on off-target inputs when we drive the activations to far off, and the steering sometimes simply fails, this may indicate that the optimal steering path is not linear, which I believe is reasonable. This is somewhat similar to neuron attribution methods, many features/skills/knowledge cannot be attributed to single neurons (they are distributed across neurons), but existing neuron attribution methods still work well because, by change, some features are primarily determined by the activity or state of a single neuron (or a small set of neurons).</p><p>We can also draw a parallel with <a href="https://arxiv.org/abs/2106.10199">BitFit</a>, which shows that tuning only (a subset of) the bias terms and the task-specific classifier head in a transformer model can achieve tuning performance comparable to full parameter finetuning. BitFit did only experiments on <strong>encoder models</strong>, in which case bias terms can be seen as steering vectors in the hidden representation space, therefore, ActAdd and BitFit differs only in the training signel. ActAdd uses the difference between the representation of a pair of (positive and negative) prompts, while BitFit propagates the human annotation from the classification head. For <strong>autoregressive models</strong>, ActAdd is more expressive because each token can be steered independently, while BitFit can only steer the whole sequence.</p><p>Interestingly, the fact that difference (or other arithmetics) in hidden representation are useful signal for some semantics has been shown in the era of learning word vectors, the fact that this can be used as a training signal is pretty neat.</p><p>The author also discussed the difference between activation engineering and adaptation methods, but the empirical results were not enough to show that ActAdd can be used as a substitute for adaptation. E.g., we cannot practically adapt the model into performing machine translation with ActAdd, because there is no negative prompt for translation. But perhaps upcoming works can apply this method to replace fine-tuning (or other adaptation methods). The realization may be a promising way to effiicently control any arbitrary model behavior without backpropagation<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><p>Nevertheless, this method is extremely interesting, and I feel like many existing methods can be improved by taking inspirations from this work.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a href="https://arxiv.org/abs/2305.17333">MeZO</a> is one alternative, but the training time of MeZO is almost the same as fine-tuning. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://arxiv.org/abs/2308.10248">Paper</a></p><p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p><p>Summary:</p><ul><li>Propose <strong>ActAdd</strong>, a method for controlling model behavior by modifying activations at inference time.</li><li>Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.</li><li>ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.</li></ul><span id="more"></span><blockquote><p>The recently popular <a href="https://arxiv.org/abs/2310.01405">representation engineering paper</a> (RepE) seems to be largely inspired by this work.</p></blockquote><h2 id="Background">Background</h2><p>The authors propose to compute steering vectors to steer the model's behavior. They call such methods <em>activation engineering</em>. They make the following contributions:</p><ul><li>Find that combining forward passes works well in GPT-2, despite it was not trained for this.</li><li>The proposed method, <strong>ActAdd</strong>, is efficient, requiring no gradient descent or labeled data.</li></ul><p>The difference between ActAdd and existing steering vector methods is that they find the vectors via one of the following.</p><ul><li>Differences after fine-tuning</li><li>Per-query gradient-based search</li><li>Linear probes + differences in truthy attention heads</li></ul><p>In contrast, ActAdd uses the difference between prompt pairs instead.</p><h2 id="Method">Method</h2><p>The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.</p><p><img src="/2023/10/07/actadd/alg.png" alt="ActAdd method" title="The algorithm of ActAdd"></p><p>As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.</p><h2 id="Result">Result</h2><p><img src="/2023/10/07/actadd/result.png" alt="Main result" title="Main results."></p><h2 id="My-Thoughts">My Thoughts</h2><p>The effectiveness of this method is a strong evidence that input and output features are represented as linear directions in representational space, but we still have no explanation for why such linearity arises naturally in LLMs. The fact that this actually works is very thought-provoking. However, ActAdd start to see degraded performance on off-target inputs when we drive the activations to far off, and the steering sometimes simply fails, this may indicate that the optimal steering path is not linear, which I believe is reasonable. This is somewhat similar to neuron attribution methods, many features/skills/knowledge cannot be attributed to single neurons (they are distributed across neurons), but existing neuron attribution methods still work well because, by change, some features are primarily determined by the activity or state of a single neuron (or a small set of neurons).</p><p>We can also draw a parallel with <a href="https://arxiv.org/abs/2106.10199">BitFit</a>, which shows that tuning only (a subset of) the bias terms and the task-specific classifier head in a transformer model can achieve tuning performance comparable to full parameter finetuning. BitFit did only experiments on <strong>encoder models</strong>, in which case bias terms can be seen as steering vectors in the hidden representation space, therefore, ActAdd and BitFit differs only in the training signel. ActAdd uses the difference between the representation of a pair of (positive and negative) prompts, while BitFit propagates the human annotation from the classification head. For <strong>autoregressive models</strong>, ActAdd is more expressive because each token can be steered independently, while BitFit can only steer the whole sequence.</p><p>Interestingly, the fact that difference (or other arithmetics) in hidden representation are useful signal for some semantics has been shown in the era of learning word vectors, the fact that this can be used as a training signal is pretty neat.</p><p>The author also discussed the difference between activation engineering and adaptation methods, but the empirical results were not enough to show that ActAdd can be used as a substitute for adaptation. E.g., we cannot practically adapt the model into performing machine translation with ActAdd, because there is no negative prompt for translation. But perhaps upcoming works can apply this method to replace fine-tuning (or other adaptation methods). The realization may be a promising way to effiicently control any arbitrary model behavior without backpropagation<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><p>Nevertheless, this method is extremely interesting, and I feel like many existing methods can be improved by taking inspirations from this work.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a href="https://arxiv.org/abs/2305.17333">MeZO</a> is one alternative, but the training time of MeZO is almost the same as fine-tuning. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
       
       
       <categories>
@@ -135,13 +141,13 @@
       
         <tags>
             
-            <tag> 00 </tag>
-            
             <tag> life </tag>
+            
+            <tag> 中秋 </tag>
             
             <tag> 中文 </tag>
             
-            <tag> 中秋 </tag>
+            <tag> 00 </tag>
             
             <tag> wedding </tag>
             
@@ -184,11 +190,11 @@
             
             <tag> eren </tag>
             
+            <tag> life </tag>
+            
             <tag> machine-learning </tag>
             
             <tag> ai-alignment </tag>
-            
-            <tag> life </tag>
             
             <tag> ethics </tag>
             
@@ -231,17 +237,11 @@
             
             <tag> research </tag>
             
-            <tag> 00 </tag>
-            
             <tag> life </tag>
             
-            <tag> jekyll </tag>
-            
-            <tag> hugo </tag>
-            
-            <tag> static-site-generator </tag>
-            
             <tag> 中文 </tag>
+            
+            <tag> 00 </tag>
             
             <tag> 面壁智能 </tag>
             
@@ -250,6 +250,12 @@
             <tag> 签证 </tag>
             
             <tag> hexo </tag>
+            
+            <tag> hugo </tag>
+            
+            <tag> jekyll </tag>
+            
+            <tag> static-site-generator </tag>
             
             <tag> 羽毛球 </tag>
             
@@ -281,7 +287,7 @@
       
       <categories>
           
-          <category> Paper </category>
+          <category> Research </category>
           
       </categories>
       
@@ -294,11 +300,11 @@
             
             <tag> english </tag>
             
+            <tag> 00 </tag>
+            
             <tag> cfd </tag>
             
             <tag> dataset </tag>
-            
-            <tag> 00 </tag>
             
             <tag> pinn </tag>
             
@@ -339,8 +345,6 @@
             
             <tag> english </tag>
             
-            <tag> test </tag>
-            
             <tag> algorithm </tag>
             
             <tag> binary-search </tag>
@@ -350,6 +354,8 @@
             <tag> python </tag>
             
             <tag> c++ </tag>
+            
+            <tag> test </tag>
             
             <tag> code </tag>
             
@@ -361,10 +367,10 @@
     
     <entry>
       <title>临近2023暑假，00师姐答辩，晚上打球</title>
-      <link href="/2023/05/18/second-post/"/>
-      <url>/2023/05/18/second-post/</url>
+      <link href="/2023/05/18/%E4%B8%B4%E8%BF%912023%E6%9A%91%E5%81%87/"/>
+      <url>/2023/05/18/%E4%B8%B4%E8%BF%912023%E6%9A%91%E5%81%87/</url>
       
-        <content type="html"><![CDATA[<p>今天睡到九点才醒来，还是被00打电话叫醒的。去过了个早，然后去上《深度学习》</p><p>今天00的师姐答辩，下午三点去了，当时我在睡午觉。感觉之后她有点emo，但是她不承认，不知道为什么。然后聊了很多关于未来，结婚、生孩子、找工作等事情。感觉也没有很大的问题，但是00总是把东西看得很灰暗，很焦虑。</p>]]></content>
+        <content type="html"><![CDATA[<p>今天睡到九点才醒来，还是被00打电话叫醒的。去过了个早，然后去上《深度学习》</p><p>今天00的师姐答辩，下午三点去了，当时我在睡午觉。感觉之后她有点emo，但是她不承认，不知道为什么。然后聊了很多关于未来，结婚、生孩子、找工作等事情。感觉也没有很大的问题，但是00总是把东西看得很灰暗，很焦虑。</p><span id="more"></span>]]></content>
       
       
       <categories>
@@ -376,11 +382,11 @@
       
         <tags>
             
-            <tag> 00 </tag>
-            
             <tag> life </tag>
             
             <tag> 中文 </tag>
+            
+            <tag> 00 </tag>
             
             <tag> school </tag>
             
@@ -394,10 +400,10 @@
     
     <entry>
       <title>第一个帖子，瞎写点东西</title>
-      <link href="/2023/05/17/first-post/"/>
-      <url>/2023/05/17/first-post/</url>
+      <link href="/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/"/>
+      <url>/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/</url>
       
-        <content type="html"><![CDATA[<p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p><p>我和 00 的孩子们：</p><span id="more"></span><ul><li>卧龙：调皮的肥猫 🐱</li><li>小绿：喜欢咬东西的鳄鱼 🐊</li><li>骆雁：超级大的土鸡！🐰</li><li>凤雏：不调皮的猫咪 🐱</li><li>黄帝：更大的巨兔 🐰</li><li>内存条：白色的熊熊 🐻</li><li>闪光灯：灰色的熊熊 🐻</li></ul><h2 id="现在要做的事情">现在要做的事情</h2><ul><li>把 EmoRen 投了<ul><li>能不能行啊</li></ul></li><li>跑 CFD 的丹炉调好<ul><li>好难呀</li></ul></li><li>写完作业<ul><li>NLP和DL的大作业！</li></ul></li><li>搞定去ACL的手续<ul><li>去加拿大，然后回挪威一两周，然后回来跟 00 去南京，我不用签证，但是还是有很多手续。</li></ul></li><li>写好开题报告<ul><li>还不知道做啥呢</li></ul></li></ul><h2 id="我的家乡-Lillesand">我的家乡 Lillesand</h2><p><img src="/2023/05/17/first-post/lillesand0.jpg" alt="Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。" title="Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。"></p><p><img src="/2023/05/17/first-post/lillesand1.jpg" alt="Lillesand 的港口" title="Lillesand 的港口"></p><p>好久没有回去了，上一次回挪威也没有回去</p>]]></content>
+        <content type="html"><![CDATA[<p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p><p>我和 00 的孩子们：</p><span id="more"></span><ul><li>卧龙：调皮的肥猫 🐱</li><li>小绿：喜欢咬东西的鳄鱼 🐊</li><li>骆雁：超级大的土鸡！🐰</li><li>凤雏：不调皮的猫咪 🐱</li><li>黄帝：更大的巨兔 🐰</li><li>内存条：白色的熊熊 🐻</li><li>闪光灯：灰色的熊熊 🐻</li></ul><h2 id="现在要做的事情">现在要做的事情</h2><ul><li>把 EmoRen 投了<ul><li>能不能行啊</li></ul></li><li>跑 CFD 的丹炉调好<ul><li>好难呀</li></ul></li><li>写完作业<ul><li>NLP和DL的大作业！</li></ul></li><li>搞定去ACL的手续<ul><li>去加拿大，然后回挪威一两周，然后回来跟 00 去南京，我不用签证，但是还是有很多手续。</li></ul></li><li>写好开题报告<ul><li>还不知道做啥呢</li></ul></li></ul><h2 id="我的家乡-Lillesand">我的家乡 Lillesand</h2><p><img src="./first-post/lillesand0.jpg" alt="Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。" title="Lillesand，挪威南边的一个沿海小镇，人口大约一万。我出生长大的地方，到本科来清华才离开的。"></p><p><img src="./first-post/lillesand1.jpg" alt="Lillesand 的港口" title="Lillesand 的港口"></p><p>好久没有回去了，上一次回挪威也没有回去</p>]]></content>
       
       
       <categories>
@@ -411,13 +417,13 @@
             
             <tag> research </tag>
             
-            <tag> cfd </tag>
-            
-            <tag> 00 </tag>
-            
             <tag> life </tag>
             
             <tag> 中文 </tag>
+            
+            <tag> 00 </tag>
+            
+            <tag> cfd </tag>
             
             <tag> school </tag>
             
@@ -465,8 +471,8 @@
     
     <entry>
       <title>第一篇</title>
-      <link href="/2022/10/27/first-draft/"/>
-      <url>/2022/10/27/first-draft/</url>
+      <link href="/2022/10/27/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+      <url>/2022/10/27/%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
       
         <content type="html"><![CDATA[<p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p><p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><span id="more"></span><p>会根据 post markdown 文件中的 front matter 中定义的 tags：</p><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">tags: some tags here</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></tbody></table></figure><p>生成相应的 html div：</p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-tags"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/life"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>life<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/update"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>update<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/learn"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>learn<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/important"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>important<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/jekyll"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>jekyll<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/hugo"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>hugo<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/static-site-generator"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>static-site-generator<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><hr><p>不知道写啥，就写一个 Python 的二分搜索吧：</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target: <span class="type">Any</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Return the smallest index such that when target is inserted at that index,</span></span><br><span class="line"><span class="string">    the array will remain sorted.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    lo, hi = <span class="number">0</span>, <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        m = (lo + hi) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[m] &lt; target:</span><br><span class="line">            lo = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            hi = m</span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></tbody></table></figure>]]></content>
       
@@ -482,15 +488,15 @@
             
             <tag> life </tag>
             
-            <tag> jekyll </tag>
+            <tag> 中文 </tag>
             
             <tag> test </tag>
             
             <tag> hugo </tag>
             
-            <tag> static-site-generator </tag>
+            <tag> jekyll </tag>
             
-            <tag> 中文 </tag>
+            <tag> static-site-generator </tag>
             
             <tag> html </tag>
             

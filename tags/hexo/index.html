@@ -797,49 +797,48 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
-        
-            <div class="flex flex-row gap-4 max-h-36">
+            
             <!-- Post thumbnail -->
             <a href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
-                <img class="
-                    h-full
-                    max-w-48
-                    rounded-md
-                    object-cover
-                    transition-all
-                    hover:scale-105
-                    hover:shadow-md
-                    "
-                    src="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/中国护照.jpg"
-                    alt="更新个人主页">
-        
-            <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    更新个人主页
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
-                <p>之前有过个人主页，但是一直没有弄好，更没有更新。最近我将自己的 GitHub 的用户名改了，导致之前的 GitHub Pages 失效了，就趁机重新搭建个人主页。</p>
-<p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p>            </div>
+            <img class="
+                h-full
+                max-w-48
+                rounded-md
+                object-cover
+                transition-all
+                hover:scale-105
+                hover:shadow-md
+                "
+                src="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/申请签证.jpg"
+                alt="">
+            </img>
+        </a>
             
-        
+            <div class="flex flex-col gap-1">
+                <!-- Post title -->
+                <a href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        更新个人主页
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
+            
+                <div class="post-excerpt post-content text-[var(--c-60)] text-sm line-clamp-5 border-b-1 border-[var(--c-sep)]">
+                    <p>之前有过个人主页，但是一直没有弄好，更没有更新。最近我将自己的 GitHub 的用户名改了，导致之前的 GitHub Pages 失效了，就趁机重新搭建个人主页。</p>
+<p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p>                </div>
+            
+            </div>
         </div>
-        
-    </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -854,7 +853,7 @@ layout: tag
                 <iconify-icon width="16"
                     icon="mingcute:refresh-3-fill"></iconify-icon>
                 <time class="w-max">
-                    2024-01-10
+                    2024-01-11
                 </time>
             </span>
             <span class="flex flex-row items-center gap-1 group">
@@ -896,19 +895,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #research
-      </a>
-    
-      <a href="/tags/00/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #00
+        research
       </a>
     
       <a href="/tags/life/" 
@@ -916,39 +913,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #life
-      </a>
-    
-      <a href="/tags/jekyll/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #jekyll
-      </a>
-    
-      <a href="/tags/hugo/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #hugo
-      </a>
-    
-      <a href="/tags/static-site-generator/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #static-site-generator
+        life
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
@@ -956,9 +931,35 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #中文
+        中文
+      </a>
+    
+      <a href="/tags/00/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        00
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
@@ -966,9 +967,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #面壁智能
+        面壁智能
       </a>
     
       <a href="/tags/blog/" 
@@ -976,9 +985,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #blog
+        blog
       </a>
     
       <a href="/tags/%E7%AD%BE%E8%AF%81/" 
@@ -986,9 +1003,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #签证
+        签证
       </a>
     
       <a href="/tags/hexo/" 
@@ -996,9 +1021,71 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #hexo
+        hexo
+      </a>
+    
+      <a href="/tags/hugo/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        hugo
+      </a>
+    
+      <a href="/tags/jekyll/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        jekyll
+      </a>
+    
+      <a href="/tags/static-site-generator/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        static-site-generator
       </a>
     
       <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/" 
@@ -1006,9 +1093,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #羽毛球
+        羽毛球
       </a>
     
       <a href="/tags/work/" 
@@ -1016,9 +1111,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #work
+        work
       </a>
     
       <a href="/tags/%E6%9E%AB%E5%8F%B6/" 
@@ -1026,9 +1129,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #枫叶
+        枫叶
       </a>
     
       <a href="/tags/%E4%B8%AD%E5%9B%BD/" 
@@ -1036,9 +1147,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #中国
+        中国
       </a>
     
       <a href="/tags/%E6%8C%AA%E5%A8%81/" 
@@ -1046,9 +1165,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #挪威
+        挪威
       </a>
     
       <a href="/tags/markdown/" 
@@ -1056,9 +1183,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #markdown
+        markdown
       </a>
     
       <a href="/tags/%E5%AE%BF%E8%88%8D/" 
@@ -1066,16 +1201,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #宿舍
+        宿舍
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -1173,7 +1315,7 @@ layout: tag
     >
       CC BY-NC-SA 4.0
     </a>
-    <span>© 2022-2023</span>
+    <span>© 2022-2024</span>
     <a class="hover:underline"
     href="https://github.com/chen-yingfa" 
     target="_blank" 

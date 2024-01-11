@@ -797,27 +797,31 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
             <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2023/10/07/interpreting-a-maze-solving-network/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    Interpreting a Maze-Solving Network
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-        
-    </div>
+                <!-- Post title -->
+                <a href="/2023/10/07/interpreting-a-maze-solving-network/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        Interpreting a Maze-Solving Network
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
+            
+                <div class="post-excerpt post-content text-[var(--c-60)] text-sm line-clamp-5 border-b-1 border-[var(--c-sep)]">
+                    <p><a target="_blank" rel="noopener" href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
+<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>                </div>
+            
+            </div>
+        </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -832,7 +836,7 @@ layout: tag
                 <iconify-icon width="16"
                     icon="mingcute:refresh-3-fill"></iconify-icon>
                 <time class="w-max">
-                    2024-01-10
+                    2024-01-11
                 </time>
             </span>
             <span class="flex flex-row items-center gap-1 group">
@@ -874,9 +878,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #llm
+        llm
       </a>
     
       <a href="/tags/english/" 
@@ -884,9 +896,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #english
+        english
       </a>
     
       <a href="/tags/representation-engineering/" 
@@ -894,9 +914,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #representation-engineering
+        representation-engineering
       </a>
     
       <a href="/tags/activation-engineering/" 
@@ -904,9 +932,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #activation-engineering
+        activation-engineering
       </a>
     
       <a href="/tags/interpretability/" 
@@ -914,9 +950,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #interpretability
+        interpretability
       </a>
     
       <a href="/tags/rl/" 
@@ -924,9 +968,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #rl
+        rl
       </a>
     
       <a href="/tags/alignment/" 
@@ -934,9 +986,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #alignment
+        alignment
       </a>
     
       <a href="/tags/maze/" 
@@ -944,16 +1004,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #maze
+        maze
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -965,31 +1032,37 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
             <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2023/10/07/actadd/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    Activation Addition (ActAdd)
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
-                <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2308.10248">Paper</a></p>
-<p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p>            </div>
+                <!-- Post title -->
+                <a href="/2023/10/07/actadd/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        Activation Addition (ActAdd)
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
             
-        
-    </div>
+                <div class="post-excerpt post-content text-[var(--c-60)] text-sm line-clamp-5 border-b-1 border-[var(--c-sep)]">
+                    <p><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2308.10248">Paper</a></p>
+<p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p>
+<p>Summary:</p>
+<ul>
+<li>Propose <strong>ActAdd</strong>, a method for controlling model behavior by modifying activations at inference time.</li>
+<li>Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.</li>
+<li>ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.</li>
+</ul>                </div>
+            
+            </div>
+        </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -1004,7 +1077,7 @@ layout: tag
                 <iconify-icon width="16"
                     icon="mingcute:refresh-3-fill"></iconify-icon>
                 <time class="w-max">
-                    2024-01-10
+                    2024-01-11
                 </time>
             </span>
             <span class="flex flex-row items-center gap-1 group">
@@ -1046,9 +1119,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #llm
+        llm
       </a>
     
       <a href="/tags/english/" 
@@ -1056,9 +1137,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #english
+        english
       </a>
     
       <a href="/tags/ai-alignment/" 
@@ -1066,9 +1155,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #ai-alignment
+        ai-alignment
       </a>
     
       <a href="/tags/gpt/" 
@@ -1076,9 +1173,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #gpt
+        gpt
       </a>
     
       <a href="/tags/activation-modification/" 
@@ -1086,9 +1191,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #activation-modification
+        activation-modification
       </a>
     
       <a href="/tags/adaptation/" 
@@ -1096,9 +1209,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #adaptation
+        adaptation
       </a>
     
       <a href="/tags/model-editing/" 
@@ -1106,9 +1227,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #model-editing
+        model-editing
       </a>
     
       <a href="/tags/representation-engineering/" 
@@ -1116,9 +1245,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #representation-engineering
+        representation-engineering
       </a>
     
       <a href="/tags/fine-tuning/" 
@@ -1126,9 +1263,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #fine-tuning
+        fine-tuning
       </a>
     
       <a href="/tags/parameter-efficient-tuning/" 
@@ -1136,16 +1281,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #parameter-efficient-tuning
+        parameter-efficient-tuning
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -1157,30 +1309,30 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
             <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2023/09/19/llm-safety-and-ethics/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    Safety and Ethical Concerns of Large Language Models
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
-                <p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>            </div>
+                <!-- Post title -->
+                <a href="/2023/09/19/llm-safety-and-ethics/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        Safety and Ethical Concerns of Large Language Models
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
             
-        
-    </div>
+                <div class="post-excerpt post-content text-[var(--c-60)] text-sm line-clamp-5 border-b-1 border-[var(--c-sep)]">
+                    <p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>                </div>
+            
+            </div>
+        </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -1237,9 +1389,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #llm
+        llm
       </a>
     
       <a href="/tags/research/" 
@@ -1247,9 +1407,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #research
+        research
       </a>
     
       <a href="/tags/english/" 
@@ -1257,9 +1425,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #english
+        english
       </a>
     
       <a href="/tags/eren/" 
@@ -1267,29 +1443,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #eren
-      </a>
-    
-      <a href="/tags/machine-learning/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #machine-learning
-      </a>
-    
-      <a href="/tags/ai-alignment/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #ai-alignment
+        eren
       </a>
     
       <a href="/tags/life/" 
@@ -1297,9 +1461,53 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #life
+        life
+      </a>
+    
+      <a href="/tags/machine-learning/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        machine-learning
+      </a>
+    
+      <a href="/tags/ai-alignment/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        ai-alignment
       </a>
     
       <a href="/tags/ethics/" 
@@ -1307,9 +1515,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #ethics
+        ethics
       </a>
     
       <a href="/tags/safety/" 
@@ -1317,9 +1533,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #safety
+        safety
       </a>
     
       <a href="/tags/%E9%9D%A2%E5%A3%81%E6%99%BA%E8%83%BD/" 
@@ -1327,9 +1551,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #面壁智能
+        面壁智能
       </a>
     
       <a href="/tags/modelbest/" 
@@ -1337,9 +1569,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #modelbest
+        modelbest
       </a>
     
       <a href="/tags/tutorial/" 
@@ -1347,9 +1587,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #tutorial
+        tutorial
       </a>
     
       <a href="/tags/chatgpt/" 
@@ -1357,9 +1605,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #chatgpt
+        chatgpt
       </a>
     
       <a href="/tags/claude/" 
@@ -1367,9 +1623,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #claude
+        claude
       </a>
     
       <a href="/tags/%E4%B8%89%E4%BD%93/" 
@@ -1377,16 +1641,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #三体
+        三体
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -1398,31 +1669,31 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
             <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2023/09/16/CFDBench/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
-                <p><a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a target="_blank" rel="noopener" href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
-<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a target="_blank" rel="noopener" href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>            </div>
+                <!-- Post title -->
+                <a href="/2023/09/16/CFDBench/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
             
-        
-    </div>
+                <div class="post-excerpt post-content text-[var(--c-60)] text-sm line-clamp-5 border-b-1 border-[var(--c-sep)]">
+                    <p><a target="_blank" rel="noopener" href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a target="_blank" rel="noopener" href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
+<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a target="_blank" rel="noopener" href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>                </div>
+            
+            </div>
+        </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -1437,7 +1708,7 @@ layout: tag
                 <iconify-icon width="16"
                     icon="mingcute:refresh-3-fill"></iconify-icon>
                 <time class="w-max">
-                    2024-01-10
+                    2024-01-11
                 </time>
             </span>
             <span class="flex flex-row items-center gap-1 group">
@@ -1460,8 +1731,8 @@ layout: tag
                     </iconify-icon>
                     
                         <a class="underline underline-offset-2"
-                            href="/categories/paper/">
-                            Paper
+                            href="/categories/research/">
+                            Research
                         </a>
                     
                 
@@ -1479,9 +1750,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #paper
+        paper
       </a>
     
       <a href="/tags/research/" 
@@ -1489,9 +1768,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #research
+        research
       </a>
     
       <a href="/tags/english/" 
@@ -1499,29 +1786,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #english
-      </a>
-    
-      <a href="/tags/cfd/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #cfd
-      </a>
-    
-      <a href="/tags/dataset/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #dataset
+        english
       </a>
     
       <a href="/tags/00/" 
@@ -1529,9 +1804,53 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #00
+        00
+      </a>
+    
+      <a href="/tags/cfd/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        cfd
+      </a>
+    
+      <a href="/tags/dataset/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        dataset
       </a>
     
       <a href="/tags/pinn/" 
@@ -1539,9 +1858,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #pinn
+        pinn
       </a>
     
       <a href="/tags/fno/" 
@@ -1549,9 +1876,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #fno
+        fno
       </a>
     
       <a href="/tags/physics/" 
@@ -1559,9 +1894,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #physics
+        physics
       </a>
     
       <a href="/tags/machine-learning/" 
@@ -1569,9 +1912,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #machine-learning
+        machine-learning
       </a>
     
       <a href="/tags/deep-learning/" 
@@ -1579,9 +1930,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #deep-learning
+        deep-learning
       </a>
     
       <a href="/tags/deeponet/" 
@@ -1589,9 +1948,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #deeponet
+        deeponet
       </a>
     
       <a href="/tags/ai4science/" 
@@ -1599,16 +1966,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #ai4science
+        ai4science
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -1620,27 +1994,27 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
             <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2023/09/14/some_binary_search/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    Some Binary Search
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-        
-    </div>
+                <!-- Post title -->
+                <a href="/2023/09/14/some_binary_search/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        Some Binary Search
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
+            
+            </div>
+        </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -1655,7 +2029,7 @@ layout: tag
                 <iconify-icon width="16"
                     icon="mingcute:refresh-3-fill"></iconify-icon>
                 <time class="w-max">
-                    2023-09-23
+                    2024-01-11
                 </time>
             </span>
             <span class="flex flex-row items-center gap-1 group">
@@ -1697,19 +2071,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #english
-      </a>
-    
-      <a href="/tags/test/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #test
+        english
       </a>
     
       <a href="/tags/algorithm/" 
@@ -1717,9 +2089,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #algorithm
+        algorithm
       </a>
     
       <a href="/tags/binary-search/" 
@@ -1727,9 +2107,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #binary-search
+        binary-search
       </a>
     
       <a href="/tags/rust/" 
@@ -1737,9 +2125,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #rust
+        rust
       </a>
     
       <a href="/tags/python/" 
@@ -1747,9 +2143,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #python
+        python
       </a>
     
       <a href="/tags/c/" 
@@ -1757,9 +2161,35 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #c++
+        c++
+      </a>
+    
+      <a href="/tags/test/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        test
       </a>
     
       <a href="/tags/code/" 
@@ -1767,16 +2197,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #code
+        code
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -1874,7 +2311,7 @@ layout: tag
     >
       CC BY-NC-SA 4.0
     </a>
-    <span>© 2022-2023</span>
+    <span>© 2022-2024</span>
     <a class="hover:underline"
     href="https://github.com/chen-yingfa" 
     target="_blank" 

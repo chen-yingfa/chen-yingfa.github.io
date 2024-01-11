@@ -797,33 +797,33 @@ layout: tag
       <!-- One post item in a list -->
 <div class="
     post-container
-    px-3 py-3
-">
-    <div class="post-data-container flex flex-col gap-3">
+    px-2 py-2
+    flex flex-col gap-3">
+    <div class="flex flex-row gap-4">
         
             <div class="flex flex-col gap-1">
-            <!-- Post title -->
-            <a href="/2022/10/27/first-draft/">
-                <h2 class="
-                    text-[var(--c-80)]
-                    font-bold
-                    text-xl
-                    hover:text-[var(--c-theme)]
-                    transition-all
-                    hover:underline">
-                    第一篇
-                </h2>
-            </a>
-        <!-- Post excerpt -->
-        
-            <div class="post-excerpt text-[var(--c-60)] text-sm line-clamp-4">
-                <p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
+                <!-- Post title -->
+                <a href="/2022/10/27/%E7%AC%AC%E4%B8%80%E7%AF%87/">
+                    <h2 class="
+                        text-[var(--c-80)]
+                        font-bold
+                        text-xl
+                        hover:text-[var(--c-theme)]
+                        transition-all
+                        hover:underline">
+                        第一篇
+                    </h2>
+                </a>
+            <!-- Post excerpt -->
+            
+                <div class="post-excerpt post-content text-[var(--c-60)] text-sm line-clamp-5 border-b-1 border-[var(--c-sep)]">
+                    <p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
 <p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p>
 
-<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>            </div>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>                </div>
             
-        
-    </div>
+            </div>
+        </div>
         <!-- Post Statistics -->
         <div class="flex flex-wrap items-center gap-x-2 text-sm
             text-[var(--c-70)]">
@@ -880,49 +880,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #life
-      </a>
-    
-      <a href="/tags/jekyll/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #jekyll
-      </a>
-    
-      <a href="/tags/test/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #test
-      </a>
-    
-      <a href="/tags/hugo/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #hugo
-      </a>
-    
-      <a href="/tags/static-site-generator/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          dark:drop-shadow-none
-        ">
-        #static-site-generator
+        life
       </a>
     
       <a href="/tags/%E4%B8%AD%E6%96%87/" 
@@ -930,9 +898,89 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #中文
+        中文
+      </a>
+    
+      <a href="/tags/test/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        test
+      </a>
+    
+      <a href="/tags/hugo/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        hugo
+      </a>
+    
+      <a href="/tags/jekyll/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        jekyll
+      </a>
+    
+      <a href="/tags/static-site-generator/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+        ">
+        static-site-generator
       </a>
     
       <a href="/tags/html/" 
@@ -940,9 +988,17 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #html
+        html
       </a>
     
       <a href="/tags/liquid/" 
@@ -950,16 +1006,23 @@ layout: tag
           tag
           text-sm
           rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
           dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
         ">
-        #liquid
+        liquid
       </a>
     
   
 </div>
             
         </div>
-    </div>
 </div>
     </div>
   
@@ -1057,7 +1120,7 @@ layout: tag
     >
       CC BY-NC-SA 4.0
     </a>
-    <span>© 2022-2023</span>
+    <span>© 2022-2024</span>
     <a class="hover:underline"
     href="https://github.com/chen-yingfa" 
     target="_blank" 
