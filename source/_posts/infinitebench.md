@@ -2,7 +2,7 @@
 author: 陈英发 Yingfa Chen
 title: "InfiniteBench: 100k+ Long-Context Benchmark for Large Language Models"
 date: 2024-01-10 10:38:38
-categories:
+categories: Research
 tags:
 - research
 - llm
