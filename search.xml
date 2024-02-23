@@ -4,11 +4,48 @@
   
     
     <entry>
+      <title>语言模型的进化</title>
+      <link href="/2024/02/01/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/"/>
+      <url>/2024/02/01/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<p>自从 Transformer 问世以来，基于注意力机制的语言模型取得了极大的成功。现在的大语言模型，如 GPT、LLaMa、Mistral都是基于 Transformer 架构的。最近有诸多研究工作提出可能可以替代 transformer 架构的新架构。本文整理一下近些年语言模型的变化。</p><span id="more"></span><h1>语言模型</h1><p>语言模型（language model）是一个对语言的概率模型，首次在八十年代提出。语言模型专注于预测一段文字出现的概率。</p><p>$$P(s) = P(w_{1}, \dots, w_{m}) = \prod_{i}^{m} P(w_i|w_{1},\dots, w_{i-1})$$</p><p>其中 $w_i$ 一般是 token，而一般一个 token 就是一个单词。在以下的讨论中，如果没有特别说明，我默认一个 token 就是一个单词，而一段文字（比如一个句子）的不可分割单元就是一个单词。</p><p>换句话说，这个问题可以转化为，给定一个序列 $w_{&lt;t}$，计算下一个单词的概率分布：</p><p>$$P(w_{t}|w_{&lt;t}) \in \mathbb R^V$$</p><p>其中 $V$ 是词表大小，$t$ 是当前要预测的单词的位置。这个目标叫做 next token prediction。</p><h1>语言模型的应用</h1><p>学习语言的表示，比如词向量（word embeddings），这是假设预测下一个单词所需要的信息可以被利用来完成其他任务。</p><h1>统计语言模型</h1><p>方法：统计每个序列出现的次数：</p><p>$$P(w_t |w_{&lt;t}) = \frac{ 出现次数 ( w_{&lt;t}, w_t)}{\sum_{w} 出现次数 (w_{&lt;t}, w)} ， \quad w \in V$$</p><p><strong>问题</strong>：单词的组合数量是 $O(V ^ t)$ 复杂度。</p><h2 id="Word-n-gram-语言模型">Word $n$-gram 语言模型</h2><p>$n$-gram 假设模型假设每个单词出现的概率仅取决于前 $n$ 个单词。可以写成：</p><p>$$P(w_{i} | w_{1}, \dots, w_{i-1}) \approx P(w_{i}|w_{i- 1 (n-1)}, \dots ,w_{i-1})$$</p><h2 id="Bag-of-Words-模型">Bag-of-Words 模型</h2><p>假设概率跟顺序无关：</p><p>$$P(w_{i} | w_{1}, \dots, w_{i-1}) \approx P(w_{i})$$</p><hr><h1>深度学习语言模型</h1><h1>Recurrent Neural Network (RNN)</h1><p>用一个 hidden state 来保存上下文信息（$w_{&lt;t}$），然后用这个 hidden state 来预测下一个单词。</p><p><img src="%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/rnn.png" alt="Recurrent Neural Network"></p><p>后面提出的 Long Short-Term Memory (LSTM) 和 Gated Recurrent Unit (GRU) 都是 RNN 的变种，只不过是对输入和 hidden state 的处理方式不同。</p><p>两个问题：</p><ul><li>很难把所有上下文信息都压缩到一个 hidden state 里面。</li><li>难以并行化：每个 token 对应的 hidden state 都依赖于前一个 token 的 hidden state，所以无法并行计算不同整个序列。</li></ul><h1>Transformer: Attention is All You Need</h1><p>Self-Attention 机制如下。</p><p><img src="%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/self-attention.png" alt="Self-attention 机制示意图。"></p><p>图中展示输入是 "see that girl run"，然后我们计算 "that" 的潜在表示。</p><p>因为右边的向量（hidden representation）不依赖于其他 token 的 hidden representation，所以可以并行计算。</p><p>Transformer 模型：</p><p>$$\begin{align*}X^{(0)} &amp;= \text{Embedding}(s) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{Attention}\left(X^{(l-1)}\right) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{Norm}\left(X^{(l)} + X^{(l-1)}\right) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{FFN}\left(X^{(l)}\right) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{Norm}\left(X^{(l)} + X^{(l-1)}\right) \in \mathbb R ^{N \times d} \\\text{Attention}(X) &amp;= \text{softmax}\left(\frac{XW_{q}(XW_{k})^\top}{\sqrt{d}} \right)XW_{v} \\end{align*}$$</p><p>其中 $N$ 是序列长度，$d$ 是 hidden size，$s$ 是输入序列，$l$ 是层数，$W_{q}, W_{k}, W_{v}$ 是参数矩阵，$\text{LN}$ 是 layer normalization，$\text{FFN}$ 是一个跟 $t$ 无关的 feed-forward network。</p><h2 id="Attention-的问题">Attention 的问题</h2><p>Attention 机制的计算复杂度是 $O(n^2)$。对于训练来说，这一般不是很大的问题。可是在推理的过程中，对于每个 token 都要计算一次 attention，也就是每生成一个 token 的复杂度是 $O(n)$。</p><h1></h1>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> research </tag>
+            
+            <tag> llm </tag>
+            
+            <tag> ai </tag>
+            
+            <tag> nlp </tag>
+            
+            <tag> transformer </tag>
+            
+            <tag> language modeling </tag>
+            
+            <tag> language models </tag>
+            
+            <tag> rnn </tag>
+            
+            <tag> deep learning </tag>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>InfiniteBench: 100k+ Long-Context Benchmark for Large Language Models</title>
       <link href="/2024/01/10/infinitebench/"/>
       <url>/2024/01/10/infinitebench/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="">Paper (upcoming)</a></p><p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p><blockquote><p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p></blockquote><p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p><span id="more"></span><h2 id="Background">Background</h2><p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p><h2 id="The-Data">The Data</h2><p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p><p>Following shows the statistics of the tasks in our benchmark.</p><p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p><h2 id="Results">Results</h2><p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p><p><img src="/2024/01/10/infinitebench/results.png" alt="Results of some SOTA long-context LLMs on our InfiniteBench" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p><h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2><p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p><h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3><p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><blockquote><p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p></blockquote><h3 id="Possible-Paths">Possible Paths</h3><p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong>. Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p><p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p><p>In contrast, state-space models and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because a blurry remembrance is much better than complete forgettal). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p><p>By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window.</p><p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p><h2 id="Additional-Notes">Additional Notes</h2><p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="">Paper (upcoming)</a></p><p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p><blockquote><p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p></blockquote><p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p><span id="more"></span><h2 id="Background">Background</h2><p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p><h2 id="The-Data">The Data</h2><p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p><p>Following shows the statistics of the tasks in our benchmark.</p><p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p><h2 id="Results">Results</h2><p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p><p><img src="/2024/01/10/infinitebench/results.png" alt="Results of some SOTA long-context LLMs on our InfiniteBench" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p><h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2><p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p><h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3><p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><blockquote><p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p></blockquote><h3 id="Possible-Paths">Possible Paths</h3><p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p><p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p><p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p><p>By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p><p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p><h2 id="Additional-Notes">Additional Notes</h2><p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
       
       
       <categories>
@@ -20,9 +57,9 @@
       
         <tags>
             
-            <tag> llm </tag>
-            
             <tag> research </tag>
+            
+            <tag> llm </tag>
             
             <tag> nlp </tag>
             
@@ -59,9 +96,9 @@
       
         <tags>
             
-            <tag> llm </tag>
-            
             <tag> english </tag>
+            
+            <tag> llm </tag>
             
             <tag> representation-engineering </tag>
             
@@ -98,11 +135,11 @@
       
         <tags>
             
-            <tag> llm </tag>
-            
             <tag> english </tag>
             
             <tag> ai-alignment </tag>
+            
+            <tag> llm </tag>
             
             <tag> gpt </tag>
             
@@ -182,19 +219,19 @@
       
         <tags>
             
-            <tag> llm </tag>
+            <tag> life </tag>
             
             <tag> research </tag>
             
             <tag> english </tag>
             
-            <tag> eren </tag>
-            
-            <tag> life </tag>
-            
             <tag> machine-learning </tag>
             
             <tag> ai-alignment </tag>
+            
+            <tag> llm </tag>
+            
+            <tag> eren </tag>
             
             <tag> ethics </tag>
             
@@ -223,7 +260,7 @@
       <link href="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/"/>
       <url>/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
       
-        <content type="html"><![CDATA[<p>之前有过个人主页，但是一直没有弄好，更没有更新。最近我将自己的 GitHub 的用户名改了，导致之前的 GitHub Pages 失效了，就趁机重新搭建个人主页。</p><p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p><span id="more"></span><p>选了好久主题，Hexo 宣传说有很多主题，但是官网上不到 400 个主题，而且大部分都不符合我的审美或者要求。我想要的风格是简约，现代，需要同时支持黑暗和白亮模式，需要有代码高亮且是代码是等款字体。最接近我的要求就是<a href="https://www.github.com/xbmlz/hexo-theme-maple">Maple</a>主题。可是仍然无法满足我的要求，所以我修改了一些格式（原版甚至有一些颜色 bug），添加了自己的一些内容，结果是一个叫做<a href="https://www.github.com/chen-yingfa/hexo-theme-fengye">枫叶</a>的主题。</p><h2 id="日记">日记</h2><p>今天早上七点半起来 🛏，打电话 📱 叫醒00（终于有一次是我打电话了哈哈哈哈），然后去核研院俱乐部在综体打羽毛球 🏸，后来发现他们其实约了西体，但是我跟00自己在蹭一个空场就不管了，八点半左右有人来了我们就去过早，然后去我宿舍 🏡。</p><p>之后点了库迪，然后去了学校南边的一个超市，买了一大包薯片和一个榴莲！然后就在宿舍没有吃午饭，直接待到晚饭。中午的时候还拍了视频 📷，中间还差点说到00emo了，哈哈哈哈。</p><p>今天 00 下午四点和晚上七点都有直播课 👩🏻‍🏫，都是真正开课，下午的在我宿舍开的，好像很成功，虽然拖堂了一点点。晚上的在她自己宿舍，貌似也拖堂了，00 说有好多人。</p><p>晚上九点去打羽毛球了 🏸，带上相机录了打球的视频，然后回去洗澡，晚上去林大北路的家 🏡。</p><h2 id="最近">最近</h2><p>最近好忙，新学期马上就要开始了，这里总结一下暑假开始到此比较重要的事情吧。</p><p>这个暑假搬出校又搬回来了，折腾了又费钱 💰，学校真的好恶心，之前说了大概率是不会有宿舍，现在就有很多空的房间。</p><p>期末前跟导师确定了要读博了，我跟他我想要三年毕业，他说没有问题，希望真的是可以吧，我们实验室好像基本都是直博生，普博的应该都是四年吧。00 也确定了不会读博了，最近在投简历，Oppo 好像已经拿到了 offer，但是他们北京没有部门，所以 00 不想去，我也不想她去。好像互联网以外很多公司都不在北京……</p><p>我的论文 📃 EREN（以前叫做 EmoRen）投出去了，上周 rebuttal 结果出来了，不是很理想，本来 soundess 是 433，Excitement 323，rebuttal 结束后第一个审稿人将 soundness 调低了。学长说主会议估计没有机会了，Findings 还有希望，我其实无所谓是不是 Findings，感觉学长反而有点介意。</p><p>被实验室的学长学姐拉去面壁智能<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>去干活，跟公司的业务没啥关系，就是把我的工位搬了，可能不想占用隔壁实验室的位置吧 😂 但是我真的不想去 😭 不能跟 00 待在一起了。我现在就是一周可能去两三天 😂</p><p>最近还申请了签证，决定了寒假 00 跟我一起回家！在家待一整个月，好神奇，觉得我们的关系发展得好顺利。马上的国庆 🇨🇳 我会跟 00 回去武汉和应城参加她高中同学和表姐的婚礼 💑，顺便还会看她的外公外婆。</p><p><img src="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/%E4%B8%AD%E5%9B%BD%E6%8A%A4%E7%85%A7.jpg" alt="中国公民的护照" title="中国护照"></p><blockquote><p>00 的护照，是我向往的身份！</p></blockquote><p><img src="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/%E7%94%B3%E8%AF%B7%E7%AD%BE%E8%AF%81.jpg" alt="00在签证中心前面"></p><blockquote><p>签证中心门口，不是大使馆，很多个国家统一办理签证的地方。</p></blockquote><p><img src="/2023/09/16/%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/%E5%90%83%E6%BE%B3%E9%97%A8%E8%8F%9C.jpg" alt="我跟00在签证中心周边吃澳门菜"></p><blockquote><p>在申请签证的地方旁边的一个很高级的商场里面吃澳门餐。</p></blockquote><hr><h2 id="一些-Markdown-渲染器测试">一些 Markdown 渲染器测试</h2><p>测试一下公式的渲染。<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p><p>$$\theta_i \leftarrow  \frac{\partial}{\partial  \theta_i} \mathcal L( y, f(x; \theta))$$</p><p>其中 $\mathcal L$ 是损失函数，$f(\cdot; \theta)$ 由 $\theta$ 参数化的模型。</p><p>那 <code>代码</code> 呢？<code>codell1i0oO</code> 可以吗？</p><p>一个表格：</p><table><thead><tr><th>Method</th><th>Accuracy</th></tr></thead><tbody><tr><td>A</td><td>0.1</td></tr><tr><td>B</td><td>0.2</td></tr><tr><td>C</td><td>0.3</td></tr></tbody></table><p>一个嵌套列表：</p><ul><li>a<ul><li>x</li><li>asdf<ul><li>懂得都懂</li></ul></li><li>好好<ol><li>item 1</li><li>item 2<ol><li>sdf</li><li>sdf</li></ol></li><li>item 3</li></ol></li></ul></li><li>asdf</li></ul><p>一个代办列表：</p><ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 买菜</li><li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 做饭</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 跑步</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 打羽毛球</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 写论文</li><li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 搞科研</li></ul><p>auto-links: <a href="http://www.hexo.io">www.hexo.io</a></p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>我导师和知乎孵化的公司。 <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>我现在用了 <a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-rendered-markdown-it</a> 来代替原来 Hexo 的渲染器。原来的渲染器是 Marked (hexo-renderer-marked) <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+        <content type="html"><![CDATA[<p>之前有过个人主页，但是一直没有弄好，更没有更新。最近我将自己的 GitHub 的用户名改了，导致之前的 GitHub Pages 失效了，就趁机重新搭建个人主页。</p><p>兜兜转转，还是决定使用 Hexo。以前用过 Jekyll，觉得还行，但是真的不想用 Ruby，Hugo 又太麻烦。</p><span id="more"></span><p>选了好久主题，Hexo 宣传说有很多主题，但是官网上不到 400 个主题，而且大部分都不符合我的审美或者要求。我想要的风格是简约，现代，需要同时支持黑暗和白亮模式，需要有代码高亮且是代码是等款字体。最接近我的要求就是<a href="https://www.github.com/xbmlz/hexo-theme-maple">Maple</a>主题。可是仍然无法满足我的要求，所以我修改了一些格式（原版甚至有一些颜色 bug），添加了自己的一些内容，结果是一个叫做<a href="https://www.github.com/chen-yingfa/hexo-theme-fengye">枫叶</a>的主题。</p><h2 id="日记">日记</h2><p>今天早上七点半起来 🛏，打电话 📱 叫醒00（终于有一次是我打电话了哈哈哈哈），然后去核研院俱乐部在综体打羽毛球 🏸，后来发现他们其实约了西体，但是我跟00自己在蹭一个空场就不管了，八点半左右有人来了我们就去过早，然后去我宿舍 🏡。</p><p>之后点了库迪，然后去了学校南边的一个超市，买了一大包薯片和一个榴莲！然后就在宿舍没有吃午饭，直接待到晚饭。中午的时候还拍了视频 📷，中间还差点说到00emo了，哈哈哈哈。</p><p>今天 00 下午四点和晚上七点都有直播课 👩🏻‍🏫，都是真正开课，下午的在我宿舍开的，好像很成功，虽然拖堂了一点点。晚上的在她自己宿舍，貌似也拖堂了，00 说有好多人。</p><p>晚上九点去打羽毛球了 🏸，带上相机录了打球的视频，然后回去洗澡，晚上去林大北路的家 🏡。</p><h2 id="最近">最近</h2><p>最近好忙，新学期马上就要开始了，这里总结一下暑假开始到此比较重要的事情吧。</p><p>这个暑假搬出校又搬回来了，折腾了又费钱 💰，学校真的好恶心，之前说了大概率是不会有宿舍，现在就有很多空的房间。</p><p>期末前跟导师确定了要读博了，我跟他我想要三年毕业，他说没有问题，希望真的是可以吧，我们实验室好像基本都是直博生，普博的应该都是四年吧。00 也确定了不会读博了，最近在投简历，Oppo 好像已经拿到了 offer，但是他们北京没有部门，所以 00 不想去，我也不想她去。好像互联网以外很多公司都不在北京……</p><p>我的论文 📃 EREN（以前叫做 EmoRen）投出去了，上周 rebuttal 结果出来了，不是很理想，本来 soundess 是 433，Excitement 323，rebuttal 结束后第一个审稿人将 soundness 调低了。学长说主会议估计没有机会了，Findings 还有希望，我其实无所谓是不是 Findings，感觉学长反而有点介意。</p><p>被实验室的学长学姐拉去面壁智能<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>去干活，跟公司的业务没啥关系，就是把我的工位搬了，可能不想占用隔壁实验室的位置吧 😂 但是我真的不想去 😭 不能跟 00 待在一起了。我现在就是一周可能去两三天 😂</p><p>最近还申请了签证，决定了寒假 00 跟我一起回家！在家待一整个月，好神奇，觉得我们的关系发展得好顺利。马上的国庆 🇨🇳 我会跟 00 回去武汉和应城参加她高中同学和表姐的婚礼 💑，顺便还会看她的外公外婆。</p><p><img src="%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/%E4%B8%AD%E5%9B%BD%E6%8A%A4%E7%85%A7.jpg" alt="中国公民的护照"></p><blockquote><p>00 的护照，是我向往的身份！</p></blockquote><p><img src="%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/%E7%94%B3%E8%AF%B7%E7%AD%BE%E8%AF%81.jpg" alt="00在签证中心前面"></p><blockquote><p>签证中心门口，不是大使馆，很多个国家统一办理签证的地方。</p></blockquote><p><img src="%E6%9B%B4%E6%96%B0%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/%E5%90%83%E6%BE%B3%E9%97%A8%E8%8F%9C.jpg" alt="我跟00在签证中心周边吃澳门菜"></p><blockquote><p>在申请签证的地方旁边的一个很高级的商场里面吃澳门餐。</p></blockquote><hr><h2 id="一些-Markdown-渲染器测试">一些 Markdown 渲染器测试</h2><p>测试一下公式的渲染。<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p><p>$$\theta_i \leftarrow  \frac{\partial}{\partial  \theta_i} \mathcal L( y, f(x; \theta))$$</p><p>其中 $\mathcal L$ 是损失函数，$f(\cdot; \theta)$ 由 $\theta$ 参数化的模型。</p><p>那 <code>代码</code> 呢？<code>codell1i0oO</code> 可以吗？</p><p>一个表格：</p><table><thead><tr><th>Method</th><th>Accuracy</th></tr></thead><tbody><tr><td>A</td><td>0.1</td></tr><tr><td>B</td><td>0.2</td></tr><tr><td>C</td><td>0.3</td></tr></tbody></table><p>一个嵌套列表：</p><ul><li><p>a</p><ul><li><p>x</p></li><li><p>asdf</p><ul><li>懂得都懂</li></ul></li><li><p>好好</p><ol><li><p>item 1</p></li><li><p>item 2</p><ol><li>sdf</li><li>sdf</li></ol></li><li><p>item 3</p></li></ol></li></ul></li><li><p>asdf</p></li></ul><p>一个代办列表：</p><ul class="contains-task-list"><li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 买菜</li><li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 做饭</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 跑步</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 打羽毛球</li><li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox"> 写论文</li><li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> 搞科研</li></ul><p>auto-links: <a href="http://www.hexo.io">www.hexo.io</a></p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>我导师和知乎孵化的的公司 <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>我现在用了 <a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-rendered-markdown-it</a> 来代替原来 Hexo 的渲染器。原来的渲染器是 Marked (hexo-renderer-marked) <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
       
       
       <categories>
@@ -235,27 +272,27 @@
       
         <tags>
             
-            <tag> research </tag>
-            
             <tag> life </tag>
             
             <tag> 中文 </tag>
             
             <tag> 00 </tag>
             
+            <tag> research </tag>
+            
             <tag> 面壁智能 </tag>
+            
+            <tag> jekyll </tag>
+            
+            <tag> hugo </tag>
+            
+            <tag> static-site-generator </tag>
             
             <tag> blog </tag>
             
             <tag> 签证 </tag>
             
             <tag> hexo </tag>
-            
-            <tag> hugo </tag>
-            
-            <tag> jekyll </tag>
-            
-            <tag> static-site-generator </tag>
             
             <tag> 羽毛球 </tag>
             
@@ -294,17 +331,17 @@
       
         <tags>
             
+            <tag> 00 </tag>
+            
             <tag> paper </tag>
             
             <tag> research </tag>
             
-            <tag> english </tag>
-            
-            <tag> 00 </tag>
-            
             <tag> cfd </tag>
             
             <tag> dataset </tag>
+            
+            <tag> english </tag>
             
             <tag> pinn </tag>
             
@@ -415,13 +452,13 @@
       
         <tags>
             
-            <tag> research </tag>
-            
             <tag> life </tag>
             
             <tag> 中文 </tag>
             
             <tag> 00 </tag>
+            
+            <tag> research </tag>
             
             <tag> cfd </tag>
             
@@ -490,13 +527,13 @@
             
             <tag> 中文 </tag>
             
-            <tag> hugo </tag>
+            <tag> test </tag>
             
             <tag> jekyll </tag>
             
-            <tag> static-site-generator </tag>
+            <tag> hugo </tag>
             
-            <tag> test </tag>
+            <tag> static-site-generator </tag>
             
             <tag> html </tag>
             
