@@ -1,6 +1,6 @@
 ---
 author: 陈英发 Yingfa Chen
-title: "InfiniteBench: 100k+ Long-Context Benchmark for Large Language Models"
+title: "InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens"
 date: 2024-01-10 10:38:38
 categories: Research
 tags:
@@ -15,7 +15,7 @@ tags:
 featured: true
 ---
 
-[Code](http://www.github.com/OpenBMB/InfiniteBench) | [Paper (upcoming)]()
+[Code](http://www.github.com/OpenBMB/InfiniteBench) | [Paper](https://arxiv.org/abs/2402.13718)
 
 The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!
 
@@ -55,13 +55,13 @@ The most obvious reason is the quadratic complexity. A large number of research 
 
 ### Possible Paths
 
-I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are **linear attention** and **state-space models**. Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.
+I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are **linear attention** and **state-space models** (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.
 
 I like to think of different language model architectures from the perspective of compressing the history^[This perspective is not new and has been discussed in many papers.]. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers **nothing** about the history before that.
 
-In contrast, state-space models and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because a blurry remembrance is much better than complete forgettal). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.
+In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.
 
-By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window.
+By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.
 
 Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, [RetNet](https://arxiv.org/abs/2307.08621)'s training throughput is actually faster than a transformer with [Flash-Attention](https://github.com/Dao-AILab/flash-attention). Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.
 
