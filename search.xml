@@ -4,48 +4,11 @@
   
     
     <entry>
-      <title>语言模型的进化</title>
-      <link href="/2024/02/01/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/"/>
-      <url>/2024/02/01/%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/</url>
-      
-        <content type="html"><![CDATA[<p>自从 Transformer 问世以来，基于注意力机制的语言模型取得了极大的成功。现在的大语言模型，如 GPT、LLaMa、Mistral都是基于 Transformer 架构的。最近有诸多研究工作提出可能可以替代 transformer 架构的新架构。本文整理一下近些年语言模型的变化。</p><span id="more"></span><h1>语言模型</h1><p>语言模型（language model）是一个对语言的概率模型，首次在八十年代提出。语言模型专注于预测一段文字出现的概率。</p><p>$$P(s) = P(w_{1}, \dots, w_{m}) = \prod_{i}^{m} P(w_i|w_{1},\dots, w_{i-1})$$</p><p>其中 $w_i$ 一般是 token，而一般一个 token 就是一个单词。在以下的讨论中，如果没有特别说明，我默认一个 token 就是一个单词，而一段文字（比如一个句子）的不可分割单元就是一个单词。</p><p>换句话说，这个问题可以转化为，给定一个序列 $w_{&lt;t}$，计算下一个单词的概率分布：</p><p>$$P(w_{t}|w_{&lt;t}) \in \mathbb R^V$$</p><p>其中 $V$ 是词表大小，$t$ 是当前要预测的单词的位置。这个目标叫做 next token prediction。</p><h1>语言模型的应用</h1><p>学习语言的表示，比如词向量（word embeddings），这是假设预测下一个单词所需要的信息可以被利用来完成其他任务。</p><h1>统计语言模型</h1><p>方法：统计每个序列出现的次数：</p><p>$$P(w_t |w_{&lt;t}) = \frac{ 出现次数 ( w_{&lt;t}, w_t)}{\sum_{w} 出现次数 (w_{&lt;t}, w)} ， \quad w \in V$$</p><p><strong>问题</strong>：单词的组合数量是 $O(V ^ t)$ 复杂度。</p><h2 id="Word-n-gram-语言模型">Word $n$-gram 语言模型</h2><p>$n$-gram 假设模型假设每个单词出现的概率仅取决于前 $n$ 个单词。可以写成：</p><p>$$P(w_{i} | w_{1}, \dots, w_{i-1}) \approx P(w_{i}|w_{i- 1 (n-1)}, \dots ,w_{i-1})$$</p><h2 id="Bag-of-Words-模型">Bag-of-Words 模型</h2><p>假设概率跟顺序无关：</p><p>$$P(w_{i} | w_{1}, \dots, w_{i-1}) \approx P(w_{i})$$</p><hr><h1>深度学习语言模型</h1><h1>Recurrent Neural Network (RNN)</h1><p>用一个 hidden state 来保存上下文信息（$w_{&lt;t}$），然后用这个 hidden state 来预测下一个单词。</p><p><img src="%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/rnn.png" alt="Recurrent Neural Network"></p><p>后面提出的 Long Short-Term Memory (LSTM) 和 Gated Recurrent Unit (GRU) 都是 RNN 的变种，只不过是对输入和 hidden state 的处理方式不同。</p><p>两个问题：</p><ul><li>很难把所有上下文信息都压缩到一个 hidden state 里面。</li><li>难以并行化：每个 token 对应的 hidden state 都依赖于前一个 token 的 hidden state，所以无法并行计算不同整个序列。</li></ul><h1>Transformer: Attention is All You Need</h1><p>Self-Attention 机制如下。</p><p><img src="%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%8C%96/self-attention.png" alt="Self-attention 机制示意图。"></p><p>图中展示输入是 "see that girl run"，然后我们计算 "that" 的潜在表示。</p><p>因为右边的向量（hidden representation）不依赖于其他 token 的 hidden representation，所以可以并行计算。</p><p>Transformer 模型：</p><p>$$\begin{align*}X^{(0)} &amp;= \text{Embedding}(s) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{Attention}\left(X^{(l-1)}\right) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{Norm}\left(X^{(l)} + X^{(l-1)}\right) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{FFN}\left(X^{(l)}\right) \in \mathbb R ^{N \times d} \X^{(l)} &amp;= \text{Norm}\left(X^{(l)} + X^{(l-1)}\right) \in \mathbb R ^{N \times d} \\\text{Attention}(X) &amp;= \text{softmax}\left(\frac{XW_{q}(XW_{k})^\top}{\sqrt{d}} \right)XW_{v} \\end{align*}$$</p><p>其中 $N$ 是序列长度，$d$ 是 hidden size，$s$ 是输入序列，$l$ 是层数，$W_{q}, W_{k}, W_{v}$ 是参数矩阵，$\text{LN}$ 是 layer normalization，$\text{FFN}$ 是一个跟 $t$ 无关的 feed-forward network。</p><h2 id="Attention-的问题">Attention 的问题</h2><p>Attention 机制的计算复杂度是 $O(n^2)$。对于训练来说，这一般不是很大的问题。可是在推理的过程中，对于每个 token 都要计算一次 attention，也就是每生成一个 token 的复杂度是 $O(n)$。</p><h1></h1>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> research </tag>
-            
-            <tag> llm </tag>
-            
-            <tag> ai </tag>
-            
-            <tag> nlp </tag>
-            
-            <tag> transformer </tag>
-            
-            <tag> language modeling </tag>
-            
-            <tag> language models </tag>
-            
-            <tag> rnn </tag>
-            
-            <tag> deep learning </tag>
-            
-            <tag> machine learning </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>InfiniteBench: 100k+ Long-Context Benchmark for Large Language Models</title>
+      <title>InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens</title>
       <link href="/2024/01/10/infinitebench/"/>
       <url>/2024/01/10/infinitebench/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="">Paper (upcoming)</a></p><p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p><blockquote><p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p></blockquote><p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p><span id="more"></span><h2 id="Background">Background</h2><p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p><h2 id="The-Data">The Data</h2><p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p><p>Following shows the statistics of the tasks in our benchmark.</p><p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p><h2 id="Results">Results</h2><p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p><p><img src="/2024/01/10/infinitebench/results.png" alt="Results of some SOTA long-context LLMs on our InfiniteBench" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p><h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2><p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p><h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3><p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><blockquote><p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p></blockquote><h3 id="Possible-Paths">Possible Paths</h3><p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p><p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p><p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p><p>By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p><p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p><h2 id="Additional-Notes">Additional Notes</h2><p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="https://arxiv.org/abs/2402.13718">Paper</a></p><p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p><blockquote><p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p></blockquote><p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p><span id="more"></span><h2 id="Background">Background</h2><p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p><h2 id="The-Data">The Data</h2><p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p><p>Following shows the statistics of the tasks in our benchmark.</p><p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p><h2 id="Results">Results</h2><p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p><p><img src="/2024/01/10/infinitebench/results.png" alt="Results of some SOTA long-context LLMs on our InfiniteBench" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p><h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2><p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p><h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3><p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><blockquote><p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p></blockquote><h3 id="Possible-Paths">Possible Paths</h3><p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p><p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p><p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p><p>By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p><p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p><h2 id="Additional-Notes">Additional Notes</h2><p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
       
       
       <categories>
@@ -57,11 +20,13 @@
       
         <tags>
             
-            <tag> research </tag>
-            
             <tag> llm </tag>
             
+            <tag> transformer </tag>
+            
             <tag> nlp </tag>
+            
+            <tag> research </tag>
             
             <tag> long-context </tag>
             
@@ -70,8 +35,6 @@
             <tag> recurrence </tag>
             
             <tag> linear-attention </tag>
-            
-            <tag> transformer </tag>
             
         </tags>
       
@@ -96,9 +59,9 @@
       
         <tags>
             
-            <tag> english </tag>
-            
             <tag> llm </tag>
+            
+            <tag> english </tag>
             
             <tag> representation-engineering </tag>
             
@@ -135,11 +98,11 @@
       
         <tags>
             
+            <tag> llm </tag>
+            
             <tag> english </tag>
             
             <tag> ai-alignment </tag>
-            
-            <tag> llm </tag>
             
             <tag> gpt </tag>
             
@@ -219,19 +182,19 @@
       
         <tags>
             
-            <tag> life </tag>
+            <tag> llm </tag>
             
             <tag> research </tag>
             
             <tag> english </tag>
             
+            <tag> eren </tag>
+            
+            <tag> life </tag>
+            
             <tag> machine-learning </tag>
             
             <tag> ai-alignment </tag>
-            
-            <tag> llm </tag>
-            
-            <tag> eren </tag>
             
             <tag> ethics </tag>
             
@@ -272,27 +235,27 @@
       
         <tags>
             
+            <tag> research </tag>
+            
             <tag> life </tag>
             
             <tag> 中文 </tag>
             
             <tag> 00 </tag>
             
-            <tag> research </tag>
-            
             <tag> 面壁智能 </tag>
-            
-            <tag> jekyll </tag>
-            
-            <tag> hugo </tag>
-            
-            <tag> static-site-generator </tag>
             
             <tag> blog </tag>
             
             <tag> 签证 </tag>
             
             <tag> hexo </tag>
+            
+            <tag> hugo </tag>
+            
+            <tag> jekyll </tag>
+            
+            <tag> static-site-generator </tag>
             
             <tag> 羽毛球 </tag>
             
@@ -331,17 +294,17 @@
       
         <tags>
             
-            <tag> 00 </tag>
+            <tag> research </tag>
             
             <tag> paper </tag>
             
-            <tag> research </tag>
+            <tag> english </tag>
+            
+            <tag> 00 </tag>
             
             <tag> cfd </tag>
             
             <tag> dataset </tag>
-            
-            <tag> english </tag>
             
             <tag> pinn </tag>
             
@@ -452,13 +415,13 @@
       
         <tags>
             
+            <tag> research </tag>
+            
             <tag> life </tag>
             
             <tag> 中文 </tag>
             
             <tag> 00 </tag>
-            
-            <tag> research </tag>
             
             <tag> cfd </tag>
             
@@ -529,9 +492,9 @@
             
             <tag> test </tag>
             
-            <tag> jekyll </tag>
-            
             <tag> hugo </tag>
+            
+            <tag> jekyll </tag>
             
             <tag> static-site-generator </tag>
             
