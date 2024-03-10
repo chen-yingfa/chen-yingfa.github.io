@@ -32,6 +32,9 @@ dependencies:
   hexo-generator-search:
     specifier: ^2.4.3
     version: 2.4.3
+  hexo-generator-searchdb:
+    specifier: ^1.4.1
+    version: 1.4.1
   hexo-generator-tag:
     specifier: ^2.0.0
     version: 2.0.0
@@ -787,6 +790,14 @@ packages:
     dependencies:
       nunjucks: 3.2.4
       utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - chokidar
+    dev: false
+
+  /hexo-generator-searchdb@1.4.1:
+    resolution: {integrity: sha512-7m8IBpZbI6iKb2jRYxs4pghD6Ln8ylQSRGl6MIC4G9wws21vYSXSD8rvC3MoCO+pWBHs6E/mTA/rjG+p2AZfVg==}
+    dependencies:
+      nunjucks: 3.2.4
     transitivePeerDependencies:
       - chokidar
     dev: false

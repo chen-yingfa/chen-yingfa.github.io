@@ -1,28 +1,28 @@
 # Header
 nav:
   # Home: /index
-  Posts:
+  posts:
     path: ./archives
     icon: mingcute:inbox-fill
     show_text: true
-  Publications:
+  publications:
     path: ./publications
     icon: mingcute:science-fill
     show_text: true
   # Projects: /projects
-  About:
+  about:
     path: ./about
     icon: mingcute:user-info-fill
     show_text: true
-  Categories:
+  categories:
     path: ./category
     icon: mingcute:classify-2-fill
     show_icon: true
-  Tags:
+  tags:
     path: ./tag
     icon: mingcute:tag-fill
     show_icon: true
-  Home:
+  home:
     path: ./index
     icon: mingcute:home-2-fill
     show_icon: true
@@ -81,8 +81,3 @@ giscus:
   category:
   category_id:
   mapping:
-
-
-search:
-  enable: true
-  placeholder: 
