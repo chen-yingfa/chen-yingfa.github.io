@@ -551,7 +551,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
             </div>
             <div class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
-              Edited: <time class="w-max">2024-02-26</time>
+              Edited: <time class="w-max">2024-03-14</time>
             </div>
           </div>
           <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
@@ -588,25 +588,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <div class="flex flex-wrap gap-1">
   
     
-      <a href="/tags/research/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-theme-2)]
-        ">
-        research
-      </a>
-    
       <a href="/tags/llm/" 
         class="
           tag
@@ -626,6 +607,25 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         llm
       </a>
     
+      <a href="/tags/transformer/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        transformer
+      </a>
+    
       <a href="/tags/nlp/" 
         class="
           tag
@@ -643,6 +643,25 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           dark:hover:text-[var(--c-theme-2)]
         ">
         nlp
+      </a>
+    
+      <a href="/tags/research/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        research
       </a>
     
       <a href="/tags/long-context/" 
@@ -721,25 +740,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
         linear-attention
       </a>
     
-      <a href="/tags/transformer/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-theme-2)]
-        ">
-        transformer
-      </a>
-    
   
 </div>
       </div>
@@ -759,10 +759,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <h2 id="The-Data">The Data</h2>
 <p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p>
 <p>Following shows the statistics of the tasks in our benchmark.</p>
-<p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p>
+<p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="" title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p>
 <h2 id="Results">Results</h2>
 <p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p>
-<p><img src="/2024/01/10/infinitebench/results.png" alt="Results of some SOTA long-context LLMs on our InfiniteBench" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p>
+<p><img src="/2024/01/10/infinitebench/results.png" alt="" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p>
 <h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2>
 <p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p>
 <h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3>
@@ -774,7 +774,7 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p>
 <p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p>
 <p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p>
-<p>By now, some poeple are urgent to say that "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p>
+<p>Some people may want to refute by saying "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p>
 <p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a target="_blank" rel="noopener" href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p>
 <h2 id="Additional-Notes">Additional Notes</h2>
 <p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p>
@@ -796,6 +796,18 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
     gap-2 text-[var(--c-50)]
   ">
     <div>
+      
+        <a href="/2024/03/14/eren/"
+          class="
+            transition-all
+            flex justify-center
+            hover:-translate-x-1
+            hover:text-[var(--c-80)]
+          ">
+          <iconify-icon width="20" icon="mingcute:left-fill" data-inline="false">
+          </iconify-icon>
+          (EREN) Robust and Scalable Model Editing for Large Language Models
+        </a>
       
     </div>
     <div>
@@ -922,9 +934,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <!-- tocbot end -->
 
   </main>
-  <footer class="flex flex-col mt-12 mb-12 items-center
+  <footer class="flex flex-col mt-18 mb-12 items-center
   text-[var(--c-50)] text-sm">
-  <div class="flex flex-row items-center mb-20">
+  <div class="flex flex-row items-center my-12">
     
     
         

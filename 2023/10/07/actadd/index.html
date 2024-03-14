@@ -588,6 +588,25 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <div class="flex flex-wrap gap-1">
   
     
+      <a href="/tags/llm/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-theme-2)]
+        ">
+        llm
+      </a>
+    
       <a href="/tags/english/" 
         class="
           tag
@@ -624,25 +643,6 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
           dark:hover:text-[var(--c-theme-2)]
         ">
         ai-alignment
-      </a>
-    
-      <a href="/tags/llm/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-theme-2)]
-        ">
-        llm
       </a>
     
       <a href="/tags/gpt/" 
@@ -812,10 +812,10 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <p>In contrast, ActAdd uses the difference between prompt pairs instead.</p>
 <h2 id="Method">Method</h2>
 <p>The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.</p>
-<p><img src="/2023/10/07/actadd/alg.png" alt="ActAdd method" title="The algorithm of ActAdd"></p>
+<p><img src="/2023/10/07/actadd/alg.png" alt="" title="The algorithm of ActAdd"></p>
 <p>As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.</p>
 <h2 id="Result">Result</h2>
-<p><img src="/2023/10/07/actadd/result.png" alt="Main result" title="Main results."></p>
+<p><img src="/2023/10/07/actadd/result.png" alt="" title="Main results."></p>
 <h2 id="My-Thoughts">My Thoughts</h2>
 <p>The effectiveness of this method is a strong evidence that input and output features are represented as linear directions in representational space, but we still have no explanation for why such linearity arises naturally in LLMs. The fact that this actually works is very thought-provoking. However, ActAdd start to see degraded performance on off-target inputs when we drive the activations to far off, and the steering sometimes simply fails, this may indicate that the optimal steering path is not linear, which I believe is reasonable. This is somewhat similar to neuron attribution methods, many features/skills/knowledge cannot be attributed to single neurons (they are distributed across neurons), but existing neuron attribution methods still work well because, by change, some features are primarily determined by the activity or state of a single neuron (or a small set of neurons).</p>
 <p>We can also draw a parallel with <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2106.10199">BitFit</a>, which shows that tuning only (a subset of) the bias terms and the task-specific classifier head in a transformer model can achieve tuning performance comparable to full parameter finetuning. BitFit did only experiments on <strong>encoder models</strong>, in which case bias terms can be seen as steering vectors in the hidden representation space, therefore, ActAdd and BitFit differs only in the training signel. ActAdd uses the difference between the representation of a pair of (positive and negative) prompts, while BitFit propagates the human annotation from the classification head. For <strong>autoregressive models</strong>, ActAdd is more expressive because each token can be steered independently, while BitFit can only steer the whole sequence.</p>
@@ -976,9 +976,9 @@ A second year graduate student in THUNLP (the NLP lab of Tsinghua University). B
 <!-- tocbot end -->
 
   </main>
-  <footer class="flex flex-col mt-12 mb-12 items-center
+  <footer class="flex flex-col mt-18 mb-12 items-center
   text-[var(--c-50)] text-sm">
-  <div class="flex flex-row items-center mb-20">
+  <div class="flex flex-row items-center my-12">
     
     
         
