@@ -138,7 +138,7 @@ markdown:
     # Set to 'right' to add permalink after heading
     permalinkSide: 'left'
     # The symbol used to make the permalink
-    permalinkSymbol: ¶
+    permalinkSymbol: '#'
     # Transform anchor to (1) lower case; (2) upper case
     case: 0
     # Replace space with a character
@@ -151,9 +151,9 @@ markdown:
     - markdown-it-ins
     - markdown-it-mark
     - markdown-it-abbr
-  # images:
-  #   prepend_root: true
-  #   post_asset: true
+  images:
+    prepend_root: false
+    post_asset: true
 
 plugins:
   - name: '@renbaoshuo/markdown-it-katex'
