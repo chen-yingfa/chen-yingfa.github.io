@@ -15,11 +15,11 @@ nav:
     icon: mingcute:user-info-fill
     show_text: true
   categories:
-    path: ./category
+    path: ./categories
     icon: mingcute:classify-2-fill
     show_icon: true
   tags:
-    path: ./tag
+    path: ./tags
     icon: mingcute:tag-fill
     show_icon: true
   home:
