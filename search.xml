@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
-    <url>/2023/09/16/CFDBench/</url>
-    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
-<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
-<span id="more"></span>
-<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
-<hr>
-<h2 id="Abstract">Abstract</h2>
-<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-      <tags>
-        <tag>research</tag>
-        <tag>paper</tag>
-        <tag>cfd</tag>
-        <tag>dataset</tag>
-        <tag>00</tag>
-        <tag>english</tag>
-        <tag>pinn</tag>
-        <tag>fno</tag>
-        <tag>physics</tag>
-        <tag>machine-learning</tag>
-        <tag>deep-learning</tag>
-        <tag>deeponet</tag>
-        <tag>ai4science</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023年中秋和国庆</title>
     <url>/2023/10/05/2023%E4%B8%AD%E7%A7%8B/</url>
     <content><![CDATA[<p>今年国庆 🇨🇳 和中秋 🥮 一起放假，我跟 00 一起回来应城参加她堂姐和初中同学的婚礼<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，
@@ -70,15 +40,45 @@
         <category>Life</category>
       </categories>
       <tags>
-        <tag>00</tag>
         <tag>life</tag>
         <tag>中秋</tag>
         <tag>中文</tag>
+        <tag>00</tag>
         <tag>wedding</tag>
         <tag>中秋-middle-autumn</tag>
         <tag>国庆-national-day</tag>
         <tag>应城</tag>
         <tag>武汉-wuhan</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
+    <url>/2023/09/16/CFDBench/</url>
+    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
+<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
+<span id="more"></span>
+<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
+<hr>
+<h2 id="Abstract">Abstract</h2>
+<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+      <tags>
+        <tag>research</tag>
+        <tag>00</tag>
+        <tag>paper</tag>
+        <tag>cfd</tag>
+        <tag>dataset</tag>
+        <tag>english</tag>
+        <tag>pinn</tag>
+        <tag>fno</tag>
+        <tag>physics</tag>
+        <tag>machine-learning</tag>
+        <tag>deep-learning</tag>
+        <tag>deeponet</tag>
+        <tag>ai4science</tag>
       </tags>
   </entry>
   <entry>
@@ -211,28 +211,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Interpreting a Maze-Solving Network</title>
-    <url>/2023/10/07/interpreting-a-maze-solving-network/</url>
-    <content><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
-<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
-<span id="more"></span>
-<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
-]]></content>
-      <categories>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>llm</tag>
-        <tag>english</tag>
-        <tag>representation-engineering</tag>
-        <tag>activation-engineering</tag>
-        <tag>interpretability</tag>
-        <tag>rl</tag>
-        <tag>alignment</tag>
-        <tag>maze</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens</title>
     <url>/2024/01/10/infinitebench/</url>
     <content><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="https://arxiv.org/abs/2402.13718">Paper</a></p>
@@ -288,6 +266,28 @@
         <tag>benchmark</tag>
         <tag>recurrence</tag>
         <tag>linear-attention</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Interpreting a Maze-Solving Network</title>
+    <url>/2023/10/07/interpreting-a-maze-solving-network/</url>
+    <content><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
+<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
+<span id="more"></span>
+<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
+]]></content>
+      <categories>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>llm</tag>
+        <tag>english</tag>
+        <tag>representation-engineering</tag>
+        <tag>activation-engineering</tag>
+        <tag>interpretability</tag>
+        <tag>rl</tag>
+        <tag>alignment</tag>
+        <tag>maze</tag>
       </tags>
   </entry>
   <entry>
@@ -357,9 +357,9 @@
       <tags>
         <tag>llm</tag>
         <tag>research</tag>
+        <tag>life</tag>
         <tag>english</tag>
         <tag>machine-learning</tag>
-        <tag>life</tag>
         <tag>ai-alignment</tag>
         <tag>eren</tag>
         <tag>ethics</tag>
@@ -406,11 +406,124 @@
         <category>Life</category>
       </categories>
       <tags>
-        <tag>00</tag>
         <tag>life</tag>
         <tag>中文</tag>
+        <tag>00</tag>
         <tag>school</tag>
         <tag>graduation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一个帖子，瞎写点东西</title>
+    <url>/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/</url>
+    <content><![CDATA[<p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p>
+<p>我和 00 的孩子们：</p>
+<span id="more"></span>
+<ul>
+<li>卧龙：调皮的肥猫 🐱</li>
+<li>小绿：喜欢咬东西的鳄鱼 🐊</li>
+<li>骆雁：超级大的土鸡！🐰</li>
+<li>凤雏：不调皮的猫咪 🐱</li>
+<li>黄帝：更大的巨兔 🐰</li>
+<li>内存条：白色的熊熊 🐻</li>
+<li>闪光灯：灰色的熊熊 🐻</li>
+</ul>
+<h2 id="现在要做的事情">现在要做的事情</h2>
+<ul>
+<li>
+<p>把 EmoRen 投了</p>
+<ul>
+<li>能不能行啊</li>
+</ul>
+</li>
+<li>
+<p>跑 CFD 的丹炉调好</p>
+<ul>
+<li>好难呀</li>
+</ul>
+</li>
+<li>
+<p>写完作业</p>
+<ul>
+<li>NLP和DL的大作业！</li>
+</ul>
+</li>
+<li>
+<p>搞定去ACL的手续</p>
+<ul>
+<li>去加拿大，然后回挪威一两周，然后回来跟 00 去南京，我不用签证，但是还是有很多手续。</li>
+</ul>
+</li>
+<li>
+<p>写好开题报告</p>
+<ul>
+<li>还不知道做啥呢</li>
+</ul>
+</li>
+</ul>
+<h2 id="我的家乡-Lillesand">我的家乡 Lillesand</h2>
+<p><img src="/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/lillesand0.jpg" alt=""></p>
+<p><img src="/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/lillesand1.jpg" alt=""></p>
+<p>好久没有回去了，上一次回挪威也没有回去</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>research</tag>
+        <tag>life</tag>
+        <tag>中文</tag>
+        <tag>00</tag>
+        <tag>cfd</tag>
+        <tag>school</tag>
+        <tag>孩子们</tag>
+        <tag>卧龙</tag>
+        <tag>凤雏</tag>
+        <tag>骆雁</tag>
+        <tag>黄帝</tag>
+        <tag>小绿</tag>
+        <tag>猫咪</tag>
+        <tag>土鸡</tag>
+        <tag>熊</tag>
+        <tag>🐻</tag>
+        <tag>🐱</tag>
+        <tag>🐇</tag>
+        <tag>🐰</tag>
+        <tag>🐊</tag>
+        <tag>emoren</tag>
+        <tag>acl</tag>
+        <tag>lillesand</tag>
+        <tag>加拿大</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇</title>
+    <url>/2022/10/27/%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
+    <content><![CDATA[<p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
+<p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p>
+
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<span id="more"></span>
+<p>会根据 post markdown 文件中的 front matter 中定义的 tags：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">tags: some tags here</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></tbody></table></figure>
+<p>生成相应的 html div：</p>
+<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-tags"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/life"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>life<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/update"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>update<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/learn"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>learn<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/important"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>important<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/jekyll"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>jekyll<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/hugo"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>hugo<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/static-site-generator"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>static-site-generator<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<hr>
+<p>不知道写啥，就写一个 Python 的二分搜索吧：</p>
+<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target: <span class="type">Any</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Return the smallest index such that when target is inserted at that index,</span></span><br><span class="line"><span class="string">    the array will remain sorted.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    lo, hi = <span class="number">0</span>, <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        m = (lo + hi) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[m] &lt; target:</span><br><span class="line">            lo = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            hi = m</span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>中文</tag>
+        <tag>test</tag>
+        <tag>jekyll</tag>
+        <tag>hugo</tag>
+        <tag>static-site-generator</tag>
+        <tag>html</tag>
+        <tag>liquid</tag>
       </tags>
   </entry>
   <entry>
@@ -538,16 +651,16 @@ $$</p>
       </categories>
       <tags>
         <tag>research</tag>
-        <tag>00</tag>
         <tag>life</tag>
         <tag>中文</tag>
+        <tag>00</tag>
         <tag>面壁智能</tag>
+        <tag>jekyll</tag>
+        <tag>hugo</tag>
+        <tag>static-site-generator</tag>
         <tag>blog</tag>
         <tag>签证</tag>
         <tag>hexo</tag>
-        <tag>hugo</tag>
-        <tag>jekyll</tag>
-        <tag>static-site-generator</tag>
         <tag>羽毛球</tag>
         <tag>work</tag>
         <tag>枫叶</tag>
@@ -555,119 +668,6 @@ $$</p>
         <tag>挪威</tag>
         <tag>markdown</tag>
         <tag>宿舍</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一个帖子，瞎写点东西</title>
-    <url>/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/</url>
-    <content><![CDATA[<p>现在是 2023 年五月十七，马上硕士一年级就结束，在清华园已经快五年了，感觉对我人生的影响真的巨大。这一年认识了很可爱的 00，希望可以一直走下去。</p>
-<p>我和 00 的孩子们：</p>
-<span id="more"></span>
-<ul>
-<li>卧龙：调皮的肥猫 🐱</li>
-<li>小绿：喜欢咬东西的鳄鱼 🐊</li>
-<li>骆雁：超级大的土鸡！🐰</li>
-<li>凤雏：不调皮的猫咪 🐱</li>
-<li>黄帝：更大的巨兔 🐰</li>
-<li>内存条：白色的熊熊 🐻</li>
-<li>闪光灯：灰色的熊熊 🐻</li>
-</ul>
-<h2 id="现在要做的事情">现在要做的事情</h2>
-<ul>
-<li>
-<p>把 EmoRen 投了</p>
-<ul>
-<li>能不能行啊</li>
-</ul>
-</li>
-<li>
-<p>跑 CFD 的丹炉调好</p>
-<ul>
-<li>好难呀</li>
-</ul>
-</li>
-<li>
-<p>写完作业</p>
-<ul>
-<li>NLP和DL的大作业！</li>
-</ul>
-</li>
-<li>
-<p>搞定去ACL的手续</p>
-<ul>
-<li>去加拿大，然后回挪威一两周，然后回来跟 00 去南京，我不用签证，但是还是有很多手续。</li>
-</ul>
-</li>
-<li>
-<p>写好开题报告</p>
-<ul>
-<li>还不知道做啥呢</li>
-</ul>
-</li>
-</ul>
-<h2 id="我的家乡-Lillesand">我的家乡 Lillesand</h2>
-<p><img src="/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/lillesand0.jpg" alt=""></p>
-<p><img src="/2023/05/17/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%B8%96%E5%AD%90%EF%BC%8C%E7%9E%8E%E5%86%99%E7%82%B9%E4%B8%9C%E8%A5%BF/lillesand1.jpg" alt=""></p>
-<p>好久没有回去了，上一次回挪威也没有回去</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>research</tag>
-        <tag>cfd</tag>
-        <tag>00</tag>
-        <tag>life</tag>
-        <tag>中文</tag>
-        <tag>school</tag>
-        <tag>孩子们</tag>
-        <tag>卧龙</tag>
-        <tag>凤雏</tag>
-        <tag>骆雁</tag>
-        <tag>黄帝</tag>
-        <tag>小绿</tag>
-        <tag>猫咪</tag>
-        <tag>土鸡</tag>
-        <tag>熊</tag>
-        <tag>🐻</tag>
-        <tag>🐱</tag>
-        <tag>🐇</tag>
-        <tag>🐰</tag>
-        <tag>🐊</tag>
-        <tag>emoren</tag>
-        <tag>acl</tag>
-        <tag>lillesand</tag>
-        <tag>加拿大</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇</title>
-    <url>/2022/10/27/%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
-    <content><![CDATA[<p>之前尝试用 Hugo 来部署，发现 Hugo 不仅挺复杂，而且还有很多小问题，可能这就是速度带来的代价吧。但是其实我也不是写很多内容，所以 Jekyll 的速度应该是够用的。</p>
-<p>Jekyll 支持在 markdown 内容里面用 Liquid template tags 来生成动态内容，比如根据 front matter 中的 tags，给每个 tag 生成 html div。如下 liquid 语法：</p>
-
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">{% for tag in site.tags %}</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"background-color: blue;"</span>&gt;</span>#{{ tag[0] }}<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">{% endfor %}</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-
-<span id="more"></span>
-<p>会根据 post markdown 文件中的 front matter 中定义的 tags：</p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">tags: some tags here</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></tbody></table></figure>
-<p>生成相应的 html div：</p>
-<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"post-tags"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/life"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>life<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/update"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>update<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/learn"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>learn<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/important"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>important<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/jekyll"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>jekyll<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/hugo"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>hugo<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/tags/static-site-generator"</span> <span class="attr">class</span>=<span class="string">"tag-card"</span>&gt;</span>static-site-generator<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<hr>
-<p>不知道写啥，就写一个 Python 的二分搜索吧：</p>
-<figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target: <span class="type">Any</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Return the smallest index such that when target is inserted at that index,</span></span><br><span class="line"><span class="string">    the array will remain sorted.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    lo, hi = <span class="number">0</span>, <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">while</span> lo &lt; hi:</span><br><span class="line">        m = (lo + hi) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[m] &lt; target:</span><br><span class="line">            lo = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            hi = m</span><br><span class="line">    <span class="keyword">return</span> lo</span><br></pre></td></tr></tbody></table></figure>]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-        <tag>中文</tag>
-        <tag>test</tag>
-        <tag>hugo</tag>
-        <tag>jekyll</tag>
-        <tag>static-site-generator</tag>
-        <tag>html</tag>
-        <tag>liquid</tag>
       </tags>
   </entry>
 </search>
