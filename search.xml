@@ -149,7 +149,8 @@
     <title>(EREN) Robust and Scalable Model Editing for Large Language Models</title>
     <url>/2024/03/14/eren/</url>
     <content><![CDATA[<p><a href="https://www.github.com/chen-yingfa/eren">GitHub</a> | <a href="...">Paper (upcoming)</a></p>
-<p>TL;DR: A reader is augmented with a growing notebook that caches all edits in natural texts, and the reader retrieves relevant edits and make inference based on them. This achieves SOTA in model editing in QA and fact-checking.</p>
+<p><strong>TL;DR</strong>: A reader is augmented with a growing notebook that caches all edits in natural texts, and the reader retrieves relevant edits and make inference based on them. This achieves SOTA in model editing in QA and fact-checking.</p>
+<span id="more"></span>
 <hr>
 <h2 id="Introduction">Introduction</h2>
 <p><img src="/2024/03/14/eren/framework.png" alt=""></p>
