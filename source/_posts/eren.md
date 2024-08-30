@@ -23,7 +23,9 @@ featured: true
 
 [GitHub](https://www.github.com/chen-yingfa/eren) | [Paper (upcoming)](...)
 
-TL;DR: A reader is augmented with a growing notebook that caches all edits in natural texts, and the reader retrieves relevant edits and make inference based on them. This achieves SOTA in model editing in QA and fact-checking.
+**TL;DR**: A reader is augmented with a growing notebook that caches all edits in natural texts, and the reader retrieves relevant edits and make inference based on them. This achieves SOTA in model editing in QA and fact-checking.
+
+<!-- more -->
 
 ---
 
