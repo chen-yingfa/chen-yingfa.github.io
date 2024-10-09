@@ -306,7 +306,7 @@ hr {
   padding: 0px 0px;
   font-style: normal;
   width: 100%;
-  display: none;
+  display: block;
 }
 .prose .fancybox-alt {
   font-size: 0.9rem;

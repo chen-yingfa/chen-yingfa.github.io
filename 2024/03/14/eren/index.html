@@ -584,26 +584,6 @@
 <div class="flex flex-wrap gap-1">
   
     
-      <a href="/tags/paper/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        paper
-      </a>
-    
       <a href="/tags/research/" 
         class="
           tag
@@ -622,6 +602,46 @@
           dark:hover:bg-[var(--c-theme)]
         ">
         research
+      </a>
+    
+      <a href="/tags/arxiv/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        arxiv
+      </a>
+    
+      <a href="/tags/paper/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        paper
       </a>
     
       <a href="/tags/english/" 
@@ -662,46 +682,6 @@
           dark:hover:bg-[var(--c-theme)]
         ">
         llm
-      </a>
-    
-      <a href="/tags/ai/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        ai
-      </a>
-    
-      <a href="/tags/arxiv/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        arxiv
       </a>
     
       <a href="/tags/knowledge/" 
@@ -782,6 +762,26 @@
           dark:hover:bg-[var(--c-theme)]
         ">
         in-context-learning
+      </a>
+    
+      <a href="/tags/ai/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        ai
       </a>
     
       <a href="/tags/serac/" 
@@ -1025,8 +1025,8 @@
         var alt = this.alt;
         var title = this.title;
         if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
-        if (title) $(this).after('<span class="fancybox-title">' + title + '</span>');
-        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+        else if (title) $(this).after('<span class="fancybox-title">' + title + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + title + '"></a>')
       });
       $(this).find('.fancybox').each(function(){
         $(this).attr('rel', 'article' + i);
