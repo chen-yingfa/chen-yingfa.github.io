@@ -514,7 +514,28 @@
   </div>
 </div>
   <main>
-    <section class="px-2 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
+    
+    <!-- 显示某个tag的所有post -->
+    <div class="flex flex-wrap justify-center items-center">
+        <div class="
+            tag
+            mt-6
+            text-lg
+            rounded-full
+            px-3
+            py-1
+            border-2
+            border-[var(--c-theme)]
+            text-[var(--c-theme)]
+            bg-[var(--c-0)]
+            dark:bg-[var(--c-0)]
+            dark:drop-shadow-none
+            ">
+            卧龙
+        </div>
+    </div>
+
+<section class="px-2 py-8 max-w-prose mx-auto gap-4 grid grid-cols-1">
   
   <!-- Sort posts by date -->
   
@@ -637,6 +658,26 @@
 <div class="flex flex-wrap gap-1">
   
     
+      <a href="/tags/research/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        research
+      </a>
+    
       <a href="/tags/life/" 
         class="
           tag
@@ -655,26 +696,6 @@
           dark:hover:bg-[var(--c-theme)]
         ">
         life
-      </a>
-    
-      <a href="/tags/%E4%B8%AD%E6%96%87/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        中文
       </a>
     
       <a href="/tags/00/" 
@@ -697,7 +718,7 @@
         00
       </a>
     
-      <a href="/tags/research/" 
+      <a href="/tags/%E4%B8%AD%E6%96%87/" 
         class="
           tag
           text-sm
@@ -714,7 +735,7 @@
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        research
+        中文
       </a>
     
       <a href="/tags/cfd/" 
