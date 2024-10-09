@@ -6,10 +6,9 @@ type: "about"
 
 <img src="images/portrait.jpg" alt="Portrait of Chen Yingfa having lunch in Beijing, taken by Luo Yining."/>
 
-<iconify-icon icon="mingcute:world-2-fill"></iconify-icon> [中文](#Chinese-Version-中文版本)
-
 <iconify-icon icon="mingcute:link-fill"></iconify-icon> Social links:
 
+- [Semantic Scholar](https://www.semanticscholar.org/author/Yingfa-Chen/2109274417)
 - [Google Scholar](https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en)
 - [X (Twitter)](https://www.twitter.com/DonnyChan123)
 - [GitHub](https://www.github.com/chen-yingfa)
@@ -27,55 +26,9 @@ type: "about"
 
 My name is Yingfa Chen (陈英发).
 
-I'm a PhD student at the [Natural Language Processing lab at Tsinghua University](http://nlp.csai.tsinghua.edu.cn/), advised by Prof. Zhiyuan Liu. My research interests are about long-context modeling and controlling the knowledge and behavior of large language models.
+I'm a PhD student at the [Natural Language Processing lab at Tsinghua University](http://nlp.csai.tsinghua.edu.cn/), advised by Prof. Zhiyuan Liu. My research interests are about long-context modeling, RNN-based language models, continual learning.
 
 [:page_facing_up: My resume (last updated: Aug, 2024)](/pdf/cv.pdf)
-
-## Education
-
----
-
-**Ph.D. in Computer Science and Technology (计算机科学与技术)**
-
-<div align="right">Aug 2024 - Jul 2027 (expected)</div>
-
-Tsinghua University, China
-
-*Research direction: natural language processing, large language models*
-
-*Advisor: Prof. Zhiyuan Liu*
-
----
-
-**M.S. in Computer Science and Technology (计算机科学与技术)**
-
-<div align="right">Sep 2022 - Jul 2024</div>
-
-Tsinghua University, China
-
-*Research direction: natural language processing, large language models*
-
-*Advisor: Prof. Zhiyuan Liu*
-
----
-
-**B.S. in Computer Science and Technology (计算机科学与技术)**
-
-<div align="right">Aug 2018 - Jul 2022</div>
-
-Tsinghua University, China 
-
----
-
-**General Studies in Natural Science (Studiespesialisering med realfag)**
-
-<div align="right">
-Aug 2014 - Jul 2018
-</div>
-
-Møglestu High School, Norway
-
----
 
 ## Personal Background
 
@@ -90,21 +43,3 @@ Since March of 2022, I am happily in a relationship with [Luo Yining](https://ww
 🏸 Sports: Badminton, running, soccer.
 
 🎮 Entertainment: Video games, C-pop, anime, manga, Jackie Cheung, etc.
-
----
-
-## Extra
-
-Here is a binary search in Python:
-
-```python
-def bin_search(arr: list, target) -> int:
-    lo, hi = 0, len(arr)
-    while lo < hi:
-        m = (lo + hi) // 2
-        if arr[m] < target:
-            lo = m + 1
-        else:
-            hi = m
-    return lo
-```
