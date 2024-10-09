@@ -1,31 +1,33 @@
 # Header
 nav:
-  # Home: /index
   posts:
     path: ./archives
     icon: mingcute:inbox-fill
-    show_text: true
+    name: Posts
   publications:
     path: ./publications
     icon: mingcute:science-fill
-    show_text: true
+    name: Publications
   # Projects: /projects
   about:
     path: ./about
     icon: mingcute:user-info-fill
-    show_text: true
+    name: About Me
   categories:
     path: ./categories
     icon: mingcute:classify-2-fill
-    show_icon: true
+    name: Categories
+    show_name: false
   tags:
     path: ./tags
     icon: mingcute:tag-fill
-    show_icon: true
+    name: Tags
+    show_name: false
   home:
     path: ./index
     icon: mingcute:home-2-fill
-    show_icon: true
+    name: Home
+    show_name: false
 
 email: "chenyingfa1999@qq.com"
 my_location: Beijing, China
