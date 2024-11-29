@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@renbaoshuo/markdown-it-katex':
     specifier: ^2.0.2
-    version: 2.0.2(katex@0.16.8)(markdown-it@13.0.1)
+    version: 2.0.2(katex@0.16.9)(markdown-it@13.0.1)
   hexo:
     specifier: ^6.3.0
     version: 6.3.0
@@ -60,8 +60,8 @@ dependencies:
     specifier: ^6.0.1
     version: 6.0.1
   katex:
-    specifier: ^0.16.8
-    version: 0.16.8
+    specifier: ^0.16.9
+    version: 0.16.9
   markdown-it-checkbox:
     specifier: ^1.1.0
     version: 1.1.0
@@ -81,13 +81,13 @@ packages:
     resolution: {integrity: sha512-/62yikz7NLScCGAAST5SHdnjaDJQBDq0M2muyRTpf2VQhw6StBg2ALiu73zSJQ4fMVLA+0uBhBHAle7Wg+2kSg==}
     dev: false
 
-  /@renbaoshuo/markdown-it-katex@2.0.2(katex@0.16.8)(markdown-it@13.0.1):
+  /@renbaoshuo/markdown-it-katex@2.0.2(katex@0.16.9)(markdown-it@13.0.1):
     resolution: {integrity: sha512-peKX5VcHY2DXQ2AQaTduWkGwaQ2QSlscoOqRmOt6Fm9W+WmYacWnkzGsQeLlDw/lg9ZPSkE/SPSZnJC/kDEwnA==}
     peerDependencies:
       katex: '*'
       markdown-it: '>=6'
     dependencies:
-      katex: 0.16.8
+      katex: 0.16.9
       markdown-it: 13.0.1
     dev: false
 
@@ -1166,8 +1166,8 @@ packages:
     engines: {'0': node >= 0.2.0}
     dev: false
 
-  /katex@0.16.8:
-    resolution: {integrity: sha512-ftuDnJbcbOckGY11OO+zg3OofESlbR5DRl2cmN8HeWeeFIV7wTXvAOx8kEjZjobhA+9wh2fbKeO6cdcA9Mnovg==}
+  /katex@0.16.9:
+    resolution: {integrity: sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ==}
     hasBin: true
     dependencies:
       commander: 8.3.0
