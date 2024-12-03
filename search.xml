@@ -732,9 +732,10 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>等宽字体</title>
+    <title>VS Code 等宽字体的问题</title>
     <url>/2024/12/03/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>在 VS Code 中，中英混用的时候会发现字体没有对齐。VS Code 官方说法是，渲染字体的方式是 Chromium 决定的，所以他们无法解决这个问题，他们推荐我们自行找中文等宽的字体。网上最常见的说法是用叫做 <a href="https://github.com/be5invis/Sarasa-Gothic">Sarasa-Gothic</a> 的字体（中文是「更纱黑体」）。可是这个字体不仅巨大，还有点丑，名字我也不喜欢。还好找到了一个更符合我要求的字体：<a href="https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=mmm&amp;query=ubuntu+mono">Ubuntu Mono</a>。</p>
+<span id="more"></span>
 <p>它不仅符合我对字体的最低要求：</p>
 <ul>
 <li>美观（这个很主观）</li>
@@ -742,9 +743,9 @@ $$</p>
 <li>中英字符对齐</li>
 <li>能很好地区分 <code>iIl1</code>, <code>oO0</code>, <code>:;.,</code>, <code>'"‘’“”</code> （指引号和弯引号）</li>
 </ul>
-<p>还有其他优点：用 open-tail 的 g （看图 1）。唯一的缺点就是 <code>m</code> 比较丑。</p>
-<img alt="图 1：两个不同的 g。" src="./g-typeface.png" style="width: 30%">
-<p><img src="/2024/12/03/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/ubuntu.png" alt="" title="Ubuntu Mono 的在 VS Code 中的效果。"></p>
+<p>还有其他优点：用 open-tail 的 g （看 Figure 1）。唯一的缺点就是 <code>m</code> 比较丑。</p>
+<img alt="Figure 1：两个不同的 g。" src="./g-typeface.png" style="width: 30%">
+<p><img src="/2024/12/03/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/ubuntu.png" alt="" title="Figure 2：Ubuntu Mono 的在 VS Code 中的效果。"></p>
 ]]></content>
   </entry>
 </search>
