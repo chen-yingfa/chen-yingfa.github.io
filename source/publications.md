@@ -10,16 +10,16 @@ List of all my publications:
 **2024**:
 
 - Stuffed Mamba: State Collapse and State Capacity of RNN-Based Long-Context Modeling
-    - [Code](https://www.github.com/thunlp/stuffed-mamba)
+    - [Code](https://www.github.com/thunlp/stuffed-mamba) | [Paper](https://arxiv.org/abs/2410.07145)
 
 - Multi-Modal Multi-Granularity Tokenizer for Chu Bamboo Slips
-    - [Code](https://www.github.com/thunlp/Chujian)
+    - [Code](https://www.github.com/thunlp/Chujian) | [Paper](https://arxiv.org/abs/2409.01011)
 
 **2023**:
 
 - [$\infty$-Bench: Extending Long Context Evaluation to Over 100K](/2024/01/10/InfiniteBench/)
     - ACL 2024
-    - [Code](http://www.github.com/OpenBMB/InfiniteBench)
+    - [Code](http://www.github.com/OpenBMB/InfiniteBench) ｜ [Paper](https://www.github.com/OpenBMB/InfiniteBench)
 
 - [CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics](/2023/09/16/CFDBench/)
     - [Code](https://www.github.com/luo-yining/CFDBench) | [知乎](https://zhuanlan.zhihu.com/p/656033757) | [Paper (preprints.org)](https://www.preprints.org/manuscript/202309.1550/v1)

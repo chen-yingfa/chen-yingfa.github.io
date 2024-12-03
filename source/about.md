@@ -22,7 +22,7 @@ type: "about"
 
 ---
 
-你好, hello, hei!
+👋 你好, hello, hei!
 
 My name is Yingfa Chen (陈英发).
 
