@@ -746,6 +746,10 @@ $$</p>
 <p>还有其他优点：用 open-tail 的 g （看 Figure 1）。唯一的缺点就是 <code>m</code> 比较丑。</p>
 <img alt="Figure 1：两个不同的 g。" src="./g-typeface.png" style="width: 30%">
 <p><img src="/2024/12/03/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/ubuntu.png" alt="" title="Figure 2：Ubuntu Mono 的在 VS Code 中的效果。"></p>
+<h2 id="下载和使用">下载和使用</h2>
+<p>下载完之后，导入系统的字体目录。然后在 VS Code 的 settings 里面加上</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="attr">"editor.fontFamily"</span><span class="punctuation">:</span> <span class="string">"'Ubuntu Mono'"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>默认下中文字体应该会 fallback 到黑体，如果没有的话，你把 <code>'Ubuntu Mono'</code> 改成 <code>'Ubuntu Mono', 黑体</code> 就行。注意引号。</p>
 ]]></content>
   </entry>
 </search>
