@@ -590,26 +590,6 @@ Discord: blazing1999
 <div class="flex flex-wrap gap-1">
   
     
-      <a href="/tags/rnn/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        rnn
-      </a>
-    
       <a href="/tags/research/" 
         class="
           tag
@@ -628,6 +608,26 @@ Discord: blazing1999
           dark:hover:bg-[var(--c-theme)]
         ">
         research
+      </a>
+    
+      <a href="/tags/rnn/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        rnn
       </a>
     
       <a href="/tags/neural-networks/" 
@@ -800,9 +800,8 @@ $$</p>
 <p><img src="/2025/03/22/2025-about-delta-product/multi-kv-deltanet.png" alt="" title="Figure 1: Illustration of DeltaProduct vs. Multi-KV DeltaNet"></p>
 <h2 id="The-Potential-Flaw-in-DeltaProduct">The Potential Flaw in DeltaProduct</h2>
 <p>Many works have shown that recurrent architecture are bottlenecked by the state size. Hence, I think it is unreasonable to try to insert multiple KVs into the same state. So one potential improvement to DeltaProduct is to use untied states (i.e., different states for different KVs), which turns it into a multi-KV DeltaNet. Inspired by Mamba2, maybe it's even better to use multi-value DeltaNet, which saves some parameters, thereby increasing the state to parameter size ratio.</p>
-<hr>
+<h2 id="How-to-Cite">How to Cite</h2>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@misc{chen2025delta-product,</span><br><span class="line">  author = {Yingfa Chen},</span><br><span class="line">  title = {Multi-Head DeltaNet},</span><br><span class="line">  year = {2025},</span><br><span class="line">  url = {https://chen-yingfa.github.io/2025/03/22/2025-about-delta-product/},</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>Author: Yingfa Chen</p>
 <p>Feel free to contact me if you want to discuss this further.</p>
 
   </article>

@@ -590,26 +590,6 @@ Discord: blazing1999
 <div class="flex flex-wrap gap-1">
   
     
-      <a href="/tags/language-models/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        language models
-      </a>
-    
       <a href="/tags/research/" 
         class="
           tag
@@ -688,6 +668,26 @@ Discord: blazing1999
           dark:hover:bg-[var(--c-theme)]
         ">
         online-learning
+      </a>
+    
+      <a href="/tags/language-models/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        language models
       </a>
     
   
@@ -809,8 +809,6 @@ $$</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">two_layer_mlp_dual_form</span>(<span class="params"></span></span><br><span class="line"><span class="params">    q: Tensor,</span></span><br><span class="line"><span class="params">    k: Tensor,</span></span><br><span class="line"><span class="params">    v: Tensor,</span></span><br><span class="line"><span class="params">    weights: <span class="built_in">dict</span>[<span class="built_in">str</span>, Tensor] | <span class="literal">None</span> = <span class="literal">None</span>,</span></span><br><span class="line"><span class="params"></span>) -&gt; <span class="built_in">tuple</span>[<span class="built_in">dict</span>[<span class="built_in">str</span>, Tensor], Tensor]:</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    This operator utilizes the dual form of TTT (https://arxiv.org/pdf/2407.04620)</span></span><br><span class="line"><span class="string">    to avoid materializing the gradients.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    device = q.device</span><br><span class="line">    batch_size = q.shape[<span class="number">0</span>]</span><br><span class="line">    w1 = weights[<span class="string">"w1"</span>]</span><br><span class="line">    w2 = weights[<span class="string">"w2"</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># forward pass</span></span><br><span class="line">    h = einsum(w1, k, <span class="string">"dm d, b d -&gt; b dm"</span>)  <span class="comment"># (b, dh)</span></span><br><span class="line">    h_relu = torch.relu(h)  <span class="comment"># (b, dh)</span></span><br><span class="line">    h2 = einsum(w2, h_relu, <span class="string">"d dm, b dm -&gt; b d"</span>)</span><br><span class="line">    pred = h2 + k  <span class="comment"># (b, d)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Backward pass</span></span><br><span class="line">    <span class="comment"># We first compute the gradients w.r.t. to the activations,</span></span><br><span class="line">    <span class="comment"># which can be efficiently computed because they utilize</span></span><br><span class="line">    <span class="comment"># backward matmuls.</span></span><br><span class="line">    grad = pred - v  <span class="comment"># (b, d)</span></span><br><span class="line">    grad_h2 = einsum(w2, grad, <span class="string">"dy dh, b dy -&gt; b dh"</span>)</span><br><span class="line">    grad_h = grad_h2 * (h_relu &gt; <span class="number">0</span>).<span class="built_in">float</span>()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Then, we avoid materializing the gradients w.r.t. the two linear layers</span></span><br><span class="line">    <span class="comment"># W1 and W2, by associativity with the queries.</span></span><br><span class="line">    mask = torch.triu(</span><br><span class="line">        torch.ones(batch_size, batch_size, requires_grad=<span class="literal">False</span>, device=device),</span><br><span class="line">    )</span><br><span class="line">    attn_scores = einsum(k, q, <span class="string">'bk dk, bq dk -&gt; bk bq'</span>)  <span class="comment"># (b, b)</span></span><br><span class="line">    attn_scores = attn_scores * mask  <span class="comment"># (b, b)</span></span><br><span class="line">    h_q = einsum(w1, q, <span class="string">'dm d, b d -&gt; b dm'</span>)</span><br><span class="line">    h_q = h_q - einsum(grad_h, attn_scores, <span class="string">'bk dm, bk bq -&gt; bq dm'</span>)</span><br><span class="line">    h2_q = torch.relu(h_q)  <span class="comment"># (b, dm)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Compute the output</span></span><br><span class="line">    attn_scores = einsum(h_relu, h2_q, <span class="string">'bk dm, bq dm -&gt; bk bq'</span>)</span><br><span class="line">    attn_scores = attn_scores * mask</span><br><span class="line">    y = einsum(w2, h2_q, <span class="string">'d dm, b dm -&gt; b d'</span>)</span><br><span class="line">    y = y - einsum(grad, attn_scores, <span class="string">'bk d, bk bq -&gt; bq d'</span>)</span><br><span class="line">    y = y + q  <span class="comment"># Residual connection</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Compute the weights at the end of the batch</span></span><br><span class="line">    grad_w1 = einsum(grad_h, k, <span class="string">"b dh, b dx -&gt; dh dx"</span>)</span><br><span class="line">    w1 = w1 - grad_w1</span><br><span class="line">    grad_w2 = einsum(grad, h_relu, <span class="string">"b dy, b dh -&gt; dy dh"</span>)</span><br><span class="line">    w2 = w2 - grad_w2</span><br><span class="line">    weights = {</span><br><span class="line">        <span class="string">'w1'</span>: w1,</span><br><span class="line">        <span class="string">'w2'</span>: w2,</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> y, weights</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="How-to-Cite">How to Cite</h2>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@misc{chen2025ttt-implementation,</span><br><span class="line">    author = {Yingfa Chen},</span><br><span class="line">    title = {Implementating Test-Time Training - Part 1},</span><br><span class="line">    year = {2025},</span><br><span class="line">    url = {https://chen-yingfa.github.io/2025/03/19/ttt-implementation/},</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<hr>
-<p>Author: Yingfa Chen</p>
 <h1>References</h1>
 <ul>
 <li>Test-Time Training. 2024. <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2407.04620">https://arxiv.org/abs/2407.04620</a>.</li>
