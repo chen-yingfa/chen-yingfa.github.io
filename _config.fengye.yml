@@ -35,6 +35,8 @@ cv_path: /pdf/cv.pdf
 cv_last_update_date: Aug, 2024
 show_features_posts: true
 year_align_center: false
+show_profile_image: true
+show_subtitle: true
 
 # favicon
 favicon: /images/favicon-32x32.png
@@ -54,8 +56,11 @@ links:
     link: https://www.zhihu.com/people/chen-ying-fa-34
     icon: ri:zhihu-line
   Twitter:
-    link: https://www.twitter.com/DonnyChan123
+    link: https://www.twitter.com/yingfachen
     icon: mingcute:social-x-fill
+  google_scholar:
+    link: https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en
+    icon: mingcute:mortarboard-fill
   # Weibo:
 
 # analytics
