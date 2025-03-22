@@ -403,22 +403,40 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
+    <url>/2023/09/16/CFDBench/</url>
+    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
+<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
+<span id="more"></span>
+<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
+<hr>
+<h2 id="Abstract">Abstract</h2>
+<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+      <tags>
+        <tag>research</tag>
+        <tag>00</tag>
+        <tag>paper</tag>
+        <tag>cfd</tag>
+        <tag>dataset</tag>
+        <tag>english</tag>
+        <tag>pinn</tag>
+        <tag>fno</tag>
+        <tag>physics</tag>
+        <tag>machine-learning</tag>
+        <tag>deep-learning</tag>
+        <tag>deeponet</tag>
+        <tag>ai4science</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2025年寒假之后</title>
     <url>/2025/03/22/2025%E5%AF%92%E5%81%87%E4%B9%8B%E5%90%8E/</url>
-    <content><![CDATA[<p>现在是 2025 年 3 月 23 日，凌晨 2 点。离上次写博客已经有差不多半年了。中间跟 00 一起去了阿联酋参加学术会议。寒假跟 00 会她老家过年，在她家里住了一个星期。见识了很多本地的风俗，感觉跟想象中有一点点不一样，算是个神奇的体验。</p>
-<span id="more"></span>
+    <content><![CDATA[<span id="more"></span>
 <p>去年博士入学之后，我就在北京上学，而 00 就在东莞工作。异地的日子 00 经常 emo。每过一段时间我就会飞去东莞找 00，然后就是一起尝试各种奇奇怪怪的体验，比如吃狗肉，买很贵的电竞椅，打游戏，买新的娃，看电影，租车自驾游。当然还有做了各种不同的食物。有披萨，面包，土豆丁，黄金炒饭，土豆丁，咖啡，奶茶，牛排，苦瓜炒蛋，干捞方便面，火锅，等等。</p>
-<h2 id="阿联酋">阿联酋</h2>
-<p>【行程规划文档】：<a href="https://www.wolai.com/5qKxFofXAnQoGP4Cnpxze7">https://www.wolai.com/5qKxFofXAnQoGP4Cnpxze7</a></p>
-<p>之前楚简论文中了 COLING 2025，它开在阿联酋，阿布扎比。我跟 00 就商量好了，一起去玩耍。我们的行程是这样的：</p>
-<ol>
-<li>1 月 17 日：晚上，北京飞迪拜，下一天早上到达。</li>
-<li>1 月 20 日：迪拜坐车到阿布扎比</li>
-<li>1 月 22 日：坐车回去迪拜，然后飞回北京。</li>
-</ol>
-<p>这时候是冬天，所以阿联酋的温度比较舒适。迪拜我们选择住在一个古城里面。因为是专门给游客设计的，所以比较干净舒适。</p>
-<p><img src="https://secure-bigfile.wostatic.cn/static/sg1Qb2jMzhFZKceX9cYPkD/IMG20250119102324.jpg?auth_key=1742664526-heMkEUMBc7bSmwMDmT1kQ9-0-13517156cdc2a50ce1eb4f7f3731f14a&amp;file_size=7634779" alt="" title="刚到古城的第一个早上。"></p>
-<p><img src="https://secure2.wostatic.cn/static/vvXvjyY8qXfDhCzbbQzpsH/IMG20250119193315.jpg?auth_key=1742665227-uhcxHLRQPy5w1GXojr4oQJ-0-9bafa65e3c50fdb3fdfbb05ef83b862c&amp;file_size=3048925" alt="" title="棕榈岛中间公园旁边拍的。"></p>
 <h2 id="新年">新年</h2>
 <p>今年新年跟 00 会她老家过年。在那里待一周，然后回来深圳继续待着，到 2 月 16 日开学再回去北京。</p>
 <p>快要回去过年的时候，我 26 号把两侧的头发剪了，不盖下来了，尝试一下新风格。</p>
@@ -434,70 +452,6 @@ $$</p>
         <tag>学术会议</tag>
         <tag>阿联酋</tag>
         <tag>过年</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Activation Addition (ActAdd)</title>
-    <url>/2023/10/07/actadd/</url>
-    <content><![CDATA[<p><a href="https://arxiv.org/abs/2308.10248">Paper</a></p>
-<p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p>
-<p>Summary:</p>
-<ul>
-<li>Propose <strong>ActAdd</strong>, a method for controlling model behavior by modifying activations at inference time.</li>
-<li>Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.</li>
-<li>ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.</li>
-</ul>
-<span id="more"></span>
-<blockquote>
-<p>The recently popular <a href="https://arxiv.org/abs/2310.01405">representation engineering paper</a> (RepE) seems to be largely inspired by this work.</p>
-</blockquote>
-<h2 id="Background">Background</h2>
-<p>The authors propose to compute steering vectors to steer the model's behavior. They call such methods <em>activation engineering</em>. They make the following contributions:</p>
-<ul>
-<li>Find that combining forward passes works well in GPT-2, despite it was not trained for this.</li>
-<li>The proposed method, <strong>ActAdd</strong>, is efficient, requiring no gradient descent or labeled data.</li>
-</ul>
-<p>The difference between ActAdd and existing steering vector methods is that they find the vectors via one of the following.</p>
-<ul>
-<li>Differences after fine-tuning</li>
-<li>Per-query gradient-based search</li>
-<li>Linear probes + differences in truthy attention heads</li>
-</ul>
-<p>In contrast, ActAdd uses the difference between prompt pairs instead.</p>
-<h2 id="Method">Method</h2>
-<p>The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.</p>
-<p><img src="/2023/10/07/actadd/alg.png" alt="" title="The algorithm of ActAdd"></p>
-<p>As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.</p>
-<h2 id="Result">Result</h2>
-<p><img src="/2023/10/07/actadd/result.png" alt="" title="Main results."></p>
-<h2 id="My-Thoughts">My Thoughts</h2>
-<p>The effectiveness of this method is a strong evidence that input and output features are represented as linear directions in representational space, but we still have no explanation for why such linearity arises naturally in LLMs. The fact that this actually works is very thought-provoking. However, ActAdd start to see degraded performance on off-target inputs when we drive the activations to far off, and the steering sometimes simply fails, this may indicate that the optimal steering path is not linear, which I believe is reasonable. This is somewhat similar to neuron attribution methods, many features/skills/knowledge cannot be attributed to single neurons (they are distributed across neurons), but existing neuron attribution methods still work well because, by change, some features are primarily determined by the activity or state of a single neuron (or a small set of neurons).</p>
-<p>We can also draw a parallel with <a href="https://arxiv.org/abs/2106.10199">BitFit</a>, which shows that tuning only (a subset of) the bias terms and the task-specific classifier head in a transformer model can achieve tuning performance comparable to full parameter finetuning. BitFit did only experiments on <strong>encoder models</strong>, in which case bias terms can be seen as steering vectors in the hidden representation space, therefore, ActAdd and BitFit differs only in the training signel. ActAdd uses the difference between the representation of a pair of (positive and negative) prompts, while BitFit propagates the human annotation from the classification head. For <strong>autoregressive models</strong>, ActAdd is more expressive because each token can be steered independently, while BitFit can only steer the whole sequence.</p>
-<p>Interestingly, the fact that difference (or other arithmetics) in hidden representation are useful signal for some semantics has been shown in the era of learning word vectors, the fact that this can be used as a training signal is pretty neat.</p>
-<p>The author also discussed the difference between activation engineering and adaptation methods, but the empirical results were not enough to show that ActAdd can be used as a substitute for adaptation. E.g., we cannot practically adapt the model into performing machine translation with ActAdd, because there is no negative prompt for translation. But perhaps upcoming works can apply this method to replace fine-tuning (or other adaptation methods). The realization may be a promising way to effiicently control any arbitrary model behavior without backpropagation<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
-<p>Nevertheless, this method is extremely interesting, and I feel like many existing methods can be improved by taking inspirations from this work.</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://arxiv.org/abs/2305.17333">MeZO</a> is one alternative, but the training time of MeZO is almost the same as fine-tuning. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>Paper Note</category>
-      </categories>
-      <tags>
-        <tag>llm</tag>
-        <tag>english</tag>
-        <tag>ai-alignment</tag>
-        <tag>gpt</tag>
-        <tag>activation-modification</tag>
-        <tag>adaptation</tag>
-        <tag>model-editing</tag>
-        <tag>representation-engineering</tag>
-        <tag>fine-tuning</tag>
-        <tag>parameter-efficient-tuning</tag>
       </tags>
   </entry>
   <entry>
@@ -554,8 +508,8 @@ $$</p>
         <tag>research</tag>
         <tag>ai</tag>
         <tag>arxiv</tag>
-        <tag>english</tag>
         <tag>paper</tag>
+        <tag>english</tag>
         <tag>knowledge</tag>
         <tag>emnlp</tag>
         <tag>model editing</tag>
@@ -580,12 +534,134 @@ $$</p>
       <tags>
         <tag>llm</tag>
         <tag>english</tag>
-        <tag>representation-engineering</tag>
         <tag>activation-engineering</tag>
+        <tag>representation-engineering</tag>
         <tag>interpretability</tag>
         <tag>rl</tag>
         <tag>alignment</tag>
         <tag>maze</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Activation Addition (ActAdd)</title>
+    <url>/2023/10/07/actadd/</url>
+    <content><![CDATA[<p><a href="https://arxiv.org/abs/2308.10248">Paper</a></p>
+<p>TLDR: Propose <strong>ActAdd</strong>, a method for controlling model behavior during inference by modifying activations with a bias term that is learned from a pair of prompt.</p>
+<p>Summary:</p>
+<ul>
+<li>Propose <strong>ActAdd</strong>, a method for controlling model behavior by modifying activations at inference time.</li>
+<li>Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.</li>
+<li>ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.</li>
+</ul>
+<span id="more"></span>
+<blockquote>
+<p>The recently popular <a href="https://arxiv.org/abs/2310.01405">representation engineering paper</a> (RepE) seems to be largely inspired by this work.</p>
+</blockquote>
+<h2 id="Background">Background</h2>
+<p>The authors propose to compute steering vectors to steer the model's behavior. They call such methods <em>activation engineering</em>. They make the following contributions:</p>
+<ul>
+<li>Find that combining forward passes works well in GPT-2, despite it was not trained for this.</li>
+<li>The proposed method, <strong>ActAdd</strong>, is efficient, requiring no gradient descent or labeled data.</li>
+</ul>
+<p>The difference between ActAdd and existing steering vector methods is that they find the vectors via one of the following.</p>
+<ul>
+<li>Differences after fine-tuning</li>
+<li>Per-query gradient-based search</li>
+<li>Linear probes + differences in truthy attention heads</li>
+</ul>
+<p>In contrast, ActAdd uses the difference between prompt pairs instead.</p>
+<h2 id="Method">Method</h2>
+<p>The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.</p>
+<p><img src="/2023/10/07/actadd/alg.png" alt="" title="The algorithm of ActAdd"></p>
+<p>As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.</p>
+<h2 id="Result">Result</h2>
+<p><img src="/2023/10/07/actadd/result.png" alt="" title="Main results."></p>
+<h2 id="My-Thoughts">My Thoughts</h2>
+<p>The effectiveness of this method is a strong evidence that input and output features are represented as linear directions in representational space, but we still have no explanation for why such linearity arises naturally in LLMs. The fact that this actually works is very thought-provoking. However, ActAdd start to see degraded performance on off-target inputs when we drive the activations to far off, and the steering sometimes simply fails, this may indicate that the optimal steering path is not linear, which I believe is reasonable. This is somewhat similar to neuron attribution methods, many features/skills/knowledge cannot be attributed to single neurons (they are distributed across neurons), but existing neuron attribution methods still work well because, by change, some features are primarily determined by the activity or state of a single neuron (or a small set of neurons).</p>
+<p>We can also draw a parallel with <a href="https://arxiv.org/abs/2106.10199">BitFit</a>, which shows that tuning only (a subset of) the bias terms and the task-specific classifier head in a transformer model can achieve tuning performance comparable to full parameter finetuning. BitFit did only experiments on <strong>encoder models</strong>, in which case bias terms can be seen as steering vectors in the hidden representation space, therefore, ActAdd and BitFit differs only in the training signel. ActAdd uses the difference between the representation of a pair of (positive and negative) prompts, while BitFit propagates the human annotation from the classification head. For <strong>autoregressive models</strong>, ActAdd is more expressive because each token can be steered independently, while BitFit can only steer the whole sequence.</p>
+<p>Interestingly, the fact that difference (or other arithmetics) in hidden representation are useful signal for some semantics has been shown in the era of learning word vectors, the fact that this can be used as a training signal is pretty neat.</p>
+<p>The author also discussed the difference between activation engineering and adaptation methods, but the empirical results were not enough to show that ActAdd can be used as a substitute for adaptation. E.g., we cannot practically adapt the model into performing machine translation with ActAdd, because there is no negative prompt for translation. But perhaps upcoming works can apply this method to replace fine-tuning (or other adaptation methods). The realization may be a promising way to effiicently control any arbitrary model behavior without backpropagation<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>Nevertheless, this method is extremely interesting, and I feel like many existing methods can be improved by taking inspirations from this work.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://arxiv.org/abs/2305.17333">MeZO</a> is one alternative, but the training time of MeZO is almost the same as fine-tuning. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>Paper Note</category>
+      </categories>
+      <tags>
+        <tag>llm</tag>
+        <tag>english</tag>
+        <tag>representation-engineering</tag>
+        <tag>ai-alignment</tag>
+        <tag>gpt</tag>
+        <tag>activation-modification</tag>
+        <tag>adaptation</tag>
+        <tag>model-editing</tag>
+        <tag>fine-tuning</tag>
+        <tag>parameter-efficient-tuning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens</title>
+    <url>/2024/01/10/infinitebench/</url>
+    <content><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="https://arxiv.org/abs/2402.13718">Paper</a></p>
+<p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p>
+<blockquote>
+<p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p>
+</blockquote>
+<p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p>
+<span id="more"></span>
+<h2 id="Background">Background</h2>
+<p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p>
+<h2 id="The-Data">The Data</h2>
+<p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p>
+<p>Following shows the statistics of the tasks in our benchmark.</p>
+<p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="" title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p>
+<h2 id="Results">Results</h2>
+<p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p>
+<p><img src="/2024/01/10/infinitebench/results.png" alt="" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p>
+<h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2>
+<p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p>
+<h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3>
+<p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<blockquote>
+<p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p>
+</blockquote>
+<h3 id="Possible-Paths">Possible Paths</h3>
+<p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p>
+<p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p>
+<p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p>
+<p>Some people may want to refute by saying "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p>
+<p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p>
+<h2 id="Additional-Notes">Additional Notes</h2>
+<p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+      <tags>
+        <tag>llm</tag>
+        <tag>transformer</tag>
+        <tag>nlp</tag>
+        <tag>research</tag>
+        <tag>long-context</tag>
+        <tag>benchmark</tag>
+        <tag>recurrence</tag>
+        <tag>linear-attention</tag>
       </tags>
   </entry>
   <entry>
@@ -657,9 +733,9 @@ $$</p>
         <tag>research</tag>
         <tag>life</tag>
         <tag>english</tag>
-        <tag>ai-alignment</tag>
-        <tag>eren</tag>
         <tag>machine-learning</tag>
+        <tag>eren</tag>
+        <tag>ai-alignment</tag>
         <tag>ethics</tag>
         <tag>safety</tag>
         <tag>面壁智能</tag>
@@ -691,36 +767,6 @@ $$</p>
         <tag>c++</tag>
         <tag>test</tag>
         <tag>code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
-    <url>/2023/09/16/CFDBench/</url>
-    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
-<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
-<span id="more"></span>
-<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
-<hr>
-<h2 id="Abstract">Abstract</h2>
-<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-      <tags>
-        <tag>research</tag>
-        <tag>00</tag>
-        <tag>english</tag>
-        <tag>paper</tag>
-        <tag>machine-learning</tag>
-        <tag>cfd</tag>
-        <tag>dataset</tag>
-        <tag>pinn</tag>
-        <tag>fno</tag>
-        <tag>physics</tag>
-        <tag>deep-learning</tag>
-        <tag>deeponet</tag>
-        <tag>ai4science</tag>
       </tags>
   </entry>
   <entry>
@@ -974,12 +1020,27 @@ $$</p>
 <li>1 月 21 日：早上去了海边一个搬到，先到一个商场喝了咖啡，吃了麦当劳。然后逛了一个古村，摸了一个骆驼。之后去了总统府。傍晚去了大清真寺，00 需要带头巾才能进去。晚上在酒店旁边的一个路边小店，又吃了烧烤 😂。</li>
 <li>1 月 22 日：早上去了一个酒店旁边的印度小店，吃了一些甜点和饼干。然后就是坐车回去迪拜，再去机场，然后飞回去北京。</li>
 </ul>
+<h3 id="18-日：北京飞迪拜">18 日：北京飞迪拜</h3>
+<p>00 先飞过来北京，然后还过来学校一趟，到了我的宿舍，看到了大白。然后我们就一起去机场。00 带上了猫三！</p>
 <h3 id="19-日：迪拜的第一天">19 日：迪拜的第一天</h3>
 <p>这时候是冬天，所以阿联酋的温度比较舒适。迪拜我们选择住在一个古城里面。因为是专门给游客设计的，所以比较干净舒适。</p>
 <p><img src="https://secure-bigfile.wostatic.cn/static/sg1Qb2jMzhFZKceX9cYPkD/IMG20250119102324.jpg?auth_key=1742664526-heMkEUMBc7bSmwMDmT1kQ9-0-13517156cdc2a50ce1eb4f7f3731f14a&amp;file_size=7634779" alt="" title="刚到古城的第一个早上。"></p>
 <p><img src="https://secure2.wostatic.cn/static/vvXvjyY8qXfDhCzbbQzpsH/IMG20250119193315.jpg?auth_key=1742665227-uhcxHLRQPy5w1GXojr4oQJ-0-9bafa65e3c50fdb3fdfbb05ef83b862c&amp;file_size=3048925" alt="" title="棕榈岛中间公园旁边拍的。"></p>
 <p>（待续）</p>
 ]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>中文</tag>
+        <tag>阿联酋</tag>
+        <tag>abu-dhabi</tag>
+        <tag>dubai</tag>
+        <tag>旅行</tag>
+        <tag>烧烤</tag>
+        <tag>猫三</tag>
+      </tags>
   </entry>
   <entry>
     <title>第一篇</title>
@@ -1009,64 +1070,6 @@ $$</p>
         <tag>static-site-generator</tag>
         <tag>html</tag>
         <tag>liquid</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens</title>
-    <url>/2024/01/10/infinitebench/</url>
-    <content><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="https://arxiv.org/abs/2402.13718">Paper</a></p>
-<p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p>
-<blockquote>
-<p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p>
-</blockquote>
-<p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p>
-<span id="more"></span>
-<h2 id="Background">Background</h2>
-<p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p>
-<h2 id="The-Data">The Data</h2>
-<p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p>
-<p>Following shows the statistics of the tasks in our benchmark.</p>
-<p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="" title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p>
-<h2 id="Results">Results</h2>
-<p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p>
-<p><img src="/2024/01/10/infinitebench/results.png" alt="" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p>
-<h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2>
-<p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p>
-<h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3>
-<p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
-<blockquote>
-<p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p>
-</blockquote>
-<h3 id="Possible-Paths">Possible Paths</h3>
-<p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p>
-<p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p>
-<p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p>
-<p>Some people may want to refute by saying "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p>
-<p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p>
-<h2 id="Additional-Notes">Additional Notes</h2>
-<p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-      <tags>
-        <tag>llm</tag>
-        <tag>transformer</tag>
-        <tag>nlp</tag>
-        <tag>research</tag>
-        <tag>long-context</tag>
-        <tag>benchmark</tag>
-        <tag>recurrence</tag>
-        <tag>linear-attention</tag>
       </tags>
   </entry>
 </search>
