@@ -7,6 +7,11 @@ type: "publications"
 
 List of all my publications:
 
+**2025**:
+
+- Cost-Optimal Grouped-Query Attention for Long-Context LLMs
+    - [Paper](https://arxiv.org/abs/2503.09579)
+
 **2024**:
 
 - Stuffed Mamba: State Collapse and State Capacity of RNN-Based Long-Context Modeling
