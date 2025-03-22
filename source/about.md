@@ -18,7 +18,7 @@ type: "about"
 <iconify-icon icon="mingcute:mail-fill"></iconify-icon> Email: (either is ok) 
 
 - chenyingfa1999@qq.com
-- donnychan1999@gmail.com
+- chenyingfa1999@gmail.com
 
 ---
 
@@ -39,6 +39,8 @@ When I was 19, I went to Beijing for a Bachelor's degree in Computer Science at 
 Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/)^[The tag [#00](../../../tags/00) refers to my girlfriend.].
 
 ## Interests
+
+🤔 Philosophy, History, Linguistics, Calligraphy
 
 🏸 Sports: Badminton, running, soccer.
 

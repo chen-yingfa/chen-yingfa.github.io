@@ -3,7 +3,13 @@ author: 陈英发 Yingfa Chen
 title: Implementating Test-Time Training - Part 1
 date: 2025-03-19 23:56:44
 categories:
+- Research
 tags:
+- research
+- online-learning
+- neural-networks
+- language models
+- test-time-learning
 ---
 
 This blog post is part 1 of a series that describes my attempt in implementing the Test-Time Training (TTT) model proposed by [Sun et al. (2024)](https://arxiv.org/abs/2407.04620), and Titans, proposed by [Behrouz et al., (2024)](https://arxiv.org/abs/2501.00663). At the time of writing, these two are two strong recurrent language models, but they have not yet open-sourced their implementation (TTT has only open-sourced the Jax implementation).
@@ -221,9 +227,16 @@ def two_layer_mlp_dual_form(
 
 ```
 
----
+## How to Cite
 
-Author: Yingfa Chen
+```bibtex
+@misc{chen2025ttt-implementation,
+    author = {Yingfa Chen},
+    title = {Implementating Test-Time Training - Part 1},
+    year = {2025},
+    url = {https://chen-yingfa.github.io/2025/03/19/ttt-implementation/},
+}
+```
 
 # References
 
