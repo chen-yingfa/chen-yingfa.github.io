@@ -31,6 +31,36 @@
       </tags>
   </entry>
   <entry>
+    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
+    <url>/2023/09/16/2023-CFDBench/</url>
+    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
+<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
+<span id="more"></span>
+<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
+<hr>
+<h2 id="Abstract">Abstract</h2>
+<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+      <tags>
+        <tag>paper</tag>
+        <tag>research</tag>
+        <tag>cfd</tag>
+        <tag>dataset</tag>
+        <tag>00</tag>
+        <tag>english</tag>
+        <tag>pinn</tag>
+        <tag>fno</tag>
+        <tag>physics</tag>
+        <tag>machine-learning</tag>
+        <tag>deep-learning</tag>
+        <tag>deeponet</tag>
+        <tag>ai4science</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Activation Addition (ActAdd)</title>
     <url>/2023/10/07/2023-actadd/</url>
     <content><![CDATA[<p><a href="https://arxiv.org/abs/2308.10248">Paper</a></p>
@@ -82,9 +112,9 @@
         <category>Paper Note</category>
       </categories>
       <tags>
-        <tag>llm</tag>
         <tag>english</tag>
         <tag>ai-alignment</tag>
+        <tag>llm</tag>
         <tag>gpt</tag>
         <tag>activation-modification</tag>
         <tag>adaptation</tag>
@@ -92,6 +122,110 @@
         <tag>representation-engineering</tag>
         <tag>fine-tuning</tag>
         <tag>parameter-efficient-tuning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Interpreting a Maze-Solving Network</title>
+    <url>/2023/10/07/2023-interpreting-a-maze-solving-network/</url>
+    <content><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
+<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
+<span id="more"></span>
+<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/2023-actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
+]]></content>
+      <categories>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>english</tag>
+        <tag>llm</tag>
+        <tag>representation-engineering</tag>
+        <tag>activation-engineering</tag>
+        <tag>interpretability</tag>
+        <tag>rl</tag>
+        <tag>alignment</tag>
+        <tag>maze</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Safety and Ethical Concerns of Large Language Models</title>
+    <url>/2023/09/19/2023-llm-safety-and-ethics/</url>
+    <content><![CDATA[<p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
+<span id="more"></span>
+<h2 id="Introduction">Introduction</h2>
+<ul>
+<li>Galactica: A Large Language Model for Science</li>
+<li><a href="https://openai.com/research/gpt-4">https://openai.com/research/gpt-4</a></li>
+<li>SafetyBench: Evaluating the Safety of Large Language Models with Multiple Choice Questions</li>
+<li>Bias and Fairness in Large Language Models: A Survey</li>
+<li>A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation</li>
+</ul>
+<h2 id="Evaluation-Methods">Evaluation Methods</h2>
+<ul>
+<li>A General Language Assistant as a Laboratory for Alignment, Anthropic</li>
+<li>Safety Assessment of Chinese Large Language Models</li>
+<li>Semantics derived automatically from language corpora contain human-like biases</li>
+<li>StereoSet: Measuring stereotypical bias in pretrained language models</li>
+</ul>
+<h3 id="Instruction-Attacks">Instruction Attacks</h3>
+<ul>
+<li>Toxicity in CHATGPT: Analyzing Persona-assigned Language Models ⭐️</li>
+<li>Large Language Models are Zero-Shot Reasoners ⭐️</li>
+<li>On Second Thought, Let’s Not Think Step by Step! Bias and Toxicity in Zero-Shot Reasoning ⭐️</li>
+<li>Prompting GPT-3 To Be Reliable</li>
+<li>Universal and Transferable Adversarial Attacks on Aligned Language Models ⭐️</li>
+<li>Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment ⭐️⭐️</li>
+</ul>
+<h3 id="Exaggerated-Safety">Exaggerated Safety</h3>
+<ul>
+<li>XSTEST: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models ⭐️</li>
+<li>Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions ⭐️</li>
+</ul>
+<h2 id="Alignment-Methods">Alignment Methods</h2>
+<ul>
+<li>Aligning language models to follow instructions ⭐️</li>
+<li>Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback ⭐️</li>
+<li>SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions ⭐️⭐️</li>
+<li>Pretraining Language Models with Human Preferences ⭐️</li>
+<li>LIMA: Less Is More for Alignment</li>
+<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Aug 2022)</li>
+<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Jul 2023) ⭐️</li>
+</ul>
+<p>⭐️: important</p>
+<p>⭐️⭐️: very important</p>
+<h2 id="My-Thoughts">My Thoughts</h2>
+<p>AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me. This is presumably because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and it is very similar to the overgeneralization model editing, which is a problem I have worked on previous (see my publication, <a href="../../../../2023/09/14/EREN/">EREN</a>). I think using classifier on top (a simple safe guard), along with prompting methods<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> and currect alignment methods is a viable solution (seem to work fairly well in ChatGPT), but as we can see from the <a href="https://www.anthropic.com/index/claude-2">technical report of Claude 2</a>, the helpfulness of the model significantly drops after alignment. Therefore, I think minimizing the sacrifice in helpfulness will be an important direction of future research.</p>
+<p>Another concern is that there is no concensus on the goal of alignment. In fact, many people think that the fact that role-playing can be used to jailbreak alignment is not a bad thing per se, especially regarding toxicity, because if the user explicitly tells the AI to role-play a person that slurs a lot, the user expects slurs (one kind of toxicity).</p>
+<p>Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This concern is specially severe for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<p>All in all, AI alignment is a sub-field of better controllability of AI system, and I can foresee that it will be a hot research topic for the upcoming five years.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Basically prepending an prefix that tells it what is unethical and unsafe. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Does there exist a way to make AI impossible to unalign? This reminds me of the "mind stamping" (Chinese: 思想钢印) from the Three Body Problem, a novel by Liu Cixin. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>research</tag>
+        <tag>english</tag>
+        <tag>machine-learning</tag>
+        <tag>ai-alignment</tag>
+        <tag>llm</tag>
+        <tag>ethics</tag>
+        <tag>safety</tag>
+        <tag>面壁智能</tag>
+        <tag>modelbest</tag>
+        <tag>tutorial</tag>
+        <tag>eren</tag>
+        <tag>chatgpt</tag>
+        <tag>claude</tag>
+        <tag>三体</tag>
       </tags>
   </entry>
   <entry>
@@ -227,19 +361,19 @@ $$</p>
         <category>Life</category>
       </categories>
       <tags>
-        <tag>research</tag>
         <tag>life</tag>
         <tag>jekyll</tag>
         <tag>hugo</tag>
         <tag>static-site-generator</tag>
         <tag>中文</tag>
+        <tag>research</tag>
         <tag>00</tag>
+        <tag>面壁智能</tag>
         <tag>blog</tag>
         <tag>签证</tag>
         <tag>hexo</tag>
         <tag>羽毛球</tag>
         <tag>work</tag>
-        <tag>面壁智能</tag>
         <tag>枫叶</tag>
         <tag>中国</tag>
         <tag>挪威</tag>
@@ -304,9 +438,10 @@ $$</p>
         <category>Life</category>
       </categories>
       <tags>
-        <tag>research</tag>
         <tag>life</tag>
         <tag>中文</tag>
+        <tag>research</tag>
+        <tag>cfd</tag>
         <tag>00</tag>
         <tag>school</tag>
         <tag>孩子们</tag>
@@ -324,7 +459,6 @@ $$</p>
         <tag>🐰</tag>
         <tag>🐊</tag>
         <tag>emoren</tag>
-        <tag>cfd</tag>
         <tag>acl</tag>
         <tag>lillesand</tag>
         <tag>加拿大</tag>
@@ -430,19 +564,19 @@ $$</p>
         <category>Paper</category>
       </categories>
       <tags>
-        <tag>llm</tag>
-        <tag>research</tag>
-        <tag>ai</tag>
-        <tag>english</tag>
         <tag>paper</tag>
+        <tag>research</tag>
+        <tag>english</tag>
+        <tag>llm</tag>
+        <tag>eren</tag>
         <tag>arxiv</tag>
         <tag>knowledge</tag>
         <tag>emnlp</tag>
         <tag>model editing</tag>
         <tag>in-context-learning</tag>
+        <tag>ai</tag>
         <tag>serac</tag>
         <tag>rome</tag>
-        <tag>eren</tag>
         <tag>mend</tag>
       </tags>
   </entry>
@@ -494,14 +628,14 @@ $$</p>
         <category>Research</category>
       </categories>
       <tags>
-        <tag>llm</tag>
-        <tag>transformer</tag>
-        <tag>nlp</tag>
         <tag>research</tag>
+        <tag>llm</tag>
+        <tag>nlp</tag>
         <tag>long-context</tag>
         <tag>benchmark</tag>
         <tag>recurrence</tag>
         <tag>linear-attention</tag>
+        <tag>transformer</tag>
       </tags>
   </entry>
   <entry>
@@ -579,16 +713,16 @@ $$</p>
         <category>Life</category>
       </categories>
       <tags>
-        <tag>rnn</tag>
-        <tag>research</tag>
         <tag>life</tag>
         <tag>中文</tag>
+        <tag>research</tag>
         <tag>00</tag>
         <tag>挪威</tag>
         <tag>中秋</tag>
         <tag>国庆</tag>
         <tag>arxiv</tag>
         <tag>long-context</tag>
+        <tag>rnn</tag>
         <tag>phd</tag>
         <tag>入职</tag>
         <tag>oppo</tag>
@@ -716,8 +850,8 @@ $$</p>
         <category>Research</category>
       </categories>
       <tags>
-        <tag>rnn</tag>
         <tag>research</tag>
+        <tag>rnn</tag>
         <tag>neural-networks</tag>
         <tag>langauge-models</tag>
         <tag>test-time-learning</tag>
@@ -849,11 +983,11 @@ $$</p>
         <category>Research</category>
       </categories>
       <tags>
-        <tag>language models</tag>
         <tag>research</tag>
         <tag>neural-networks</tag>
         <tag>test-time-learning</tag>
         <tag>online-learning</tag>
+        <tag>language models</tag>
       </tags>
   </entry>
   <entry>
@@ -919,142 +1053,8 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Interpreting a Maze-Solving Network</title>
-    <url>/2023/10/07/interpreting-a-maze-solving-network/</url>
-    <content><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
-<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
-<span id="more"></span>
-<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
-]]></content>
-      <categories>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>llm</tag>
-        <tag>english</tag>
-        <tag>representation-engineering</tag>
-        <tag>activation-engineering</tag>
-        <tag>interpretability</tag>
-        <tag>rl</tag>
-        <tag>alignment</tag>
-        <tag>maze</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
-    <url>/2023/09/16/CFDBench/</url>
-    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
-<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
-<span id="more"></span>
-<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
-<hr>
-<h2 id="Abstract">Abstract</h2>
-<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-      <tags>
-        <tag>research</tag>
-        <tag>english</tag>
-        <tag>00</tag>
-        <tag>cfd</tag>
-        <tag>paper</tag>
-        <tag>dataset</tag>
-        <tag>pinn</tag>
-        <tag>fno</tag>
-        <tag>physics</tag>
-        <tag>machine-learning</tag>
-        <tag>deep-learning</tag>
-        <tag>deeponet</tag>
-        <tag>ai4science</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Safety and Ethical Concerns of Large Language Models</title>
-    <url>/2023/09/19/llm-safety-and-ethics/</url>
-    <content><![CDATA[<p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
-<span id="more"></span>
-<h2 id="Introduction">Introduction</h2>
-<ul>
-<li>Galactica: A Large Language Model for Science</li>
-<li><a href="https://openai.com/research/gpt-4">https://openai.com/research/gpt-4</a></li>
-<li>SafetyBench: Evaluating the Safety of Large Language Models with Multiple Choice Questions</li>
-<li>Bias and Fairness in Large Language Models: A Survey</li>
-<li>A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation</li>
-</ul>
-<h2 id="Evaluation-Methods">Evaluation Methods</h2>
-<ul>
-<li>A General Language Assistant as a Laboratory for Alignment, Anthropic</li>
-<li>Safety Assessment of Chinese Large Language Models</li>
-<li>Semantics derived automatically from language corpora contain human-like biases</li>
-<li>StereoSet: Measuring stereotypical bias in pretrained language models</li>
-</ul>
-<h3 id="Instruction-Attacks">Instruction Attacks</h3>
-<ul>
-<li>Toxicity in CHATGPT: Analyzing Persona-assigned Language Models ⭐️</li>
-<li>Large Language Models are Zero-Shot Reasoners ⭐️</li>
-<li>On Second Thought, Let’s Not Think Step by Step! Bias and Toxicity in Zero-Shot Reasoning ⭐️</li>
-<li>Prompting GPT-3 To Be Reliable</li>
-<li>Universal and Transferable Adversarial Attacks on Aligned Language Models ⭐️</li>
-<li>Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment ⭐️⭐️</li>
-</ul>
-<h3 id="Exaggerated-Safety">Exaggerated Safety</h3>
-<ul>
-<li>XSTEST: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models ⭐️</li>
-<li>Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions ⭐️</li>
-</ul>
-<h2 id="Alignment-Methods">Alignment Methods</h2>
-<ul>
-<li>Aligning language models to follow instructions ⭐️</li>
-<li>Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback ⭐️</li>
-<li>SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions ⭐️⭐️</li>
-<li>Pretraining Language Models with Human Preferences ⭐️</li>
-<li>LIMA: Less Is More for Alignment</li>
-<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Aug 2022)</li>
-<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Jul 2023) ⭐️</li>
-</ul>
-<p>⭐️: important</p>
-<p>⭐️⭐️: very important</p>
-<h2 id="My-Thoughts">My Thoughts</h2>
-<p>AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me. This is presumably because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and it is very similar to the overgeneralization model editing, which is a problem I have worked on previous (see my publication, <a href="../../../../2023/09/14/EREN/">EREN</a>). I think using classifier on top (a simple safe guard), along with prompting methods<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> and currect alignment methods is a viable solution (seem to work fairly well in ChatGPT), but as we can see from the <a href="https://www.anthropic.com/index/claude-2">technical report of Claude 2</a>, the helpfulness of the model significantly drops after alignment. Therefore, I think minimizing the sacrifice in helpfulness will be an important direction of future research.</p>
-<p>Another concern is that there is no concensus on the goal of alignment. In fact, many people think that the fact that role-playing can be used to jailbreak alignment is not a bad thing per se, especially regarding toxicity, because if the user explicitly tells the AI to role-play a person that slurs a lot, the user expects slurs (one kind of toxicity).</p>
-<p>Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This concern is specially severe for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
-<p>All in all, AI alignment is a sub-field of better controllability of AI system, and I can foresee that it will be a hot research topic for the upcoming five years.</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Basically prepending an prefix that tells it what is unethical and unsafe. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>Does there exist a way to make AI impossible to unalign? This reminds me of the "mind stamping" (Chinese: 思想钢印) from the Three Body Problem, a novel by Liu Cixin. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>llm</tag>
-        <tag>research</tag>
-        <tag>life</tag>
-        <tag>english</tag>
-        <tag>ai-alignment</tag>
-        <tag>面壁智能</tag>
-        <tag>eren</tag>
-        <tag>machine-learning</tag>
-        <tag>ethics</tag>
-        <tag>safety</tag>
-        <tag>modelbest</tag>
-        <tag>tutorial</tag>
-        <tag>chatgpt</tag>
-        <tag>claude</tag>
-        <tag>三体</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Some Binary Search</title>
-    <url>/2023/09/14/some_binary_search/</url>
+    <url>/2023/09/14/2023-some_binary_search/</url>
     <content><![CDATA[<p>A binary search with C++:</p>
 <figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bin_search</span><span class="params">(vector&lt;T&gt;&amp; arr, T target)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = arr.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) {</span><br><span class="line">        <span class="type">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == target) {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; target) {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>The same thing with Rust:</p>

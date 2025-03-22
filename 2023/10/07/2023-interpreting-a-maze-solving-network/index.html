@@ -25,7 +25,7 @@ Discord: blazing1999
   <meta name="keywords" content="Chen Yingfa,陈英发,Natural Language Processing,Artificial Intelligence,Large Language Models">
 
 
-<title>Some Binary Search | Yingfa Chen</title>
+<title>Interpreting a Maze-Solving Network | Yingfa Chen</title>
 
 
 
@@ -535,7 +535,7 @@ Discord: blazing1999
     <div class="flex flex-col gap-2 pt-4 md:pt-6">
       <!-- Title -->
       <div id="article-title" class="leading-snug">
-        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">Some Binary Search</p>
+        <p class="text-3xl font-bold text-[var(--c-100)] mb-4">Interpreting a Maze-Solving Network</p>
       </div>
       <!-- Meta data -->
       <div>
@@ -545,21 +545,26 @@ Discord: blazing1999
             <!-- Dates -->
             <div class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:add-circle-fill" ></iconify-icon>
-              Created: <time class="w-max">2023-09-14</time>
+              Created: <time class="w-max">2023-10-07</time>
             </div>
             <div class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:refresh-3-fill" ></iconify-icon>
-              Edited: <time class="w-max">2024-01-11</time>
+              Edited: <time class="w-max">2025-03-23</time>
             </div>
           </div>
           <div class="flex flex-wrap items-center gap-x-3 gap-y-3">
             <!-- Author -->
             
+              <span class="flex items-center gap-1 group">
+                <iconify-icon width="18" icon="mingcute:user-edit-fill" ></iconify-icon>
+                <p>陈英发 Yingfa Chen</p>
+              </span>
+            
 
             <!-- Word count -->
             <span class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
-              <span>157 words, 1 min</span>
+              <span>56 words, 1 min</span>
             </span>
             <!-- Categories -->
             
@@ -569,7 +574,7 @@ Discord: blazing1999
                   width="18"
                   icon="mingcute:classify-2-fill">
                 </iconify-icon>
-                <a class="article-category-link" href="/categories/test/">Test</a>
+                <a class="article-category-link" href="/categories/thoughts/">Thoughts</a>
               </span>
             
           </div>
@@ -580,26 +585,6 @@ Discord: blazing1999
         
 <div class="flex flex-wrap gap-1">
   
-    
-      <a href="/tags/test/" 
-        class="
-          tag
-          text-sm
-          rounded-full
-          px-[5px]
-          border-[1px]
-          border-[var(--c-theme)]
-          text-[var(--c-theme)]
-          bg-[var(--c-0)]
-          dark:bg-[var(--c-0)]
-          dark:drop-shadow-none
-          hover:bg-[var(--c-theme)]
-          hover:text-[var(--c-0)]
-          dark:hover:text-[var(--c-10)]
-          dark:hover:bg-[var(--c-theme)]
-        ">
-        test
-      </a>
     
       <a href="/tags/english/" 
         class="
@@ -621,7 +606,7 @@ Discord: blazing1999
         english
       </a>
     
-      <a href="/tags/algorithm/" 
+      <a href="/tags/llm/" 
         class="
           tag
           text-sm
@@ -638,10 +623,10 @@ Discord: blazing1999
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        algorithm
+        llm
       </a>
     
-      <a href="/tags/binary-search/" 
+      <a href="/tags/representation-engineering/" 
         class="
           tag
           text-sm
@@ -658,10 +643,10 @@ Discord: blazing1999
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        binary-search
+        representation-engineering
       </a>
     
-      <a href="/tags/rust/" 
+      <a href="/tags/activation-engineering/" 
         class="
           tag
           text-sm
@@ -678,10 +663,10 @@ Discord: blazing1999
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        rust
+        activation-engineering
       </a>
     
-      <a href="/tags/python/" 
+      <a href="/tags/interpretability/" 
         class="
           tag
           text-sm
@@ -698,10 +683,10 @@ Discord: blazing1999
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        python
+        interpretability
       </a>
     
-      <a href="/tags/c/" 
+      <a href="/tags/rl/" 
         class="
           tag
           text-sm
@@ -718,10 +703,10 @@ Discord: blazing1999
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        c++
+        rl
       </a>
     
-      <a href="/tags/code/" 
+      <a href="/tags/alignment/" 
         class="
           tag
           text-sm
@@ -738,7 +723,27 @@ Discord: blazing1999
           dark:hover:text-[var(--c-10)]
           dark:hover:bg-[var(--c-theme)]
         ">
-        code
+        alignment
+      </a>
+    
+      <a href="/tags/maze/" 
+        class="
+          tag
+          text-sm
+          rounded-full
+          px-[5px]
+          border-[1px]
+          border-[var(--c-theme)]
+          text-[var(--c-theme)]
+          bg-[var(--c-0)]
+          dark:bg-[var(--c-0)]
+          dark:drop-shadow-none
+          hover:bg-[var(--c-theme)]
+          hover:text-[var(--c-0)]
+          dark:hover:text-[var(--c-10)]
+          dark:hover:bg-[var(--c-theme)]
+        ">
+        maze
       </a>
     
   
@@ -748,12 +753,11 @@ Discord: blazing1999
   </header>
   <!-- content -->
   <article class="post-content prose m-auto dark:prose-invert">
-    <p>A binary search with C++:</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bin_search</span><span class="params">(vector&lt;T&gt;&amp; arr, T target)</span> </span>{</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>, right = arr.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) {</span><br><span class="line">        <span class="type">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[mid] == target) {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; target) {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> left;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>The same thing with Rust:</p>
-<figure class="highlight rust"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">fn</span> <span class="title function_">bin_search</span>&lt;T: <span class="built_in">Ord</span>&gt;(arr: &amp;<span class="type">Vec</span>&lt;T&gt;, target: &amp;T) <span class="punctuation">-&gt;</span> <span class="type">usize</span> {</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">left</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">right</span> = arr.<span class="title function_ invoke__">len</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> left &lt;= right {</span><br><span class="line">        <span class="keyword">let</span> <span class="variable">mid</span> = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> arr[mid] == *target {</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> arr[mid] &lt; *target {</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    left</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>And with Python:</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bin_search</span>(<span class="params">arr: <span class="built_in">list</span>, target</span>):</span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:</span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> arr[mid] == target:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">elif</span> arr[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> left</span><br></pre></td></tr></tbody></table></figure>
+    <p><a target="_blank" rel="noopener" href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
+<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
+<span id="more"></span>
+<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/2023-actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
+
   </article>
 
   <!-- prev and next -->
@@ -763,7 +767,7 @@ Discord: blazing1999
   ">
     <div>
       
-        <a href="/2023/09/16/CFDBench/"
+        <a href="/2024/01/10/2024-infinitebench/"
           class="
             transition-all
             flex justify-center
@@ -772,13 +776,13 @@ Discord: blazing1999
           ">
           <iconify-icon width="20" icon="mingcute:left-fill" data-inline="false">
           </iconify-icon>
-          CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics
+          InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens
         </a>
       
     </div>
     <div>
       
-        <a href="/2023/05/18/2023-%E4%B8%B4%E8%BF%912023%E6%9A%91%E5%81%87/"
+        <a href="/2023/10/07/2023-actadd/"
           class="
             flex 
             justify-center
@@ -787,7 +791,7 @@ Discord: blazing1999
             hover:text-[var(--c-100)]
           "
         >
-          临近2023暑假，00师姐答辩，晚上打球
+          Activation Addition (ActAdd)
           <iconify-icon width="20" icon="mingcute:right-fill" data-inline="false"></iconify-icon>
         </a>
       
