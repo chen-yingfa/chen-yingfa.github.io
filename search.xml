@@ -51,6 +51,34 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 等宽字体的问题</title>
+    <url>/2024/12/03/2024-%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/</url>
+    <content><![CDATA[<p>在 VS Code 中，中英混用的时候会发现字体没有对齐。VS Code 官方说法是，渲染字体的方式是 Chromium 决定的，所以他们无法解决这个问题，他们推荐我们自行找中文等宽的字体。网上最常见的说法是用叫做 <a href="https://github.com/be5invis/Sarasa-Gothic">Sarasa-Gothic</a> 的字体（中文是「更纱黑体」）。可是这个字体不仅巨大，还有点丑，名字我也不喜欢。还好找到了一个更符合我要求的字体：<a href="https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=mmm&amp;query=ubuntu+mono">Ubuntu Mono</a>。</p>
+<span id="more"></span>
+<p>它不仅符合我对字体的最低要求：</p>
+<ul>
+<li>美观（这个很主观）</li>
+<li>等宽</li>
+<li>中英字符对齐</li>
+<li>能很好地区分 <code>iIl1</code>, <code>oO0</code>, <code>:;.,</code>, <code>'"‘’“”</code> （指引号和弯引号）</li>
+</ul>
+<p>还有其他优点：用 open-tail 的 g （看 Figure 1）。唯一的缺点就是 <code>m</code> 比较丑。</p>
+<img alt="Figure 1：两个不同的 g。" src="./g-typeface.png" style="width: 30%">
+<p><img src="/./%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/ubuntu.png" alt="" title="Figure 2：Ubuntu Mono 的在 VS Code 中的效果。"></p>
+<h2 id="下载和使用">下载和使用</h2>
+<p>下载完之后，导入系统的字体目录。然后在 VS Code 的 settings 里面加上</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="attr">"editor.fontFamily"</span><span class="punctuation">:</span> <span class="string">"'Ubuntu Mono'"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<p>默认下中文字体应该会 fallback 到黑体，如果没有的话，你把 <code>'Ubuntu Mono'</code> 改成 <code>'Ubuntu Mono', 黑体</code> 就行。注意引号。</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+        <tag>fonts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2024 国庆之后</title>
     <url>/2024/10/10/2024%E5%9B%BD%E5%BA%86%E4%B9%8B%E5%90%8E/</url>
     <content><![CDATA[<p>刚刚放完 🇨🇳 国庆假，从东莞回来了北京继续我的博士生涯。这几个月感觉事情特别多，虽然很充实，但也很累，刚好这个七天长假（实际只有五天）可以让我喘口气。很久没有写博客了，上一次关于我自己的博客内容好像就是去年国庆之后的。刚好过一年，也可以当作一个年度总结吧。</p>
@@ -97,13 +125,13 @@
         <category>Life</category>
       </categories>
       <tags>
+        <tag>rnn</tag>
+        <tag>research</tag>
         <tag>life</tag>
         <tag>中秋</tag>
         <tag>中文</tag>
         <tag>00</tag>
         <tag>国庆</tag>
-        <tag>research</tag>
-        <tag>rnn</tag>
         <tag>arxiv</tag>
         <tag>挪威</tag>
         <tag>phd</tag>
@@ -234,8 +262,8 @@ $$</p>
         <category>Research</category>
       </categories>
       <tags>
-        <tag>research</tag>
         <tag>rnn</tag>
+        <tag>research</tag>
         <tag>neural-networks</tag>
         <tag>langauge-models</tag>
         <tag>test-time-learning</tag>
@@ -367,11 +395,45 @@ $$</p>
         <category>Research</category>
       </categories>
       <tags>
+        <tag>language models</tag>
         <tag>research</tag>
         <tag>neural-networks</tag>
         <tag>test-time-learning</tag>
         <tag>online-learning</tag>
-        <tag>language models</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025年寒假之后</title>
+    <url>/2025/03/22/2025%E5%AF%92%E5%81%87%E4%B9%8B%E5%90%8E/</url>
+    <content><![CDATA[<p>现在是 2025 年 3 月 23 日，凌晨 2 点。离上次写博客已经有差不多半年了。中间跟 00 一起去了阿联酋参加学术会议。寒假跟 00 会她老家过年，在她家里住了一个星期。见识了很多本地的风俗，感觉跟想象中有一点点不一样，算是个神奇的体验。</p>
+<span id="more"></span>
+<p>去年博士入学之后，我就在北京上学，而 00 就在东莞工作。异地的日子 00 经常 emo。每过一段时间我就会飞去东莞找 00，然后就是一起尝试各种奇奇怪怪的体验，比如吃狗肉，买很贵的电竞椅，打游戏，买新的娃，看电影，租车自驾游。当然还有做了各种不同的食物。有披萨，面包，土豆丁，黄金炒饭，土豆丁，咖啡，奶茶，牛排，苦瓜炒蛋，干捞方便面，火锅，等等。</p>
+<h2 id="阿联酋">阿联酋</h2>
+<p>【行程规划文档】：<a href="https://www.wolai.com/5qKxFofXAnQoGP4Cnpxze7">https://www.wolai.com/5qKxFofXAnQoGP4Cnpxze7</a></p>
+<p>之前楚简论文中了 COLING 2025，它开在阿联酋，阿布扎比。我跟 00 就商量好了，一起去玩耍。我们的行程是这样的：</p>
+<ol>
+<li>1 月 17 日：晚上，北京飞迪拜，下一天早上到达。</li>
+<li>1 月 20 日：迪拜坐车到阿布扎比</li>
+<li>1 月 22 日：坐车回去迪拜，然后飞回北京。</li>
+</ol>
+<p>这时候是冬天，所以阿联酋的温度比较舒适。迪拜我们选择住在一个古城里面。因为是专门给游客设计的，所以比较干净舒适。</p>
+<p><img src="https://secure-bigfile.wostatic.cn/static/sg1Qb2jMzhFZKceX9cYPkD/IMG20250119102324.jpg?auth_key=1742664526-heMkEUMBc7bSmwMDmT1kQ9-0-13517156cdc2a50ce1eb4f7f3731f14a&amp;file_size=7634779" alt="" title="刚到古城的第一个早上。"></p>
+<p><img src="https://secure2.wostatic.cn/static/vvXvjyY8qXfDhCzbbQzpsH/IMG20250119193315.jpg?auth_key=1742665227-uhcxHLRQPy5w1GXojr4oQJ-0-9bafa65e3c50fdb3fdfbb05ef83b862c&amp;file_size=3048925" alt="" title="棕榈岛中间公园旁边拍的。"></p>
+<h2 id="新年">新年</h2>
+<p>今年新年跟 00 会她老家过年。在那里待一周，然后回来深圳继续待着，到 2 月 16 日开学再回去北京。</p>
+<p>快要回去过年的时候，我 26 号把两侧的头发剪了，不盖下来了，尝试一下新风格。</p>
+<p>1 月 27 日我们一起从深圳做高铁去武汉的。之后一起去一个酒店跟 00 的一些亲戚见面。吃完一顿饭之后，就是坐车回去应城。是 00 开车的，她父母好像有点不放心。回到应城之后</p>
+<p>（待续）</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+        <tag>中文</tag>
+        <tag>学术会议</tag>
+        <tag>阿联酋</tag>
+        <tag>过年</tag>
       </tags>
   </entry>
   <entry>
@@ -426,9 +488,9 @@ $$</p>
         <category>Paper Note</category>
       </categories>
       <tags>
+        <tag>llm</tag>
         <tag>english</tag>
         <tag>ai-alignment</tag>
-        <tag>llm</tag>
         <tag>gpt</tag>
         <tag>activation-modification</tag>
         <tag>adaptation</tag>
@@ -436,64 +498,6 @@ $$</p>
         <tag>representation-engineering</tag>
         <tag>fine-tuning</tag>
         <tag>parameter-efficient-tuning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
-    <url>/2023/09/16/CFDBench/</url>
-    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
-<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
-<span id="more"></span>
-<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
-<hr>
-<h2 id="Abstract">Abstract</h2>
-<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-      <tags>
-        <tag>00</tag>
-        <tag>research</tag>
-        <tag>english</tag>
-        <tag>paper</tag>
-        <tag>cfd</tag>
-        <tag>dataset</tag>
-        <tag>pinn</tag>
-        <tag>fno</tag>
-        <tag>physics</tag>
-        <tag>machine-learning</tag>
-        <tag>deep-learning</tag>
-        <tag>deeponet</tag>
-        <tag>ai4science</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VS Code 等宽字体的问题</title>
-    <url>/2024/12/03/2024-%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/</url>
-    <content><![CDATA[<p>在 VS Code 中，中英混用的时候会发现字体没有对齐。VS Code 官方说法是，渲染字体的方式是 Chromium 决定的，所以他们无法解决这个问题，他们推荐我们自行找中文等宽的字体。网上最常见的说法是用叫做 <a href="https://github.com/be5invis/Sarasa-Gothic">Sarasa-Gothic</a> 的字体（中文是「更纱黑体」）。可是这个字体不仅巨大，还有点丑，名字我也不喜欢。还好找到了一个更符合我要求的字体：<a href="https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=mmm&amp;query=ubuntu+mono">Ubuntu Mono</a>。</p>
-<span id="more"></span>
-<p>它不仅符合我对字体的最低要求：</p>
-<ul>
-<li>美观（这个很主观）</li>
-<li>等宽</li>
-<li>中英字符对齐</li>
-<li>能很好地区分 <code>iIl1</code>, <code>oO0</code>, <code>:;.,</code>, <code>'"‘’“”</code> （指引号和弯引号）</li>
-</ul>
-<p>还有其他优点：用 open-tail 的 g （看 Figure 1）。唯一的缺点就是 <code>m</code> 比较丑。</p>
-<img alt="Figure 1：两个不同的 g。" src="./g-typeface.png" style="width: 30%">
-<p><img src="/./%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93/ubuntu.png" alt="" title="Figure 2：Ubuntu Mono 的在 VS Code 中的效果。"></p>
-<h2 id="下载和使用">下载和使用</h2>
-<p>下载完之后，导入系统的字体目录。然后在 VS Code 的 settings 里面加上</p>
-<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="attr">"editor.fontFamily"</span><span class="punctuation">:</span> <span class="string">"'Ubuntu Mono'"</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
-<p>默认下中文字体应该会 fallback 到黑体，如果没有的话，你把 <code>'Ubuntu Mono'</code> 改成 <code>'Ubuntu Mono', 黑体</code> 就行。注意引号。</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-        <tag>fonts</tag>
       </tags>
   </entry>
   <entry>
@@ -546,16 +550,16 @@ $$</p>
         <category>Paper</category>
       </categories>
       <tags>
+        <tag>llm</tag>
         <tag>research</tag>
+        <tag>ai</tag>
         <tag>arxiv</tag>
         <tag>english</tag>
-        <tag>llm</tag>
         <tag>paper</tag>
         <tag>knowledge</tag>
         <tag>emnlp</tag>
         <tag>model editing</tag>
         <tag>in-context-learning</tag>
-        <tag>ai</tag>
         <tag>serac</tag>
         <tag>rome</tag>
         <tag>eren</tag>
@@ -563,66 +567,107 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>寒假之后.md</title>
-    <url>/2025/03/22/2025%E5%AF%92%E5%81%87%E4%B9%8B%E5%90%8E/</url>
-    <content><![CDATA[]]></content>
+    <title>Interpreting a Maze-Solving Network</title>
+    <url>/2023/10/07/interpreting-a-maze-solving-network/</url>
+    <content><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
+<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
+<span id="more"></span>
+<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
+]]></content>
+      <categories>
+        <category>Thoughts</category>
+      </categories>
+      <tags>
+        <tag>llm</tag>
+        <tag>english</tag>
+        <tag>representation-engineering</tag>
+        <tag>activation-engineering</tag>
+        <tag>interpretability</tag>
+        <tag>rl</tag>
+        <tag>alignment</tag>
+        <tag>maze</tag>
+      </tags>
   </entry>
   <entry>
-    <title>InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens</title>
-    <url>/2024/01/10/infinitebench/</url>
-    <content><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="https://arxiv.org/abs/2402.13718">Paper</a></p>
-<p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p>
-<blockquote>
-<p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p>
-</blockquote>
-<p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p>
+    <title>Safety and Ethical Concerns of Large Language Models</title>
+    <url>/2023/09/19/llm-safety-and-ethics/</url>
+    <content><![CDATA[<p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
 <span id="more"></span>
-<h2 id="Background">Background</h2>
-<p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p>
-<h2 id="The-Data">The Data</h2>
-<p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p>
-<p>Following shows the statistics of the tasks in our benchmark.</p>
-<p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="" title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p>
-<h2 id="Results">Results</h2>
-<p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p>
-<p><img src="/2024/01/10/infinitebench/results.png" alt="" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p>
-<h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2>
-<p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p>
-<h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3>
-<p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
-<blockquote>
-<p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p>
-</blockquote>
-<h3 id="Possible-Paths">Possible Paths</h3>
-<p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p>
-<p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p>
-<p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p>
-<p>Some people may want to refute by saying "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p>
-<p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p>
-<h2 id="Additional-Notes">Additional Notes</h2>
-<p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p>
+<h2 id="Introduction">Introduction</h2>
+<ul>
+<li>Galactica: A Large Language Model for Science</li>
+<li><a href="https://openai.com/research/gpt-4">https://openai.com/research/gpt-4</a></li>
+<li>SafetyBench: Evaluating the Safety of Large Language Models with Multiple Choice Questions</li>
+<li>Bias and Fairness in Large Language Models: A Survey</li>
+<li>A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation</li>
+</ul>
+<h2 id="Evaluation-Methods">Evaluation Methods</h2>
+<ul>
+<li>A General Language Assistant as a Laboratory for Alignment, Anthropic</li>
+<li>Safety Assessment of Chinese Large Language Models</li>
+<li>Semantics derived automatically from language corpora contain human-like biases</li>
+<li>StereoSet: Measuring stereotypical bias in pretrained language models</li>
+</ul>
+<h3 id="Instruction-Attacks">Instruction Attacks</h3>
+<ul>
+<li>Toxicity in CHATGPT: Analyzing Persona-assigned Language Models ⭐️</li>
+<li>Large Language Models are Zero-Shot Reasoners ⭐️</li>
+<li>On Second Thought, Let’s Not Think Step by Step! Bias and Toxicity in Zero-Shot Reasoning ⭐️</li>
+<li>Prompting GPT-3 To Be Reliable</li>
+<li>Universal and Transferable Adversarial Attacks on Aligned Language Models ⭐️</li>
+<li>Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment ⭐️⭐️</li>
+</ul>
+<h3 id="Exaggerated-Safety">Exaggerated Safety</h3>
+<ul>
+<li>XSTEST: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models ⭐️</li>
+<li>Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions ⭐️</li>
+</ul>
+<h2 id="Alignment-Methods">Alignment Methods</h2>
+<ul>
+<li>Aligning language models to follow instructions ⭐️</li>
+<li>Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback ⭐️</li>
+<li>SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions ⭐️⭐️</li>
+<li>Pretraining Language Models with Human Preferences ⭐️</li>
+<li>LIMA: Less Is More for Alignment</li>
+<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Aug 2022)</li>
+<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Jul 2023) ⭐️</li>
+</ul>
+<p>⭐️: important</p>
+<p>⭐️⭐️: very important</p>
+<h2 id="My-Thoughts">My Thoughts</h2>
+<p>AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me. This is presumably because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and it is very similar to the overgeneralization model editing, which is a problem I have worked on previous (see my publication, <a href="../../../../2023/09/14/EREN/">EREN</a>). I think using classifier on top (a simple safe guard), along with prompting methods<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> and currect alignment methods is a viable solution (seem to work fairly well in ChatGPT), but as we can see from the <a href="https://www.anthropic.com/index/claude-2">technical report of Claude 2</a>, the helpfulness of the model significantly drops after alignment. Therefore, I think minimizing the sacrifice in helpfulness will be an important direction of future research.</p>
+<p>Another concern is that there is no concensus on the goal of alignment. In fact, many people think that the fact that role-playing can be used to jailbreak alignment is not a bad thing per se, especially regarding toxicity, because if the user explicitly tells the AI to role-play a person that slurs a lot, the user expects slurs (one kind of toxicity).</p>
+<p>Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This concern is specially severe for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<p>All in all, AI alignment is a sub-field of better controllability of AI system, and I can foresee that it will be a hot research topic for the upcoming five years.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>Basically prepending an prefix that tells it what is unethical and unsafe. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p>Does there exist a way to make AI impossible to unalign? This reminds me of the "mind stamping" (Chinese: 思想钢印) from the Three Body Problem, a novel by Liu Cixin. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
 ]]></content>
       <categories>
-        <category>Research</category>
+        <category>Thoughts</category>
       </categories>
       <tags>
-        <tag>research</tag>
-        <tag>long-context</tag>
         <tag>llm</tag>
-        <tag>nlp</tag>
-        <tag>benchmark</tag>
-        <tag>recurrence</tag>
-        <tag>linear-attention</tag>
-        <tag>transformer</tag>
+        <tag>research</tag>
+        <tag>life</tag>
+        <tag>english</tag>
+        <tag>ai-alignment</tag>
+        <tag>eren</tag>
+        <tag>machine-learning</tag>
+        <tag>ethics</tag>
+        <tag>safety</tag>
+        <tag>面壁智能</tag>
+        <tag>modelbest</tag>
+        <tag>tutorial</tag>
+        <tag>chatgpt</tag>
+        <tag>claude</tag>
+        <tag>三体</tag>
       </tags>
   </entry>
   <entry>
@@ -649,25 +694,33 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Interpreting a Maze-Solving Network</title>
-    <url>/2023/10/07/interpreting-a-maze-solving-network/</url>
-    <content><![CDATA[<p><a href="https://www.lesswrong.com/s/sCGfFb5DPfjEmtEdn">The blog post</a></p>
-<p>I can't believe I haven't read this until now. This is mind-provoking, and the result is an important step towards understanding neural networks.</p>
+    <title>CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics</title>
+    <url>/2023/09/16/CFDBench/</url>
+    <content><![CDATA[<p><a href="https://www.github.com/luo-yining/CFDBench">Code</a> | <a href="...">Paper (on hold by ArXiv)</a> | <a href="https://www.preprints.org/manuscript/202309.1550/v1">Paper (preprints.org)</a> | <a href="https://zhuanlan.zhihu.com/p/656033757">知乎</a></p>
+<p>I did this work with my girlfriend, whose research direction is computational fluid dynamics (CFD). We observed that there are numerous research works in applying deep learning (DL) to solve CFD problems. E.g., <a href="https://github.com/198808xc/Pangu-Weather">Pangu-Weather</a> have shown that DL methods can not only be more accurate than the best numerical methods, but can also be multiple magnitudes faster.</p>
 <span id="more"></span>
-<p>The culmination of this blog post is the exciting work of <a href="/2023/10/07/actadd/">Activation Addition</a>, which I believe is one important work that inspired the recently <a href="https://arxiv.org/abs/2310.01405">Representation Engineering</a> work.</p>
+<p>However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.</p>
+<hr>
+<h2 id="Abstract">Abstract</h2>
+<p>In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.</p>
 ]]></content>
       <categories>
-        <category>Thoughts</category>
+        <category>Research</category>
       </categories>
       <tags>
+        <tag>research</tag>
+        <tag>00</tag>
         <tag>english</tag>
-        <tag>llm</tag>
-        <tag>representation-engineering</tag>
-        <tag>activation-engineering</tag>
-        <tag>interpretability</tag>
-        <tag>rl</tag>
-        <tag>alignment</tag>
-        <tag>maze</tag>
+        <tag>paper</tag>
+        <tag>machine-learning</tag>
+        <tag>cfd</tag>
+        <tag>dataset</tag>
+        <tag>pinn</tag>
+        <tag>fno</tag>
+        <tag>physics</tag>
+        <tag>deep-learning</tag>
+        <tag>deeponet</tag>
+        <tag>ai4science</tag>
       </tags>
   </entry>
   <entry>
@@ -803,11 +856,12 @@ $$</p>
         <category>Life</category>
       </categories>
       <tags>
+        <tag>research</tag>
         <tag>life</tag>
         <tag>中文</tag>
         <tag>00</tag>
-        <tag>research</tag>
         <tag>挪威</tag>
+        <tag>面壁智能</tag>
         <tag>blog</tag>
         <tag>签证</tag>
         <tag>hexo</tag>
@@ -816,93 +870,10 @@ $$</p>
         <tag>static-site-generator</tag>
         <tag>羽毛球</tag>
         <tag>work</tag>
-        <tag>面壁智能</tag>
         <tag>枫叶</tag>
         <tag>中国</tag>
         <tag>markdown</tag>
         <tag>宿舍</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Safety and Ethical Concerns of Large Language Models</title>
-    <url>/2023/09/19/llm-safety-and-ethics/</url>
-    <content><![CDATA[<p>I will be holding a seminar at ModelBest (面壁智能) in Sep 20, 2023 in Beijing, Haidian, 科技园. The seminar will be in Chinese, and it's called "大模型安全与伦理问题" (translation: Safety and Ethical Concerns of Large Language Models). Below is a list of references.</p>
-<span id="more"></span>
-<h2 id="Introduction">Introduction</h2>
-<ul>
-<li>Galactica: A Large Language Model for Science</li>
-<li><a href="https://openai.com/research/gpt-4">https://openai.com/research/gpt-4</a></li>
-<li>SafetyBench: Evaluating the Safety of Large Language Models with Multiple Choice Questions</li>
-<li>Bias and Fairness in Large Language Models: A Survey</li>
-<li>A Survey of Safety and Trustworthiness of Large Language Models through the Lens of Verification and Validation</li>
-</ul>
-<h2 id="Evaluation-Methods">Evaluation Methods</h2>
-<ul>
-<li>A General Language Assistant as a Laboratory for Alignment, Anthropic</li>
-<li>Safety Assessment of Chinese Large Language Models</li>
-<li>Semantics derived automatically from language corpora contain human-like biases</li>
-<li>StereoSet: Measuring stereotypical bias in pretrained language models</li>
-</ul>
-<h3 id="Instruction-Attacks">Instruction Attacks</h3>
-<ul>
-<li>Toxicity in CHATGPT: Analyzing Persona-assigned Language Models ⭐️</li>
-<li>Large Language Models are Zero-Shot Reasoners ⭐️</li>
-<li>On Second Thought, Let’s Not Think Step by Step! Bias and Toxicity in Zero-Shot Reasoning ⭐️</li>
-<li>Prompting GPT-3 To Be Reliable</li>
-<li>Universal and Transferable Adversarial Attacks on Aligned Language Models ⭐️</li>
-<li>Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment ⭐️⭐️</li>
-</ul>
-<h3 id="Exaggerated-Safety">Exaggerated Safety</h3>
-<ul>
-<li>XSTEST: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models ⭐️</li>
-<li>Safety-Tuned LLaMAs: Lessons From Improving the Safety of Large Language Models that Follow Instructions ⭐️</li>
-</ul>
-<h2 id="Alignment-Methods">Alignment Methods</h2>
-<ul>
-<li>Aligning language models to follow instructions ⭐️</li>
-<li>Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback ⭐️</li>
-<li>SELF-INSTRUCT: Aligning Language Models with Self-Generated Instructions ⭐️⭐️</li>
-<li>Pretraining Language Models with Human Preferences ⭐️</li>
-<li>LIMA: Less Is More for Alignment</li>
-<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Aug 2022)</li>
-<li><a href="https://openai.com/blog/our-approach-to-alignment-research">https://openai.com/blog/our-approach-to-alignment-research</a> (Jul 2023) ⭐️</li>
-</ul>
-<p>⭐️: important</p>
-<p>⭐️⭐️: very important</p>
-<h2 id="My-Thoughts">My Thoughts</h2>
-<p>AI alignment is extremely important, and we know very little about it right now. In my everyday use of ChatGPT, it occasionally refuses to help me. This is presumably because it thinks that assisting me is harmful, while it's actually not. This is a problem of "exaggerated safety", and it is very similar to the overgeneralization model editing, which is a problem I have worked on previous (see my publication, <a href="../../../../2023/09/14/EREN/">EREN</a>). I think using classifier on top (a simple safe guard), along with prompting methods<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> and currect alignment methods is a viable solution (seem to work fairly well in ChatGPT), but as we can see from the <a href="https://www.anthropic.com/index/claude-2">technical report of Claude 2</a>, the helpfulness of the model significantly drops after alignment. Therefore, I think minimizing the sacrifice in helpfulness will be an important direction of future research.</p>
-<p>Another concern is that there is no concensus on the goal of alignment. In fact, many people think that the fact that role-playing can be used to jailbreak alignment is not a bad thing per se, especially regarding toxicity, because if the user explicitly tells the AI to role-play a person that slurs a lot, the user expects slurs (one kind of toxicity).</p>
-<p>Moreover, the entire meaning of alignment research might be undermined by the fact that AI system can be unaligned pretty easily. This concern is specially severe for works that focus on reducing the cost of alignment, because the same techniques might be used to effectively unalign AI systems.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
-<p>All in all, AI alignment is a sub-field of better controllability of AI system, and I can foresee that it will be a hot research topic for the upcoming five years.</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Basically prepending an prefix that tells it what is unethical and unsafe. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>Does there exist a way to make AI impossible to unalign? This reminds me of the "mind stamping" (Chinese: 思想钢印) from the Three Body Problem, a novel by Liu Cixin. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>Thoughts</category>
-      </categories>
-      <tags>
-        <tag>life</tag>
-        <tag>research</tag>
-        <tag>english</tag>
-        <tag>ai-alignment</tag>
-        <tag>llm</tag>
-        <tag>machine-learning</tag>
-        <tag>eren</tag>
-        <tag>面壁智能</tag>
-        <tag>ethics</tag>
-        <tag>safety</tag>
-        <tag>modelbest</tag>
-        <tag>tutorial</tag>
-        <tag>chatgpt</tag>
-        <tag>claude</tag>
-        <tag>三体</tag>
       </tags>
   </entry>
   <entry>
@@ -962,10 +933,10 @@ $$</p>
         <category>Life</category>
       </categories>
       <tags>
+        <tag>research</tag>
         <tag>life</tag>
         <tag>中文</tag>
         <tag>00</tag>
-        <tag>research</tag>
         <tag>cfd</tag>
         <tag>school</tag>
         <tag>孩子们</tag>
@@ -987,6 +958,28 @@ $$</p>
         <tag>lillesand</tag>
         <tag>加拿大</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>阿联酋之旅</title>
+    <url>/2025/03/23/%E9%98%BF%E8%81%94%E9%85%8B%E4%B9%8B%E6%97%85/</url>
+    <content><![CDATA[<p>现在是 2025 年 3 月 23 日，凌晨 2 点。离上次写博客已经有差不多半年了。中间跟 00 一起去了阿联酋参加学术会议。寒假跟 00 会她老家过年，在她家里住了一个星期。见识了很多本地的风俗，感觉跟想象中有一点点不一样，算是个神奇的体验。</p>
+<p>因为值得记录的经历真的太多了，这篇文章只能先写下去年国庆之后，到我们一起去阿联酋的这段时间。下一篇会补充我跟 00 回家过年以及之后的经历。</p>
+<h2 id="阿联酋">阿联酋</h2>
+<p>【行程规划文档】：<a href="https://www.wolai.com/5qKxFofXAnQoGP4Cnpxze7">https://www.wolai.com/5qKxFofXAnQoGP4Cnpxze7</a></p>
+<p>之前楚简论文中了 COLING 2025，它开在阿联酋，阿布扎比。我跟 00 就商量好了，一起去玩耍。我们的行程是这样的：</p>
+<ul>
+<li>1 月 18 日：晚上，北京飞迪拜，晚上快凌晨到达迪拜。</li>
+<li>1 月 19 日：迪拜自由活动。先逛了一下古城，然后坐地铁去哈利法塔。之后坐巴士去一个清真寺，然后逛了一下海边的度假村。晚上去棕榈岛。</li>
+<li>1 月 20 日：早上坐船对面的黄金市场和香水市场。然后坐船回来继续逛了古街。之后就去坐大巴到阿布扎比，三个小时的车程。晚上到了之后，在路边店吃了烧烤，然后逛街直到海边。之后就是步行回去九点。</li>
+<li>1 月 21 日：早上去了海边一个搬到，先到一个商场喝了咖啡，吃了麦当劳。然后逛了一个古村，摸了一个骆驼。之后去了总统府。傍晚去了大清真寺，00 需要带头巾才能进去。晚上在酒店旁边的一个路边小店，又吃了烧烤 😂。</li>
+<li>1 月 22 日：早上去了一个酒店旁边的印度小店，吃了一些甜点和饼干。然后就是坐车回去迪拜，再去机场，然后飞回去北京。</li>
+</ul>
+<h3 id="19-日：迪拜的第一天">19 日：迪拜的第一天</h3>
+<p>这时候是冬天，所以阿联酋的温度比较舒适。迪拜我们选择住在一个古城里面。因为是专门给游客设计的，所以比较干净舒适。</p>
+<p><img src="https://secure-bigfile.wostatic.cn/static/sg1Qb2jMzhFZKceX9cYPkD/IMG20250119102324.jpg?auth_key=1742664526-heMkEUMBc7bSmwMDmT1kQ9-0-13517156cdc2a50ce1eb4f7f3731f14a&amp;file_size=7634779" alt="" title="刚到古城的第一个早上。"></p>
+<p><img src="https://secure2.wostatic.cn/static/vvXvjyY8qXfDhCzbbQzpsH/IMG20250119193315.jpg?auth_key=1742665227-uhcxHLRQPy5w1GXojr4oQJ-0-9bafa65e3c50fdb3fdfbb05ef83b862c&amp;file_size=3048925" alt="" title="棕榈岛中间公园旁边拍的。"></p>
+<p>（待续）</p>
+]]></content>
   </entry>
   <entry>
     <title>第一篇</title>
@@ -1016,6 +1009,64 @@ $$</p>
         <tag>static-site-generator</tag>
         <tag>html</tag>
         <tag>liquid</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens</title>
+    <url>/2024/01/10/infinitebench/</url>
+    <content><![CDATA[<p><a href="http://www.github.com/OpenBMB/InfiniteBench">Code</a> | <a href="https://arxiv.org/abs/2402.13718">Paper</a></p>
+<p>The first benchmark for evaluating the effectiveness of LLMs in handling more than 100k tokens!</p>
+<blockquote>
+<p>In the paper, we name it $\infty$-Bench, but I will sometimes use "InfiniteBench" in this blog post for better readability.</p>
+</blockquote>
+<p>Finally got some time to write this blog, been so busy lately! I have been in a fairly long duration of research hiatus, meanwhile the field of NLP has been revolutionized by an overwhelming number of new LLMs. Finally, I was able to arrive at some productive and meaningful work in this new era of research, as a second author. In this blog post, I will introduce this work that I have been working on recently.</p>
+<span id="more"></span>
+<h2 id="Background">Background</h2>
+<p>The advent of LLMs have shown many promising results, but many practice applications (e.g., agents, document/webpage reading, long text summarization, etc.) are greatly limited by the context length constraint. Therefore, many works have strived to increase the length of the context that LLMs can accept. However, current "long-sequence" benchmarks all fall below 100k tokens, and is therefore not able to evaluate the effectiveness of many long-context LLMs. Our work, $\infty$-Bench</p>
+<h2 id="The-Data">The Data</h2>
+<p>The data consists of language tasks from diverse domains (math, code, novels), two languages (English and Chinese). Half of the tasks are automatically generated, which is desirable for optionally further scaling the context lengths to any arbitrary lengths.</p>
+<p>Following shows the statistics of the tasks in our benchmark.</p>
+<p><img src="/2024/01/10/infinitebench/data-stat-pie.png" alt="" title="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)."></p>
+<h2 id="Results">Results</h2>
+<p>We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.</p>
+<p><img src="/2024/01/10/infinitebench/results.png" alt="" title="Results of some SOTA long-context LLMs on our InfiniteBench"></p>
+<h2 id="Thoughts-on-the-Future-of-Long-Context-Research">Thoughts on the Future of Long-Context Research</h2>
+<p>Our lab have been investing much efforts in long-context LLMs lately. Particularly, we are interested in developing LLMs that can accept infinite input lengths, or what some of my colleagues call streaming language models (i.e., models that operate on streaming inputs). I believe that the transformer architecture is inherently incapable of processing infinite-length inputs. This is the research direction that I have been focusing on.</p>
+<h3 id="Inherent-Limitations-of-Transformers">Inherent Limitations of Transformers</h3>
+<p>The most obvious reason is the quadratic complexity. A large number of research papers have focused on reducing the computational cost of the self-attention mechanism. But most SOTA LLMs at the moment are still dense attention layers, and rely on using Flash-Attention to speedup the computation. However, through discussion with various researchers, I have found that many people now believe that the attention computation is fast enough for most practical applications. I strongly disagree with this view. Firstly, the computational cost translates to the operational cost and emission that results from the usage of LLMs, which is of great concern. Secondly, my experience with ChatGPT (especially when using GPT-4) is that it is often not fast enough. Especially when it tends to produce many irrelevant lead-up sentences, I often find that I can find the answer using search engines before ChatGPT gives me the answer. Thirdly, current LLMs typically only have less than 100k in context length, however, as we apply them on contexts with millions of tokens, the speed of processing these tokens becomes unacceptable in most applications. For instance, in our experiments with InfiniteBench, applying a 7B model on 128k tokens using one A100 GPU takes 8~11 minutes to simply read the input<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<blockquote>
+<p>This is not the only drawback of the transformer architecture, but that is out of the scope of this discussion.</p>
+</blockquote>
+<h3 id="Possible-Paths">Possible Paths</h3>
+<p>I do not believe making small tweaks to the self-attention mechanism will solve the problem. Yep, we need new model architectures. Two architectures that I find promising are <strong>linear attention</strong> and <strong>state-space models</strong> (SSMs). Since these architectures have been widely discussed in the research community, I will not describe them in detail here. Instead, I want to express my opinion on the future of these architectures.</p>
+<p>I like to think of different language model architectures from the perspective of compressing the history<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. The way transformers work is that they feed the last $L$ tokens without any compression to the model in each step. This means that the model remembers everything perfectly up to $L$ previous tokens, and remembers <strong>nothing</strong> about the history before that.</p>
+<p>In contrast, SSM and models with linear attention can learn to automatically choose what information retain about the past, which more closely resembles how humans memorize, and provides a smoother curve of forgettance (which is likely beneficial because I think that a blurry remembrance is much better than complete forgettal beyond $n$ tokens). I firmly believe that this is the right direction to go. We are very likely to see a surge of LLMs with $O(1)$ inference cost (for one token) in the upcoming five years, and this can drastically reduce the computational costs and increase their applicability in real-world applications.</p>
+<p>Some people may want to refute by saying "but recurrent models are much weaker than transformers". The thing is, most of such comparison are done in settings where the input does not exceed the context window of the transformer models. In other words, we only evaluate transformers on cases where it has perfect memory. In fact, I believe that within the context windows of a transformer model, it should be the upper bounds for the performance of recurrent models, which holds a lossful compression of the window. Moreover, I think that further research down the line can drastically improve the performance of recurrent models (actually any possible linear language models) over self-attention-based language models.</p>
+<p>Another thing to note is that, I have noticed that people like to align the parameter count of different LLMs during comparison, but for models with different architecture, this is a bad practice. In practice, we likely care more about the cost of maintenance, the speed of inference or training, and memory usage, etc. For instance, <a href="https://arxiv.org/abs/2307.08621">RetNet</a>'s training throughput is actually faster than a transformer with <a href="https://github.com/Dao-AILab/flash-attention">Flash-Attention</a>. Imagine how fast RetNet + Flash-Attention can be. For applications, if a model is 10x faster than ChatGPT, but just slightly underperforms it, it is very likely that I will choose that over ChatGPT.</p>
+<h2 id="Additional-Notes">Additional Notes</h2>
+<p>I am currently working on a linear attention model, but the field is changing so fast. I expect that this project will end within the next three months, because if not, my ideas will likely become obselete due to new works being released. Stay tuned.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>I know that this is much faster than humans, but we expect AI to be faster than humans, especially considering they cost so much power to run. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>This perspective is not new and has been discussed in many papers. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+      <tags>
+        <tag>llm</tag>
+        <tag>transformer</tag>
+        <tag>nlp</tag>
+        <tag>research</tag>
+        <tag>long-context</tag>
+        <tag>benchmark</tag>
+        <tag>recurrence</tag>
+        <tag>linear-attention</tag>
       </tags>
   </entry>
 </search>
