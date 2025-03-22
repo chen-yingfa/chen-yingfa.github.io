@@ -568,7 +568,7 @@ Discord: blazing1999
             <!-- Word count -->
             <span class="flex items-center gap-1">
               <iconify-icon width="18" icon="mingcute:book-2-fill" ></iconify-icon>
-              <span>652 words, 4 min</span>
+              <span>665 words, 4 min</span>
             </span>
             <!-- Categories -->
             
@@ -699,7 +699,11 @@ Discord: blazing1999
   <article class="post-content prose m-auto dark:prose-invert">
     <p>In DeltaProduct <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2502.10297">(Siems et al., 2025)</a>, they propose to improve DeltaNet <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2412.06464">(Yang et al., 2025)</a> by updating the online memory with $n_h$ KVs for each token, which can be seen as performing multiple steps of gradient descent per token. I will explain how this method is almost the same as multi-KV DeltaNet and reveal a potential flaw in the design of DeltaProduct.</p>
 <span id="more"></span>
-<h2 id="Introduction-to-DeltaNet">Introduction to DeltaNet</h2>
+<h2 id="Introduction">Introduction</h2>
+<h3 id="DeltaNet">DeltaNet</h3>
+<blockquote>
+<p>We use row-vector notation.</p>
+</blockquote>
 <p>The update rule and query rule of DeltaNet can be written as:</p>
 <p>$$
 \mathbf W_t = \mathbf W_{t-1} - \eta_t \frac{\ell(k_t, v_t, \mathbf W_{t-1})}{ \partial \mathbf W_{t-1} } \in \mathbb R ^{d \times d}
@@ -716,8 +720,8 @@ $$</p>
 $$
 \mathbf W_t = (\mathbf I - \eta_t k_t^Tk_t)\mathbf W_{t-1} + \eta_t k_t ^T v_t
 $$</p>
-<h2 id="DeltaProduct">DeltaProduct</h2>
-<p>DeltaProduct extends DeltaNet by generating $n_h$ KVs and online learning rate for each token. The update rule becomes $\mathbf W_t = \mathbf A_t \mathbf W_{t-1} + \mathbf B_t$ where</p>
+<h3 id="DeltaProduct">DeltaProduct</h3>
+<p>DeltaProduct extends DeltaNet by generating $n_h$ KVs $(k_{t,i}, v_{t,i})$ and online learning rates $\eta_{t,i}$ for each token. The update rule becomes $\mathbf W_t = \mathbf A_t \mathbf W_{t-1} + \mathbf B_t$ where</p>
 <p>$$
 \mathbf A_t = \prod_{i=1}^{n_h}\left(\mathbf I-\eta_{t,i}k_{t,i}^Tk_{t,i} \right)
 $$
