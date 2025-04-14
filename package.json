@@ -30,7 +30,7 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-util": "^3.1.0",
     "hexo-wordcount": "^6.0.1",
-    "katex": "^0.16.8",
+    "katex": "^0.16.9",
     "markdown-it-checkbox": "^1.1.0",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-task-lists": "^2.1.1",
