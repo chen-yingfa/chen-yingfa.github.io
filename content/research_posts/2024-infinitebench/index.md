@@ -3,6 +3,8 @@ author: 陈英发 Yingfa Chen
 title: "InfiniteBench: Extending Long Context Evaluation Beyond 100K Tokens"
 date: 2024-01-10 10:38:38
 categories: Research
+cover:
+    image: data-stat-pie.png
 tags:
 - research
 - llm
@@ -35,13 +37,15 @@ The data consists of language tasks from diverse domains (math, code, novels), t
 
 Following shows the statistics of the tasks in our benchmark.
 
-![Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).](./2024-infinitebench/data-stat-pie.png "Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).")
+<!-- ![Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).](./data-stat-pie.png "Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens).") -->
+<img src="./data-stat-pie.png#center" alt="Data statistics. The angle of segments is proportional to the number of examples, and the radius is proportional to the average example lengths (sum of input and output tokens)." style="width: 50%; height: auto;">
 
 ## Results
 
 We tested SOTA proprietary and open-source LLMs at the time of evaluation. The result is shown below. We can see that in most tasks, the performance is far from satisfactory in practical applications.
 
-![Results of some SOTA long-context LLMs on our InfiniteBench](./2024-infinitebench/results.png "Results of some SOTA long-context LLMs on our InfiniteBench")
+<!-- ![Results of some SOTA long-context LLMs on our InfiniteBench](./results.png "Results of some SOTA long-context LLMs on our InfiniteBench") -->
+<img src="./results.png#center" alt="Results of some SOTA long-context LLMs on our InfiniteBench" style="width: 70%; height: auto;">
 
 ## Thoughts on the Future of Long-Context Research
 

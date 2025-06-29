@@ -49,7 +49,7 @@
     border: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     width: 700px;
-    height: 160px;
+    /* height: 160px; */
 }
 
 .post-entry:active {
@@ -105,8 +105,8 @@
 }
 
 .entry-cover {
+    aspect-ratio: 4 / 3;
     width: 20%;
-    height: 100%;
     flex-shrink: 0; /* prevents it from being squished */
 }
 
