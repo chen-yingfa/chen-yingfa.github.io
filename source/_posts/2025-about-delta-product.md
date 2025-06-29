@@ -19,7 +19,11 @@ In DeltaProduct [(Siems et al., 2025)](https://arxiv.org/pdf/2502.10297), they p
 
 <!-- more -->
 
-## Introduction to DeltaNet
+## Introduction
+
+### DeltaNet
+
+> We use row-vector notation.
 
 The update rule and query rule of DeltaNet can be written as:
 
@@ -42,9 +46,9 @@ $$
 \mathbf W_t = (\mathbf I - \eta_t k_t^Tk_t)\mathbf W_{t-1} + \eta_t k_t ^T v_t
 $$
 
-## DeltaProduct
+### DeltaProduct
 
-DeltaProduct extends DeltaNet by generating $n_h$ KVs and online learning rate for each token. The update rule becomes $\mathbf W_t = \mathbf A_t \mathbf W_{t-1} + \mathbf B_t$ where
+DeltaProduct extends DeltaNet by generating $n_h$ KVs $(k_{t,i}, v_{t,i})$ and online learning rates $\eta_{t,i}$ for each token. The update rule becomes $\mathbf W_t = \mathbf A_t \mathbf W_{t-1} + \mathbf B_t$ where
 
 $$
 \mathbf A_t = \prod_{i=1}^{n_h}\left(\mathbf I-\eta_{t,i}k_{t,i}^Tk_{t,i} \right) 
