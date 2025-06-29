@@ -2,6 +2,9 @@
 author: 陈英发 Yingfa Chen
 title: 阿联酋之旅
 date: 2025-03-22 23:30:56
+thumbnail: 01-20坐船.png
+cover:
+    image: 01-20坐船.png
 categories:
 - Life
 tags:

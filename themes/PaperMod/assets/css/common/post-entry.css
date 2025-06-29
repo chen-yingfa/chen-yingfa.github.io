@@ -36,17 +36,20 @@
 .post-entry {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between; */
+    /* align-items: center; */
     gap: 12px;
-    position: relative;
+    /* position: relative; */
+    cursor: pointer;
     margin-bottom: var(--gap);
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
     transition: transform 0.1s;
-    /* border: 1px solid var(--border); */
+    border: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+    width: 700px;
+    height: 160px;
 }
 
 .post-entry:active {
@@ -79,7 +82,7 @@
 }
 
 .entry-link {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     top: 0;
@@ -98,30 +101,17 @@
 .post_entry > .entry-content-container {
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
-.post-entry > .entry-cover {
-    /* font-size: 14px; */
-    /* margin-bottom: var(--gap); */
-    /* text-align: center; */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    width: 1000% !important;
-}
-
-.post-entry > .entry-cover img {
-    border-radius: var(--radius);
-    display: flex;
-    /* width: 100%; */
+.entry-cover {
+    width: 20%;
     height: 100%;
-    width: 240px;
-    max-width: 100%;
-    flex-grow: 10;
+    flex-shrink: 0; /* prevents it from being squished */
 }
 
-/* .entry-cover a {
-    color: var(--secondary);
-    box-shadow: 0 1px 0 var(--primary);
-} */
+.entry-cover img {
+    height: 100%;
+    width: 100%; /* or 100% if you want stretch */
+    object-fit: cover;
+}

@@ -5,9 +5,17 @@ type: "about"
 toc: false
 ---
 
+# 👋 Hey there!
+
+My name is Yingfa Chen (Chinese: 陈英发).
+
+I'm a PhD student at the [Natural Language Processing lab at Tsinghua University](http://nlp.csai.tsinghua.edu.cn/), advised by Prof. Zhiyuan Liu. My research interests are about long-context modeling, RNN-based language models, continual learning.
+
+📃 [My resume (last updated: Aug, 2024)](/pdf/cv.pdf)
+
 ![Portrait of Chen Yingfa having lunch in Beijing, taken by Luo Yining.](../images/portrait.jpg)
 
-<iconify-icon icon="mingcute:link-fill"></iconify-icon> Social links:
+### <iconify-icon icon="mingcute:link-fill"></iconify-icon> Social links:
 
 - [Semantic Scholar](https://www.semanticscholar.org/author/Yingfa-Chen/2109274417)
 - [Google Scholar](https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en)
@@ -20,16 +28,6 @@ toc: false
 
 - chenyingfa1999@qq.com
 - chenyingfa1999@gmail.com
-
----
-
-👋 Hey there!
-
-My name is Yingfa Chen (Chinese: 陈英发).
-
-I'm a PhD student at the [Natural Language Processing lab at Tsinghua University](http://nlp.csai.tsinghua.edu.cn/), advised by Prof. Zhiyuan Liu. My research interests are about long-context modeling, RNN-based language models, continual learning.
-
-📃 [My resume (last updated: Aug, 2024)](/pdf/cv.pdf)
 
 ## Personal Background
 

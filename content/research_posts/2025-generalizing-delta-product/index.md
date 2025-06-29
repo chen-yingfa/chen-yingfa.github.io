@@ -4,6 +4,8 @@ title: Generalizing DeltaProduct
 date: 2025-03-22 23:40:08
 Next: 2024-eren
 Prev: test
+cover:
+  image: multi-kv-deltanet.png
 categories:
 - Research
 tags:

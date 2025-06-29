@@ -1,6 +1,6 @@
 {{- with .cxt}} {{/* Apply proper context from dict */}}
 {{- if (and .Params.cover.image (not $.isHidden)) }}
-<figure class="entry-cover">
+<div class="entry-cover">
     {{- $loading := cond $.IsSingle "eager" "lazy" }}
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
@@ -60,6 +60,6 @@
             <figcaption>{{ . | markdownify }}</figcaption>
         {{- end }}
     {{- end }}
-</figure>
+</div>
 {{- end }}{{/* End image */}}
 {{- end -}}{{/* End context */ -}}

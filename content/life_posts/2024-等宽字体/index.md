@@ -2,6 +2,8 @@
 author: 陈英发 Yingfa Chen
 title: VS Code 等宽字体的问题
 thumbnail: ubuntu.png
+cover:
+    image: ubuntu.png
 date: 2024-12-03 17:43:30
 categories:
 - Life
