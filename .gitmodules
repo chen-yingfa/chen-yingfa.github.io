@@ -1,6 +1,12 @@
-[submodule "themes/stellar"]
-	path = themes/stellar
-	url = git@github.com:chen-yingfa/hexo-theme-stellar.git
-[submodule "themes/oranges"]
-	path = themes/oranges
-	url = https://github.com/zchengsite/hexo-theme-oranges.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/paper"]
+	path = themes/paper
+	url = git@github.com:nanxiaobei/hugo-paper.git
+[submodule "themes/papermod"]
+	path = themes/papermod
+	url = git@github.com:adityatelange/hugo-PaperMod.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = git@github.com:adityatelange/hugo-PaperMod.git

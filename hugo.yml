@@ -1,0 +1,99 @@
+baseURL: https://chen-yingfa.github.io/
+languageCode: en-us
+title: Yingfa Chen 陈英发
+theme: PaperMod
+
+menus:
+  main:
+  - name: Home
+    pageRef: /
+    weight: 10
+  - name: "Research posts"
+    Title: "Research Posts"
+    pageRef: /research_posts
+    weight: 20
+  - name: "Life posts"
+    Title: List posts
+    pageRef: /life_posts/
+    weight: 30
+  # - name: Archive
+  #   pageRef: /archives/
+  #   weight: 20
+  - name: About Me
+    pageRef: /about/
+    weight: 1000
+  # - name: Categories
+  #   pageRef: /categories/
+  #   weight: 20
+  - name: Search
+    pageRef: /search/
+    weight: 2000
+
+markup:
+  highlight:
+    noClasses: false
+
+# [markup]
+#   [markup.goldmark]
+#     [markup.goldmark.extensions]
+#       [markup.goldmark.extensions.passthrough]
+#         enable = true
+#         [markup.goldmark.extensions.passthrough.delimiters]
+#           block = [['\[', '\]'], ['$$', '$$']]
+#           inline = [['\(', '\)']]
+params:
+  carouselHomepage:
+    enable: false
+  math: true
+  homeInfoParams:
+    enabled: false
+    Title: Yingfa Chen - 陈英发
+    Content: |
+      PhD student at Tsinghua University, interested in LLMs and long-context modeling. 
+      
+      (暂不考虑实习)
+
+  profileMode:
+    enabled: true
+    title: "Yingfa Chen - 陈英发" # optional default will be site title
+    subtitle: |
+      PhD student at Tsinghua University, interested in LLMs and long-context modeling.
+      
+      (暂不考虑实习)
+    imageUrl: "images/portrait.png" # optional
+    imageTitle: "Portrait of Yingfa Chen" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: GitHub
+        url: "https://github.com/chen-yingfa"
+
+  socialIcons: # optional
+    - name: "GitHub"
+      url: "https://github.com/chen-yingfa"
+    - name: "GoogleScholar"
+      url: "https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en"
+    - name: "X"
+      url: "https://x.com/yingfachen"
+    - name: "Zhihu"
+      url: "https://www.zhihu.com/people/chen-ying-fa-34"
+
+  ShowCodeCopyButtons: true
+  comments: true
+  ShowReadingTime: true
+  ShowToc: true
+  ShowBreadCrumbs: true
+  ShowShareButtons: true
+  cover:
+    linkFullImages: true
+  ShowPostNavLinks: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+caches:
+  images:
+    dir: :cacheDir/images
