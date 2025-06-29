@@ -23,7 +23,7 @@ toc: false
 
 ---
 
-👋 你好, hello, hei!
+👋 Hey there!
 
 My name is Yingfa Chen (Chinese: 陈英发).
 
