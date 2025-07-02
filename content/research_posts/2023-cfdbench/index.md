@@ -3,6 +3,8 @@ author: 陈英发 Yingfa Chen
 title: "CFDBench: A Comprehensive Benchmark for Machine Learning Methods in Fluid Dynamics"
 date: 2023-09-16 19:47:17
 categories: Research
+cover:
+  image: models.png
 tags:
 - paper
 - research
@@ -28,8 +30,14 @@ I did this work with my girlfriend, whose research direction is computational fl
 
 However, there is no standard benchmark for evaluating the performance of different DL methods. Therefore, we constructed CFDBench.
 
+![tasks](./tasks.png "The four tasks in CFDBench.")
+
+![models](./models.png "The models that we evaluated in CFDBench.")
+
 ---
 
 ## Abstract
 
 In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce operators that can learn solutions to the whole system of partial differential equations. However, the existing methods are only evaluated on simple flow equations (e.g., Burger's equation), and only consider the generalization ability on different initial conditions. In this paper, we construct CFDBench, a benchmark with four classic problems in computational fluid dynamics (CFD): lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. Each flow problem includes data with different boundary conditions, fluid physical properties, and domain geometry. Compared to existing datasets, the advantages of CFDBench are (1) comprehensive. It contains common physical parameters such as velocity, pressure, and cavity fraction. (2) realistic. It is very suitable for deep learning solutions of fluid mechanics equations. (3) challenging. It has a certain learning difficulty, prompting to find models with strong learning ability. (4) standardized. CFDBench facilitates a comprehensive and fair comparison of different deep learning methods for CFD. We make appropriate modifications to popular deep neural networks to apply them to CFDBench and enable the accommodation of more changing inputs. The evaluation on CFDBench reveals some new shortcomings of existing works and we propose possible directions for solving such problems.
+
+![evaluation result](./evaluation-result.png "The main evaluation results of CFDBench.")
