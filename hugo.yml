@@ -52,16 +52,25 @@ params:
     enabled: false
     Title: Yingfa Chen - 陈英发
     Content: |
-      PhD student at Tsinghua University, interested in LLMs and long-context modeling. 
-      
+      2nd year PhD student at Tsinghua University, majoring in CS, NLP.
+
+      Interested in LLMs and long-context modeling. 
+
+      chenyingfa1999 (at) qq (dot) com
+
       (暂不考虑实习)
 
   profileMode:
     enabled: true
     title: "Yingfa Chen - 陈英发" # optional default will be site title
     subtitle: |
-      PhD student at Tsinghua University, interested in LLMs and long-context modeling.
+      2nd year PhD student at Tsinghua University, majoring in CS, NLP.
       
+      Interested in LLMs and long-context modeling.
+      <br><br>
+
+      ✉️ Email: chenyingfa1999 (at) qq (dot) com
+
       (暂不考虑实习)
     imageUrl: "images/portrait.png" # optional
     imageTitle: "Portrait of Yingfa Chen" # optional
