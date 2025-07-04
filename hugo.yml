@@ -6,27 +6,27 @@ theme: PaperMod
 menus:
   main:
   - name: Home
-    pageRef: /
+    url: /
     weight: 10
   - name: "Research posts"
     Title: "Research Posts"
-    pageRef: /research_posts
+    url: /research_posts
     weight: 20
   - name: "Life posts"
     Title: List posts
-    pageRef: /life_posts/
+    url: /life_posts
     weight: 30
   # - name: Archive
   #   pageRef: /archives/
   #   weight: 20
   - name: About Me
-    pageRef: /about/
+    url: /about
     weight: 1000
   # - name: Categories
   #   pageRef: /categories/
   #   weight: 20
   - name: Search
-    pageRef: /search/
+    url: /search
     weight: 2000
 
 markup:
