@@ -11,7 +11,7 @@ My name is Yingfa Chen (Chinese: 陈英发).
 
 I'm a PhD student at the [Natural Language Processing lab at Tsinghua University](http://nlp.csai.tsinghua.edu.cn/), advised by Prof. Zhiyuan Liu. My research interests are about long-context modeling, RNN-based language models, continual learning.
 
-📃 [My resume (last updated: Aug, 2024)](/pdf/cv.pdf)
+📃 [My resume (last updated: Apr, 2025)](/pdf/cv.pdf)
 
 ![Portrait of Chen Yingfa having lunch in Beijing, taken by Luo Yining.](../images/portrait.jpg)
 
