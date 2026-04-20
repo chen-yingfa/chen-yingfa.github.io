@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config/site";
 ---
 
-<Layout>
-	<Welcome />
+<Layout bodyClass="list" activePath="/">
+  <div class="profile">
+    <div class="profile_inner">
+      <img
+        draggable="false"
+        src={siteConfig.profile.imageUrl}
+        alt={siteConfig.profile.imageAlt}
+        title={siteConfig.profile.imageAlt}
+        width="120"
+        height="120"
+      />
+      <h1>{siteConfig.profile.title}</h1>
+      <span set:html={siteConfig.profile.subtitle}></span>
+      <div class="social-icons">
+        {
+          siteConfig.profile.socialLinks.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer me" title={link.label} aria-label={link.label}>
+              <iconify-icon icon={link.icon}></iconify-icon>
+            </a>
+          ))
+        }
+      </div>
+      <div class="buttons">
+        <a class="button" href={siteConfig.profile.button.href} rel="noopener" title={siteConfig.profile.button.label}>
+          <span class="button-inner">{siteConfig.profile.button.label}</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </Layout>

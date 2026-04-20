@@ -1,0 +1,34 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readingTime: string;
+  imageUrl?: string;
+}
+
+const { href, title, excerpt, date, readingTime, imageUrl } = Astro.props;
+---
+
+<article class={`post-entry ${imageUrl ? "has-cover" : ""}`}>
+  {
+    imageUrl && (
+      <div class="entry-cover">
+        <img loading="lazy" src={imageUrl} alt={title} />
+      </div>
+    )
+  }
+  <div class="entry-content-container">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">{title}</h2>
+    </header>
+    <div class="entry-content no-mathjax">
+      <p>{excerpt}</p>
+    </div>
+    <footer class="entry-footer">
+      <span>{date}</span>&nbsp;·&nbsp;{readingTime}
+    </footer>
+  </div>
+  <a class="entry-link" href={href} aria-label={`Open post ${title}`}></a>
+</article>

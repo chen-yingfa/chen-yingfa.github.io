@@ -1,23 +1,205 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import { siteConfig } from "../config/site";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface Props {
+  title?: string;
+  description?: string;
+  bodyClass?: string;
+  activePath?: string;
+}
+
+const { title, description, bodyClass = "", activePath } = Astro.props;
+const pageTitle = title ? `${title} | ${siteConfig.title}` : siteConfig.title;
+const pageDescription = description ?? siteConfig.description;
+const currentPath = activePath ?? Astro.url.pathname;
+const normalize = (path: string) => path.replace(/\/$/, "") || "/";
+---
+
+<!doctype html>
+<html lang="en" dir="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={pageDescription} />
+    <title>{pageTitle}</title>
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <script is:inline>
+      MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        },
+        options: {
+          ignoreHtmlClass: "no-mathjax",
+        },
+      };
+    </script>
+    <script
+      is:inline
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script is:inline src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  </head>
+  <body class={bodyClass} id="top">
+    <script is:inline>
+      if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add("dark");
+      } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove("dark");
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add("dark");
+      }
+    </script>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="/" accesskey="h" title={`${siteConfig.title} (Alt + H)`}>{siteConfig.title}</a>
+          <div class="logo-switches">
+            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+              <svg
+                id="moon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path>
+              </svg>
+              <svg
+                id="sun"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul id="menu">
+          {
+            siteConfig.navItems.map((item) => (
+              <li>
+                <a href={item.href}>
+                  <span class={normalize(item.href) === normalize(currentPath) ? "active" : ""}>
+                    {item.label}
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </header>
+    <main class="main container">
+      <slot />
+    </main>
+    <footer class="footer">
+      <span>&copy; {new Date().getFullYear()} <a href="/">{siteConfig.title}</a></span> ·
+      <span>
+        Powered by
+        <a href="https://astro.build" rel="noopener noreferrer" target="_blank">Astro</a>
+      </span>
+    </footer>
+    <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+      <iconify-icon icon="mingcute:arrow-up-line"></iconify-icon>
+    </a>
+    <script is:inline>
+      const menu = document.getElementById("menu");
+      if (menu) {
+        menu.scrollLeft = Number(localStorage.getItem("menu-scroll-position") ?? 0);
+        menu.onscroll = function () {
+          localStorage.setItem("menu-scroll-position", String(menu.scrollLeft));
+        };
+      }
+
+      const topLink = document.getElementById("top-link");
+      window.addEventListener("scroll", () => {
+        if (!topLink) return;
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+          topLink.style.visibility = "visible";
+          topLink.style.opacity = "1";
+        } else {
+          topLink.style.visibility = "hidden";
+          topLink.style.opacity = "0";
+        }
+      });
+
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle?.addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+          document.body.classList.remove("dark");
+          localStorage.setItem("pref-theme", "light");
+        } else {
+          document.body.classList.add("dark");
+          localStorage.setItem("pref-theme", "dark");
+        }
+      });
+
+      document.querySelectorAll("pre > code").forEach((codeblock) => {
+        const pre = codeblock.parentNode;
+        if (!(pre instanceof HTMLElement) || pre.querySelector(".copy-code")) return;
+
+        const copybutton = document.createElement("button");
+        copybutton.classList.add("copy-code");
+        copybutton.innerHTML = '<iconify-icon icon="mingcute:copy-2-line"></iconify-icon>';
+        copybutton.type = "button";
+        copybutton.setAttribute("aria-label", "Copy code");
+        copybutton.setAttribute("title", "Copy code");
+
+        function copyingDone() {
+          copybutton.innerHTML = '<iconify-icon icon="mingcute:check-line"></iconify-icon>';
+          setTimeout(() => {
+            copybutton.innerHTML = '<iconify-icon icon="mingcute:copy-2-line"></iconify-icon>';
+          }, 2000);
+        }
+
+        copybutton.addEventListener("click", () => {
+          if ("clipboard" in navigator) {
+            navigator.clipboard.writeText(codeblock.textContent ?? "");
+            copyingDone();
+          }
+        });
+
+        pre.appendChild(copybutton);
+      });
+
+      document.querySelectorAll(".post-content img[title]").forEach((img) => {
+        if (!(img instanceof HTMLImageElement)) return;
+        if (img.dataset.captionInjected === "true") return;
+
+        const title = img.getAttribute("title")?.trim();
+        if (!title) return;
+
+        const caption = document.createElement("span");
+        caption.className = "image-caption";
+        caption.textContent = title;
+
+        img.insertAdjacentElement("afterend", caption);
+        img.dataset.captionInjected = "true";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Search" bodyClass="list" activePath="/search">
+  <header class="page-header">
+    <h1>
+      Search
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </h1>
+  </header>
+  <div id="searchbox">
+    <input id="searchInput" autofocus placeholder="Search title or content" aria-label="search" type="search" autocomplete="off" maxlength="64" />
+    <p id="searchStatus" class="search-status">Type to search posts.</p>
+    <ul id="searchResults" aria-label="search results"></ul>
+  </div>
+
+  <script is:inline>
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+    const searchStatus = document.getElementById("searchStatus");
+    let index = [];
+
+    fetch("/index.json")
+      .then((response) => response.json())
+      .then((data) => {
+        index = data;
+        if (searchStatus instanceof HTMLElement) {
+          searchStatus.textContent = `Ready. ${data.length} posts indexed.`;
+        }
+      });
+
+    function preview(text, query) {
+      const clean = text.replace(/\s+/g, " ").trim();
+      const i = clean.toLowerCase().indexOf(query.toLowerCase());
+      if (i < 0) return clean.slice(0, 140);
+      const start = Math.max(0, i - 45);
+      return clean.slice(start, start + 160);
+    }
+
+    function renderResults(results) {
+      if (!(searchResults instanceof HTMLElement)) return;
+      searchResults.innerHTML = "";
+      results.slice(0, 30).forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "post-entry";
+        li.innerHTML = `
+          <a href="${item.permalink}" class="search-result-link" aria-label="Open ${item.title}">
+            <header class="entry-header"><h2>${item.title}</h2></header>
+            <div class="entry-content"><p>${item.previewText ?? ""}</p></div>
+          </a>
+        `;
+        searchResults.appendChild(li);
+      });
+    }
+
+    searchInput?.addEventListener("input", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement)) return;
+      const q = target.value.trim().toLowerCase();
+      if (!q) {
+        renderResults([]);
+        if (searchStatus instanceof HTMLElement) searchStatus.textContent = "Type to search posts.";
+        return;
+      }
+      const results = index
+        .filter(
+        (item) => item.title.toLowerCase().includes(q) || item.content.toLowerCase().includes(q),
+        )
+        .map((item) => ({ ...item, previewText: preview(item.content, q) }));
+      renderResults(results);
+      if (searchStatus instanceof HTMLElement) {
+        searchStatus.textContent = results.length
+          ? `${results.length} result(s) for "${target.value}".`
+          : `No results for "${target.value}".`;
+      }
+    });
+  </script>
+</Layout>

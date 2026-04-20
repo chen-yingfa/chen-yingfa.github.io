@@ -1,0 +1,115 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { readingTimeFromText, routeSlugFromId, sortPostsByDate, tagToSlug } from "../../lib/posts";
+
+interface NeighborLink {
+  title: string;
+  href: string;
+}
+
+export async function getStaticPaths() {
+  const posts = sortPostsByDate(await getCollection("lifePosts"));
+  return posts.map((post, index) => ({
+    params: { slug: routeSlugFromId(post.id) },
+    props: {
+      post,
+      previousPost:
+        index > 0
+          ? {
+              title: posts[index - 1].data.title,
+              href: `/life_posts/${routeSlugFromId(posts[index - 1].id)}/`,
+            }
+          : null,
+      nextPost:
+        index < posts.length - 1
+          ? {
+              title: posts[index + 1].data.title,
+              href: `/life_posts/${routeSlugFromId(posts[index + 1].id)}/`,
+            }
+          : null,
+    },
+  }));
+}
+
+const { post, previousPost, nextPost } = Astro.props as {
+  post: CollectionEntry<"lifePosts">;
+  previousPost: NeighborLink | null;
+  nextPost: NeighborLink | null;
+};
+const rendered = await render(post);
+const { Content, headings } = rendered;
+---
+
+<Layout title={post.data.title} bodyClass="" activePath="/life_posts">
+  <article class="post-single">
+    <header class="post-header">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>&nbsp;»&nbsp;<a href="/life_posts/">Life Posts</a>
+      </div>
+      <h1 class="post-title entry-hint-parent">{post.data.title}</h1>
+      <div class="post-meta">
+        <span>
+          {post.data.date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+        </span>
+        &nbsp;·&nbsp;{readingTimeFromText(post.body)}
+      </div>
+    </header>
+    {
+      headings.length > 0 && (
+        <div class="toc">
+          <details>
+            <summary>
+              <span class="details">Table of Contents</span>
+            </summary>
+            <div class="inner">
+              <ul>
+                {headings.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+              </ul>
+            </div>
+          </details>
+        </div>
+      )
+    }
+    <div class="post-content">
+      <Content />
+    </div>
+    {
+      post.data.tags && post.data.tags.length > 0 && (
+        <footer class="post-footer">
+          <ul class="post-tags">
+            {post.data.tags.map((tag) => <li><a href={`/tags/${tagToSlug(tag)}/`}>{tag}</a></li>)}
+          </ul>
+        </footer>
+      )
+    }
+    <nav class="post-nav" aria-label="Post navigation">
+      {
+        previousPost ? (
+          <a class="post-nav-button" href={previousPost.href}>
+            <span>Previous Post</span>
+            <strong>{previousPost.title}</strong>
+          </a>
+        ) : (
+          <span class="post-nav-button disabled">
+            <span>Previous Post</span>
+            <strong>None</strong>
+          </span>
+        )
+      }
+      {
+        nextPost ? (
+          <a class="post-nav-button" href={nextPost.href}>
+            <span>Next Post</span>
+            <strong>{nextPost.title}</strong>
+          </a>
+        ) : (
+          <span class="post-nav-button disabled">
+            <span>Next Post</span>
+            <strong>None</strong>
+          </span>
+        )
+      }
+    </nav>
+  </article>
+</Layout>

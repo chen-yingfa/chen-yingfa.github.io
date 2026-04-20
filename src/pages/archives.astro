@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { routeSlugFromId, sortPostsByDate } from "../lib/posts";
+
+const researchPosts = await getCollection("researchPosts");
+const lifePosts = await getCollection("lifePosts");
+
+const allPosts = sortPostsByDate([
+  ...researchPosts.map((post) => ({ ...post, section: "research_posts" as const })),
+  ...lifePosts.map((post) => ({ ...post, section: "life_posts" as const })),
+]);
+---
+
+<Layout title="Archives" bodyClass="list" activePath="/archives">
+  <header class="page-header">
+    <div class="breadcrumbs">
+      <a href="/">Home</a>
+    </div>
+    <h1>Archives</h1>
+  </header>
+  <div class="archive-year">
+    {
+      allPosts.map((post) => (
+        <div class="archive-entry">
+          <h3 class="archive-entry-title">
+            <a href={`/${post.section}/${routeSlugFromId(post.id)}/`}>{post.data.title}</a>
+          </h3>
+          <div class="archive-meta">
+            {post.data.date.toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Layout>

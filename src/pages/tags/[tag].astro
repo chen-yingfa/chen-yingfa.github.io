@@ -1,0 +1,89 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+import {
+  postExcerpt,
+  postImageUrl,
+  readingTimeFromText,
+  routeSlugFromId,
+  sortPostsByDate,
+  tagToSlug,
+} from "../../lib/posts";
+
+export async function getStaticPaths() {
+  const researchPosts = await getCollection("researchPosts");
+  const lifePosts = await getCollection("lifePosts");
+  const posts = [...researchPosts, ...lifePosts];
+
+  const tagMap = new Map<
+    string,
+    {
+      label: string;
+      posts: Array<(typeof posts)[number] & { section: "research_posts" | "life_posts" }>;
+    }
+  >();
+
+  for (const post of posts) {
+    const section = post.collection === "researchPosts" ? "research_posts" : "life_posts";
+    const tags = post.data.tags ?? [];
+    for (const tag of tags) {
+      const slug = tagToSlug(tag);
+      if (!tagMap.has(slug)) {
+        tagMap.set(slug, { label: tag, posts: [] });
+      }
+      tagMap.get(slug)?.posts.push({ ...post, section });
+    }
+  }
+
+  return [...tagMap.entries()].map(([tag, value]) => ({
+    params: { tag },
+    props: {
+      tagLabel: value.label,
+      posts: sortPostsByDate(value.posts),
+    },
+  }));
+}
+
+const { tagLabel, posts } = Astro.props as {
+  tagLabel: string;
+  posts: Array<{
+    collection: "researchPosts" | "lifePosts";
+    id: string;
+    body: string;
+    data: {
+      title: string;
+      date: Date;
+      author?: string;
+      cover?: { image?: string };
+      thumbnail?: string;
+    };
+    section: "research_posts" | "life_posts";
+  }>;
+};
+---
+
+<Layout title={`Tag: ${tagLabel}`} bodyClass="list">
+  <header class="page-header">
+    <div class="breadcrumbs">
+      <a href="/">Home</a>
+    </div>
+    <h1>Tag: {tagLabel}</h1>
+  </header>
+  {
+    posts.map((post) => (
+      <PostCard
+        href={`/${post.section}/${routeSlugFromId(post.id)}/`}
+        title={post.data.title}
+        excerpt={postExcerpt(post.body)}
+        date={post.data.date.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })}
+        readingTime={readingTimeFromText(post.body)}
+        imageUrl={postImageUrl(post.section, routeSlugFromId(post.id), post.data.cover?.image ?? post.data.thumbnail)}
+      />
+    ))
+  }
+</Layout>
