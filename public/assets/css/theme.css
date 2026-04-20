@@ -109,14 +109,46 @@ a:hover {
 }
 
 .logo > a {
+  font-family:
+    "Cormorant Garamond",
+    "Noto Serif SC",
+    "Times New Roman",
+    Georgia,
+    serif;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.22rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
   color: var(--text);
-  letter-spacing: -0.01em;
+}
+
+/* Subtle metallic gradient on the title; solid color fallback where clip is unsupported */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .logo > a {
+    background-image: linear-gradient(
+      118deg,
+      var(--text) 0%,
+      var(--text-muted) 48%,
+      var(--text) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.45s ease;
+  }
 }
 
 .logo > a:hover {
   text-decoration: none;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .logo > a:hover {
+    background-position: 100% 50%;
+  }
 }
 
 #menu {
