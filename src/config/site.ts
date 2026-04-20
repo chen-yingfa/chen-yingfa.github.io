@@ -7,7 +7,7 @@ export const siteConfig = {
     { label: "Blog", href: "/research_posts" },
     { label: "生活记录", href: "/life_posts" },
     { label: "About Me", href: "/about" },
-    { label: "Search", href: "/search" },
+    { label: "Search", href: "/search", icon: "mingcute:search-line" },
   ],
   profile: {
     title: "Yingfa Chen - 陈英发",

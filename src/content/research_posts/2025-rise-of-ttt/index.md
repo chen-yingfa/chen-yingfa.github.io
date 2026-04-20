@@ -1,8 +1,10 @@
 ---
+
 author: 陈英发 Yingfa Chen
 title: The Rise of Test-Time Training
 date: 2025-07-07 20:11:00
 categories:
+
 - Research
 tags:
 - research
@@ -10,13 +12,12 @@ tags:
 - neural-networks
 - language models
 - test-time-learning
+
 ---
 
 **Abstract**:
 
 The main idea in test-time training (TTT) ([Sun et al. 2024](https://arxiv.org/pdf/2407.04620)) is that a model with fixed parameters produces the supervision for another network that is updated during test-time (or inference-time). This article first reviews the TTT paper. Then, we discuss the problem with TTT and how LaCT addresses them, resulting in a powerful attention alternative that balances efficiency and performance.
-
-<!-- more -->
 
 > Currently, "test-time training" is an overloaded term with multiple meanings. In this article, we use the term to refer to the test-time training paradigm proposed in [Sun et al. 2024](https://arxiv.org/pdf/2407.04620), which is a framework for recurrent architectures for sequence modeling.
 
@@ -30,9 +31,9 @@ To unify the notation, we formulate the popular attention mechanism as follows:
 
 $$
 \begin{align*}
-\mathbf q_t &= \mathbf x_t \mathbf W_q \in \mathbb R ^d \\
-\mathbf k_t &= \mathbf x_t \mathbf W_k \in \mathbb R ^d \\
-\mathbf v_t &= \mathbf x_t \mathbf W_v \in \mathbb R ^d \\
+\mathbf q_t &= \mathbf x_t \mathbf W_q \in \mathbb R ^d 
+\mathbf k_t &= \mathbf x_t \mathbf W_k \in \mathbb R ^d 
+\mathbf v_t &= \mathbf x_t \mathbf W_v \in \mathbb R ^d 
 \mathbf o_t &= \text{softmax}\left(\frac{\mathbf q_t \mathbf K_t^T}{\sqrt{d}}\right) \mathbf V_t \in \mathbb R ^d
 \end{align*}
 $$
@@ -41,12 +42,12 @@ where $\mathbf x_t \in \mathbb R ^{d_h}$ is the input at time $t$, $d$ is the he
 
 $$
 \mathbf K_t = \begin{bmatrix}
-\mathbf k_1 \\
-\vdots \\
+\mathbf k_1 
+\vdots 
 \mathbf k_t
 \end{bmatrix}, \mathbf V_t = \begin{bmatrix}
-\mathbf v_1 \\
-\vdots \\
+\mathbf v_1 
+\vdots 
 \mathbf v_t
 \end{bmatrix} \in \mathbb R ^{t \times d}
 $$
@@ -67,10 +68,10 @@ In linear attention ([Katharopoulos et al. 2020](https://arxiv.org/abs/2006.1623
 
 $$
 \begin{align*}
-\mathbf y_t &= \cancel{\text{softmax}}\left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t \\
-\rightarrow \mathbf y_t &= \left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t \\
-&= \mathbf q_t \left(\mathbf K_t^T \mathbf V_t \right) \\
-&= \mathbf q_t \underbrace{\sum_{i=1}^N \mathbf k_i^T \mathbf v_i}_{\text{sum of outer products}} \\
+\mathbf y_t &= \cancel{\text{softmax}}\left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t 
+\rightarrow \mathbf y_t &= \left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t 
+&= \mathbf q_t \left(\mathbf K_t^T \mathbf V_t \right) 
+&= \mathbf q_t \underbrace{\sum_{i=1}^N \mathbf k_i^T \mathbf v_i}_{\text{sum of outer products}} 
 \end{align*}
 $$
 
@@ -78,8 +79,8 @@ This can be written as a recurrent equation:
 
 $$
 \begin{align*}
-\mathbf S_t &= \mathbf S_{t-1} + \mathbf k_t^T \mathbf v_t \in\mathbb R^{d\times d} & \text{(Update rule)} \\
-\mathbf y_t &= \mathbf q_t \mathbf S_t \in \mathbb R ^d & \text{(Query rule)} \\
+\mathbf S_t &= \mathbf S_{t-1} + \mathbf k_t^T \mathbf v_t \in\mathbb R^{d\times d} & \text{(Update rule)} 
+\mathbf y_t &= \mathbf q_t \mathbf S_t \in \mathbb R ^d & \text{(Query rule)} 
 \end{align*}
 $$
 
@@ -87,12 +88,14 @@ $$
 
 In test-time training (TTT), the recurrent state is replaced with a neural network $f(\cdot, \mathbf W_t)$, parameterized by $\mathbf W_t$, which we call the *fast weight*. The following table summarizes the update and query rules of different attention variants and DeltaNet ([Schlag et al. 2021](https://arxiv.org/abs/2102.11174)) and TTT, which are two popular RNN variants. We will soon see that both linear attention and DeltaNet are special cases of TTT.
 
-| Model | Update Rule | Query Rule | State Size |
-| --- | --- | --- | --- |
-| Attention | $\mathbf K_t\text{.append}(\mathbf k_t)$<br>$\mathbf V_t\text{.append}(\mathbf v_t)$ | $\mathbf y_t = \text{softmax}\left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t$ | $2 td$ |
-| Linear Attention | $\mathbf S_t = \mathbf S_{t-1} + \mathbf k_t^T \mathbf v_t$ | $\mathbf y_t = \mathbf q_t \mathbf S_t$ | $d^2$ |
-| DeltaNet | $\mathbf S_t = \mathbf S_{t-1} - \beta \mathbf k_t^T(\mathbf k_t\mathbf S_{t-1} - \mathbf v_t)$ | $\mathbf y_t = \mathbf q_t \mathbf S_t$ | $d^2$ |
-| TTT | $\mathbf W_t= \mathbf W_{t-1} - \eta_t \nabla_{\mathbf W_{t-1}} \mathcal L$ | $\mathbf y_t = f(\mathbf q_t, \mathbf W_t)$ | Arbitrary |
+
+| Model            | Update Rule                                                                                     | Query Rule                                                                        | State Size |
+| ---------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------- |
+| Attention        | $\mathbf K_t\text{.append}(\mathbf k_t)$ $\mathbf V_t\text{.append}(\mathbf v_t)$               | $\mathbf y_t = \text{softmax}\left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t$ | $2 td$     |
+| Linear Attention | $\mathbf S_t = \mathbf S_{t-1} + \mathbf k_t^T \mathbf v_t$                                     | $\mathbf y_t = \mathbf q_t \mathbf S_t$                                           | $d^2$      |
+| DeltaNet         | $\mathbf S_t = \mathbf S_{t-1} - \beta \mathbf k_t^T(\mathbf k_t\mathbf S_{t-1} - \mathbf v_t)$ | $\mathbf y_t = \mathbf q_t \mathbf S_t$                                           | $d^2$      |
+| TTT              | $\mathbf W_t= \mathbf W_{t-1} - \eta_t \nabla_{\mathbf W_{t-1}} \mathcal L$                     | $\mathbf y_t = f(\mathbf q_t, \mathbf W_t)$                                       | Arbitrary  |
+
 
 ## Test-Time Training Update Rule
 
@@ -109,10 +112,10 @@ Consider the simplest case where the fast weight is a linear model (i.e., $f(\ma
 
 $$
 \begin{align*}
-f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} \\
-\mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t \mathbf W_{t-1} \mathbf v_t^T \\
-\Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t^T \mathbf v_t \\
-\Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) \\
+f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} 
+\mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t \mathbf W_{t-1} \mathbf v_t^T 
+\Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t^T \mathbf v_t 
+\Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) 
 &= \mathbf W_{t-1} + \eta \mathbf k_t^T \mathbf v_t
 \end{align*}
 $$
@@ -130,7 +133,7 @@ f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} \\
 \Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= \mathbf k_t^T\left(\mathbf k_t \mathbf W_{t-1} - \mathbf v_t\right) \\
 \Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) \\
 &= \mathbf W_{t-1} - \eta \mathbf k_t^T(\mathbf k_t \mathbf W_{t-1} - \mathbf v_t) \\
-&= \mathbf W_{t-1} \underbrace{- \eta \mathbf k_t^T \mathbf k_t \mathbf W_{t-1}}_{\text{forgetting}} \underbrace{+ \eta \mathbf k_t^T \mathbf v_t}_{\text{inserting}} \\
+&= \mathbf W_{t-1} \underbrace{- \eta \mathbf k_t^T \mathbf k_t \mathbf W_{t-1}}_{\text{forgetting}} \underbrace{+ \eta \mathbf k_t^T \mathbf v_t}_{\text{inserting}}
 \end{align*}
 $$
 
@@ -144,9 +147,9 @@ To make it parallelizable, they use a *mini-batch gradient descent* trick: The s
 
 $$
 \begin{align*}
-\mathbf W_t &= \mathbf W_{t-1} - \eta \nabla _{W_{t-1}}\mathcal L(\mathbf W_{t-1}, \mathbf k_t, \mathbf v_t) \\
+\mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}}\mathcal L(\mathbf W_{t-1}, \mathbf k_t, \mathbf v_t) \\
 \rightarrow
-\mathbf W_t &= \mathbf W_{\textcolor{red}{t'}} - \eta \sum_{i=t'}^{t} \nabla _{\mathbf W_{\textcolor{red}{t'}}} \mathcal L(\mathbf k_{\textcolor{red}{i}}, \mathbf v_{\textcolor{red}{i}}, \mathbf W_{\textcolor{red}{t'}})
+\mathbf W_t &= \mathbf W_{\textcolor{red}{t'}} - \eta \sum_{i=t'}^{t} \nabla_{\mathbf W_{\textcolor{red}{t'}}} \mathcal L(\mathbf k_{\textcolor{red}{i}}, \mathbf v_{\textcolor{red}{i}}, \mathbf W_{\textcolor{red}{t'}})
 \end{align*}
 $$
 where $t' = t - t \text{ mod } B$ is the time step at the beginning of the chunk.
@@ -169,10 +172,10 @@ Thus, in practice, the arithmetic intensity of TTT is bounded by the chunk size 
 
 LaCT ([Zhang et al., 2025](https://arxiv.org/abs/2505.23884)) increases the arithmetic intensity of TTT by increasing the chunk size from 16 to 2048 or even 1M tokens. However, directly increasing the chunk size results in poor modeling of local dependencies. Thus, LaCT incorporates sliding window attention layer for handling local dependencies. In practice, the SWA and TTT layers share the same set of QKV.
 
-![LaCT architecture](./lact-arch.png "The architecture of LaCT.")
+LaCT architecture
 
 (to be continued...)
 
 ---
 
-Thanks for reading. If you want further discussions, reach me at chenyingfa1999@gmail.com.
+Thanks for reading. If you want further discussions, reach me at [chenyingfa1999@gmail.com](mailto:chenyingfa1999@gmail.com).

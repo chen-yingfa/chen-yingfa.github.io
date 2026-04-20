@@ -58,59 +58,71 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
         <div class="logo">
           <a href="/" accesskey="h" title={`${siteConfig.title} (Alt + H)`}>{siteConfig.title}</a>
           <div class="logo-switches">
-            <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-              <svg
-                id="moon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path>
-              </svg>
-              <svg
-                id="sun"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+              <iconify-icon icon="mingcute:menu-line"></iconify-icon>
             </button>
           </div>
         </div>
-        <ul id="menu">
-          {
-            siteConfig.navItems.map((item) => (
-              <li>
-                <a href={item.href}>
-                  <span class={normalize(item.href) === normalize(currentPath) ? "active" : ""}>
-                    {item.label}
-                  </span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+        <div class="nav-right">
+          <ul id="menu">
+            {
+              siteConfig.navItems.map((item) => (
+                <li>
+                  <a href={item.href} aria-label={item.label} title={item.label}>
+                    <span class={normalize(item.href) === normalize(currentPath) ? "active" : ""}>
+                      {item.icon ? (
+                        <>
+                          <iconify-icon class="menu-icon" icon={item.icon}></iconify-icon>
+                          <span class="sr-only">{item.label}</span>
+                        </>
+                      ) : (
+                        item.label
+                      )}
+                    </span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+            <svg
+              id="moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path>
+            </svg>
+            <svg
+              id="sun"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
     <main class="main container">
@@ -135,6 +147,51 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
         };
       }
 
+      const nav = document.querySelector(".nav");
+      const menuToggle = document.getElementById("menu-toggle");
+      const portraitMenuQuery = window.matchMedia("(max-width: 760px) and (orientation: portrait)");
+      const closeMobileMenu = () => {
+        if (!nav || !menuToggle) return;
+        nav.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      };
+
+      menuToggle?.addEventListener("click", (event) => {
+        if (!nav || !menuToggle || !portraitMenuQuery.matches) return;
+        event.stopPropagation();
+        const isOpen = nav.classList.toggle("menu-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      menu?.querySelectorAll("a").forEach((anchor) => {
+        anchor.addEventListener("click", () => {
+          if (portraitMenuQuery.matches) {
+            closeMobileMenu();
+          }
+        });
+      });
+
+      portraitMenuQuery.addEventListener("change", (event) => {
+        if (!event.matches) {
+          closeMobileMenu();
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!nav || !portraitMenuQuery.matches) return;
+        const target = event.target;
+        if (!(target instanceof Node)) return;
+        if (!nav.contains(target)) {
+          closeMobileMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+
       const topLink = document.getElementById("top-link");
       window.addEventListener("scroll", () => {
         if (!topLink) return;
@@ -145,6 +202,14 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
           topLink.style.visibility = "hidden";
           topLink.style.opacity = "0";
         }
+      });
+
+      topLink?.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
 
       const themeToggle = document.getElementById("theme-toggle");
