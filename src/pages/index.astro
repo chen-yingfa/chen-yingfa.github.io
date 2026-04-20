@@ -11,24 +11,30 @@ import { siteConfig } from "../config/site";
         src={siteConfig.profile.imageUrl}
         alt={siteConfig.profile.imageAlt}
         title={siteConfig.profile.imageAlt}
-        width="120"
-        height="120"
+        width="180"
+        height="180"
       />
       <h1>{siteConfig.profile.title}</h1>
       <span set:html={siteConfig.profile.subtitle}></span>
       <div class="social-icons">
         {
-          siteConfig.profile.socialLinks.map((link) => (
-            <a href={link.href} target="_blank" rel="noopener noreferrer me" title={link.label} aria-label={link.label}>
-              <iconify-icon icon={link.icon}></iconify-icon>
-            </a>
-          ))
+          siteConfig.profile.socialLinks.map((link) => {
+            const hideText = link.label === "X" || link.label === "Zhihu" || link.label === "Xiaohongshu";
+            return (
+              <a
+                class:list={{ "icon-only": hideText }}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer me"
+                title={link.label}
+                aria-label={link.label}
+              >
+                <iconify-icon icon={link.icon}></iconify-icon>
+                {!hideText && <span>{link.label}</span>}
+              </a>
+            );
+          })
         }
-      </div>
-      <div class="buttons">
-        <a class="button" href={siteConfig.profile.button.href} rel="noopener" title={siteConfig.profile.button.label}>
-          <span class="button-inner">{siteConfig.profile.button.label}</span>
-        </a>
       </div>
     </div>
   </div>

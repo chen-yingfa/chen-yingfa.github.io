@@ -11,7 +11,9 @@ const { Content } = await render(about);
   <article class="post-single">
     <header class="post-header">
       <div class="breadcrumbs">
-        <a href="/">Home</a>&nbsp;»&nbsp;<a href="/about">About</a>
+        <a href="/">Home</a>
+        <span class="crumb-separator" aria-hidden="true"><iconify-icon icon="mingcute:right-line"></iconify-icon></span>
+        <a href="/about">About</a>
       </div>
       <h1 class="post-title entry-hint-parent">{about.data.title}</h1>
     </header>

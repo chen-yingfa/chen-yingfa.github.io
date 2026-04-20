@@ -15,17 +15,17 @@ export async function getStaticPaths() {
     props: {
       post,
       previousPost:
-        index > 0
-          ? {
-              title: posts[index - 1].data.title,
-              href: `/research_posts/${routeSlugFromId(posts[index - 1].id)}/`,
-            }
-          : null,
-      nextPost:
         index < posts.length - 1
           ? {
               title: posts[index + 1].data.title,
               href: `/research_posts/${routeSlugFromId(posts[index + 1].id)}/`,
+            }
+          : null,
+      nextPost:
+        index > 0
+          ? {
+              title: posts[index - 1].data.title,
+              href: `/research_posts/${routeSlugFromId(posts[index - 1].id)}/`,
             }
           : null,
     },
@@ -45,7 +45,9 @@ const { Content, headings } = rendered;
   <article class="post-single">
     <header class="post-header">
       <div class="breadcrumbs">
-        <a href="/">Home</a>&nbsp;»&nbsp;<a href="/research_posts/">Research Posts</a>
+        <a href="/">Home</a>
+        <span class="crumb-separator" aria-hidden="true"><iconify-icon icon="mingcute:right-line"></iconify-icon></span>
+        <a href="/research_posts/">Research Posts</a>
       </div>
       <h1 class="post-title entry-hint-parent">{post.data.title}</h1>
       <div class="post-meta">

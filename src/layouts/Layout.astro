@@ -155,7 +155,7 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
 
       const nav = document.querySelector(".nav");
       const menuToggle = document.getElementById("menu-toggle");
-      const portraitMenuQuery = window.matchMedia("(max-width: 760px) and (orientation: portrait)");
+      const portraitMenuQuery = window.matchMedia("(max-width: 640px) and (orientation: portrait)");
       const closeMobileMenu = () => {
         if (!nav || !menuToggle) return;
         nav.classList.remove("menu-open");

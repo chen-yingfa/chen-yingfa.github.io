@@ -25,6 +25,7 @@ export function postExcerpt(markdown: string): string {
     .replace(/\\[a-zA-Z]+(?:\{[^}]*\})*/g, " ")
     .replace(/```[\s\S]*?```/g, " ")
     .replace(/`[^`]*`/g, " ")
+    .replace(/\^\[[\s\S]*?\]/g, " ")
     .replace(/\!\[[^\]]*\]\([^)]+\)/g, " ")
     .replace(/\[[^\]]+\]\([^)]+\)/g, "$1")
     .replace(/<[^>]+>/g, " ")

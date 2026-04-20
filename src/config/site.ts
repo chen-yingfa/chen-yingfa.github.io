@@ -10,7 +10,7 @@ export const siteConfig = {
     { label: "Search", href: "/search", icon: "mingcute:search-line" },
   ],
   profile: {
-    title: "Yingfa Chen - 陈英发",
+    title: "Yingfa Chen － 陈英发",
     subtitle: `2nd year PhD student at Tsinghua University, advised by Prof. Zhiyuan Liu. Doing research in CS, NLP. Interested in LLMs and long-context modeling.
 <br><br>
 <iconify-icon icon="mingcute:mail-line"></iconify-icon> <strong>Email:</strong> <a href="mailto:chenyingfa1999@gmail.com">chenyingfa1999@gmail.com</a>
