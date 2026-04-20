@@ -26,8 +26,14 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
     <link rel="stylesheet" href="/assets/css/theme.css" />
     <script is:inline>
       MathJax = {
+        loader: {
+          load: ["[tex]/cancel", "[tex]/color"],
+        },
         tex: {
           inlineMath: [["$", "$"], ["\\(", "\\)"]],
+          packages: {
+            "[+]": ["cancel", "color"],
+          },
         },
         options: {
           ignoreHtmlClass: "no-mathjax",

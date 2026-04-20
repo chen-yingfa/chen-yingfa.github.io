@@ -1,46 +1,63 @@
-# Astro Starter Kit: Basics
+# chen-yingfa.github.io (Astro)
 
-```sh
-npm create astro@latest -- --template basics
+Personal website and blog for Yingfa Chen, rebuilt with Astro.
+
+## Tech Stack
+
+- [Astro](https://astro.build/)
+- `@astrojs/sitemap`
+- Shiki syntax highlighting (light/dark themes)
+- MathJax for equations in posts
+
+## Requirements
+
+- Node.js `>= 22.12.0`
+- npm
+
+## Local Development
+
+Run from the repository root:
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Useful scripts:
 
-## 🚀 Project Structure
+- `npm run dev` - start development server (`http://localhost:4321`)
+- `npm run build` - create production build in `dist/`
+- `npm run preview` - preview production build locally
 
-Inside of your Astro project, you'll see the following folders and files:
+## Content Structure
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Main content lives in `src/content/` and is validated by `src/content.config.ts`.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- `src/content/research_posts/` - research blog posts
+- `src/content/life_posts/` - life posts
+- `src/content/pages/` - static pages (`about`, `archives`, `search`)
 
-## 🧞 Commands
+Site-wide settings are in:
 
-All commands are run from the root of the project, from a terminal:
+- `src/config/site.ts` - title, nav, profile, social links
+- `public/assets/css/theme.css` - global theme and component styling
+- `src/layouts/Layout.astro` - shared layout, MathJax, theme toggle, mobile nav
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Writing Posts
 
-## 👀 Want to learn more?
+- Research posts are folder-based (`.../post-slug/index.md`), and can include local images.
+- Life posts can be either `index.md` in a folder or a single `.md` file.
+- Recommended frontmatter fields:
+  - `title`
+  - `date`
+  - `tags`
+  - `categories`
+  - optional `cover.image` or `thumbnail`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Deployment
+
+This repository is configured for the public site URL:
+
+- `https://chen-yingfa.github.io`
+
+Build output is generated to `dist/`. Deploy by publishing `dist/` with your preferred workflow (for example, GitHub Pages Actions).
