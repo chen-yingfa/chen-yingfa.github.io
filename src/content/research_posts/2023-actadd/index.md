@@ -1,9 +1,11 @@
 ---
+
 author: 陈英发 Yingfa Chen
 title: Activation Addition (ActAdd)
 date: 2023-10-07 17:55:33
 categories: Paper Note
 tags:
+
 - english
 - ai-alignment
 - llm
@@ -14,6 +16,7 @@ tags:
 - representation-engineering
 - fine-tuning
 - parameter-efficient-tuning
+
 ---
 
 [Paper](https://arxiv.org/abs/2308.10248)
@@ -26,7 +29,7 @@ Summary:
 - Steering vectors are computed by taking the activation differences that result from pairs of prompts. The vectors are added as bias during inference.
 - ActAdd provides control over high-level properties of the output, and preserves off-target model performance, and requires little computational and implementational costs.
 
-<!-- more -->
+
 
 > The recently popular [representation engineering paper](https://arxiv.org/abs/2310.01405) (RepE) seems to be largely inspired by this work.
 
@@ -49,13 +52,13 @@ In contrast, ActAdd uses the difference between prompt pairs instead.
 
 The method is really, really simple. Simply manually contruct a pair of prompts, and compute the difference between the activations. Then, add the difference as a bias term to the activations during inference. The algorithm is as follows.
 
-![ActAdd method](./alg.png "The algorithm of ActAdd")
+ActAdd method
 
 As shown, this method has two hyperparameters, the amount of drift $c$, and the modified layer $l$, and requires two manually constructed prompts $(p_+, p_-)$. How to more effectively construct these prompts is not discussed in this paper.
 
 ## Result
 
-![Main result](./result.png "Main results.")
+Main result
 
 ## My Thoughts
 

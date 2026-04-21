@@ -23,7 +23,7 @@ export const siteConfig = {
     socialLinks: [
       { label: "GitHub", href: "https://github.com/chen-yingfa", icon: "mingcute:github-line" },
       {
-        label: "GoogleScholar",
+        label: "Google Scholar",
         href: "https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en",
         icon: "mingcute:book-6-line",
       },

@@ -602,7 +602,9 @@ body.dark #sun {
   color: var(--text);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  padding: 2rem 0.8rem 0.8rem;
+  /* Tight top; extra right padding reserves the copy button column so we do not
+     need a tall top pad to clear it vertically */
+  padding: 0.7rem 2.65rem 0.8rem 0.8rem;
   overflow-x: auto;
   font-size: 0.82rem;
   line-height: 1.5;
@@ -617,30 +619,22 @@ body.dark .post-content pre {
   line-height: 1.5;
 }
 
+/* Shiki sets per-token colors via inline styles; do not set span { color } here —
+   !important would override those inlines and flatten the whole block to one color. */
 .post-content pre.astro-code {
   background-color: var(--shiki-light-bg, var(--surface-soft)) !important;
-  color: var(--shiki-light, var(--text)) !important;
-}
-
-.post-content pre.astro-code span {
-  color: var(--shiki-light) !important;
 }
 
 body.dark .post-content pre.astro-code {
   background-color: var(--shiki-dark-bg, #1e1e1e) !important;
-  color: var(--shiki-dark, #e6edf3) !important;
-}
-
-body.dark .post-content pre.astro-code span {
-  color: var(--shiki-dark) !important;
 }
 
 .copy-code {
   position: absolute;
   top: 0.45rem;
   right: 0.45rem;
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.85rem;
+  height: 1.85rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -650,7 +644,7 @@ body.dark .post-content pre.astro-code span {
   color: var(--text);
   border-radius: 6px;
   padding: 0;
-  font-size: 0.95rem;
+  font-size: 1.08rem;
   cursor: pointer;
   z-index: 2;
 }
@@ -667,7 +661,7 @@ body.dark .post-content pre.astro-code span {
 .post-tags li a {
   display: inline-flex;
   font-size: 0.82rem;
-  background: var(--surface-soft);
+  background: color-mix(in srgb, var(--surface-soft) 35%, var(--bg));
   border: 1px solid var(--line);
   color: var(--text-muted);
   border-radius: 999px;
@@ -694,11 +688,16 @@ body.dark .post-content pre.astro-code span {
   gap: 0.2rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  background: var(--surface-soft-strong);
+  /* Blend panel tint toward page bg so blocks don’t float above it */
+  background: color-mix(in srgb, var(--surface-soft-strong) 34%, var(--bg));
   color: var(--text);
   padding: 0.55rem 0.65rem;
   text-decoration: none;
   min-height: 4rem;
+}
+
+body:not(.dark) .post-nav-button {
+  background: var(--bg);
 }
 
 .post-nav-button span {
@@ -796,7 +795,8 @@ body.dark #searchInput {
   padding-top: 1.35rem;
   padding-bottom: 1rem;
   border-top: 1px solid var(--line);
-  color: var(--text-muted);
+  /* Softer than --text-muted: blend toward page bg so the line reads as secondary */
+  color: color-mix(in srgb, var(--text-muted) 62%, var(--bg));
   font-size: 0.86rem;
   display: block;
   text-align: center;
