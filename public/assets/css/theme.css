@@ -553,6 +553,11 @@ body.dark #sun {
   opacity: 0.85;
 }
 
+/* MathJax CHTML (build-time): match body text scale but read a bit larger */
+.post-content mjx-container.MathJax {
+  font-size: 1.09em;
+}
+
 .post-content img {
   display: block;
   width: auto;

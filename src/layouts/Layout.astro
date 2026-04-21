@@ -24,29 +24,6 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
     <meta name="description" content={pageDescription} />
     <title>{pageTitle}</title>
     <link rel="stylesheet" href="/assets/css/theme.css" />
-    <script is:inline>
-      MathJax = {
-        loader: {
-          load: ["[tex]/cancel", "[tex]/color"],
-        },
-        tex: {
-          inlineMath: [["$", "$"], ["\\(", "\\)"]],
-          packages: {
-            "[+]": ["cancel", "color"],
-          },
-        },
-        options: {
-          ignoreHtmlClass: "no-mathjax",
-        },
-      };
-    </script>
-    <script
-      is:inline
-      type="text/javascript"
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
     <script is:inline src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
   <body class={bodyClass} id="top">

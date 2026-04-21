@@ -31,9 +31,9 @@ To unify the notation, we formulate the popular attention mechanism as follows:
 
 $$
 \begin{align*}
-\mathbf q_t &= \mathbf x_t \mathbf W_q \in \mathbb R ^d \\\\%
-\mathbf k_t &= \mathbf x_t \mathbf W_k \in \mathbb R ^d \\\\%
-\mathbf v_t &= \mathbf x_t \mathbf W_v \in \mathbb R ^d \\\\%
+\mathbf q_t &= \mathbf x_t \mathbf W_q \in \mathbb R ^d \\
+\mathbf k_t &= \mathbf x_t \mathbf W_k \in \mathbb R ^d \\
+\mathbf v_t &= \mathbf x_t \mathbf W_v \in \mathbb R ^d \\
 \mathbf o_t &= \text{softmax}\left(\frac{\mathbf q_t \mathbf K_t^T}{\sqrt{d}}\right) \mathbf V_t \in \mathbb R ^d
 \end{align*}
 $$
@@ -42,12 +42,12 @@ where $\mathbf x_t \in \mathbb R ^{d_h}$ is the input at time $t$, $d$ is the he
 
 $$
 \mathbf K_t = \begin{bmatrix}
-\mathbf k_1 \\\\%
-\vdots \\\\%
+\mathbf k_1 \\
+\vdots \\
 \mathbf k_t
 \end{bmatrix}, \mathbf V_t = \begin{bmatrix}
-\mathbf v_1 \\\\%
-\vdots \\\\%
+\mathbf v_1 \\
+\vdots \\
 \mathbf v_t
 \end{bmatrix} \in \mathbb R ^{t \times d}
 $$
@@ -68,10 +68,10 @@ In linear attention ([Katharopoulos et al. 2020](https://arxiv.org/abs/2006.1623
 
 $$
 \begin{align*}
-\mathbf y_t &= \cancel{\text{softmax}}\left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t \\\\%
-\rightarrow \mathbf y_t &= \left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t \\\\%
-&= \mathbf q_t \left(\mathbf K_t^T \mathbf V_t \right) \\\\%
-&= \mathbf q_t \underbrace{\sum_{i=1}^N \mathbf k_i^T \mathbf v_i}_{\text{sum of outer products}} 
+\mathbf y_t &= \cancel{\text{softmax}}\left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t \\
+\rightarrow \mathbf y_t &= \left(\mathbf q_t \mathbf K_t^T \right) \mathbf V_t \\
+&= \mathbf q_t \left(\mathbf K_t^T \mathbf V_t \right) \\
+&= \mathbf q_t \underbrace{\sum_{i=1}^N \mathbf k_i^T \mathbf v_i}_{\text{sum of outer products}}
 \end{align*}
 $$
 
@@ -79,8 +79,8 @@ This can be written as a recurrent equation:
 
 $$
 \begin{align*}
-\mathbf S_t &= \mathbf S_{t-1} + \mathbf k_t^T \mathbf v_t \in\mathbb R^{d\times d} & \text{(Update rule)} \\\\%
-\mathbf y_t &= \mathbf q_t \mathbf S_t \in \mathbb R ^d & \text{(Query rule)} 
+\mathbf S_t &= \mathbf S_{t-1} + \mathbf k_t^T \mathbf v_t \in\mathbb R^{d\times d} & \text{(Update rule)} \\
+\mathbf y_t &= \mathbf q_t \mathbf S_t \in \mathbb R ^d & \text{(Query rule)}
 \end{align*}
 $$
 
@@ -112,10 +112,10 @@ Consider the simplest case where the fast weight is a linear model (i.e., $f(\ma
 
 $$
 \begin{align*}
-f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} \\\\%
-\mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t \mathbf W_{t-1} \mathbf v_t^T \\\\%
-\Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t^T \mathbf v_t \\\\%
-\Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) \\\\%
+f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} \\
+\mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t \mathbf W_{t-1} \mathbf v_t^T \\
+\Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= -\mathbf k_t^T \mathbf v_t \\
+\Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) \\
 &= \mathbf W_{t-1} + \eta \mathbf k_t^T \mathbf v_t
 \end{align*}
 $$
@@ -128,11 +128,11 @@ If $f$ is a linear model and the loss function is the MSE loss, we get the well-
 
 $$
 \begin{align*}
-f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} \\\\%
-\mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= \frac 1 2 \left\lVert \mathbf k_t \mathbf W_{t-1} - \mathbf v_t \right\rVert_2^2 \\\\%
-\Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= \mathbf k_t^T\left(\mathbf k_t \mathbf W_{t-1} - \mathbf v_t\right) \\\\%
-\Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) \\\\%
-&= \mathbf W_{t-1} - \eta \mathbf k_t^T(\mathbf k_t \mathbf W_{t-1} - \mathbf v_t) \\\\%
+f(\mathbf k_t, \mathbf W_{t-1}) &= \mathbf k_t \mathbf W_{t-1} \\
+\mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= \frac 1 2 \left\lVert \mathbf k_t \mathbf W_{t-1} - \mathbf v_t \right\rVert_2^2 \\
+\Rightarrow \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) &= \mathbf k_t^T\left(\mathbf k_t \mathbf W_{t-1} - \mathbf v_t\right) \\
+\Rightarrow \mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}} \mathcal L(\mathbf k_t, \mathbf v_t, \mathbf W_{t-1}) \\
+&= \mathbf W_{t-1} - \eta \mathbf k_t^T(\mathbf k_t \mathbf W_{t-1} - \mathbf v_t) \\
 &= \mathbf W_{t-1} \underbrace{- \eta \mathbf k_t^T \mathbf k_t \mathbf W_{t-1}}_{\text{forgetting}} \underbrace{+ \eta \mathbf k_t^T \mathbf v_t}_{\text{inserting}}
 \end{align*}
 $$
@@ -147,9 +147,8 @@ To make it parallelizable, they use a *mini-batch gradient descent* trick: The s
 
 $$
 \begin{align*}
-\mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}}\mathcal L(\mathbf W_{t-1}, \mathbf k_t, \mathbf v_t) \\\\%
-\rightarrow \\\\%
-\mathbf W_t &= \mathbf W_{\textcolor{red}{t'}} - \eta \sum_{i=t'}^{t} \nabla_{\mathbf W_{\textcolor{red}{t'}}} \mathcal L(\mathbf k_{\textcolor{red}{i}}, \mathbf v_{\textcolor{red}{i}}, \mathbf W_{\textcolor{red}{t'}})
+\mathbf W_t &= \mathbf W_{t-1} - \eta \nabla_{\mathbf W_{t-1}}\mathcal L(\mathbf W_{t-1}, \mathbf k_t, \mathbf v_t) \\
+\rightarrow \quad \mathbf W_t &= \mathbf W_{\textcolor{red}{t'}} - \eta \sum_{i=t'}^{t} \nabla_{\mathbf W_{\textcolor{red}{t'}}} \mathcal L(\mathbf k_{\textcolor{red}{i}}, \mathbf v_{\textcolor{red}{i}}, \mathbf W_{\textcolor{red}{t'}})
 \end{align*}
 $$
 where $t' = t - t \text{ mod } B$ is the time step at the beginning of the chunk.
