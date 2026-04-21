@@ -592,6 +592,10 @@ body.dark #sun {
 .post-content td {
   border: 1px solid var(--line);
   padding: 0.45rem 0.6rem;
+}
+
+.post-content th:not([align]):not([style*="text-align"]),
+.post-content td:not([align]):not([style*="text-align"]) {
   text-align: left;
 }
 
@@ -623,14 +627,18 @@ body.dark .post-content pre {
   line-height: 1.5;
 }
 
-/* Shiki sets per-token colors via inline styles; do not set span { color } here —
-   !important would override those inlines and flatten the whole block to one color. */
+/* Keep light mode token colors from inline styles; don't force a single span color. */
 .post-content pre.astro-code {
   background-color: var(--shiki-light-bg, var(--surface-soft)) !important;
 }
 
 body.dark .post-content pre.astro-code {
   background-color: var(--shiki-dark-bg, #1e1e1e) !important;
+}
+
+/* In dark mode, use each token's Shiki dark color from inline `--shiki-dark`. */
+body.dark .post-content pre.astro-code span {
+  color: var(--shiki-dark) !important;
 }
 
 .copy-code {
