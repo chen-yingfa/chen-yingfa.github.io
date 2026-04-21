@@ -578,7 +578,10 @@ body.dark #sun {
 }
 
 .post-content table {
-  width: 100%;
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   overflow-x: auto;
   display: block;
   border-collapse: collapse;
@@ -589,6 +592,7 @@ body.dark #sun {
 .post-content td {
   border: 1px solid var(--line);
   padding: 0.45rem 0.6rem;
+  text-align: left;
 }
 
 .post-content code,
@@ -894,6 +898,7 @@ body.dark #searchInput {
     min-height: 64px;
     flex-wrap: nowrap !important;
     padding: 0;
+    overflow: visible;
   }
 
   .nav-right {
