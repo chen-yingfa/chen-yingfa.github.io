@@ -11,7 +11,7 @@ export const siteConfig = {
   ],
   profile: {
     title: "Yingfa Chen － 陈英发",
-    subtitle: `2nd year PhD student at Tsinghua University, advised by Prof. Zhiyuan Liu. Doing research in CS, NLP. Interested in LLMs and long-context modeling.
+    subtitle: `2nd year PhD student at Tsinghua University, advised by Prof. Zhiyuan Liu. Doing research on LLMs, continual learning, long-context modeling, and neural architecture.
 <br><br>
 <iconify-icon icon="mingcute:mail-line"></iconify-icon> <strong>Email:</strong> <a href="mailto:chenyingfa1999@gmail.com">chenyingfa1999@gmail.com</a>
 <br><br>

@@ -47,7 +47,12 @@ const normalize = (path: string) => path.replace(/\/$/, "") || "/";
             {
               siteConfig.navItems.map((item) => (
                 <li>
-                  <a href={item.href} aria-label={item.label} title={item.label}>
+                  <a
+                    href={item.href}
+                    aria-label={item.label}
+                    title={item.label}
+                    class={`menu-link${item.icon ? " menu-link-icon" : ""}`}
+                  >
                     <span class={normalize(item.href) === normalize(currentPath) ? "active" : ""}>
                       {item.icon ? (
                         <>

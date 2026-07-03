@@ -167,13 +167,22 @@ a:hover {
 
 #menu a {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
   padding: 0.34rem 0.62rem;
   border-radius: 999px;
   color: var(--text-muted);
   font-size: 0.9rem;
   font-weight: 500;
+  line-height: 1.2;
   transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+#menu a.menu-link-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
 }
 
 #menu a:hover {
@@ -191,7 +200,8 @@ a:hover {
 
 #menu .menu-icon {
   font-size: 1.05rem;
-  vertical-align: middle;
+  line-height: 1;
+  display: block;
 }
 
 .sr-only {
