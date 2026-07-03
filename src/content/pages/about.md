@@ -17,7 +17,6 @@ I'm a PhD student at the [Natural Language Processing lab at Tsinghua University
 
 ### <iconify-icon icon="mingcute:link-fill"></iconify-icon> Social links:
 
-- [Semantic Scholar](https://www.semanticscholar.org/author/Yingfa-Chen/2109274417)
 - [Google Scholar](https://scholar.google.com/citations?user=IgPWvEQAAAAJ&hl=en)
 - [X (Twitter)](https://www.twitter.com/DonnyChan123)
 - [GitHub](https://www.github.com/chen-yingfa)
@@ -36,9 +35,7 @@ I was born in March 13, 1999 in Arendal Norway. I grew up in Lillesand, a small 
 
 When I was 19, I went to Beijing for a Bachelor's degree in Computer Science at Tsinghua University.
 
-Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/)[^1]
-
-[^1]: The tag [#00](../../../tags/00) refers to my girlfriend.
+Since March of 2022, I am happily in a relationship with [Luo Yining](https://www.github.com/luo-yining/)
 
 ## Interests
 
