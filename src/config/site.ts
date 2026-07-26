@@ -5,7 +5,6 @@ export const siteConfig = {
   navItems: [
     { label: "Home", href: "/" },
     { label: "Blog", href: "/research_posts" },
-    { label: "生活记录", href: "/life_posts" },
     { label: "About Me", href: "/about" },
     { label: "Search", href: "/search", icon: "mingcute:search-line" },
   ],

@@ -34,8 +34,8 @@ Useful scripts:
 Main content lives in `src/content/` and is validated by `src/content.config.ts`.
 
 - `src/content/research_posts/` - research blog posts
-- `src/content/life_posts/` - life posts
 - `src/content/pages/` - static pages (`about`, `archives`, `search`)
+- `private/life_posts/` - retained life-post source files, excluded from the public site
 
 Site-wide settings are in:
 
@@ -46,7 +46,6 @@ Site-wide settings are in:
 ## Writing Posts
 
 - Research posts are folder-based (`.../post-slug/index.md`), and can include local images.
-- Life posts can be either `index.md` in a folder or a single `.md` file.
 - Recommended frontmatter fields:
   - `title`
   - `date`

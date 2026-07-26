@@ -13,26 +13,23 @@ import {
 
 export async function getStaticPaths() {
   const researchPosts = await getCollection("researchPosts");
-  const lifePosts = await getCollection("lifePosts");
-  const posts = [...researchPosts, ...lifePosts];
 
   const tagMap = new Map<
     string,
     {
       label: string;
-      posts: Array<(typeof posts)[number] & { section: "research_posts" | "life_posts" }>;
+      posts: Array<(typeof researchPosts)[number] & { section: "research_posts" }>;
     }
   >();
 
-  for (const post of posts) {
-    const section = post.collection === "researchPosts" ? "research_posts" : "life_posts";
+  for (const post of researchPosts) {
     const tags = post.data.tags ?? [];
     for (const tag of tags) {
       const slug = tagToSlug(tag);
       if (!tagMap.has(slug)) {
         tagMap.set(slug, { label: tag, posts: [] });
       }
-      tagMap.get(slug)?.posts.push({ ...post, section });
+      tagMap.get(slug)?.posts.push({ ...post, section: "research_posts" });
     }
   }
 
@@ -48,7 +45,7 @@ export async function getStaticPaths() {
 const { tagLabel, posts } = Astro.props as {
   tagLabel: string;
   posts: Array<{
-    collection: "researchPosts" | "lifePosts";
+    collection: "researchPosts";
     id: string;
     body: string;
     data: {
@@ -58,7 +55,7 @@ const { tagLabel, posts } = Astro.props as {
       cover?: { image?: string };
       thumbnail?: string;
     };
-    section: "research_posts" | "life_posts";
+    section: "research_posts";
   }>;
 };
 ---

@@ -31,11 +31,6 @@ const researchPosts = defineCollection({
   schema: postSchema,
 });
 
-const lifePosts = defineCollection({
-  loader: glob({ base: "./src/content/life_posts", pattern: "**/*.md" }),
-  schema: postSchema,
-});
-
 const pages = defineCollection({
   loader: glob({ base: "./src/content/pages", pattern: "**/*.md" }),
   schema: pageSchema,
@@ -43,6 +38,5 @@ const pages = defineCollection({
 
 export const collections = {
   researchPosts,
-  lifePosts,
   pages,
 };
